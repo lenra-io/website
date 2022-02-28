@@ -1,0 +1,27 @@
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: url('../fonts/source-sans-pro-600.eot');
+	src: local(''),
+		url('../fonts/source-sans-pro-600.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/source-sans-pro-600.woff2') format('woff2'),
+		url('../fonts/source-sans-pro-600.woff') format('woff'),
+		url('../fonts/source-sans-pro-600.ttf') format('truetype'),
+		url('../fonts/source-sans-pro-600.svg#SourceSansPro') format('svg');
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: bold;
+	font-display: swap;
+	src: url('../fonts/source-sans-pro-900.eot');
+	src: local(''),
+		url('../fonts/source-sans-pro-900.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/source-sans-pro-900.woff2') format('woff2'),
+		url('../fonts/source-sans-pro-900.woff') format('woff'),
+		url('../fonts/source-sans-pro-900.ttf') format('truetype'),
+		url('../fonts/source-sans-pro-900.svg#SourceSansPro') format('svg');
+}

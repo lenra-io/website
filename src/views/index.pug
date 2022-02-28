@@ -1,0 +1,15 @@
+extends .layout.pug
+
+block content
+    main
+        h1= title
+        nav
+            a(href="https://dev.lenra.io/login" disabled aria-disabled="true" tabindex="-1")= login
+            a(href="https://doc.lenra.io" target="_blank" rel="noopener" disabled aria-disabled="true" tabindex="-1")= documentation
+        section(data-img-alt=currentPage.illustration_alt)
+            h2= currentPage.description
+            p= currentPage.accelerate_creation
+            p= currentPage.easy_deployment
+            nav
+                a(href="https://dev.lenra.io/register" class="primary" disabled aria-disabled="true" tabindex="-1")= register
+                a(href="contact" class="tertiary" target="_blank" rel="noopener")= contact_us

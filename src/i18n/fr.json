@@ -1,0 +1,14 @@
+{
+    "login": "Se connecter",
+    "documentation": "Documentation",
+    "register": "S'inscrire sur Lenra",
+    "contact_us": "Nous contacter", 
+    "page": {
+        "index": {
+            "description": "Accélérer la création d'applications et simplifier leur hébergement",
+            "accelerate_creation": "Accélérez la création de vos applications en vous concentrant principalement sur ce que vous aimez: le développement.",
+            "easy_deployment": "Nous vous facilitons la vie sur votre infrastructure et les problématiques liées à la multitude de plateformes.",
+            "illustration_alt": "Illustration de l'accélération de la création d'applications. L'application est accessible sur mobile, bureau et smartwatch, et directement liée à la gestion des serveurs."
+        }
+    }
+}
