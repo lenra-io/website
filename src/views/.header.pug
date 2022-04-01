@@ -1,0 +1,14 @@
+block header
+    header
+        h1 !{currentPage.titleHtml ? currentPage.titleHtml : currentPage.title}
+        if currentPage.subtitle
+            h2 !{currentPage.subtitle}
+        nav.pages
+            img(src="img/logo.svg" alt="Logo GO Sport Training Festival")
+            a(href="/") Home
+            a(href="beta.html") Beta
+            a(href="functioning.html") Functioning &amp; audience
+            a(href="values.html") Company values 
+            a(href="team.html") Team 
+            a(href="objectives.html") Objectives 
+            a(href="contact.html") Contact
