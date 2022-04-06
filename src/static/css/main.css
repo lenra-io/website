@@ -12,7 +12,6 @@
 
 html, body {
     height: 100%;
-    overflow: hidden;
     transition-property: none;
 }
 
@@ -66,7 +65,7 @@ body {
     line-height: calc(2 * var(--base) / var(--font-size));
 }
 
-a {
+a.btn {
     display: inline-block;
     text-align: center;
     background: var(--background-color);
@@ -78,33 +77,33 @@ a {
     transition-property: background-color;
 }
 
-a:hover {
+a.btn:hover {
     background-color: var(--background-color-hover);
 }
 
-a[disabled],
-a:disabled {
+a.btn[disabled],
+a.btn:disabled {
     pointer-events: none;
     color: var(--primary-color-disabled);
     background-color: var(--background-color);
 }
 
-a.primary {
+a.btn.primary {
     background-color: var(--primary-color);
     color: white;
     --border-size: 0pt;
 }
 
-a.primary:hover {
+a.btn.primary:hover {
     background-color: var(--primary-color-hover);
 }
 
-a.primary[disabled],
-a.primary:disabled {
+a.btn.primary[disabled],
+a.btn.primary:disabled {
     background-color: var(--primary-color-disabled);
 }
 
-a.tertiary {
+a.btn.tertiary {
     --border-size: 0pt;
 }
 
@@ -112,7 +111,6 @@ main {
     position: relative;
     display: block;/*IE*/
     width: 90%;
-    height: 100%;
     max-width: 1200pt;
     margin: auto;
     padding: calc(var(--base) * var(--top-padding)) 0 calc(var(--base) * var(--bottom-padding));
@@ -154,57 +152,6 @@ nav > a:first-child {
     margin-left: 0;
 }
 
-section {
-    position: absolute;
-    width: 100%;
-    top: calc((100% + var(--top-reduction) - var(--bottom-reduction)) / 2);
-    left: 0;
-    transform: translateY(-50%);
-}
-
-h2 {
-    font-size: var(--title-font-size);
-    padding-bottom: calc(var(--base) * 2);
-    max-width: var(--title-max-width);
-    transition-property: none;
-}
-
-p {
-    max-width: var(--text-max-width);
-}
-
-section::after {
-    content: "";
-    content: "" / attr(data-img-alt);
-    alt: attr(data-img-alt);
-    --max-height: calc(var(--body-height) - var(--base) * (10 + var(--top-padding) + var(--bottom-padding) + var(--button-size)));
-    --left-limit: calc(max(var(--title-max-width), var(--text-max-width)) + var(--image-space));
-    --width: min(calc(100% - var(--left-limit)), var(--max-height));
-    position: absolute;
-    left: calc(var(--left-limit) + (100% - var(--left-limit) - var(--width)) / 2);
-    width: var(--width);
-    height: var(--max-height);
-    background-image: url(../img/illustration.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    top: 50%;
-    transform: translateY(-50%);
-} 
-
-section > nav {
-    padding-top: calc(var(--base) * var(--nav-seprataion-size));
-}
-
-section > nav > a {
-    width: calc(var(--base) * (10 + 5 * var(--title-size)));
-}
-
-section > nav > a.tertiary {
-    width: calc(var(--base) * (10 + 3 * var(--title-size)));
-}
-
-
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -241,21 +188,6 @@ section > nav > a.tertiary {
         --title-font-size-multiplier: 2.5;
         --text-max-width-multiplier: 16;
     }
-
-    h2, p {
-        text-align: center;
-        margin: auto;
-    }
-
-    section::after {
-        width: 0;
-        left: 100%;
-        display: none;
-    }
-
-    section >  nav {
-        text-align: center;
-    }
 }
 
 @media (max-width: 650pt),
@@ -284,52 +216,6 @@ section > nav > a.tertiary {
     h1 {
         height: calc(var(--base) * var(--logo-size));
         margin: auto;
-    }
-
-    section {
-        transition-property: none;
-    }
-
-    main > nav,
-    section > nav {
-        top: auto;
-        width: 100%;
-        transition-property: none;
-    }
-
-    main > nav {
-        z-index: 100;
-        bottom: calc(var(--base) * (var(--bottom-padding) + var(--button-size) + var(--seprataion-size)));
-    }
-
-    section > nav {
-        position: absolute;
-        bottom: calc((100% - var(--body-height) + var(--top-reduction) - var(--bottom-reduction)) / 2 + (var(--base) * var(--bottom-padding)));
-    }
-
-    nav > a {
-        display: block;
-        width: 80%;
-        max-width: 300pt;
-        margin: auto;
-    }
-
-    nav > a:first-child {
-        margin-top: 0;
-        margin-left: auto;
-    }
-
-    main > nav > a:nth-child(2) {
-        display: none;
-    }
-
-    section > nav > a:first-child {
-        margin-bottom: calc(var(--base) * (var(--seprataion-size) * 2 + var(--button-size)));
-    }
-
-    section > nav > a,
-    section > nav > a.tertiary {
-        width: 80%;
     }
 }
 

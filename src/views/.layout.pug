@@ -20,4 +20,7 @@ html(lang=language)
       link(rel='stylesheet' as='style' type='text/css' href='css/main.css')
     script(src='js/main.js' defer)
   body
-    block content
+    include .header.pug
+    main
+      block content
+    include .footer.pug
