@@ -55,17 +55,17 @@ html, body {
 }
 
 body {
+    background-image: linear-gradient(to right, var(--green), var(--green) 25%, var(--yellow) 25%, var(--yellow) 50%, var(--red) 50%, var(--red) 75%, var(--blue) 75%, var(--blue)), var(--background-image);
     background-size: 100% calc(var(--base) / 2), cover;
     background-position: 50% 100%, 50% 50%;
     background-repeat: no-repeat;
-    background-color: white;
-    color: black;
+    background-color: var(--background-color);
+    color: var(--text-color);
     font-family: 'Source Sans Pro';
     font-size: var(--font-size);
     line-height: calc(2 * var(--base) / var(--font-size));
 }
 
-/*
 a {
     display: inline-block;
     text-align: center;
@@ -110,9 +110,7 @@ a.tertiary {
 
 main {
     position: relative;
-    display: block;
-    /*IE*/
-/*
+    display: block;/*IE*/
     width: 90%;
     height: 100%;
     max-width: 1200pt;
@@ -141,18 +139,18 @@ h1::before {
     background-position: var(--logo-position);
 }
 
-main>nav {
+main > nav {
     position: absolute;
     top: calc(var(--base) * var(--top-padding));
     right: 0;
     text-align: right;
 }
 
-nav>a {
+nav > a {
     margin-left: calc(var(--base) * 2);
 }
 
-nav>a:first-child {
+nav > a:first-child {
     margin-left: 0;
 }
 
@@ -177,7 +175,7 @@ p {
 
 section::after {
     content: "";
-    content: ""/ attr(data-img-alt);
+    content: "" / attr(data-img-alt);
     alt: attr(data-img-alt);
     --max-height: calc(var(--body-height) - var(--base) * (10 + var(--top-padding) + var(--bottom-padding) + var(--button-size)));
     --left-limit: calc(max(var(--title-max-width), var(--text-max-width)) + var(--image-space));
@@ -192,19 +190,21 @@ section::after {
     background-position: center;
     top: 50%;
     transform: translateY(-50%);
-}
+} 
 
-section>nav {
+section > nav {
     padding-top: calc(var(--base) * var(--nav-seprataion-size));
 }
 
-section>nav>a {
+section > nav > a {
     width: calc(var(--base) * (10 + 5 * var(--title-size)));
 }
 
-section>nav>a.tertiary {
+section > nav > a.tertiary {
     width: calc(var(--base) * (10 + 3 * var(--title-size)));
 }
+
+
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -223,7 +223,7 @@ section>nav>a.tertiary {
 }
 
 @media (max-width: 1200pt),
-(min-width: 1200pt) and (max-height: 300pt) {
+       (min-width: 1200pt) and (max-height: 300pt) {
     :root {
         --title-font-size-multiplier: 2;
         --text-max-width-multiplier: 18;
@@ -253,13 +253,13 @@ section>nav>a.tertiary {
         display: none;
     }
 
-    section>nav {
+    section >  nav {
         text-align: center;
     }
 }
 
 @media (max-width: 650pt),
-(min-width: 650pt) and (max-width: 850pt) and (max-height: 330pt) {
+        (min-width: 650pt) and (max-width: 850pt) and (max-height: 330pt) {
     :root {
         --title-font-size-multiplier: 2;
         --text-max-width-multiplier: 18;
@@ -290,53 +290,52 @@ section>nav>a.tertiary {
         transition-property: none;
     }
 
-    main>nav,
-    section>nav {
+    main > nav,
+    section > nav {
         top: auto;
         width: 100%;
         transition-property: none;
     }
 
-    main>nav {
+    main > nav {
         z-index: 100;
         bottom: calc(var(--base) * (var(--bottom-padding) + var(--button-size) + var(--seprataion-size)));
     }
 
-    section>nav {
+    section > nav {
         position: absolute;
         bottom: calc((100% - var(--body-height) + var(--top-reduction) - var(--bottom-reduction)) / 2 + (var(--base) * var(--bottom-padding)));
     }
 
-    nav>a {
+    nav > a {
         display: block;
         width: 80%;
         max-width: 300pt;
         margin: auto;
     }
 
-    nav>a:first-child {
+    nav > a:first-child {
         margin-top: 0;
         margin-left: auto;
     }
 
-    main>nav>a:nth-child(2) {
+    main > nav > a:nth-child(2) {
         display: none;
     }
 
-    section>nav>a:first-child {
+    section > nav > a:first-child {
         margin-bottom: calc(var(--base) * (var(--seprataion-size) * 2 + var(--button-size)));
     }
 
-    section>nav>a,
-    section>nav>a.tertiary {
+    section > nav > a,
+    section > nav > a.tertiary {
         width: 80%;
     }
 }
 
 /* Title size */
-/*
 @media (max-width: 420pt),
-(min-width: 420pt) and (max-width: 540pt) and (max-height: 450pt) {
+        (min-width: 420pt) and (max-width: 540pt) and (max-height: 450pt) {
     :root {
         --title-font-size-multiplier: 1.5;
         --text-max-width-multiplier: 22;
@@ -345,14 +344,14 @@ section>nav>a.tertiary {
 }
 
 @media (max-width: 360pt),
-(min-width: 360pt) and (max-width: 540pt) and (max-height: 280pt) {
+        (min-width: 360pt) and (max-width: 540pt) and (max-height: 280pt) {
     :root {
         --title-font-size-multiplier: 1.25;
     }
 }
 
 @media (max-width: 300pt),
-(min-width: 300pt) and (max-width: 360pt) and (max-height: 300pt) {
+        (min-width: 300pt) and (max-width: 360pt) and (max-height: 300pt) {
     :root {
         --title-font-size-multiplier: calc(16 / 14);
         --logo-size: 8;
@@ -366,14 +365,13 @@ section>nav>a.tertiary {
 }
 
 /* Top and bottom paddings */
-/*
 @media (min-width: 1200pt) and (max-height: 400pt),
-(min-width: 850pt) and (max-width: 1200pt) and (max-height: 360pt),
-(min-width: 650pt) and (max-width: 850pt) and (max-height: 380pt),
-(min-width: 540pt) and (max-width: 650pt) and (max-height: 380pt),
-(min-width: 420pt) and (max-width: 540pt) and (max-height: 540pt),
-(min-width: 300pt) and (max-width: 420pt) and (max-height: 520pt),
-(max-width: 300pt) and (max-height: 480pt) {
+        (min-width: 850pt) and (max-width: 1200pt) and (max-height: 360pt),
+        (min-width: 650pt) and (max-width: 850pt) and (max-height: 380pt),
+        (min-width: 540pt) and (max-width: 650pt) and (max-height: 380pt),
+        (min-width: 420pt) and (max-width: 540pt) and (max-height: 540pt),
+        (min-width: 300pt) and (max-width: 420pt) and (max-height: 520pt),
+        (max-width: 300pt) and (max-height: 480pt) {
     :root {
         --top-padding: 5;
         --bottom-padding: 3;
@@ -382,12 +380,12 @@ section>nav>a.tertiary {
 }
 
 @media (min-width: 1200pt) and (max-height: 320pt),
-(min-width: 850pt) and (max-width: 1200pt) and (max-height: 300pt),
-(min-width: 650pt) and (max-width: 850pt) and (max-height: 330pt),
-(min-width: 540pt) and (max-width: 650pt) and (max-height: 320pt),
-(min-width: 420pt) and (max-width: 540pt) and (max-height: 480pt),
-(min-width: 300pt) and (max-width: 420pt) and (max-height: 460pt),
-(max-width: 300pt) and (max-height: 440pt) {
+        (min-width: 850pt) and (max-width: 1200pt) and (max-height: 300pt),
+        (min-width: 650pt) and (max-width: 850pt) and (max-height: 330pt),
+        (min-width: 540pt) and (max-width: 650pt) and (max-height: 320pt),
+        (min-width: 420pt) and (max-width: 540pt) and (max-height: 480pt),
+        (min-width: 300pt) and (max-width: 420pt) and (max-height: 460pt),
+        (max-width: 300pt) and (max-height: 440pt) {
     :root {
         --top-padding: 3;
         --bottom-padding: 2;
@@ -396,7 +394,7 @@ section>nav>a.tertiary {
 }
 
 @media (min-width: 300pt) and (max-width: 420pt) and (max-height: 300pt),
-(max-width: 300pt) and (max-height: 350pt) {
+        (max-width: 300pt) and (max-height: 350pt) {
     :root {
         --top-padding: 2;
         --bottom-padding: 2;
@@ -404,103 +402,95 @@ section>nav>a.tertiary {
 }
 
 /* Buttons width */
-/*
 @media (max-width: 360pt) {
-
-    nav>a,
-    section>nav>a,
-    section>nav>a.tertiary {
+    nav > a,
+    section > nav > a,
+    section > nav > a.tertiary {
         width: 90%;
     }
 }
 
 @media (max-width: 300pt) {
-
-    nav>a,
-    section>nav>a,
-    section>nav>a.tertiary {
+    nav > a,
+    section > nav > a,
+    section > nav > a.tertiary {
         width: 100%;
     }
 }
 
 @media (max-width: 240pt) {
-
-    nav>a,
-    section>nav>a,
-    section>nav>a.tertiary {
+    nav > a,
+    section > nav > a,
+    section > nav > a.tertiary {
         width: fit-content;
     }
 }
 
 /* Hide the login button */
-/*
 @media (min-width: 360pt) and (max-width: 540pt) and (max-height: 400pt),
-(min-width: 300pt) and (max-width: 360pt) and (max-height: 380pt),
-(min-width: 240pt) and (max-width: 300pt) and (max-height: 360pt),
-(max-width: 240pt) and (max-height: 380pt) {
+        (min-width: 300pt) and (max-width: 360pt) and (max-height: 380pt),
+        (min-width: 240pt) and (max-width: 300pt) and (max-height: 360pt),
+        (max-width: 240pt) and (max-height: 380pt) {
     :root {
         --seprataion-size: 2;
         --bottom-reduction: var(--base) * (var(--bottom-padding) + var(--button-size) * 2 + var(--seprataion-size));
     }
 
-    main>nav {
+    main > nav {
         display: none;
     }
 
-    section>nav>a:first-child {
+    section > nav > a:first-child {
         margin-bottom: calc(var(--base) * var(--seprataion-size));
     }
 }
 
 /* Inline button */
-/*
 @media (min-width: 360pt) and (max-width: 540pt) and (max-height: 320pt),
-(min-width: 300pt) and (max-width: 360pt) and (max-height: 340pt) {
+        (min-width: 300pt) and (max-width: 360pt) and (max-height: 340pt) {
     :root {
         --bottom-reduction: var(--base) * var(--bottom-padding);
     }
 
-    nav>a {
+    nav > a {
         margin-left: calc(var(--base) * 2);
         display: inline-block;
     }
-
-    nav>a:first-child {
+    
+    nav > a:first-child {
         margin-left: 0;
     }
-
-    section>nav {
+    
+    section > nav {
         position: relative;
         bottom: auto;
     }
 
-    section>nav>a:first-child,
-    section>nav>a.tertiary {
+    section > nav > a:first-child,
+    section > nav > a.tertiary {
         width: auto;
         margin-bottom: 0;
     }
 }
 
 /* Not inline for scroll */
-/*
 @media (min-width: 240pt) and (max-width: 300pt) and (max-height: 310pt),
-(max-width: 240pt) and (max-height: 330pt) {
+        (max-width: 240pt) and (max-height: 330pt) {
     :root {
         --bottom-reduction: var(--base) * var(--bottom-padding);
     }
-
-    section>nav {
+    
+    section > nav {
         position: relative;
         bottom: auto;
     }
 }
 
 /* Vertical logo */
-/*
 @media (max-width: 240pt),
-(min-width: 360pt) and (max-width: 540pt) and (max-height: 350pt),
-(min-width: 300pt) and (max-width: 360pt) and (max-height: 420pt),
-(min-width: 240pt) and (max-width: 300pt) and (max-height: 400pt) {
+        (min-width: 360pt) and (max-width: 540pt) and (max-height: 350pt),
+        (min-width: 300pt) and (max-width: 360pt) and (max-height: 420pt),
+        (min-width: 240pt) and (max-width: 300pt) and (max-height: 400pt) {
     :root {
         --logo-image: var(--logo-horizontal-image);
         --logo-size: 5;
@@ -508,17 +498,16 @@ section>nav>a.tertiary {
 }
 
 @media (min-width: 300pt) and (max-width: 360pt) and (max-height: 300pt),
-(max-width: 300pt) and (max-height: 400pt) {
+        (max-width: 300pt) and (max-height: 400pt) {
     :root {
         --logo-size: 4;
     }
 }
 
 /* Enable scroll */
-/*
 @media (min-width: 300pt) and (max-height: 270pt),
-(min-width: 240pt) and (max-width: 300pt) and (max-height: 310pt),
-(max-width: 240pt) and (max-height: 330pt) {
+        (min-width: 240pt) and (max-width: 300pt) and (max-height: 310pt),
+        (max-width: 240pt) and (max-height: 330pt) {
     html {
         overflow: auto;
         height: auto;
