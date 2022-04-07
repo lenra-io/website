@@ -73,7 +73,7 @@ Translations.loadTranslations()
                 }))
                 .map(({file, pugFile}) => ({
                     file, 
-                    html: pug.renderFile(Path.join(viewsDirPath, pugFile), { ...props, currentPage: props.page[file] })
+                    html: pug.renderFile(Path.join(viewsDirPath, pugFile), { ...props, currentPage: { ...props.page[file], path: file }})
                 }))
                 .map(async ({file, html}) => {
                     const filePath = Path.join(wwwPath, lang, `${file}.html`);

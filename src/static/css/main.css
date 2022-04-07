@@ -1,4 +1,4 @@
-@import 'font.css';
+@import '.font.css';
 
 *, *::before, *::after {
     margin: 0;
@@ -8,6 +8,7 @@
     text-decoration: none;
     list-style: none;
     transition-duration: 300ms;
+    transition-property: none;
 }
 
 html, body {
@@ -24,15 +25,27 @@ html, body {
     --base: 8pt;
     --primary-color: #1269ED;
     --primary-color-hover: #0D4DAE;
-    --primary-color-disabled: #D0E1FB;
-    --text-color: #1E232C;
-    --background-color: white;
+    --white-primary-color-disabled: #D0E1FB;
+    --black-primary-color-disabled: #1c2f50;
+    --light-primary-color-disabled: #D0E1FB;
+    --dark-primary-color-disabled: #1c2f50;
+    --black: #1E232C;
+    --white: white;
+    --text-color: var(--black);
+    --background-color: var(--white);
+    --primary-color-disabled: var(--light-primary-color-disabled);
+    --invert-primary-color-disabled: var(--dark-primary-color-disabled);
     --background-color-hover: var(--primary-color-disabled);
     --background-image: url("../img/fond.svg");
-    --logo-horizontal-image: url("../img/logo.svg");
-    --logo-vertical-image: url("../img/logo-vertical.svg");
+    --logo-horizontal-image-black: url("../img/logo.svg");
+    --logo-vertical-image-black: url("../img/logo-vertical.svg");
+    --logo-horizontal-image-white: url("../img/logo-white.svg");
+    --logo-vertical-image-white: url("../img/logo-vertical-white.svg");
+    --logo-horizontal-image: var(--logo-horizontal-image-black);
+    --logo-vertical-image: var(--logo-vertical-image-black);
     --logo-image: var(--logo-horizontal-image);
     --logo-position: left;
+    --logo-horizontal-ratio: 3.646153846153846;
     --font-size: var(--base) * 1.5;
     --title-font-size-multiplier: 2.5;
     --title-font-size: calc(var(--font-size) * var(--title-font-size-multiplier));
@@ -46,7 +59,7 @@ html, body {
     --seprataion-size: 2;
     --nav-seprataion-size: 4;
     --logo-size: 12;
-    --top-padding: 8;
+    --top-padding: 5;
     --bottom-padding: 5;
     --top-reduction: var(--base) * (var(--top-padding) + var(--button-size));
     --bottom-reduction: var(--base) * var(--bottom-padding);
@@ -54,15 +67,18 @@ html, body {
 }
 
 body {
-    background-image: linear-gradient(to right, var(--green), var(--green) 25%, var(--yellow) 25%, var(--yellow) 50%, var(--red) 50%, var(--red) 75%, var(--blue) 75%, var(--blue)), var(--background-image);
-    background-size: 100% calc(var(--base) / 2), cover;
-    background-position: 50% 100%, 50% 50%;
-    background-repeat: no-repeat;
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: 'Source Sans Pro';
     font-size: var(--font-size);
     line-height: calc(2 * var(--base) / var(--font-size));
+}
+
+a[disabled],
+a:disabled,
+summary[disabled],
+summary:disabled {
+    pointer-events: none;
 }
 
 a.btn {
@@ -83,7 +99,6 @@ a.btn:hover {
 
 a.btn[disabled],
 a.btn:disabled {
-    pointer-events: none;
     color: var(--primary-color-disabled);
     background-color: var(--background-color);
 }
@@ -107,24 +122,98 @@ a.btn.tertiary {
     --border-size: 0pt;
 }
 
-main {
-    position: relative;
-    display: block;/*IE*/
-    width: 90%;
-    max-width: 1200pt;
-    margin: auto;
-    padding: calc(var(--base) * var(--top-padding)) 0 calc(var(--base) * var(--bottom-padding));
+.invert-colors {
+    --text-color: var(--white);
+    --background-color: var(--black);
+    --logo-horizontal-image: var(--logo-horizontal-image-white);
+    --logo-vertical-image: var(--logo-vertical-image-white);
+    --logo-image: var(--logo-horizontal-image);
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-h1 {
+body > header {
+    background-image: linear-gradient(to right, var(--green), var(--green) 25%, var(--yellow) 25%, var(--yellow) 50%, var(--red) 50%, var(--red) 75%, var(--blue) 75%, var(--blue));
+    background-size: 100% calc(var(--base) / 2);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    padding-top: calc(var(--base) * var(--top-padding));
+}
+
+body > header > nav {
+    --height: calc(var(--base) * var(--button-size));
     position: relative;
+    margin: auto;
+    width: 90%;
+    max-width: 1200pt;
+    height: var(--height);
+    text-align: right;
+}
+
+body > header > nav > * {
+    display: inline-block;
+    width: calc(var(--base) * 10);
+    height: 100%;
+    text-align: center;
+}
+
+body > header > nav > details {
+    position: relative;
+}
+
+body > header > nav > details > * {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+body > header > nav > a::before,
+body > header > nav > details > *::before {
+    content: " ";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 0;
+}
+
+body > header > nav > details > a {
+    display: block;
+    position: absolute;
+}
+
+
+
+body > footer {
+    /* margin-top:  */
+    text-align: right;
+}
+
+body > footer > nav {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+
+body > footer > nav > a {
+    display: block;
+}
+
+body > header > nav > a[href="/"],
+body > footer > a[href="/"] {
+    /* position: relative;
+    flex: 1; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(var(--height) * var(--logo-horizontal-ratio));
+    text-align: left; 
     text-indent: -200pt;
     overflow: hidden;
-    height: calc(var(--base) * var(--button-size));
     transition-property: none;
 }
 
-h1::before {
+body > header > nav > a[href="/"]::before,
+body > footer > a[href="/"]::before {
     content: " ";
     position: absolute;
     top: 0;
@@ -137,30 +226,25 @@ h1::before {
     background-position: var(--logo-position);
 }
 
-main > nav {
-    position: absolute;
-    top: calc(var(--base) * var(--top-padding));
-    right: 0;
-    text-align: right;
-}
-
-nav > a {
-    margin-left: calc(var(--base) * 2);
-}
-
-nav > a:first-child {
-    margin-left: 0;
+main {
+    position: relative;
+    display: block;/*IE*/
+    width: 90%;
+    max-width: 1200pt;
+    margin: auto;
+    padding: calc(var(--base) * var(--top-padding)) 0 calc(var(--base) * var(--bottom-padding));
 }
 
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: #1E232C;
-        --background-color-hover: #1c2f50;
-        --text-color: white;
+    /* :root {
+        --white: #1E232C;
+        --primary-color-disabled: var(--dark-primary-color-disabled);
+        --invert-primary-color-disabled: var(--light-primary-color-disabled);
+        --black: white;
         --logo-horizontal-image: url("../img/logo-white.svg");
         --logo-vertical-image: url("../img/logo-vertical-white.svg");
-    }
+    } */
 }
 
 @media (max-aspect-ratio: 1/1) {

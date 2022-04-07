@@ -5,6 +5,7 @@
     "contact_us": "Contact us", 
     "page": {
         "index": {
+            "title": "Lenra",
             "description": "Speed ​​up the creation of your apps and host them easily",
             "accelerate_creation": "Speed ​​up your app creation by focusing on what you love: development.",
             "easy_deployment": "We make your life easier on infrastructure management and on cross-platform related issues.",

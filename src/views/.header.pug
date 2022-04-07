@@ -1,14 +1,17 @@
 block header
-    header
+    header.invert-colors
+        nav
+            a(href="/") Lenra
+            details
+                summary(disabled aria-disabled="true" tabindex="-1") Project
+                a(href="beta.html" disabled aria-disabled="true" tabindex="-1") Beta
+                a(href="functioning.html" disabled aria-disabled="true" tabindex="-1") Functioning &amp; audience
+            details
+                summary(disabled aria-disabled="true" tabindex="-1") Company
+                a(href="values.html" disabled aria-disabled="true" tabindex="-1") Our values
+                a(href="team.html" disabled aria-disabled="true" tabindex="-1") Team
+                a(href="objectives.html" disabled aria-disabled="true" tabindex="-1") Objectives
+            a(href="contact.html" disabled aria-disabled="true" tabindex="-1") Contact
         h1 !{currentPage.titleHtml ? currentPage.titleHtml : currentPage.title}
         if currentPage.subtitle
             h2 !{currentPage.subtitle}
-        nav.pages
-            img(src="img/logo.svg" alt="Logo GO Sport Training Festival")
-            a(href="/") Home
-            a(href="beta.html") Beta
-            a(href="functioning.html") Functioning &amp; audience
-            a(href="values.html") Company values 
-            a(href="team.html") Team 
-            a(href="objectives.html") Objectives 
-            a(href="contact.html") Contact

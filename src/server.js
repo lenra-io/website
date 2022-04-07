@@ -25,10 +25,10 @@ app.get('/(*.html)?', async (req, res) => {
     }
     const languages = await pLanguages;
     const props = utils.mergeDeep({}, common, await pTranslation, {language: lang, languages: languages, otherLanguages: languages.filter(l => l!=lang)});
-    res.send(pug.renderFile(file, { ...props, currentPage: props.page[path] }));
+    res.send(pug.renderFile(file, { ...props, currentPage: { ...props.page[path], path }}));
 })
 
-app.use(express.static(staticPath));
+app.use(express.static(staticPath, {dotfiles: 'allow'}));
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
