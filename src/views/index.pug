@@ -1,6 +1,8 @@
 extends .layout.pug
 
-block content 
+block content
+    figure
+        iframe(width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/B8C5sjjhsso?rel=0&showinfo=0&autohide=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
     header 
         p The Lenra platform is made to accelerate the creation of your applications and simplify its hosting while preserving your users’ personal data. 
         p It allows developers to implement their applications faster in order to test their market.
@@ -9,34 +11,34 @@ block content
 
     section 
         h3 Speed up your app creation 
-        img(src="img/undraw_computer.svg" alt="A developper in front of it's computer")
-        p Some tools will already be integrated into the system such as development frameworks or the database. To create and deliver their apps, developers no longer need multiple tools and services. There will be no account management, all user data will be managed solely by the platform
+        img(src="img/undraw/undraw_programming_re_kg9v.svg" alt="A developper in front of it's computer")
+        p Some tools will already be integrated into the system such as development frameworks or the database. To create and deliver their apps, developers no longer need multiple tools and services. There will be no account management, all user data will be managed by the platform.
         p The application has a cross-platform functionality that allows accessibility on all your devices.
 
     section 
         h3 Deploy easily 
-        img(src="img/undraw_server.svg" alt="A same app on a phone, a computer and a smart watch, all linked to the same server cluster")
+        img(src="img/undraw/undraw_server_cluster_jwwq.svg" alt="A same app on a phone, a computer and a smart watch, all linked to the same server cluster")
         p Deployment of your application is greatly simplified and can be done with one simple button click.
         p Pay only for what you use, the budget is adapted to the usage of your app.
         p The application has a scalable environment without limits which allows the infrastructure to adapt to the needs of your application.
 
     section 
         h3 Preserve data 
-        img(src="img/undraw_data.svg" alt="A user taking care of it personal datas")
+        img(src="img/undraw/undraw_security_re_a2rk.svg" alt="A user taking care of it personal datas")
         p Lenra is built around the values of digital sobriety and data protection, meaning users of its tools anchor their practice in a more responsible and ethical digital world.
         p Malware protection is a key point for our application and has been respected through a process of improving the security of your data.
         p The platform allows GDPR  compliance and also the control by the user of his personal data.
 
-    section 
+    section#partners.invert-colors
         h2 Our Partners
         nav
-            a(href="#TODO")
-                img(src="img/logo-technopole.svg" alt="Logo La Rochelle Technopole")
-            a(href="#TODO")
-                img(src="img/labanquiz.png" alt="Logo La Banquiz")
-            a(href="#TODO")
-                img(src="img/Logo-OVH.svg.png" alt="Logo OVH Start-up Program")
-            a(href="#TODO")
-                img(src="img/Logo-Naos.svg" alt="Logo NAOS - Nouvelle Aquitaine Open Source")
-            a(href="#TODO")
-                img(src="img/Logo-french-tech.svg" alt="Logo French Tech")
+            a(href="https://www.larochelle-technopole.fr/")
+                img(src="img/partners/la-rochelle-technopole.svg" alt="La Rochelle Technopole")
+            a(href="https://labanquiz.com/la rochell")
+                img(src="img/partners/LaBanquiz.png" alt="La Banquiz")
+            a(href="https://startup.ovhcloud.com/fr/")
+                img(src="img/partners/OVHCloud-startup-program.png" alt="OVHCloud Startup Program")
+            a(href="https://naos-cluster.com/")
+                img(src="img/partners/NAOS.png" alt="NAOS - Nouvelle Aquitaine Open Source")
+            a(href="https://lafrenchtech.com/fr/communaute/atlantic-valley/")
+                img(src="img/partners/french-tech.png" alt="French Tech")

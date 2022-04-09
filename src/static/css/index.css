@@ -6,3 +6,51 @@ body > header {
 h1 {
     display: none;
 }
+
+figure {
+    --max-width: 1000px;
+    --height: calc(min(90vw, var(--max-width)) * 1080 / 1920);
+    position: relative;
+    width: 100%;
+    max-width: var(--max-width);
+    height: var(--height);
+    margin: auto;
+    top: calc(var(--height) / -2);
+    -webkit-box-shadow: 15px 15px 20px 0px rgba(0,0,0,0.7); 
+    box-shadow: 15px 15px 20px 0px rgba(0,0,0,0.7);
+}
+
+figure > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#partners {
+
+}
+
+#partners > nav {
+    text-align: center;
+}
+
+#partners > nav > a {
+    position: relative;
+    display: inline-block;
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    border-radius: 25%;
+}
+
+#partners > nav > a > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+}
