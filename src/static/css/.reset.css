@@ -1,0 +1,15 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit;
+    text-decoration: none;
+    list-style: none;
+    transition-duration: 300ms;
+    transition-property: none;
+}
+
+html {
+    height: 100%;
+    overflow-x: hidden;
+}

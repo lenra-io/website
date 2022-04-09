@@ -3,7 +3,7 @@ block header
         nav
             a(href="/") Lenra
             details
-                summary(disabled aria-disabled="true" tabindex="-1" title="Coming soon") Project
+                summary(disabled aria-disabled="true" tabindex="-1" title="Coming soon") Platform
                 a(href="beta.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Beta
                 a(href="usage.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Use cases
             details
@@ -15,3 +15,5 @@ block header
         h1 !{currentPage.titleHtml ? currentPage.titleHtml : currentPage.title}
         if currentPage.subtitle
             h2 !{currentPage.subtitle}
+        each text  in currentPage.headerTexts
+            p= text

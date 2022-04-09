@@ -1,232 +1,11 @@
+@import '.reset.css';
+@import '.design.css';
+@import '.components.css';
 @import '.font.css';
-
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: inherit;
-    text-decoration: none;
-    list-style: none;
-    transition-duration: 300ms;
-    transition-property: none;
-}
-
-html {
-    height: 100%;
-    overflow-x: hidden;
-}
-
-:root {
-    --body-height: 100vh;
-    --green: #57C0B3;
-    --blue: #70CBF2;
-    --yellow: #F6C28B;
-    --red: #F27A86;
-    --base: 8px;
-    --primary-color: #1269ED;
-    --primary-color-hover: #0D4DAE;
-    --white-primary-color-disabled: #D0E1FB;
-    --black-primary-color-disabled: #1c2f50;
-    --light-primary-color-disabled: #D0E1FB;
-    --dark-primary-color-disabled: #1c2f50;
-    --black: #1E232C;
-    --white: white;
-    --text-color: var(--black);
-    --background-color: var(--white);
-    --primary-color-disabled: var(--light-primary-color-disabled);
-    --invert-primary-color-disabled: var(--dark-primary-color-disabled);
-    --background-color-hover: var(--primary-color-disabled);
-    --background-image: url("../img/fond.svg");
-    --logo-horizontal-image-black: url("../img/logo.svg");
-    --logo-vertical-image-black: url("../img/logo-vertical.svg");
-    --logo-horizontal-image-white: url("../img/logo-white.svg");
-    --logo-vertical-image-white: url("../img/logo-vertical-white.svg");
-    --logo-horizontal-image: var(--logo-horizontal-image-black);
-    --logo-vertical-image: var(--logo-vertical-image-black);
-    --logo-image: var(--logo-horizontal-image);
-    --logo-position: left;
-    --logo-horizontal-ratio: 3.646153846153846;
-    --font-size: 15px;
-    --title-font-size-multiplier: 2.5;
-    --title-font-size: calc(var(--font-size) * var(--title-font-size-multiplier));
-    --title-size: calc(var(--title-font-size) / var(--base));
-    --title-max-width-multiplier: 16;
-    --text-max-width-multiplier: 18;
-    --title-max-width: calc(var(--title-max-width-multiplier) * var(--title-font-size));
-    --text-max-width: calc(var(--text-max-width-multiplier) * var(--title-font-size));
-    --image-space: calc(16 * var(--base));
-    --button-size: 4;
-    --seprataion-size: 2;
-    --nav-seprataion-size: 4;
-    --logo-size: var(--button-size);
-    --top-padding: 5;
-    --bottom-padding: 5;
-    --top-reduction: var(--base) * (var(--top-padding) + var(--button-size));
-    --bottom-reduction: var(--base) * var(--bottom-padding);
-    --height-reduction: var(--top-reduction) + var(--bottom-reduction);
-}
-
-body {
-    height: 100%;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: 'Source Sans Pro';
-    font-size: var(--font-size);
-    line-height: calc(20px / var(--font-size));
-}
-
-a[disabled],
-a:disabled,
-summary[disabled],
-summary:disabled {
-    pointer-events: none;
-    opacity: 0.5;
-}
-
-a.btn {
-    display: inline-block;
-    text-align: center;
-    background: var(--background-color);
-    --border-size: 1px;
-    padding: calc(var(--base) - var(--border-size)) calc(var(--base) * 2 - var(--border-size));
-    color: var(--primary-color);
-    border: var(--border-size) solid;
-    border-radius: calc(var(--base) / 2);
-    transition-property: background-color;
-}
-
-a.btn:hover {
-    background-color: var(--background-color-hover);
-}
-
-a.btn[disabled],
-a.btn:disabled {
-    color: var(--primary-color-disabled);
-    background-color: var(--background-color);
-}
-
-a.btn.primary {
-    background-color: var(--primary-color);
-    color: white;
-    --border-size: 0px;
-}
-
-a.btn.primary:hover {
-    background-color: var(--primary-color-hover);
-}
-
-a.btn.primary[disabled],
-a.btn.primary:disabled {
-    background-color: var(--primary-color-disabled);
-}
-
-a.btn.tertiary {
-    --border-size: 0px;
-}
-
-.invert-colors {
-    --text-color: var(--white);
-    --background-color: var(--black);
-    --logo-horizontal-image: var(--logo-horizontal-image-white);
-    --logo-vertical-image: var(--logo-vertical-image-white);
-    --logo-image: var(--logo-horizontal-image);
-    position: relative;
-    color: var(--text-color);
-}
-
-.invert-colors::before {
-    content: " ";
-    position: absolute;
-    background-color: var(--background-color);
-    top: 0;
-    left: 50%;
-    height: 100%;
-    width: 100vw;
-    transform: translateX(-50%);
-    z-index: -1;
-}
-
-body > main,
-body > header > nav,
-body > footer > nav {
-    margin: auto;
-    width: 90%;
-    max-width: 1200px;
-}
 
 body > header,
 body > footer {
     padding: calc(var(--base) * var(--top-padding)) 0;
-}
-
-body > header {
-    background-image: linear-gradient(to right, var(--green), var(--green) 25%, var(--yellow) 25%, var(--yellow) 50%, var(--red) 50%, var(--red) 75%, var(--blue) 75%, var(--blue));
-    background-size: 100% calc(var(--base) / 2);
-    background-position: 50% 100%;
-    background-repeat: no-repeat;
-}
-
-body > header > nav {
-    position: relative;
-    height: calc(var(--base) * var(--logo-size));
-    text-align: right;
-}
-
-body > header > nav > * {
-    display: inline-block;
-    width: calc(var(--base) * 10);
-    height: 100%;
-    text-align: center;
-}
-
-body > header > nav > details {
-    position: relative;
-}
-
-body > header > nav > details > * {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
-
-body > header > nav > a::before,
-body > header > nav > details > *::before {
-    content: " ";
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
-    width: 0;
-}
-
-body > header > nav > details > a {
-    display: block;
-    position: absolute;
-}
-
-body > header > nav > details > a + a {
-    transform: translateY(100%);
-}
-
-
-
-body > footer > nav {
-    /* margin-top:  */
-    position: relative;
-    text-align: right;
-}
-
-body > footer > nav > h2 {
-    text-align: left;
-}
-
-body > footer > nav > section {
-    display: inline-block;
-    text-align: left;
-    vertical-align: top;
-}
-
-body > footer > nav > section > a {
-    display: block;
 }
 
 body > header > nav > a[href="/"],
@@ -265,6 +44,24 @@ body > header > nav > a[href="/"] {
 main {
     position: relative;
     display: block;/*IE*/
+}
+
+main h2 {
+    text-align: center;
+}
+
+main > h2 {
+    padding-top: calc(var(--base) * var(--section-padding-top));
+}
+
+main > section {
+    padding-top: calc(var(--base) * var(--section-padding-top));
+    padding-bottom: calc(var(--base) * var(--section-padding-bottom));
+}
+
+main > section > h2,
+main > section > h3 {
+    padding-bottom: calc(var(--base) * 2);
 }
 
 

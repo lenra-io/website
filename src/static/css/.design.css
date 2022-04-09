@@ -1,0 +1,120 @@
+:root {
+    --body-height: 100vh;
+    --green: #57C0B3;
+    --blue: #70CBF2;
+    --yellow: #F6C28B;
+    --red: #F27A86;
+    --base: 8px;
+    --primary-color: #1269ED;
+    --primary-color-hover: #0D4DAE;
+    --disabled-opacity: 0.3;
+    --dark-grey-opacity: 0.7;
+    --grey-opacity: 0.5;
+    --light-grey-opacity: 0.3;
+    --white-primary-color-disabled: #D0E1FB;
+    --black-primary-color-disabled: #1c2f50;
+    --light-primary-color-disabled: #D0E1FB;
+    --dark-primary-color-disabled: #1c2f50;
+    --black: #1E232C;
+    --white: white;
+    --text-color: var(--black);
+    --background-color: var(--white);
+    --primary-color-disabled: var(--light-primary-color-disabled);
+    --invert-primary-color-disabled: var(--dark-primary-color-disabled);
+    --background-color-hover: var(--primary-color-disabled);
+    --background-image: url("../img/fond.svg");
+    --logo-horizontal-image-black: url("../img/logo.svg");
+    --logo-vertical-image-black: url("../img/logo-vertical.svg");
+    --logo-horizontal-image-white: url("../img/logo-white.svg");
+    --logo-vertical-image-white: url("../img/logo-vertical-white.svg");
+    --logo-horizontal-image: var(--logo-horizontal-image-black);
+    --logo-vertical-image: var(--logo-vertical-image-black);
+    --logo-image: var(--logo-horizontal-image);
+    --logo-position: left;
+    --logo-horizontal-ratio: 3.646153846153846;
+    --font-size: 16px;
+    --line-height: calc(20 / 16);
+    --title-font-size-multiplier: 2.5;
+    --title-font-size: calc(var(--font-size) * var(--title-font-size-multiplier));
+    --title-size: calc(var(--title-font-size) / var(--base));
+    --title-max-width-multiplier: 16;
+    --text-max-width-multiplier: 18;
+    --title-max-width: calc(var(--title-max-width-multiplier) * var(--title-font-size));
+    --text-max-width: calc(var(--text-max-width-multiplier) * var(--title-font-size));
+    --image-space: calc(16 * var(--base));
+    --button-size: 4;
+    --seprataion-size: 2;
+    --nav-seprataion-size: 4;
+    --logo-size: var(--button-size);
+    --top-padding: 5;
+    --bottom-padding: 5;
+    --top-reduction: var(--base) * (var(--top-padding) + var(--button-size));
+    --bottom-reduction: var(--base) * var(--bottom-padding);
+    --height-reduction: var(--top-reduction) + var(--bottom-reduction);
+    --section-padding-top: 4;
+    --section-padding-bottom: 8;
+}
+
+body {
+    height: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Source Sans Pro';
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+}
+
+h1, h2, h3, h4 {
+    font-size: calc(var(--font-size) * var(--font-size-multiplier));
+    font-weight: bold;
+}
+
+h1 {
+    --font-size-multiplier: calc(5 / 3);
+}
+
+h2 {
+    --font-size-multiplier: calc(4 / 3);
+}
+
+h3 {
+    --font-size-multiplier: calc(5 / 4);
+}
+
+h4 {
+    --font-size-multiplier: 1;
+}
+
+p {
+    padding-bottom: var(--base);
+}
+
+.invert-colors {
+    --text-color: var(--white);
+    --background-color: var(--black);
+    --logo-horizontal-image: var(--logo-horizontal-image-white);
+    --logo-vertical-image: var(--logo-vertical-image-white);
+    --logo-image: var(--logo-horizontal-image);
+    position: relative;
+    color: var(--text-color);
+}
+
+.invert-colors::before {
+    content: " ";
+    position: absolute;
+    background-color: var(--background-color);
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 100vw;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+body > main,
+body > header,
+body > footer {
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+}
