@@ -58,7 +58,7 @@ html, body {
     --button-size: 4;
     --seprataion-size: 2;
     --nav-seprataion-size: 4;
-    --logo-size: 12;
+    --logo-size: var(--button-size);
     --top-padding: 5;
     --bottom-padding: 5;
     --top-reduction: var(--base) * (var(--top-padding) + var(--button-size));
@@ -79,6 +79,7 @@ a:disabled,
 summary[disabled],
 summary:disabled {
     pointer-events: none;
+    opacity: 0.5;
 }
 
 a.btn {
@@ -132,21 +133,29 @@ a.btn.tertiary {
     color: var(--text-color);
 }
 
+body > main,
+body > header > nav,
+body > footer > nav {
+    margin: auto;
+    width: 90%;
+    max-width: 1200pt;
+}
+
+body > header,
+body > footer {
+    padding: calc(var(--base) * var(--top-padding)) 0;
+}
+
 body > header {
     background-image: linear-gradient(to right, var(--green), var(--green) 25%, var(--yellow) 25%, var(--yellow) 50%, var(--red) 50%, var(--red) 75%, var(--blue) 75%, var(--blue));
     background-size: 100% calc(var(--base) / 2);
     background-position: 50% 100%;
     background-repeat: no-repeat;
-    padding-top: calc(var(--base) * var(--top-padding));
 }
 
 body > header > nav {
-    --height: calc(var(--base) * var(--button-size));
     position: relative;
-    margin: auto;
-    width: 90%;
-    max-width: 1200pt;
-    height: var(--height);
+    height: calc(var(--base) * var(--logo-size));
     text-align: right;
 }
 
@@ -181,31 +190,39 @@ body > header > nav > details > a {
     position: absolute;
 }
 
+body > header > nav > details > a + a {
+    transform: translateY(100%);
+}
 
 
-body > footer {
+
+body > footer > nav {
     /* margin-top:  */
+    position: relative;
     text-align: right;
 }
 
-body > footer > nav {
+body > footer > nav > h2 {
+    text-align: left;
+}
+
+body > footer > nav > section {
     display: inline-block;
     text-align: left;
     vertical-align: top;
 }
 
-body > footer > nav > a {
+body > footer > nav > section > a {
     display: block;
 }
 
 body > header > nav > a[href="/"],
-body > footer > a[href="/"] {
-    /* position: relative;
-    flex: 1; */
-    position: absolute;
-    top: 0;
-    left: 0;
+body > footer > nav > h2 > a[href="/"] {
+    --height: calc(var(--base) * var(--logo-size));
+    position: relative;
+    display: inline-block;
     width: calc(var(--height) * var(--logo-horizontal-ratio));
+    height: var(--height);
     text-align: left; 
     text-indent: -200pt;
     overflow: hidden;
@@ -213,7 +230,7 @@ body > footer > a[href="/"] {
 }
 
 body > header > nav > a[href="/"]::before,
-body > footer > a[href="/"]::before {
+body > footer > nav > h2 > a[href="/"]::before {
     content: " ";
     position: absolute;
     top: 0;
@@ -226,12 +243,15 @@ body > footer > a[href="/"]::before {
     background-position: var(--logo-position);
 }
 
+body > header > nav > a[href="/"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 main {
     position: relative;
     display: block;/*IE*/
-    width: 90%;
-    max-width: 1200pt;
-    margin: auto;
     padding: calc(var(--base) * var(--top-padding)) 0 calc(var(--base) * var(--bottom-padding));
 }
 
