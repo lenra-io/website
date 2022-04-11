@@ -1,15 +1,18 @@
-body > header::after {
-    content: " ";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 100vw;
-    height: calc(var(--base) / 2);
-    background-image: linear-gradient(to right, var(--green), var(--green) 25%, var(--yellow) 25%, var(--yellow) 50%, var(--red) 50%, var(--red) 75%, var(--blue) 75%, var(--blue));
-    background-size: 100% 100%;
-    background-position: 50% 100%;
+body > header {
+    text-align: center;
+}
+
+body > header::before {
+    background-image: 
+        url(../../img/fond.svg),
+        linear-gradient(to right, var(--green), var(--green) 25%, var(--yellow) 25%, var(--yellow) 50%, var(--red) 50%, var(--red) 75%, var(--blue) 75%, var(--blue));
+    background-size: 
+        cover,
+        100% calc(var(--base) / 2);
+    background-position: 
+        50% 50%, 
+        50% 100%;
     background-repeat: no-repeat;
-    transform: translateX(-50%);
 }
 
 body > header > nav {

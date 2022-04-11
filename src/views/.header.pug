@@ -15,5 +15,8 @@ block header
         h1 !{currentPage.titleHtml ? currentPage.titleHtml : currentPage.title}
         if currentPage.subtitle
             h2 !{currentPage.subtitle}
-        each text  in currentPage.headerTexts
-            p= text
+        if currentPage.headerTexts
+            each text  in currentPage.headerTexts
+                p= text
+        if currentPage.mainAction
+            a.btn.primary(href=currentPage.mainAction.href)= currentPage.mainAction.text
