@@ -1,19 +1,23 @@
 body > header {
-    height: 100%;
+    /* height: 100%; */
+    text-align: left;
 }
 
 figure {
-    --max-width: 1000px;
-    --height: calc(min(90vw, var(--max-width)) * 1080 / 1920);
+    --max-width: 500px;
+    --height: calc(min(45vw, var(--max-width)) * 1079 / 1920);
     position: relative;
-    width: 100%;
+    width: 50%;
     max-width: var(--max-width);
     height: var(--height);
-    margin: auto;
-    margin-top: calc(var(--height) / -2);
-    margin-bottom: calc(var(--base) * 10);
-    -webkit-box-shadow: 15px 15px 20px 0px rgba(0,0,0,0.7); 
-    box-shadow: 15px 15px 20px 0px rgba(0,0,0,0.7);
+    float: right;
+
+    /* margin: auto; */
+    /* margin-top: calc(var(--height) / -2); */
+    /* margin-top: calc(var(--base) * 10);
+    margin-bottom: calc(var(--base) * 10); */
+    /* -webkit-box-shadow: 15px 15px 20px 0px rgba(0,0,0,0.7); 
+    box-shadow: 15px 15px 20px 0px rgba(0,0,0,0.7); */
     /* overflow: hidden; */
 }
 
@@ -23,8 +27,6 @@ figure > iframe {
     left: 0;
     width: 100%;
     height: 100%;
-    /* left: -100%;
-    width: 300%; */
 }
 
 section.key-point {

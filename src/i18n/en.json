@@ -6,22 +6,16 @@
     "page": {
         "index": {
             "name": "Lenra",
-            "title": "We help you to accelerate the development of your apps !",
+            "title": "Speed ​​up the creation of your apps and host them easily !",
             "headerTexts": [
                 "The Lenra platform is made to accelerate the creation of your applications and simplify its hosting while preserving your users' personal data.",
                 "It allows developers to implement their applications faster in order to test their market."
             ],
             "mainAction": {
                 "href": "https://dev.lenra.io/#/register",
-                "text": "Get an account now"
+                "text": "Join our beta"
             },
-            "description": "Speed ​​up the creation of your apps and host them easily",
-            "keyPoints": [
-                {
-                    "title": "",
-                    "icon": ""
-                }
-            ]
+            "description": "Speed ​​up the creation of your apps and host them easily !"
         }
     }
 }

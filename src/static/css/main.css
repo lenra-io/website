@@ -10,11 +10,10 @@ body > footer {
 
 body > header > nav > a[href="/"],
 body > footer > nav > h2 > a[href="/"] {
-    --height: calc(var(--base) * var(--logo-size));
     position: relative;
     display: inline-block;
-    width: calc(var(--height) * var(--logo-horizontal-ratio));
-    height: var(--height);
+    width: calc(var(--logo-height) * var(--logo-horizontal-ratio));
+    height: var(--logo-height);
     text-align: left; 
     text-indent: -200px;
     overflow: hidden;
@@ -120,14 +119,14 @@ main > section > h3 {
 
 @media (max-width: 540px) {
     :root {
-        --top-reduction: var(--base) * (var(--top-padding) + var(--logo-size));
+        --top-reduction: var(--base) * (var(--top-padding) + var(--logo-height));
         --bottom-reduction: var(--base) * (var(--bottom-padding) + var(--button-size) * 3 + var(--seprataion-size) * 2);
         --logo-image: var(--logo-vertical-image);
         --logo-position: center;
     }
 
     h1 {
-        height: calc(var(--base) * var(--logo-size));
+        height: var(--logo-height);
         margin: auto;
     }
 }
@@ -138,7 +137,7 @@ main > section > h3 {
     :root {
         --title-font-size-multiplier: 1.5;
         --text-max-width-multiplier: 22;
-        --logo-size: 10;
+        /* --logo-height: 10; */
     }
 }
 
@@ -153,7 +152,7 @@ main > section > h3 {
         (min-width: 300px) and (max-width: 360px) and (max-height: 300px) {
     :root {
         --title-font-size-multiplier: calc(16 / 14);
-        --logo-size: 8;
+        /* --logo-height: 8; */
     }
 }
 
@@ -292,14 +291,14 @@ main > section > h3 {
         (min-width: 240px) and (max-width: 300px) and (max-height: 400px) {
     :root {
         --logo-image: var(--logo-horizontal-image);
-        --logo-size: 5;
+        /* --logo-height: 5; */
     }
 }
 
 @media (min-width: 300px) and (max-width: 360px) and (max-height: 300px),
         (max-width: 300px) and (max-height: 400px) {
     :root {
-        --logo-size: 4;
+        /* --logo-height: 4; */
     }
 }
 

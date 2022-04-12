@@ -4,7 +4,9 @@
     --blue: #70CBF2;
     --yellow: #F6C28B;
     --red: #F27A86;
-    --base: 8px;
+    --unit: 1px;
+    --base-value: 8;
+    --base: calc(var(--base-value) * var(--unit));
     --primary-color: #1269ED;
     --primary-color-hover: #0D4DAE;
     --disabled-opacity: 0.3;
@@ -32,8 +34,10 @@
     --logo-image: var(--logo-horizontal-image);
     --logo-position: left;
     --logo-horizontal-ratio: 3.646153846153846;
-    --font-size: 16px;
-    --line-height: calc(20 / 16);
+    --font-size-value: 16;
+    --font-size: calc(1px * var(--font-size-value));
+    --line-height-value: 20;
+    --line-height: calc(var(--line-height-value) / var(--font-size-value));
     --title-font-size-multiplier: 2.5;
     --title-font-size: calc(var(--font-size) * var(--title-font-size-multiplier));
     --title-size: calc(var(--title-font-size) / var(--base));
@@ -45,8 +49,14 @@
     --button-size: 4;
     --seprataion-size: 2;
     --nav-seprataion-size: 4;
-    --logo-size: var(--button-size);
-    --top-padding: 5;
+    --padding-small-multiplier: 0.5;
+    --padding-small: calc(var(--padding-small-multiplier) * var(--base));
+    --padding-medium-multiplier: 1;
+    --padding-medium: calc(var(--padding-medium-multiplier) * var(--base));
+    --padding-big-multiplier: 1.5;
+    --padding-big: calc(var(--padding-big-multiplier) * var(--base));
+    --logo-height: calc(var(--line-height-value) * var(--unit) + var(--padding-medium) * 2);
+    --top-padding: 6;
     --bottom-padding: 5;
     --top-reduction: var(--base) * (var(--top-padding) + var(--button-size));
     --bottom-reduction: var(--base) * var(--bottom-padding);
@@ -70,15 +80,15 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    --font-size-multiplier: calc(5 / 3);
+    --font-size-multiplier: 2;
 }
 
 h2 {
-    --font-size-multiplier: calc(4 / 3);
+    --font-size-multiplier: calc(5 / 3);
 }
 
 h3 {
-    --font-size-multiplier: calc(5 / 4);
+    --font-size-multiplier: calc(4 / 3);
 }
 
 h4 {
