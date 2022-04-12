@@ -4,13 +4,13 @@ body > header {
 
 body > header::before {
     background-image: 
-        url(../../img/fond.svg),
+        /* url(../../img/fond.svg), */
         linear-gradient(to right, var(--green), var(--green) 25%, var(--yellow) 25%, var(--yellow) 50%, var(--red) 50%, var(--red) 75%, var(--blue) 75%, var(--blue));
     background-size: 
-        cover,
+        /* cover, */
         100% calc(var(--base) / 2);
     background-position: 
-        50% 50%, 
+        /* 50% 50%,  */
         50% 100%;
     background-repeat: no-repeat;
 }
