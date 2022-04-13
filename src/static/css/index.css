@@ -104,6 +104,7 @@ section.key-point:nth-of-type(2) > img {
     position: relative;
     display: inline-block;
     background-color: white;
+    border: 1px solid #1E232C;
     width: var(--size);
     height: var(--size);
     border-radius: 25%;
