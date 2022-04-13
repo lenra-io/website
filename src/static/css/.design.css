@@ -128,3 +128,28 @@ body > footer {
     width: 90%;
     max-width: 1200px;
 }
+
+body > header > nav > a[href="/"],
+body > footer > nav > h2 > a[href="/"] {
+    position: relative;
+    display: inline-block;
+    width: calc(var(--logo-height) * var(--logo-horizontal-ratio));
+    height: var(--logo-height);
+    text-align: left; 
+    text-indent: -200px;
+    overflow: hidden;
+    transition-property: none;
+}
+
+a[href="/"]::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: var(--logo-image);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: var(--logo-position);
+}
