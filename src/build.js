@@ -26,6 +26,7 @@ getFilesRecursively(staticSrcPath)
     const destinationPath = Path.join(staticDestPath, relativePath);
     const destinationDir = Path.dirname(destinationPath);
     const ext = Path.extname(file).toLowerCase();
+    if (/^.*\/\.[^/]+$/.test(file)) return;
     fs.mkdirsSync(destinationDir);
     switch (ext) {
         case '.html':
@@ -33,13 +34,15 @@ getFilesRecursively(staticSrcPath)
             return minify(file)
             .then(content => fs.writeFile(destinationPath, content));
         case '.css':
-            return fs.readFile(file, 'utf-8')
-            .then(str => minify.css(str, {
+            const content = minify.css(`@import "${Path.relative(process.cwd(), file)}";`, {
                 css: {
-                    inline: "none"
+                    rebase: false
+                },
+                img: {
+                    maxSize: 1
                 }
-            }))
-            .then(content => fs.writeFile(destinationPath, content));
+            });
+            return fs.writeFile(destinationPath, content);
         default:
             return fs.copyFile(file, destinationPath);
     }
@@ -120,7 +123,7 @@ server {
     charset_types text/css application/javascript;
 
     add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
-    add_header Content-Security-Policy "default-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self';";
+    add_header Content-Security-Policy "default-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; frame-src 'self' *.youtube-nocookie.com;";
     add_header Vary "Accept-Encoding";
     add_header X-Content-Type-Options "nosniff";
     add_header X-Frame-Options "DENY";
@@ -156,6 +159,13 @@ server {
 }
 `;
     fs.writeFile(Path.join(buildPath, `nginx.conf`), conf);
+
+    // generate the sitemap.txt file
+    // fs.writeFile(Path.join(staticDestPath, `sitemap.txt`),
+    //     pages.flatMap(getPagesToGenerate)
+    //     .map(page => `!BASE_URL!${page.path}`)
+    //     .join('\n')
+    // );
 });
 
 /**
