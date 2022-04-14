@@ -37,7 +37,8 @@
     --font-size-value: 16;
     --font-size: calc(1px * var(--font-size-value));
     --line-height-value: 20;
-    --line-height: calc(var(--line-height-value) / var(--font-size-value));
+    --line-height: calc(var(--line-height-value) * var(--unit));
+    --line-height-multiplier: calc(var(--line-height-value) / var(--font-size-value));
     --title-font-size-multiplier: 2.5;
     --title-font-size: calc(var(--font-size) * var(--title-font-size-multiplier));
     --title-size: calc(var(--title-font-size) / var(--base));
@@ -55,7 +56,8 @@
     --padding-medium: calc(var(--padding-medium-multiplier) * var(--base));
     --padding-big-multiplier: 1.5;
     --padding-big: calc(var(--padding-big-multiplier) * var(--base));
-    --logo-height: calc(var(--line-height-value) * var(--unit) + var(--padding-medium) * 2);
+    --button-height: calc(var(--line-height) + var(--padding-medium) * 2);
+    --logo-height: var(--button-height);
     --top-padding: 6;
     --bottom-padding: 5;
     --top-reduction: var(--base) * (var(--top-padding) + var(--button-size));
@@ -71,7 +73,7 @@ body {
     color: var(--text-color);
     font-family: 'Source Sans Pro';
     font-size: var(--font-size);
-    line-height: var(--line-height);
+    line-height: var(--line-height-multiplier);
 }
 
 h1, h2, h3, h4 {
@@ -129,6 +131,11 @@ body > footer {
     max-width: 1200px;
 }
 
+body > header,
+body > footer {
+    padding: calc(var(--base) * var(--top-padding)) 0;
+}
+
 body > header > nav > a[href="/"],
 body > footer > nav > h2 > a[href="/"] {
     position: relative;
@@ -152,4 +159,36 @@ a[href="/"]::before {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: var(--logo-position);
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --white: #1E232C;
+        --primary-color-disabled: var(--dark-primary-color-disabled);
+        --invert-primary-color-disabled: var(--light-primary-color-disabled);
+        --black: white;
+        --logo-horizontal-image-black: url("../img/logo-white.svg");
+        --logo-horizontal-image-white: url("../img/logo.svg");
+        --logo-vertical-image-black: url("../img/logo-vertical-white.svg");
+        --logo-vertical-image-white: url("../img/logo-vertical.svg");
+        --logo-image: var(--logo-horizontal-image);
+    }
+}
+
+@media (max-width: 550px) {
+    :root {
+        --logo-height: calc(var(--base) * 10);
+        --logo-image: var(--logo-vertical-image);
+    }
+    
+    .invert-colors {
+        --logo-image: var(--logo-vertical-image);
+    }
+
+    body > header > nav > a[href="/"],
+    body > footer > nav > h2 > a[href="/"] {
+        width: var(--logo-height);
+        height: var(--logo-height);
+    }
 }
