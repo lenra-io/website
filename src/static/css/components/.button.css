@@ -69,14 +69,20 @@ nav.social > a {
     border-radius: 20%;
     background-color: white;
     color: #1E232C;
-    border: 1px solid;
+    /* border: 1px solid; */
     margin: var(--vertical-spacing) calc(var(--horizontal-spacing) / 2) 0;
+    transition-property: color, background;
 }
 
-nav.social.dev > a {
+nav.social > a:hover {
     background-color: #1E232C;
     color: white;
 }
+
+/* nav.social.dev > a {
+    background-color: #1E232C;
+    color: white;
+} */
 
 nav.social > a::before {
     position: absolute;

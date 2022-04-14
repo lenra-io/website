@@ -81,6 +81,7 @@ body > header > h2,
 body > header > p {
     max-width: 500px;
     padding-bottom: calc(var(--base) * 3);
+    margin: auto;
 }
 
 body > header > p {

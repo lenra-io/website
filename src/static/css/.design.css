@@ -162,7 +162,7 @@ a[href="/"]::before {
 }
 
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --white: #1E232C;
         --primary-color-disabled: var(--dark-primary-color-disabled);
@@ -174,7 +174,7 @@ a[href="/"]::before {
         --logo-vertical-image-white: url("../img/logo-vertical.svg");
         --logo-image: var(--logo-horizontal-image);
     }
-}
+} */
 
 @media (max-width: 550px) {
     :root {

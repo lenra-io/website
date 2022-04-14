@@ -103,7 +103,7 @@ section.key-point:nth-of-type(2) > img {
 }
 
 #partners > nav > a {
-    --size: 160px;
+    --size: 150px;
     position: relative;
     display: inline-block;
     background-color: white;
@@ -118,10 +118,15 @@ section.key-point:nth-of-type(2) > img {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 80%;
     object-fit: contain;
     transform: translate(-50%, -50%);
+}
+
+#partners > nav > a[href*="naos-cluster.com"] > img {
+    width: 70%;
+    height: 70%;
 }
 
 @media (max-width: 1150px) {

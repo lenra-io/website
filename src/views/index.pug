@@ -4,14 +4,11 @@ block header
     figure
         iframe(width="1920" height="1080" src="https://www.youtube-nocookie.com/embed/4mxcZMv9Eqk?rel=0&modestbranding=1&showinfo=0&autohide=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
     
-    h1 !{currentPage.titleHtml ? currentPage.titleHtml : currentPage.title}
-    if currentPage.subtitle
-        h2 !{currentPage.subtitle}
-    if currentPage.headerTexts
-        each text  in currentPage.headerTexts
-            p= text
-    if currentPage.mainAction
-        a.btn.primary(href=currentPage.mainAction.href)= currentPage.mainAction.text
+    h1 Speed ​​up the creation of your apps and host them easily !
+    p The Lenra platform is made to accelerate the creation of your applications and simplify its hosting while preserving your users' personal data.
+    p It allows you to implement your applications faster in order to test their market.
+    
+    a.btn.primary(href="https://dev.lenra.io/#/register") Try our beta
 
 block content
     section.key-point
@@ -39,7 +36,7 @@ block content
         nav
             a(href="https://www.larochelle-technopole.fr/")
                 img(src="img/partners/la-rochelle-technopole.svg" alt="La Rochelle Technopole")
-            a(href="https://labanquiz.com/la rochell")
+            a(href="https://labanquiz.com/")
                 img(src="img/partners/LaBanquiz.png" alt="La Banquiz")
             a(href="https://startup.ovhcloud.com/fr/")
                 img(src="img/partners/OVHCloud-startup-program.png" alt="OVHCloud Startup Program")
