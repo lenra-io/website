@@ -91,6 +91,11 @@ section.key-point:nth-of-type(2) > * {
     margin-right: 0;
 }
 
+section.key-point:nth-of-type(1) > img {
+    top: calc(var(--base) * var(--section-padding-top));
+    height: calc(100% - var(--base) * (var(--section-padding-bottom) + var(--section-padding-top)));
+}
+
 section.key-point:nth-of-type(2) > img {
     left: 0;
     right: auto;
