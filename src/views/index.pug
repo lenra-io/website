@@ -1,15 +1,46 @@
 extends .layout.pug
 
+block header 
+    figure
+        iframe(width="1920" height="1080" src="https://www.youtube-nocookie.com/embed/4mxcZMv9Eqk?rel=0&modestbranding=1&showinfo=0&autohide=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+    
+    h1 Speed ​​up the creation of your apps and host them easily !
+    p The Lenra platform is made to accelerate the creation of your apps and simplify their hosting while preserving your users' personal data.
+    p It allows you to implement your applications faster in order to test your market.
+    
+    a.btn.primary(href="https://dev.lenra.io/#/register") Try our beta
+
 block content
-    main
-        h1= title
+    section.key-point
+        h2 Speed up your app creation 
+        img(src="img/undraw/undraw_coding_re_iv62.svg" alt="A developper in front of its computer")
+        p To create and deliver apps, you no longer need to juggle with technologies and services. Our platform integrates tools such as development frameworks or the database. There's no account management, all users data will be managed by the platform.
+        p The application has a cross-platform functionality that allows accessibility on all your devices.
+
+    section.key-point
+        h2 Deploy easily 
+        img(src="img/undraw/undraw_server_cluster_jwwq.svg" alt="A same app on a phone, a computer and a smart watch, all linked to the same server cluster")
+        p Deployment of your application is greatly simplified and can be done with one single click button.
+        p Pay only for what you use, the more you optimize your code the less you pay.
+        p The application has a scalable environment without limits, which allows the infrastructure to adapt to the needs of your application.
+
+    section.key-point
+        h2 Preserve data 
+        img(src="img/undraw/undraw_private_data_re_4eab.svg" alt="A user taking care of it personal datas")
+        p Lenra is built around the values of digital sobriety and data protection, meaning users of its tools anchor their practice in a more responsible and ethical digital world.
+        p Malware protection is a key point for our platform and has been respected through a process of improving the security of your data.
+        p The platform allows GDPR  compliance and also the control by the user of his personal data.
+
+    section#partners.invert-colors
+        h2 Our Partners
         nav
-            a(href="https://dev.lenra.io/login")= login
-            a(href="https://doc.lenra.io" target="_blank" rel="noopener")= documentation
-        section(data-img-alt=currentPage.illustration_alt)
-            h2= currentPage.description
-            p= currentPage.accelerate_creation
-            p= currentPage.easy_deployment
-            nav
-                a(href="https://dev.lenra.io/register" class="primary")= register
-                a(href="contact" class="tertiary" target="_blank" rel="noopener")= contact_us
+            a(href="https://www.larochelle-technopole.fr/")
+                img(src="img/partners/la-rochelle-technopole.svg" alt="La Rochelle Technopole")
+            a(href="https://labanquiz.com/")
+                img(src="img/partners/LaBanquiz.png" alt="La Banquiz")
+            a(href="https://startup.ovhcloud.com/fr/")
+                img(src="img/partners/OVHCloud-startup-program.png" alt="OVHCloud Startup Program")
+            a(href="https://naos-cluster.com/")
+                img(src="img/partners/NAOS.png" alt="NAOS - Nouvelle Aquitaine Open Source")
+            a(href="https://lafrenchtech.com/fr/communaute/atlantic-valley/")
+                img(src="img/partners/french-tech.png" alt="French Tech")

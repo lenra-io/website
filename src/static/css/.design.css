@@ -1,0 +1,194 @@
+:root {
+    --body-height: 100vh;
+    --green: #57C0B3;
+    --blue: #70CBF2;
+    --yellow: #F6C28B;
+    --red: #F27A86;
+    --unit: 1px;
+    --base-value: 8;
+    --base: calc(var(--base-value) * var(--unit));
+    --primary-color: #1269ED;
+    --primary-color-hover: #0D4DAE;
+    --disabled-opacity: 0.3;
+    --dark-grey-opacity: 0.7;
+    --grey-opacity: 0.5;
+    --light-grey-opacity: 0.3;
+    --white-primary-color-disabled: #D0E1FB;
+    --black-primary-color-disabled: #1c2f50;
+    --light-primary-color-disabled: #D0E1FB;
+    --dark-primary-color-disabled: #1c2f50;
+    --black: #1E232C;
+    --white: white;
+    --text-color: var(--black);
+    --background-color: var(--white);
+    --primary-color-disabled: var(--light-primary-color-disabled);
+    --invert-primary-color-disabled: var(--dark-primary-color-disabled);
+    --background-color-hover: var(--primary-color-disabled);
+    --background-image: url("../img/fond.svg");
+    --logo-horizontal-image-black: url("../img/logo.svg");
+    --logo-vertical-image-black: url("../img/logo-vertical.svg");
+    --logo-horizontal-image-white: url("../img/logo-white.svg");
+    --logo-vertical-image-white: url("../img/logo-vertical-white.svg");
+    --logo-horizontal-image: var(--logo-horizontal-image-black);
+    --logo-vertical-image: var(--logo-vertical-image-black);
+    --logo-image: var(--logo-horizontal-image);
+    --logo-position: left;
+    --logo-horizontal-ratio: 3.646153846153846;
+    --font-size-value: 16;
+    --font-size: calc(1px * var(--font-size-value));
+    --line-height-value: 20;
+    --line-height: calc(var(--line-height-value) * var(--unit));
+    --line-height-multiplier: calc(var(--line-height-value) / var(--font-size-value));
+    --title-font-size-multiplier: 2.5;
+    --title-font-size: calc(var(--font-size) * var(--title-font-size-multiplier));
+    --title-size: calc(var(--title-font-size) / var(--base));
+    --title-max-width-multiplier: 16;
+    --text-max-width-multiplier: 18;
+    --title-max-width: calc(var(--title-max-width-multiplier) * var(--title-font-size));
+    --text-max-width: calc(var(--text-max-width-multiplier) * var(--title-font-size));
+    --image-space: calc(16 * var(--base));
+    --button-size: 4;
+    --seprataion-size: 2;
+    --nav-seprataion-size: 4;
+    --padding-small-multiplier: 0.5;
+    --padding-small: calc(var(--padding-small-multiplier) * var(--base));
+    --padding-medium-multiplier: 1;
+    --padding-medium: calc(var(--padding-medium-multiplier) * var(--base));
+    --padding-big-multiplier: 1.5;
+    --padding-big: calc(var(--padding-big-multiplier) * var(--base));
+    --button-height: calc(var(--line-height) + var(--padding-medium) * 2);
+    --logo-height: var(--button-height);
+    --top-padding: 6;
+    --bottom-padding: 5;
+    --top-reduction: var(--base) * (var(--top-padding) + var(--button-size));
+    --bottom-reduction: var(--base) * var(--bottom-padding);
+    --height-reduction: var(--top-reduction) + var(--bottom-reduction);
+    --section-padding-top: 4;
+    --section-padding-bottom: 8;
+}
+
+body {
+    height: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Source Sans Pro';
+    font-size: var(--font-size);
+    line-height: var(--line-height-multiplier);
+}
+
+h1, h2, h3, h4 {
+    font-size: calc(var(--font-size) * var(--font-size-multiplier));
+    font-weight: bold;
+}
+
+h1 {
+    --font-size-multiplier: 2;
+}
+
+h2 {
+    --font-size-multiplier: calc(5 / 3);
+}
+
+h3 {
+    --font-size-multiplier: calc(4 / 3);
+}
+
+h4 {
+    --font-size-multiplier: 1;
+}
+
+p {
+    padding-bottom: var(--base);
+}
+
+.invert-colors {
+    --text-color: var(--white);
+    --background-color: var(--black);
+    --logo-horizontal-image: var(--logo-horizontal-image-white);
+    --logo-vertical-image: var(--logo-vertical-image-white);
+    --logo-image: var(--logo-horizontal-image);
+    position: relative;
+    color: var(--text-color);
+}
+
+.invert-colors::before {
+    content: " ";
+    position: absolute;
+    background-color: var(--background-color);
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 100vw;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+body > main,
+body > header,
+body > footer {
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+body > header,
+body > footer {
+    padding: calc(var(--base) * var(--top-padding)) 0;
+}
+
+body > header > nav > a[href="/"],
+body > footer > nav > h2 > a[href="/"] {
+    position: relative;
+    display: inline-block;
+    width: calc(var(--logo-height) * var(--logo-horizontal-ratio));
+    height: var(--logo-height);
+    text-align: left; 
+    text-indent: -200px;
+    overflow: hidden;
+    transition-property: none;
+}
+
+a[href="/"]::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: var(--logo-image);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: var(--logo-position);
+}
+
+
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --white: #1E232C;
+        --primary-color-disabled: var(--dark-primary-color-disabled);
+        --invert-primary-color-disabled: var(--light-primary-color-disabled);
+        --black: white;
+        --logo-horizontal-image-black: url("../img/logo-white.svg");
+        --logo-horizontal-image-white: url("../img/logo.svg");
+        --logo-vertical-image-black: url("../img/logo-vertical-white.svg");
+        --logo-vertical-image-white: url("../img/logo-vertical.svg");
+        --logo-image: var(--logo-horizontal-image);
+    }
+} */
+
+@media (max-width: 550px) {
+    :root {
+        --logo-height: calc(var(--base) * 10);
+        --logo-image: var(--logo-vertical-image);
+    }
+    
+    .invert-colors {
+        --logo-image: var(--logo-vertical-image);
+    }
+
+    body > header > nav > a[href="/"],
+    body > footer > nav > h2 > a[href="/"] {
+        width: var(--logo-height);
+        height: var(--logo-height);
+    }
+}

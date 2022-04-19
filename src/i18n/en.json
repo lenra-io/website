@@ -5,10 +5,9 @@
     "contact_us": "Contact us", 
     "page": {
         "index": {
-            "description": "Speed ​​up the creation of your apps and host them easily",
-            "accelerate_creation": "Speed ​​up your app creation by focusing on what you love: development.",
-            "easy_deployment": "We make your life easier on infrastructure management and on cross-platform related issues.",
-            "illustration_alt": "An illustration of the application creation speed up. The application is usable on mobile, desktop and smatwatch, and it is directly linked to the server management."
+            "name": "Lenra",
+            "title": "Speed ​​up the creation of your apps and host them easily !",
+            "description": "The Lenra platform is made to accelerate the creation of your applications and simplify its hosting while preserving your users' personal data."
         }
     }
 }
