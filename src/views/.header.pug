@@ -1,0 +1,22 @@
+header.invert-colors
+    nav
+        a(href="/") Lenra
+        details
+            summary(disabled aria-disabled="true" tabindex="-1" title="Coming soon") Platform
+            a(href="beta.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Beta
+            a(href="usage.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Use cases
+        details
+            summary(disabled aria-disabled="true" tabindex="-1" title="Coming soon") Company
+            a(href="values.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Our values
+            a(href="team.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Team
+            a(href="objectives.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Objectives
+        a(href="contact.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Contact
+    block header
+        h1 !{currentPage.titleHtml ? currentPage.titleHtml : currentPage.title}
+        if currentPage.subtitle
+            h2 !{currentPage.subtitle}
+        if currentPage.headerTexts
+            each text  in currentPage.headerTexts
+                p= text
+        if currentPage.mainAction
+            a.btn.primary(href=currentPage.mainAction.href)= currentPage.mainAction.text

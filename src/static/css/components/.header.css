@@ -1,0 +1,114 @@
+body > header {
+    text-align: center;
+    margin-bottom: calc(var(--base) * var(--top-padding));
+}
+
+body > header::before {
+    background-image: 
+        /* url(../../img/fond.svg), */
+        linear-gradient(to right, var(--green), var(--green) 25%, var(--yellow) 25%, var(--yellow) 50%, var(--red) 50%, var(--red) 75%, var(--blue) 75%, var(--blue));
+    background-size: 
+        /* cover, */
+        100% calc(var(--base) / 2);
+    background-position: 
+        /* 50% 50%,  */
+        50% 100%;
+    background-repeat: no-repeat;
+}
+
+body > header::after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+body > header > * {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body > header > nav {
+    position: relative;
+    height: var(--button-height);
+    text-align: right;
+    margin-bottom: calc(var(--base) * var(--top-padding));
+}
+
+body > header > nav > * {
+    display: inline-block;
+    width: calc(var(--base) * 12);
+    height: 100%;
+    text-align: center;
+}
+
+body > header > nav > a[href="/"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+body > header > nav a,
+body > header > nav summary {
+    color: var(--text-color);
+}
+
+body > header > nav > details {
+    position: relative;
+}
+
+body > header > nav > details > * {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+body > header > nav > a::before,
+body > header > nav > details > *::before {
+    content: " ";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 0;
+}
+
+body > header > nav > details > a {
+    display: block;
+    position: absolute;
+}
+
+body > header > nav > details > a + a {
+    transform: translateY(100%);
+}
+
+body > header > h1,
+body > header > h2,
+body > header > p {
+    max-width: 500px;
+    padding-bottom: calc(var(--base) * 3);
+}
+
+body > header > p {
+    max-width: 500px;
+    font-size: 110%;
+    opacity: var(--dark-grey-opacity);
+    padding-bottom: calc(var(--base) * 2);
+}
+
+@media (max-width: 550px) {
+    body > header > nav {
+        padding-top: calc(var(--logo-height) + var(--base) * 3);
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+    }
+
+    body > header > nav > * {
+        height: var(--button-height);
+    }
+
+    body > header > nav > a[href="/"] {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
