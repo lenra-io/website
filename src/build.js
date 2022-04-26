@@ -122,7 +122,7 @@ server {
     charset_types text/css application/javascript;
 
     add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
-    add_header Content-Security-Policy "default-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; frame-src 'self' *.youtube-nocookie.com; script-src 'self' https://plausible.io;";
+    add_header Content-Security-Policy "default-src 'self' 'unsafe-inline' plausible.io; object-src 'none'; base-uri 'self'; frame-src 'self' *.youtube-nocookie.com;";
     add_header Vary "Accept-Encoding";
     add_header X-Content-Type-Options "nosniff";
     add_header X-Frame-Options "DENY";
