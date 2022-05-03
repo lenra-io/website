@@ -7,7 +7,7 @@ html(lang=language)
     meta(name="description" content=currentPage.description)
     meta(property="og:title" content=title)
     meta(property="og:type" content="website")
-    meta(property="og:url" content="!BASE_URL!/")
+    meta(property="og:url" content="!CURRENT_URL!")
     meta(property="og:image" content="!IMAGE_URL!")
     meta(property="og:description" content=currentPage.description)
     meta(property="og:locale" content=language)
@@ -21,7 +21,7 @@ html(lang=language)
       link(rel='stylesheet' as='style' type='text/css' href='css/main.css')
       link(rel='stylesheet' as='style' type='text/css' href='css/' + currentPage.path + '.css')
     script(src='js/main.js' defer)
-    script(src="https://plausible.io/js/plausible.js" data-domain="www.lenra.io" defer)
+    script(src="https://plausible.io/js/plausible.js" data-domain="!DOMAIN!" defer)
 
   body
     include .header.pug

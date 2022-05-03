@@ -151,8 +151,9 @@ server {
         
         try_files /$lang$uri /$lang$uri$index /$lang$uri/$index /static$uri /$lang$index /$lang/$index =404;
 
-        sub_filter '!CURRENT_URL!'  '$initial_scheme://$host$request_uri';
+        sub_filter '!DOMAIN!'  '$host';
         sub_filter '!BASE_URL!'  '$initial_scheme://$host';
+        sub_filter '!CURRENT_URL!'  '$initial_scheme://$host$request_uri';
         sub_filter '!IMAGE_URL!'  '$initial_scheme://$host$uri.jpg';
     }
 }
