@@ -84,14 +84,14 @@ body > header > nav > details > a + a {
 body > header > h1,
 body > header > h2,
 body > header > p {
-    max-width: 500px;
+    max-width: 600px;
     padding-bottom: calc(var(--base) * 3);
 }
 
 body > header > p {
-    max-width: 500px;
+    max-width: 600px;
     font-size: 110%;
-    opacity: var(--dark-grey-opacity);
+    color: rgba(var(--text-color-data), var(--dark-grey-opacity));
     padding-bottom: calc(var(--base) * 2);
 }
 

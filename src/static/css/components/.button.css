@@ -66,6 +66,7 @@ nav.social > a {
     font-size: calc(var(--size) * 0.6);
     overflow: hidden;
     text-indent: -200px;
+    text-align: left;
     border-radius: 20%;
     background-color: white;
     color: #1E232C;

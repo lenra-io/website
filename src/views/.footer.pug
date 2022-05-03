@@ -17,12 +17,15 @@ footer
             a(href="usage.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Use cases
         section
             h3 Company
-            a(href="values.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Our values
+            a(href="manifesto.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Manifesto
             a(href="team.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Team
-            a(href="objectives.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Objectives
         section
             h3 Contact
             a(href="contact.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Contact us
-            a(href="legal.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Legal information
-        
-        include .social-dev.pug
+            a(href="legal.html") Legal information
+
+    ul 
+        li Follow us
+            include .social.pug
+        li For developers
+            include .social-dev.pug

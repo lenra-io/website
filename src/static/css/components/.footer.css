@@ -1,6 +1,7 @@
 body > footer > nav {
     position: relative;
     text-align: right;
+    padding-bottom: calc(var(--base) * 2);
 }
 
 body > footer > nav > * {
@@ -18,11 +19,17 @@ body > footer > nav > section {
     width: 160px;
 }
 
-body > footer > nav > section > h3 {
+body > footer > nav > section > h3,
+body > footer > ul > li {
     font-size: var(--font-size);
     font-weight: normal;
+    --text-opacity: var(--dark-grey-opacity);
+    --text-color: rgba(var(--text-color-data), var(--text-opacity));
+    color: var(--text-color);
+}
+
+body > footer > nav > section > h3 {
     padding-bottom: calc(var(--base) * 2);
-    opacity: var(--dark-grey-opacity);
 }
 
 body > footer > nav > section > a {
@@ -30,8 +37,20 @@ body > footer > nav > section > a {
     padding-bottom: calc(var(--base) * 2);
 }
 
-body > footer > nav > nav.social {
-    padding-top: calc(var(--base) * 2);
+body > footer > ul {
+    text-align: right;
+}
+
+body > footer > ul > li {
+    text-align: left;
+}
+
+body > footer > ul > li:first-of-type {
+    float: left;
+}
+
+body > footer > ul > li:last-of-type {
+    display: inline-block;
 }
 
 @media (max-width: 800px) {
@@ -43,10 +62,6 @@ body > footer > nav > nav.social {
     body > footer > nav > section {
         width: 50%;
         margin-top: calc(var(--base) * 3);
-        text-align: center;
-    }
-
-    body > footer > nav > nav.social {
         text-align: center;
     }
 }

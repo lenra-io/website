@@ -1,0 +1,16 @@
+body > main {
+    max-width: 500px;
+}
+
+section > ul > li {
+    display: inline-block;
+}
+
+section > ul > li::before {
+    content: "-";
+    margin: 0px 10px;
+}
+
+section > ul > li:first-of-type:before {
+    display: none;
+}

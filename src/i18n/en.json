@@ -8,6 +8,11 @@
             "name": "Lenra",
             "title": "Lenra: all-in-one app development solution",
             "description": "The Lenra platform is made to accelerate the creation of your applications and simplify their hosting while preserving your users' personal data."
+        },
+        "legal": {
+            "name": "Legal informations",
+            "title": "Lenra - Legal informations",
+            "description": "The Lenra platform is made to accelerate the creation of your applications and simplify their hosting while preserving your users' personal data."
         }
     }
 }

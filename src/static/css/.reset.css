@@ -9,6 +9,15 @@
     transition-property: none;
 }
 
+details > summary {
+    background-image:none;
+    -webkit-appearance:none;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
 html {
     height: 100%;
     overflow-x: hidden;

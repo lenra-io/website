@@ -1,19 +1,29 @@
 body > header {
     /* height: 100%; */
     text-align: left;
+    --figure-max-width: 500px;
 }
 
 body > header > * {
     margin-left: 0;
 }
 
+body > header > h1 {
+    width: 400px;
+}
+
+body > header > h2,
+body > header > p {
+    width: calc(100% - var(--figure-max-width) - 50px);
+}
+
 figure {
     --width: 45vw;
     --max-width: 500px;
-    --height: calc(min(var(--width), var(--max-width)) * 1079 / 1920);
+    --height: calc(min(var(--width), var(--figure-max-width)) * 1079 / 1920);
     position: relative;
     width: var(--width);
-    max-width: var(--max-width);
+    max-width: var(--figure-max-width);
     height: var(--height);
     float: right;
 
@@ -112,7 +122,7 @@ section.key-point:nth-of-type(2) > img {
 }
 
 #partners > nav > a {
-    --size: 150px;
+    --size: 120px;
     position: relative;
     display: inline-block;
     background-color: white;
