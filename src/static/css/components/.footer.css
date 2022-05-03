@@ -53,6 +53,10 @@ body > footer > ul > li:last-of-type {
     display: inline-block;
 }
 
+body > footer > ul > li > nav.social {
+    margin-top: var(--base);
+}
+
 @media (max-width: 800px) {
     body > footer > nav > h2 > a[href="/"] {
         display: block;
@@ -63,6 +67,20 @@ body > footer > ul > li:last-of-type {
         width: 50%;
         margin-top: calc(var(--base) * 3);
         text-align: center;
+    }
+
+    body > footer > ul,
+    body > footer > ul > li {
+        text-align: center;
+    }
+    
+    body > footer > ul > li:first-of-type {
+        float: none;
+    }
+    
+    body > footer > ul > li:last-of-type {
+        display: block;
+        margin-top: calc(var(--base) * 2);
     }
 }
 

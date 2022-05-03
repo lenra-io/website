@@ -158,6 +158,11 @@ section.key-point:nth-of-type(2) > img {
         margin-right: auto;
     }
 
+    body > header > h2,
+    body > header > p {
+        width: 100%;
+    }
+
     figure {
         --width: 90vw;
         --max-width: 800px;
