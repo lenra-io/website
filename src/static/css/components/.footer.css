@@ -24,8 +24,6 @@ body > footer > ul > li {
     font-size: var(--font-size);
     font-weight: normal;
     --text-opacity: var(--dark-grey-opacity);
-    --text-color: rgba(var(--text-color-data), var(--text-opacity));
-    color: var(--text-color);
 }
 
 body > footer > nav > section > h3 {
@@ -55,6 +53,7 @@ body > footer > ul > li:last-of-type {
 
 body > footer > ul > li > nav.social {
     margin-top: var(--base);
+    --text-opacity: 1;
 }
 
 @media (max-width: 800px) {

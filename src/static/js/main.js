@@ -15,3 +15,9 @@ setInterval(function() {
         previousHeight = h;
     }
 }, 50);
+
+document.querySelectorAll("iframe[data-src").forEach(function(iframe) {
+    if (!iframe.src) {
+        iframe.src = iframe.dataset.src;
+    }
+});

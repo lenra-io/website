@@ -29,12 +29,13 @@
     --white-data: 255, 255, 255;
     --white: white;
     --text-opacity: 1;
-    --text-color-data: var(--black-data);
-    --text-color: rgba(var(--text-color-data), var(--text-opacity));
+    --background-color-data: var(--white-data);
+    --background-color-opacity: 1;
     --background-color: var(--white);
+    --background-contrast-color-data: var(--black-data);
+    --text-color-data: var(--background-contrast-color-data);
     --primary-color-disabled: var(--light-primary-color-disabled);
     --invert-primary-color-disabled: var(--dark-primary-color-disabled);
-    --background-color-hover: var(--primary-color-disabled);
     --background-image: url("../img/fond.svg");
     --logo-horizontal-image-black: url("../img/logo.svg");
     --logo-vertical-image-black: url("../img/logo-vertical.svg");
@@ -81,10 +82,13 @@
 body {
     height: 100%;
     background-color: var(--background-color);
-    color: var(--text-color);
     font-family: 'Source Sans Pro';
     font-size: var(--font-size);
     line-height: var(--line-height-multiplier);
+}
+
+*, *::before, *::after {
+    color: rgba(var(--text-color-data), var(--text-opacity));
 }
 
 h1, h2, h3, h4 {
@@ -113,20 +117,19 @@ p {
 }
 
 .invert-colors {
-    --text-color-data: var(--white-data);
-    --text-color: rgb(var(--text-color-data));
-    --background-color: var(--black);
+    --background-contrast-color-data: var(--white-data);
+    --text-color-data: var(--background-contrast-color-data);
+    --background-color-data: var(--black-data);
     --logo-horizontal-image: var(--logo-horizontal-image-white);
     --logo-vertical-image: var(--logo-vertical-image-white);
     --logo-image: var(--logo-horizontal-image);
     position: relative;
-    color: var(--text-color);
 }
 
 .invert-colors::before {
     content: " ";
     position: absolute;
-    background-color: var(--background-color);
+    background-color: rgb(var(--background-color-data));
     top: 0;
     left: 50%;
     height: 100%;
