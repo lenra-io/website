@@ -30,7 +30,7 @@ a.btn {
     --btn-background-color-data: var(--background-color-data);
     --btn-background-color-opacity: 1;
     --border-size: 1px;
-    background: rgba(var(--btn-background-color-data), var(--btn-background-color-opacity));
+    background-color: rgba(var(--btn-background-color-data), var(--btn-background-color-opacity));
     display: inline-block;
     text-align: center;
     padding: calc(var(--base) - var(--border-size)) calc(var(--base) * 2 - var(--border-size));
@@ -61,7 +61,7 @@ a.btn.primary {
 
 button.primary:hover,
 a.btn.primary:hover {
-    --btn-background-color-data: var(--primary-color-hover);
+    --btn-background-color-data: var(--primary-color-hover-data);
     --btn-background-color-opacity: 1;
 }
 

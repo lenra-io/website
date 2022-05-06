@@ -1,39 +1,31 @@
 extends .layout.pug
 
 block header 
-    h1 Beta version
+    h1=currentPage.title
+    p Please keep in mind that you are using a beta version of the dev platform, which means bugs can occur throughout your progress.
+    p For now we only provide Javascript language to code your app, but very soooooon you’ll be able to code in any language !!
+    p In the beta version, you will have access to several features that will allow you to start developing with our solution.
+    a.btn.primary(href="https://dev.lenra.io/#/register") Try our beta
+    a.btn.primary(href="https://github.com/lenra-io/Lenra" target="_blank" rel="noopener") Check our Github
+    a.btn(href="https://github.com/lenra-io/Lenra/discussions" target="_blank" rel="noopener") Suggest a new feature
+    a.btn(href="https://github.com/lenra-io/Lenra/issues" target="_blank" rel="noopener") Report a bug
 
 block content
     section
-        h2 Owner
-        h3 Lenra
-        p SAS with a capital of 1030 €
-        p RCS La Rochelle B 812 357 317
-        p 
-            strong APE code
-            | 62009Z
-        p 
-            strong Intracommunity VAT
-            | FR 22 812 357 317
-        p
-            strong Head office
-            | 1 rue Fleming 17000 La Rochelle FRANCE
-        p 
-            strong President
-            | Thomas Da Rocha
-        p
-            strong Phone number 
-            a(href="tel:+33767673626") +33 7 67 67 36 26
+        h2 Features
+        h3 Devtools
+        h3 Managed user accounts
+        p (undraw: Add friends)
 
     section.invert-colors
-        h2 Credits
-        h3 Illustrations and icons
-        ul
-            li 
-                a(href="https://undraw.co/" target="_blank" rel="noopener") Undraw
-            li 
-                a(href="https://icomoon.io/" target="_blank" rel="noopener") Icomoon
-            li 
-                a(href="https://feathericons.com/" target="_blank" rel="noopener") Feather
-            li 
-                a(href="https://simpleicons.org/" target="_blank" rel="noopener") Simple Icons
+        h2 Open Source
+        p We are planning to release the Lenra platfom under open source licenses but we are not ready yet.
+            |
+            | We first want to build a great tool that you will like.
+            |
+            | Only then we will provide you the source code of Lenra.
+        p We already released some of our tools and dependencies under an open source license and more is coming !
+
+        a.btn.primary(href="https://github.com/lenra-io/Lenra" target="_blank" rel="noopener") Check our Github
+        a.btn(href="https://github.com/lenra-io/Lenra/discussions" target="_blank" rel="noopener") Suggest a new feature
+        a.btn(href="https://github.com/lenra-io/Lenra/issues" target="_blank" rel="noopener") Report a bug

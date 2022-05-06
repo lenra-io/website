@@ -35,28 +35,20 @@ body > footer > nav > section > a {
     padding-bottom: calc(var(--base) * 2);
 }
 
-body > footer > ul {
-    text-align: right;
-}
-
-body > footer > ul > li {
-    text-align: left;
-}
-
-body > footer > ul > li:first-of-type {
-    float: left;
-}
-
 body > footer > ul > li:last-of-type {
-    display: inline-block;
+    margin-top: calc(var(--base) * 2);
 }
 
 body > footer > ul > li > nav.social {
-    margin-top: var(--base);
+    margin-top: calc(var(--base) / 2);
     --text-opacity: 1;
 }
 
 @media (max-width: 800px) {
+    body > footer > nav {
+        padding-bottom: calc(var(--base) * 2);
+    }
+
     body > footer > nav > h2 > a[href="/"] {
         display: block;
         margin: auto;
@@ -68,18 +60,8 @@ body > footer > ul > li > nav.social {
         text-align: center;
     }
 
-    body > footer > ul,
     body > footer > ul > li {
         text-align: center;
-    }
-    
-    body > footer > ul > li:first-of-type {
-        float: none;
-    }
-    
-    body > footer > ul > li:last-of-type {
-        display: block;
-        margin-top: calc(var(--base) * 2);
     }
 }
 
