@@ -1,21 +1,46 @@
 extends .layout.pug
 
 block header 
+    figure 
+        img(src="img/undraw/undraw_bug_fixing_oc-7-a.svg" alt="Bug fixing")
     h1=currentPage.title
     p Please keep in mind that you are using a beta version of the dev platform, which means bugs can occur throughout your progress.
     p For now we only provide Javascript language to code your app, but very soooooon you’ll be able to code in any language !!
     p In the beta version, you will have access to several features that will allow you to start developing with our solution.
-    a.btn.primary(href="https://dev.lenra.io/#/register") Try our beta
-    a.btn.primary(href="https://github.com/lenra-io/Lenra" target="_blank" rel="noopener") Check our Github
-    a.btn(href="https://github.com/lenra-io/Lenra/discussions" target="_blank" rel="noopener") Suggest a new feature
-    a.btn(href="https://github.com/lenra-io/Lenra/issues" target="_blank" rel="noopener") Report a bug
+    a.btn.primary(href="https://dev.lenra.io/#/register") Register to join our beta
+    a.btn.secondary(href="https://github.com/lenra-io/Lenra" target="_blank" rel="noopener") Check our Github
 
 block content
     section
         h2 Features
-        h3 Devtools
-        h3 Managed user accounts
-        p (undraw: Add friends)
+        section.feature
+            h3 Framework
+            img(src="img/undraw/undraw_composition_re_4o4o.svg" alt="Composing the application UI with widgets")
+            p Our framework includes 3 parts : data, listeners and UI. They interact with each other, as modifying the data from a listener will rebuild your UI.
+            p Lenra’s widget paradigm is declarative, which means your UI is both managed by your code and the states you give to your app. That’ll make you save some valuable time !! On client side, you can execute your app on any device (web / smartphones etc). This awesome UI system is also what makes your app crossplatform by design.
+            p A revoir: Listeners system 
+            p A revoir: Data management is easier on Lenra on several points : Automation of the users data management but you can manually manage by requesting the data with a @me. You can easily create data with an  API and then request with our system, similar to MongoDB
+
+        section.feature
+            h3 Devtools
+            img(src="img/undraw/undraw_building_blocks_re_5ahy.svg" alt="Build a SaaS application")
+            p You can execute locally your app using our dev tools.
+            p We created a unique Docker image that contains our Lenra client, Lenra server, PostgreSQL database and the application server, so that you no longer need to juggle with many tools to test your app.
+            p To see your latest modifications, use our hot restart function and try it faster.
+
+        section.feature
+            h3 Deploy with our built in CI/CD pipeline
+            img(src="img/undraw/undraw_maintenance_re_59vn.svg" alt="Deploying code directly to the servers")
+            p You can deploy easily your git repository from Gitlab or Github (or any solution you like).
+            p You can see the status of your deployment on our servers (located in France).
+            p Scale easily your app with our auto scaling management, adjusting to the number of users.
+
+        section.feature
+            h3 Users management
+            img(src="img/undraw/undraw_add_friends_re_3xte.svg" alt="Adding new users")
+            p Your app is hosted on Lenra, you can manage access public or private.
+            p Our solution automatically manage users account creation.
+            p We built a Single Sign On (SSO) login system into the platform.
 
     section.invert-colors
         h2 Open Source
