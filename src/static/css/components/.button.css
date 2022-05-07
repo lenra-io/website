@@ -30,6 +30,7 @@ a.btn {
     --btn-background-color-data: var(--background-color-data);
     --btn-background-color-opacity: 1;
     --border-size: 1px;
+    min-width: calc(var(--base) * 20);
     background-color: rgba(var(--btn-background-color-data), var(--btn-background-color-opacity));
     display: inline-block;
     text-align: center;
@@ -46,7 +47,7 @@ a.btn:disabled {
     --btn-background-color-opacity: var(--disabled-opacity);
 }
 
-button:hover
+button:hover,
 a.btn:hover {
     --btn-background-color-data: var(--primary-color-data);
     --btn-background-color-opacity: var(--disabled-opacity);
@@ -68,6 +69,13 @@ a.btn.primary:hover {
 button.link,
 a.btn.link {
     --border-size: 0px;
+}
+
+button + button,
+button + a.btn,
+a.btn + button,
+a.btn + a.btn {
+    margin-left: calc(var(--base) * 2);
 }
 
 nav.social {
@@ -106,4 +114,19 @@ nav.social > a::before {
     transform: translate(-50%, -50%);
     text-indent: 0px;
     color: inherit;
+}
+
+@media (max-width: 450px) {
+    button,
+    a.btn {
+        display: block;
+        margin-top: calc(var(--base) * 2);
+    }
+
+    button + button,
+    button + a.btn,
+    a.btn + button,
+    a.btn + a.btn {
+        margin-left: 0;
+    }
 }

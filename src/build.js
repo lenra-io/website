@@ -10,6 +10,7 @@ const Utils = require('./utils/common');
 
 const {languagePriority} = require('./config.json');
 const minify = require('minify');
+const { generateNginxConf } = require('./utils/nginx.js');
 
 const srcPath = Path.join(__dirname);
 const buildPath = Path.join(__dirname, '..', 'build');
@@ -158,14 +159,17 @@ server {
     }
 }
 `;
-    fs.writeFile(Path.join(buildPath, `nginx.conf`), conf);
+    fs.writeFile(Path.join(buildPath, `nginx.conf`), generateNginxConf(langs, {
+        'frame-src': ['*.youtube-nocookie.com']
+    }));
 
     // generate the sitemap.txt file
-    // fs.writeFile(Path.join(staticDestPath, `sitemap.txt`),
-    //     pages.flatMap(getPagesToGenerate)
-    //     .map(page => `!BASE_URL!${page.path}`)
-    //     .join('\n')
-    // );
+    fs.writeFile(Path.join(staticDestPath, `sitemap.txt`),
+        pages.flatMap(getPagesToGenerate)
+        .map(page => `!BASE_URL!${page.path}`)
+        .join('\n')
+    );
+    // TODO: manage page modifications to create a sitemap.xml
 });
 
 /**
