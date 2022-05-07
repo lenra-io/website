@@ -1,16 +1,5 @@
 {
     "languagePriority": [
         "en"
-    ],
-    "pages": [
-        {
-            "name": "index"
-        },
-        {
-            "name": "index"
-        },
-        {
-            "name": "index"
-        }
     ]
 }

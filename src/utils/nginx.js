@@ -90,16 +90,16 @@ function acceptLangMapper(langs, lang, i) {
 function buildContentSecurityPolicyHeader(additionalPolicies) {
     if (!additionalPolicies) additionalPolicies = {};
     const defaultSecurityPolicies = {
-        'default-src': ['self', 'unsafe-inline'],
+        'default-src': ['self'],
         'object-src': ['none'],
         'base-uri': ['self']
     };
     const policies = {};
     mergeDeep(policies, defaultSecurityPolicies, additionalPolicies);
+    const siteRuleRegex = /.*[.*].*/;
     return Object.entries(policies)
-        .map(([key, values]) => `${key} ${values.map(v => `'${v}'`).join(' ')};`)
+        .map(([key, values]) => `${key} ${values.map(v => siteRuleRegex.test(v) ? v : `'${v}'`).join(' ')};`)
         .join(' ');
-    return `default-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; frame-src 'self' *.youtube-nocookie.com;`;
 }
 
 module.exports = {

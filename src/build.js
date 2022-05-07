@@ -107,9 +107,10 @@ Translations.loadTranslations()
 
     // generate the sitemap.txt file
     fs.writeFile(Path.join(staticDestPath, `sitemap.txt`),
-        pages.flatMap(getPagesToGenerate)
-        .map(page => `!BASE_URL!${page.path}`)
-        .join('\n')
+        common.pages
+            .filter(page => !page.disabled)
+            .map(page => page.path ? `!BASE_URL!${page.path}` : `!BASE_URL!/${page.name}.html`)
+            .join('\n')
     );
     // TODO: manage page modifications to create a sitemap.xml
 });
