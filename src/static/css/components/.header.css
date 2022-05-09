@@ -48,9 +48,8 @@ body > header > nav > a[href="/"] {
     left: 0;
 }
 
-body > header > nav a,
-body > header > nav summary {
-    color: var(--text-color);
+body > header > nav a {
+    --btn-text-color-data: var(--background-contrast-color-data);
 }
 
 body > header > nav > details {
@@ -75,24 +74,35 @@ body > header > nav > details > *::before {
 body > header > nav > details > a {
     display: block;
     position: absolute;
+    z-index: 100;
+    background-color: rgba(var(--background-color-data), var(--background-color-opacity));
 }
 
 body > header > nav > details > a + a {
     transform: translateY(100%);
 }
 
+body > header > nav > details > a:last-of-type {
+    border-bottom-left-radius: calc(var(--base) / 2);
+    border-bottom-right-radius: calc(var(--base) / 2);
+}
+
 body > header > h1,
 body > header > h2,
 body > header > p {
-    max-width: 500px;
+    max-width: 600px;
     padding-bottom: calc(var(--base) * 3);
 }
 
 body > header > p {
-    max-width: 500px;
+    max-width: 600px;
     font-size: 110%;
-    opacity: var(--dark-grey-opacity);
+    --text-opacity: var(--dark-grey-opacity);
     padding-bottom: calc(var(--base) * 2);
+}
+
+body > header > p > a {
+    --text-opacity: 1;
 }
 
 @media (max-width: 550px) {

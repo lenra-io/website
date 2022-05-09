@@ -1,6 +1,7 @@
 body > footer > nav {
     position: relative;
     text-align: right;
+    padding-bottom: calc(var(--base) * 2);
 }
 
 body > footer > nav > * {
@@ -18,11 +19,15 @@ body > footer > nav > section {
     width: 160px;
 }
 
-body > footer > nav > section > h3 {
+body > footer > nav > section > h3,
+body > footer > ul > li {
     font-size: var(--font-size);
     font-weight: normal;
+    --text-opacity: var(--dark-grey-opacity);
+}
+
+body > footer > nav > section > h3 {
     padding-bottom: calc(var(--base) * 2);
-    opacity: var(--dark-grey-opacity);
 }
 
 body > footer > nav > section > a {
@@ -30,11 +35,20 @@ body > footer > nav > section > a {
     padding-bottom: calc(var(--base) * 2);
 }
 
-body > footer > nav > nav.social {
-    padding-top: calc(var(--base) * 2);
+body > footer > ul > li:last-of-type {
+    margin-top: calc(var(--base) * 2);
+}
+
+body > footer > ul > li > nav.social {
+    margin-top: calc(var(--base) / 2);
+    --text-opacity: 1;
 }
 
 @media (max-width: 800px) {
+    body > footer > nav {
+        padding-bottom: calc(var(--base) * 2);
+    }
+
     body > footer > nav > h2 > a[href="/"] {
         display: block;
         margin: auto;
@@ -46,7 +60,7 @@ body > footer > nav > nav.social {
         text-align: center;
     }
 
-    body > footer > nav > nav.social {
+    body > footer > ul > li {
         text-align: center;
     }
 }

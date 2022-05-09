@@ -1,16 +1,54 @@
+- const headerGroups = {};
+
+mixin displayPageLink(p)
+    - const trad = page[p.name]
+    - const path = p.path || `/${p.name}.html`
+    if (p.disabled)
+        a(href=path disabled aria-disabled="true" tabindex="-1" title="Coming soon")= trad.name
+    else 
+        a(href=path)= trad.name
+
+mixin displayPageGroup(group, pages)
+    - var disabled = pages.filter(p => !p.disabled).length==0
+    if (disabled)
+        details
+            summary(disabled aria-disabled="true" tabindex="-1" title="Coming soon")= group.name
+            each page in pages
+                +displayPageLink(page)
+    else
+        details
+            summary= group.name
+            each page in pages
+                +displayPageLink(page)
+
+mixin displayNavElement(element)
+    - var type = typeof element
+    if (type == 'string')
+        - var pages = headerGroups[element]
+        if (pages.length==1)
+            +displayPageLink(pages[0])
+        else
+            +displayPageGroup(pageGroup[element], pages)
+    else 
+        +displayPageLink(element)
+
 header.invert-colors
     nav
-        a(href="/") Lenra
-        details
-            summary(disabled aria-disabled="true" tabindex="-1" title="Coming soon") Platform
-            a(href="beta.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Beta
-            a(href="usage.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Use cases
-        details
-            summary(disabled aria-disabled="true" tabindex="-1" title="Coming soon") Company
-            a(href="values.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Our values
-            a(href="team.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Team
-            a(href="objectives.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Objectives
-        a(href="contact.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Contact
+        - const items = pages.filter(p => !p.notOnTop).flatMap(p => {
+        -    if (!p.group) return [p];
+        -    if (!headerGroups[p.group]) {
+        -        headerGroups[p.group] = [p];
+        -        return p.group;
+        -    }
+        -    else {
+        -        headerGroups[p.group].push(p);
+        -        return [];
+        -    }
+        - });
+
+        each el in items
+            +displayNavElement(el)
+    
     block header
         h1 !{currentPage.titleHtml ? currentPage.titleHtml : currentPage.title}
         if currentPage.subtitle

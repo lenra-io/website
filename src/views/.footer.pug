@@ -1,3 +1,31 @@
+- const footerGroups = {};
+
+mixin displayFooterPageLink(p)
+    - const trad = page[p.name]
+    - const path = p.path || `/${p.name}.html`
+    if (p.disabled)
+        a(href=path disabled aria-disabled="true" tabindex="-1" title="Coming soon")= trad.name
+    else 
+        a(href=path)= trad.name
+
+mixin displayFooterPageGroup(group, pages)
+    - var disabled = pages.filter(p => !p.disabled).length==0
+    if (disabled)
+        section
+            h3= group.name
+            each page in pages
+                +displayFooterPageLink(page)
+    else
+        section
+            h3= group.name
+            each page in pages
+                +displayFooterPageLink(page)
+
+mixin displayFooterElement(element)
+    - console.log(element)
+    - var pages = footerGroups[element]
+    +displayFooterPageGroup(pageGroup[element], pages)
+
 footer
     //- section 
     //-     h2 So, we're going up together?
@@ -11,18 +39,23 @@ footer
             //- a(href="https://app.lenra.io") app.lenra.io
             a(href="https://dev.lenra.io") Dev platform
             a(href="https://doc.lenra.io") Documentation
-        section
-            h3 Platform
-            a(href="beta.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Beta
-            a(href="usage.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Use cases
-        section
-            h3 Company
-            a(href="values.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Our values
-            a(href="team.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Team
-            a(href="objectives.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Objectives
-        section
-            h3 Contact
-            a(href="contact.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Contact us
-            a(href="legal.html" disabled aria-disabled="true" tabindex="-1" title="Coming soon") Legal information
         
-        include .social-dev.pug
+        - const footerItems = pages.filter(p => p.group).flatMap(p => {
+        -    if (!footerGroups[p.group]) {
+        -        footerGroups[p.group] = [p];
+        -        return p.group;
+        -    }
+        -    else {
+        -        footerGroups[p.group].push(p);
+        -        return [];
+        -    }
+        - });
+
+        each el in footerItems
+            +displayFooterElement(el)
+
+    ul 
+        li Follow us
+            include .social.pug
+        li For developers
+            include .social-dev.pug

@@ -1,0 +1,44 @@
+body > header > p {
+    max-width: 500px;
+}
+
+main > section:first-of-type,
+main > section:first-of-type + section {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    padding-right: calc(var(--base) * 3);
+}
+
+main > section > p > strong::after {
+    content: ":";
+    margin-right: 5px;
+}
+
+main > section:last-of-type {
+    text-align: center;
+}
+
+main > section > ul > li {
+    display: inline-block;
+}
+
+main > section > ul > li::before {
+    content: "-";
+    margin: 0px 10px;
+}
+
+main > section > ul > li:first-of-type:before {
+    display: none;
+}
+
+
+@media (max-width: 800px) {
+    main > section:first-of-type,
+    main > section:first-of-type + section {
+        display: block;
+        width: auto;
+        padding-right: 0;
+        text-align: center;
+    }
+}

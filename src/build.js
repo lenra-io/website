@@ -10,6 +10,7 @@ const Utils = require('./utils/common');
 
 const { languagePriority } = require('./config.json');
 const minify = require('minify');
+const { generateNginxConf } = require('./utils/nginx.js');
 
 const srcPath = Path.join(__dirname);
 const buildPath = Path.join(__dirname, '..', 'build');
@@ -88,85 +89,31 @@ Translations.loadTranslations()
         }
 
 
-        // generate the nginx.conf file
-        const langs = Object.keys(ts).sort((a, b) => {
-            const posA = languagePriority.indexOf(a);
-            const posB = languagePriority.indexOf(b);
-            if (posA != -1 && posB != -1) return posA - posB;
-            if (posA != -1) return -1;
-            if (posB != -1) return +1;
-            if (a < b) return -1;
-            return 1;
-        });
-        const conf =
-            `map $http_accept_language $lang {
-    default ${langs[0]};
-
-    ${langs
-                .map(((lang, i) => acceptLangMapper(langs, lang, i)))
-                .join('\n    ')
-            }
-}
-
-map $http_x_forwarded_proto $initial_scheme {
-    default $scheme;
-    https https;
-}
-
-server {
-    listen 0.0.0.0:8080;
-    server_name coming-soon;
-    root /app/;
-
-    charset utf-8;
-    charset_types text/css application/javascript;
-
-    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
-    add_header Content-Security-Policy "default-src 'self' 'unsafe-inline' plausible.io; object-src 'none'; base-uri 'self'; frame-src 'self' *.youtube-nocookie.com;";
-    add_header Vary "Accept-Encoding";
-    add_header X-Content-Type-Options "nosniff";
-    add_header X-Frame-Options "DENY";
-
-    gzip_types
-        text/plain
-        text/css
-        text/js
-        text/xml
-        text/javascript
-        application/javascript
-        application/x-javascript
-        application/json
-        application/xml
-        application/rss+xml
-        image/svg+xml;
-    
-    location / {
-        expires 10d;
-        
-        if ($uri ~ '^/((${langs.join('|')}|static)(/.*)?)$') {
-            return 404;
-        }
-
-        set $index 'index.html';
-        
-        try_files /$lang$uri /$lang$uri$index /$lang$uri/$index /static$uri /$lang$index /$lang/$index =404;
-
-        sub_filter '!DOMAIN!'  '$host';
-        sub_filter '!BASE_URL!'  '$initial_scheme://$host';
-        sub_filter '!CURRENT_URL!'  '$initial_scheme://$host$request_uri';
-        sub_filter '!IMAGE_URL!'  '$initial_scheme://$host$uri.jpg';
-    }
-}
-`;
-        fs.writeFile(Path.join(buildPath, `nginx.conf`), conf);
-
-        // generate the sitemap.txt file
-        // fs.writeFile(Path.join(staticDestPath, `sitemap.txt`),
-        //     pages.flatMap(getPagesToGenerate)
-        //     .map(page => `!BASE_URL!${page.path}`)
-        //     .join('\n')
-        // );
+    // generate the nginx.conf file
+    const langs = Object.keys(ts).sort((a, b) => {
+        const posA = languagePriority.indexOf(a);
+        const posB = languagePriority.indexOf(b);
+        if (posA != -1 && posB != -1) return posA - posB;
+        if (posA != -1) return -1;
+        if (posB != -1) return +1;
+        if (a < b) return -1;
+        return 1;
     });
+
+    fs.writeFile(Path.join(buildPath, `nginx.conf`), generateNginxConf(langs, {
+        'default-src': ['unsafe-inline', 'plausible.io'],
+        'frame-src': ['*.youtube-nocookie.com']
+    }));
+
+    // generate the sitemap.txt file
+    fs.writeFile(Path.join(staticDestPath, `sitemap.txt`),
+        common.pages
+            .filter(page => !page.disabled)
+            .map(page => page.path ? `!BASE_URL!${page.path}` : `!BASE_URL!/${page.name}.html`)
+            .join('\n')
+    );
+    // TODO: manage page modifications to create a sitemap.xml
+});
 
 /**
  * 
