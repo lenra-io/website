@@ -33,6 +33,9 @@
 .lenra-icon-shield:before {
   content: "\e902";
 }
+.lenra-icon-dev-dot-to:before {
+  content: "\e90b";
+}
 .lenra-icon-medium:before {
   content: "\e909";
 }

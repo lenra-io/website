@@ -1,29 +1,30 @@
 body > header {
-    /* height: 100%; */
     text-align: left;
+    --figure-max-width: 500px;
 }
 
 body > header > * {
     margin-left: 0;
 }
 
+body > header > h1 {
+    max-width: 400px;
+}
+
+body > header > h2,
+body > header > p {
+    width: calc(100% - var(--figure-max-width) - 50px);
+}
+
 figure {
     --width: 45vw;
     --max-width: 500px;
-    --height: calc(min(var(--width), var(--max-width)) * 1079 / 1920);
+    --height: calc(min(var(--width), var(--figure-max-width)) * 1079 / 1920);
     position: relative;
     width: var(--width);
-    max-width: var(--max-width);
+    max-width: var(--figure-max-width);
     height: var(--height);
     float: right;
-
-    /* margin: auto; */
-    /* margin-top: calc(var(--height) / -2); */
-    /* margin-top: calc(var(--base) * 10);
-    margin-bottom: calc(var(--base) * 10); */
-    /* -webkit-box-shadow: 15px 15px 20px 0px rgba(0,0,0,0.7); 
-    box-shadow: 15px 15px 20px 0px rgba(0,0,0,0.7); */
-    /* overflow: hidden; */
 }
 
 figure > iframe {
@@ -32,6 +33,10 @@ figure > iframe {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+section > h2 {
+    text-align: center;
 }
 
 section.key-point {
@@ -77,13 +82,10 @@ section.key-point > h2::before {
 section.key-point > img {
     position: absolute;
     top: 0;
-    /* top: calc(var(--base) * var(--section-padding-top)); */
     right: 0;
     width: calc(100% - var(--text-width));
     padding-left: var(--spacing);
-    /* height: 100%; */
     height: calc(100% - var(--base) * (var(--section-padding-bottom) - var(--section-padding-top)));
-    /* height: calc(100% - var(--base) * (var(--section-padding-top) + var(--section-padding-bottom))); */
 }
 
 section.key-point:nth-of-type(2) > * {
@@ -112,7 +114,7 @@ section.key-point:nth-of-type(2) > img {
 }
 
 #partners > nav > a {
-    --size: 150px;
+    --size: 120px;
     position: relative;
     display: inline-block;
     background-color: white;
@@ -146,6 +148,11 @@ section.key-point:nth-of-type(2) > img {
     body > header > * {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    body > header > h2,
+    body > header > p {
+        width: 100%;
     }
 
     figure {

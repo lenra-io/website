@@ -1,54 +1,81 @@
+a,
+summary,
+button {
+    --btn-text-color-data: var(--text-color-data);
+    --btn-text-opacity: 1;
+    color: rgba(var(--btn-text-color-data), var(--btn-text-opacity));
+}
+
 a {
-    color: var(--primary-color);
-    transition-property: color, background;
+    --btn-text-color-data: var(--primary-color-data);
+    transition-property: color;
 }
 
 a:hover {
-    color: var(--primary-color-hover);
+    --btn-text-color-data: var(--primary-color-hover-data);
 }
 
 a[disabled],
 a:disabled,
 summary[disabled],
 summary:disabled {
+    --btn-text-opacity: var(--disabled-opacity);
     pointer-events: none;
-    opacity: var(--disabled-opacity);
     transition-property: none;
 }
 
 button,
 a.btn {
+    --btn-text-color-data: var(--primary-color-data);
+    --btn-background-color-data: var(--background-color-data);
+    --btn-background-color-opacity: 1;
+    --border-size: 1px;
+    min-width: calc(var(--base) * 20);
+    background-color: rgba(var(--btn-background-color-data), var(--btn-background-color-opacity));
     display: inline-block;
     text-align: center;
-    background: var(--background-color);
-    --border-size: 1px;
     padding: calc(var(--base) - var(--border-size)) calc(var(--base) * 2 - var(--border-size));
-    color: var(--primary-color);
     border: var(--border-size) solid;
     border-radius: calc(var(--base) / 2);
-    transition-property: background-color;
+    transition-property: color, background;
 }
 
-button:hover
+button[disabled],
+button:disabled,
+a.btn[disabled],
+a.btn:disabled {
+    --btn-background-color-opacity: var(--disabled-opacity);
+}
+
+button:hover,
 a.btn:hover {
-    background-color: var(--background-color-hover);
+    --btn-background-color-data: var(--primary-color-data);
+    --btn-background-color-opacity: var(--disabled-opacity);
 }
 
 button.primary,
 a.btn.primary {
-    background-color: var(--primary-color);
-    color: white;
+    --btn-background-color-data: var(--primary-color-data);
+    --btn-text-color-data: var(--white-data);
     --border-size: 0px;
 }
 
 button.primary:hover,
 a.btn.primary:hover {
-    background-color: var(--primary-color-hover);
+    --btn-background-color-data: var(--primary-color-hover-data);
+    --btn-background-color-opacity: 1;
 }
 
 button.link,
 a.btn.link {
     --border-size: 0px;
+}
+
+button + button,
+button + a.btn,
+a.btn + button,
+a.btn + a.btn {
+    margin-left: calc(var(--base) * 2);
 }
 
 nav.social {
@@ -66,23 +93,19 @@ nav.social > a {
     font-size: calc(var(--size) * 0.6);
     overflow: hidden;
     text-indent: -200px;
+    text-align: left;
     border-radius: 20%;
-    background-color: white;
-    color: #1E232C;
+    background-color: rgb(var(--background-color-data));
+    --btn-text-color-data: var(--text-color-data);
     /* border: 1px solid; */
     margin: var(--vertical-spacing) calc(var(--horizontal-spacing) / 2) 0;
     transition-property: color, background;
 }
 
 nav.social > a:hover {
-    background-color: #1E232C;
-    color: white;
+    background-color: rgb(var(--text-color-data));
+    --btn-text-color-data: var(--background-color-data);
 }
-
-/* nav.social.dev > a {
-    background-color: #1E232C;
-    color: white;
-} */
 
 nav.social > a::before {
     position: absolute;
@@ -91,4 +114,19 @@ nav.social > a::before {
     transform: translate(-50%, -50%);
     text-indent: 0px;
     color: inherit;
+}
+
+@media (max-width: 450px) {
+    button,
+    a.btn {
+        display: block;
+        margin-top: calc(var(--base) * 2);
+    }
+
+    button + button,
+    button + a.btn,
+    a.btn + button,
+    a.btn + a.btn {
+        margin-left: 0;
+    }
 }

@@ -1,13 +1,3 @@
-// initialiser le mailto au moment du clic
-// document.body.querySelector("a[href=contact]").onclick = function(e) {
-//     var link = atob("bWFpbHRv")+":"+atob("Y29udGFjdEBsZW5yYS5pbw==");
-//     e.target.href = link;
-//     e.target.onclick = function(){};
-//     window.open(link);
-//     e.preventDefault();
-//     return false;
-// };
-
 // ajouter/générer le style sans les variables si elles ne sont pas gérées
 var computedStyle = getComputedStyle(document.body, null);
 if (computedStyle.backgroundColor=="transparent") {
@@ -25,3 +15,9 @@ setInterval(function() {
         previousHeight = h;
     }
 }, 50);
+
+document.querySelectorAll("iframe[data-src").forEach(function(iframe) {
+    if (!iframe.src) {
+        iframe.src = iframe.dataset.src;
+    }
+});

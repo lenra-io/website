@@ -9,10 +9,6 @@ main {
     display: block;/*IE*/
 }
 
-main h2 {
-    text-align: center;
-}
-
 main > h2 {
     padding-top: calc(var(--base) * var(--section-padding-top));
 }

@@ -21,7 +21,11 @@ function mergeDeep(target, ...sources) {
         if (isObject(source[key])) {
           if (!target[key]) Object.assign(target, { [key]: {} });
           mergeDeep(target[key], source[key]);
-        } else {
+        }
+        else if (Array.isArray(target[key]) && Array.isArray(source[key])) {
+          [].push.apply(target[key], source[key])
+        }
+        else {
           Object.assign(target, { [key]: source[key] });
         }
       }
