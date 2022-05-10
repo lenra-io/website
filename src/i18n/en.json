@@ -6,13 +6,13 @@
     "page": {
         "index": {
             "name": "Lenra",
-            "title": "The open source all-in-one app development solution !",
-            "description": "The Lenra platform is made to accelerate the creation of your applications and simplify their hosting while preserving your users' personal data."
+            "title": "The all-in-one open source application development solution!",
+            "description": "The Lenra platform is made to accelerate the creation of your applications and simplify their hosting while preserving the personal data of your users."
         },
         "beta": {
             "name": "Beta",
             "title": "Beta version",
-            "description": "The Lenra platform is made to accelerate the creation of your applications and simplify their hosting while preserving your users' personal data."
+            "description": "The Lenra platform is made to accelerate the creation of your applications and simplify their hosting while preserving the personal data of your users."
         },
         "usecases": {
             "name": "Use cases"
