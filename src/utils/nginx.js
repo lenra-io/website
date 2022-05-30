@@ -61,6 +61,7 @@ function generateNginxConf(languages, additionalContentSecurityPolicies) {
 
             sub_filter_types text/plain;
             sub_filter_once off;
+            sub_filter '!DOMAIN!'  '$host';
             sub_filter '!CURRENT_URL!'  '$initial_scheme://$host$request_uri';
             sub_filter '!BASE_URL!'  '$initial_scheme://$host';
             sub_filter '!IMAGE_URL!'  '$initial_scheme://$host$uri.jpg';
