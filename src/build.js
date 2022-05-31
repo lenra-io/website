@@ -89,31 +89,31 @@ Translations.loadTranslations()
         }
 
 
-    // generate the nginx.conf file
-    const langs = Object.keys(ts).sort((a, b) => {
-        const posA = languagePriority.indexOf(a);
-        const posB = languagePriority.indexOf(b);
-        if (posA != -1 && posB != -1) return posA - posB;
-        if (posA != -1) return -1;
-        if (posB != -1) return +1;
-        if (a < b) return -1;
-        return 1;
+        // generate the nginx.conf file
+        const langs = Object.keys(ts).sort((a, b) => {
+            const posA = languagePriority.indexOf(a);
+            const posB = languagePriority.indexOf(b);
+            if (posA != -1 && posB != -1) return posA - posB;
+            if (posA != -1) return -1;
+            if (posB != -1) return +1;
+            if (a < b) return -1;
+            return 1;
+        });
+
+        fs.writeFile(Path.join(buildPath, `nginx.conf`), generateNginxConf(langs, {
+            'default-src': ['unsafe-inline', 'analytics.lenra.io'],
+            'frame-src': ['*.youtube-nocookie.com']
+        }));
+
+        // generate the sitemap.txt file
+        fs.writeFile(Path.join(staticDestPath, `sitemap.txt`),
+            common.pages
+                .filter(page => !page.disabled)
+                .map(page => page.path ? `!BASE_URL!${page.path}` : `!BASE_URL!/${page.name}.html`)
+                .join('\n')
+        );
+        // TODO: manage page modifications to create a sitemap.xml
     });
-
-    fs.writeFile(Path.join(buildPath, `nginx.conf`), generateNginxConf(langs, {
-        'default-src': ['unsafe-inline', 'plausible.io'],
-        'frame-src': ['*.youtube-nocookie.com']
-    }));
-
-    // generate the sitemap.txt file
-    fs.writeFile(Path.join(staticDestPath, `sitemap.txt`),
-        common.pages
-            .filter(page => !page.disabled)
-            .map(page => page.path ? `!BASE_URL!${page.path}` : `!BASE_URL!/${page.name}.html`)
-            .join('\n')
-    );
-    // TODO: manage page modifications to create a sitemap.xml
-});
 
 /**
  * 
