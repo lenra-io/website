@@ -10,10 +10,13 @@
         "dev": "nodemon src/server.js"
     },
     "dependencies": {
+        "dotenv": "^16.0.1",
         "express": "^4.17.1",
         "fs-extra": "^10.0.0",
         "minify": "^7.0.2",
-        "pug": "^3.0.2"
+        "node": "^17.7.2",
+        "pug": "^3.0.2",
+        "twitter": "^1.7.1"
     },
     "devDependencies": {
         "@types/fs-extra": "^9.0.12",
