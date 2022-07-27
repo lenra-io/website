@@ -1,15 +1,22 @@
 extends .layout.pug
 
 block header 
-    figure
-        iframe(width="1920" height="1080" loading="lazy" data-src="https://www.youtube-nocookie.com/embed/4mxcZMv9Eqk?rel=0&modestbranding=1&showinfo=0&autohide=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-    
-    h1=currentPage.title
-    p=currentPage.description
-    p Focus on what you love : develop, deploy and repeat !
-    p Finally work on a platform which matches your values: eco-designed, GAFAM free, and safe for users.
-    
-    a.btn.primary(href="beta.html") Try our beta
+    //-h1=currentPage.title
+    //-p=currentPage.description
+    //-a.btn.primary(href="started.html") Get started
+    h1 Create your cross-platform
+    |
+    |
+    message(class="message")
+        word(class="word1") Javascript 
+        word(class="word2") Python 
+        word(class="word3") C
+    |
+    | app.
+    p Lenra is an open source framework to create your app using any language, and deploy it without any Ops scale, built on ethical values.
+    a.btn.primary(href="started.html") Get started
+
+
 
 block content
     section.key-point
