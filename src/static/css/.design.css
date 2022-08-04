@@ -11,10 +11,10 @@
     --unit: 1px;
     --base-value: 8;
     --base: calc(var(--base-value) * var(--unit));
-    --primary-color-data: 18, 105, 237;
+    --primary-color-data: 56, 149, 137;
     --primary-color-opacity: 1;
     --primary-color: rgba(var(--primary-color-data), var(--primary-color-opacity));
-    --primary-color-hover-data: 13, 77, 174;
+    --primary-color-hover-data: 42, 111, 102;
     --primary-color-hover: rgb(var(--primary-color-hover-data));
     --disabled-opacity: 0.3;
     --dark-grey-opacity: 0.7;
@@ -138,26 +138,26 @@ p {
     z-index: -1;
 }
 
-body > main,
-body > header,
-body > footer {
+body>main,
+body>header,
+body>footer {
     margin: auto;
     width: 90%;
     max-width: 1200px;
 }
 
-body > header,
-body > footer {
+body>header,
+body>footer {
     padding: calc(var(--base) * var(--top-padding)) 0;
 }
 
-body > header > nav > a[href="/"],
-body > footer > nav > h2 > a[href="/"] {
+body>header>nav>a[href="/"],
+body>footer>nav>h2>a[href="/"] {
     position: relative;
     display: inline-block;
     width: calc(var(--logo-height) * var(--logo-horizontal-ratio));
     height: var(--logo-height);
-    text-align: left; 
+    text-align: left;
     text-indent: -200px;
     overflow: hidden;
     transition-property: none;
@@ -196,13 +196,13 @@ a[href="/"]::before {
         --logo-height: calc(var(--base) * 10);
         --logo-image: var(--logo-vertical-image);
     }
-    
+
     .invert-colors {
         --logo-image: var(--logo-vertical-image);
     }
 
-    body > header > nav > a[href="/"],
-    body > footer > nav > h2 > a[href="/"] {
+    body>header>nav>a[href="/"],
+    body>footer>nav>h2>a[href="/"] {
         width: var(--logo-height);
         height: var(--logo-height);
     }

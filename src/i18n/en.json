@@ -3,6 +3,16 @@
     "documentation": "Documentation",
     "register": "Register on Lenra",
     "contact_us": "Contact us",
+    "programmingLanguages": [
+        "any language",
+        "JavaScript",
+        "Rust",
+        "Elixir",
+        "C",
+        "Java",
+        "Python",
+        "Brainfuck"
+    ],
     "page": {
         "index": {
             "name": "Lenra",

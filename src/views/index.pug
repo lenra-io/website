@@ -4,22 +4,29 @@ block header
     //-h1=currentPage.title
     //-p=currentPage.description
     //-a.btn.primary(href="started.html") Get started
-    h1 Create your cross-platform
-    |
-    |
-    message(class="message")
-        word(class="word1") Javascript 
-        word(class="word2") Python 
-        word(class="word3") C
-    |
-    | app.
-    p Lenra is an open source framework to create your app using any language, and deploy it without any Ops scale, built on ethical values.
-    a.btn.primary(href="started.html") Get started
+    section.text
+        h1 Create your cross-platform app using
+            |
+            |
+            ul.message
+                each l in programmingLanguages
+                    li.word= l
+                li.word Python
+                li.word C
+                li.word fggh
+                li.word fdfghg
+        p Lenra is an open source framework to create your app using any language, and deploy it without any Ops scale, built on ethical values.
+        a.btn.primary(href="started.html") Get started
+    nav
+        a.lenra-icon-zap(href="#speedup") Speed up your app creation
+        img(src="../img/icons/upload-cloud.svg" alt="upload-cloud")
+        img(src="../img/icons/shield.svg" alt="shield")
+
 
 
 
 block content
-    section.key-point
+    section#speedup.key-point
         h2 Speed up your app creation 
         img(src="img/undraw/undraw_coding_re_iv62.svg" alt="A developper in front of its computer")
         p To create and deliver apps, you no longer need to juggle with technologies and services. Our all-in-one platform gives you agility on frameworks, data, and compatibility across devices. You can now test your market faster !
@@ -52,3 +59,82 @@ block content
                 img(src="img/partners/NAOS.png" alt="NAOS - Nouvelle Aquitaine Open Source")
             a(href="https://lafrenchtech.com/fr/communaute/atlantic-valley/")
                 img(src="img/partners/french-tech.png" alt="French Tech")
+
+    style. 
+        @keyframes openclose {
+            0% {
+                transform: translateY(0px);
+                width: 0;
+            }
+
+            5% {
+                width: 0;
+            }
+
+            15% {
+                width: 100%;
+            }
+
+            30% {
+                transform: translateY(0px);
+                width: 100%;
+            }
+
+            33% {
+                transform: translateY(0px);
+                width: 0;
+            }
+
+            35% {
+                transform: translateY(calc(var(--height) * -1));
+                width: 0;
+            }
+
+            38% {
+                transform: translateY(calc(var(--height) * -1));
+            }
+
+            48% {
+                transform: translateY(calc(var(--height) * -1));
+                width: 100%;
+            }
+
+            62% {
+                transform: translateY(calc(var(--height) * -1));
+                width: 100%;
+            }
+
+            66% {
+                transform: translateY(calc(var(--height) * -1));
+                width: 0;
+                text-indent: 0;
+            }
+
+            71% {
+                transform: translateY(calc(var(--height) * -2));
+                width: 0;
+                text-indent: 5px;
+            }
+
+            86% {
+                transform: translateY(calc(var(--height) * -2));
+                width: 100%;
+            }
+
+            95% {
+                transform: translateY(calc(var(--height) * -2));
+                width: 100%;
+            }
+
+            98% {
+                transform: translateY(calc(var(--height) * -2));
+                width: 0;
+                text-indent: 5px;
+            }
+
+            100% {
+                transform: translateY(0);
+                width: 0;
+                text-indent: 0;
+            }
+            }
