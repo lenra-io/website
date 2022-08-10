@@ -15,12 +15,13 @@ header>nav:first-of-type {
   margin-bottom: 0;
   width: 90%;
   max-width: 1200px;
-  margin: auto;
+  margin: 50px;
 }
 
 body>header.invert-colors {
   height: 100%;
   width: 100%;
+  padding: 0;
 }
 
 body>header>* {
@@ -132,8 +133,24 @@ header>nav:last-of-type>a:first-of-type::before {
   --text-color-data: var(--green-data);
 }
 
-header>nav:last-of-type>a:hover {
+header>nav:last-of-type>a:nth-of-type(2)::before {
+  --text-color-data: var(--blue-data);
+}
+
+header>nav:last-of-type>a:nth-of-type(3)::before {
+  --text-color-data: var(--red-data);
+}
+
+header>nav:last-of-type>a:first-of-type:hover {
   --text-color-data: var(--green-pulse-data);
+}
+
+header>nav:last-of-type>a:nth-of-type(2):hover {
+  --text-color-data: var(--blue-pulse-data);
+}
+
+header>nav:last-of-type>a:nth-of-type(3):hover {
+  --text-color-data: var(--red-pulse-data);
 }
 
 /*------------------*/
