@@ -1,0 +1,225 @@
+body>header {
+    text-align: left;
+    --figure-max-width: 500px;
+}
+
+body>header>* {
+    margin-left: 0;
+}
+
+body>header>h1 {
+    max-width: 400px;
+}
+
+body>header>h2,
+body>header>p {
+    width: calc(100% - var(--figure-max-width) - 50px);
+}
+
+figure {
+    --width: 45vw;
+    --max-width: 500px;
+    position: absolute;
+    width: var(--width);
+    max-width: var(--figure-max-width);
+    top: calc(var(--base) * var(--top-padding) + var(--button-height));
+    bottom: calc(var(--base) * var(--top-padding));
+    right: 0;
+}
+
+figure>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+}
+
+main>section {
+    text-align: center;
+}
+
+main>section>p {
+    max-width: 600px;
+    text-align: justify;
+    margin: auto;
+}
+
+/*main > section > p + a.btn {
+    margin-top: calc(var(--base) * 2);
+}*/
+
+section.manifesto {
+    --text-width: 60%;
+    --text-max-width: 550px;
+    --spacing: 40px;
+    position: relative;
+    padding-top: calc(var(--base) * var(--section-padding-top));
+    padding-bottom: calc(var(--base) * var(--section-padding-bottom));
+}
+
+section.manifesto:first-of-type {
+    margin-top: calc(var(--base) * var(--section-padding-top));
+}
+
+section.manifesto>* {
+    width: var(--text-width);
+    max-width: var(--text-max-width);
+    text-align: justify;
+}
+
+section.manifesto>ul>li::before {
+    content: "• ";
+}
+
+section.manifesto>img {
+    max-height: 380px;
+    position: absolute;
+    top: calc(var(--base) * var(--section-padding-top));
+    right: 0;
+    width: calc(100% - var(--text-width));
+    padding-left: var(--spacing);
+    height: calc(100% - var(--base) * (var(--section-padding-bottom) + var(--section-padding-top)));
+}
+
+section.manifesto>* {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+section.manifesto:nth-of-type(2n)>* {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+section.manifesto>img {
+    right: 0;
+    left: auto;
+    padding-left: var(--spacing);
+    padding-right: 0;
+}
+
+section.manifesto:nth-of-type(2n)>img {
+    left: 0;
+    right: auto;
+    padding-right: var(--spacing);
+    padding-left: 0;
+}
+
+section:nth-of-type(2n)>section.manifesto>* {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+section:nth-of-type(2n)>section.manifesto:nth-of-type(2n)>* {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+section:nth-of-type(2n)>section.manifesto>img {
+    left: 0;
+    right: auto;
+    padding-right: var(--spacing);
+    padding-left: 0;
+}
+
+section:nth-of-type(2n)>section.manifesto:nth-of-type(2n)>img {
+    right: 0;
+    left: auto;
+    padding-left: var(--spacing);
+    padding-right: 0;
+}
+
+section.invert-colors>section>p {
+    max-width: 600px;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section.invert-colors>section {
+    margin-top: 20px;
+}
+
+@media (max-width: 1150px) {
+    body>header {
+        text-align: center;
+    }
+
+    body>header>* {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body>header>h2,
+    body>header>p {
+        width: 100%;
+    }
+
+    figure {
+        position: initial;
+        margin-bottom: calc(var(--base) * var(--top-padding));
+    }
+
+    figure>img {
+        position: initial;
+    }
+}
+
+@media (max-width: 1000px) {
+    section.invert-colors>section:nth-of-type(2) {
+        padding-bottom: 150px;
+    }
+}
+
+@media (max-width: 800px) {
+    section {
+        padding-bottom: 0;
+    }
+
+    section.manifesto {
+        --text-width: 100%;
+        --text-max-width: none;
+        padding-top: 0;
+    }
+
+    section.manifesto>h3 {
+        text-align: center;
+    }
+
+
+    section>section.manifesto>img,
+    section>section.manifesto:nth-of-type(2n)>img,
+    section:nth-of-type(2n)>section.manifesto>img,
+    section:nth-of-type(2n)>section.manifesto:nth-of-type(2n)>img {
+        position: initial;
+        display: block;
+        top: auto;
+        left: auto;
+        right: auto;
+        margin: calc(var(--base) * 3) auto;
+        width: 50%;
+        max-width: 300px;
+        padding: 0;
+        height: auto;
+    }
+
+    section.manifesto>h2 {
+        text-align: center;
+    }
+
+    section.manifesto>* {
+        margin-right: auto;
+    }
+
+    section.manifesto>img {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 750px) {
+    section.invert-colors>section:nth-of-type(2) {
+        padding-bottom: 200px;
+    }
+}

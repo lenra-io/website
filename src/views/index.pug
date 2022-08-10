@@ -11,10 +11,6 @@ block header
             ul.message
                 each l in programmingLanguages
                     li.word= l
-                li.word Python
-                li.word C
-                li.word fggh
-                li.word fdfghg
         p Lenra is an open source framework to create your app using any language, and deploy it without any Ops scale, built on ethical values.
         a.btn.primary(href="started.html") Get started
     nav
@@ -56,82 +52,7 @@ block content
                 img(src="img/partners/NAOS.png" alt="NAOS - Nouvelle Aquitaine Open Source")
             a(href="https://lafrenchtech.com/fr/communaute/atlantic-valley/")
                 img(src="img/partners/french-tech.png" alt="French Tech")
+            a(href="https://planet-techcare.green/manifeste/")
+                img(src="img/partners/Logo-PlaneteTC.png" alt="Planete Tech'Care")
 
-    style. 
-        @keyframes openclose {
-            0% {
-                transform: translateY(0px);
-                width: 0;
-            }
-
-            5% {
-                width: 0;
-            }
-
-            15% {
-                width: 100%;
-            }
-
-            30% {
-                transform: translateY(0px);
-                width: 100%;
-            }
-
-            33% {
-                transform: translateY(0px);
-                width: 0;
-            }
-
-            35% {
-                transform: translateY(calc(var(--height) * -1));
-                width: 0;
-            }
-
-            38% {
-                transform: translateY(calc(var(--height) * -1));
-            }
-
-            48% {
-                transform: translateY(calc(var(--height) * -1));
-                width: 100%;
-            }
-
-            62% {
-                transform: translateY(calc(var(--height) * -1));
-                width: 100%;
-            }
-
-            66% {
-                transform: translateY(calc(var(--height) * -1));
-                width: 0;
-                text-indent: 0;
-            }
-
-            71% {
-                transform: translateY(calc(var(--height) * -2));
-                width: 0;
-                text-indent: 5px;
-            }
-
-            86% {
-                transform: translateY(calc(var(--height) * -2));
-                width: 100%;
-            }
-
-            95% {
-                transform: translateY(calc(var(--height) * -2));
-                width: 100%;
-            }
-
-            98% {
-                transform: translateY(calc(var(--height) * -2));
-                width: 0;
-                text-indent: 5px;
-            }
-
-            100% {
-                transform: translateY(0);
-                width: 0;
-                text-indent: 0;
-            }
-            }
+    script(src='js/index.js' defer)

@@ -6,26 +6,31 @@
             "path": "/"
         },
         {
-            "name": "beta"
+            "name": "beta",
+            "group": "platform"
         },
         {
             "name": "usecases",
+            "group": "platform",
             "disabled": true
         },
         {
             "name": "manifesto",
-            "disabled": true
+            "group": "company"
         },
         {
             "name": "team",
+            "group": "company",
             "disabled": true
         },
         {
             "name": "contact",
+            "group": "contact",
             "disabled": true
         },
         {
             "name": "legal",
+            "group": "contact",
             "notOnTop": true
         }
     ]

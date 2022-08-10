@@ -8,11 +8,12 @@ button {
 
 a {
     --btn-text-color-data: var(--primary-color-data);
+    --btn-text-color-hover-data: var(--primary-color-hover-data);
     transition-property: color;
 }
 
 a:hover {
-    --btn-text-color-data: var(--primary-color-hover-data);
+    color: rgba(var(--btn-text-color-hover-data), var(--btn-text-opacity));
 }
 
 a[disabled],
@@ -97,6 +98,7 @@ nav.social>a {
     border-radius: 20%;
     background-color: rgb(var(--background-color-data));
     --btn-text-color-data: var(--text-color-data);
+    --btn-text-color-hover-data: var(--background-color-data);
     /* border: 1px solid; */
     margin: var(--vertical-spacing) calc(var(--horizontal-spacing) / 2) 0;
     transition-property: color, background;
@@ -104,7 +106,6 @@ nav.social>a {
 
 nav.social>a:hover {
     background-color: rgb(var(--text-color-data));
-    --btn-text-color-data: var(--background-color-data);
 }
 
 nav.social>a::before {
