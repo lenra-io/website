@@ -11,8 +11,7 @@
         },
         {
             "name": "usecases",
-            "group": "platform",
-            "disabled": true
+            "group": "platform"
         },
         {
             "name": "manifesto",

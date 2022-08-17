@@ -58,6 +58,7 @@ button.primary,
 a.btn.primary {
     --btn-background-color-data: var(--primary-color-data);
     --btn-text-color-data: var(--white-data);
+    --btn-text-color-hover-data: var(--white-data);
     --border-size: 0px;
 }
 

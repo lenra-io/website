@@ -13,13 +13,14 @@ body>header {
 
 header>nav:first-of-type {
   margin-bottom: 0;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
-  margin: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 body>header.invert-colors {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   padding: 0;
 }
@@ -38,7 +39,7 @@ section.text {
   overflow: hidden;
   position: relative;
   width: 95%;
-  margin: auto;
+  margin: 0 auto;
 }
 
 section.text>h1 {
@@ -111,7 +112,7 @@ header>nav:last-of-type {
   max-width: 600px;
   height: auto;
   justify-content: space-between;
-  margin: auto;
+  margin: 0 auto;
 }
 
 header>nav:last-of-type>img {
@@ -234,7 +235,7 @@ section.key-point:nth-of-type(2)>img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 calc(var(--base) * -3);
+  width: 100%;
 }
 
 #partners>nav>a {
@@ -312,9 +313,7 @@ section.key-point:nth-of-type(2)>img {
   section.text>p {
     font-size: 20px;
   }
-}
 
-@media (max-width: 800px) {
   section.key-point {
     --text-width: 100%;
     --text-max-width: none;
@@ -348,13 +347,16 @@ section.key-point:nth-of-type(2)>img {
   }
 }
 
-@media (max-height: 700px) {
+@media (max-width: 649px) {
+  section.text>a {
+    font-size: 20px;
+    display: inline-block;
+  }
+
   nav:last-of-type {
     padding-top: 0;
   }
-}
 
-@media (max-width: 649px) {
   section.text>h1 {
     --font-size: 20px;
     --height: calc(var(--font-size) * var(--line-height-multiplier));
@@ -373,26 +375,15 @@ section.key-point:nth-of-type(2)>img {
   section.text {
     margin-top: 0;
   }
+
+  #partners>nav>a {
+    --size: 100px;
+  }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 485px) {
   section.text>h1>ul.message>li {
     text-align: center;
     margin: auto;
-  }
-}
-
-@media (max-width: 650px) {
-  section.text>a {
-    font-size: 20px;
-    display: inline-block;
-
-
-  }
-}
-
-@media (max-width: 510px) {
-  #partners>nav>a {
-    --size: 100px;
   }
 }

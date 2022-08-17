@@ -4,10 +4,12 @@
     --green-pulse-data: 56, 149, 137;
     --green: rgb(var(--green-data));
     --blue-data: 112, 203, 242;
+    --blue-pulse-data: 25, 172, 234;
     --blue: rgb(var(--blue-data));
     --yellow-data: 246, 194, 139;
     --yellow: rgb(var(--yellow-data));
     --red-data: 242, 122, 134;
+    --red-pulse-data: 233, 34, 54;
     --red: rgb(var(--red-data));
     --unit: 1px;
     --base-value: 8;

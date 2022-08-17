@@ -46,10 +46,6 @@ main>section>p {
     margin: auto;
 }
 
-/*main > section > p + a.btn {
-    margin-top: calc(var(--base) * 2);
-}*/
-
 section.manifesto {
     --text-width: 60%;
     --text-max-width: 550px;
@@ -167,14 +163,8 @@ section.invert-colors>section {
     }
 }
 
-@media (max-width: 1000px) {
-    section.invert-colors>section:nth-of-type(2) {
-        padding-bottom: 150px;
-    }
-}
-
 @media (max-width: 800px) {
-    section {
+    main>section:nth-of-type(1) {
         padding-bottom: 0;
     }
 
@@ -182,6 +172,7 @@ section.invert-colors>section {
         --text-width: 100%;
         --text-max-width: none;
         padding-top: 0;
+        padding-bottom: 0;
     }
 
     section.manifesto>h3 {
