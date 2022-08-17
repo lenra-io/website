@@ -19,8 +19,7 @@
         },
         {
             "name": "team",
-            "group": "company",
-            "disabled": true
+            "group": "company"
         },
         {
             "name": "contact",
