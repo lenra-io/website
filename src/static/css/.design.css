@@ -141,6 +141,11 @@ p {
     z-index: -1;
 }
 
+.invert-colors>img,
+header>figure>img {
+    background-image: radial-gradient(closest-side, rgba(255, 255, 255, 0.5), transparent 100%);
+}
+
 body>main,
 body>header,
 body>footer {
@@ -178,21 +183,6 @@ a[href="/"]::before {
     background-size: contain;
     background-position: var(--logo-position);
 }
-
-
-/* @media (prefers-color-scheme: dark) {
-    :root {
-        --white: #1E232C;
-        --primary-color-disabled: var(--dark-primary-color-disabled);
-        --invert-primary-color-disabled: var(--light-primary-color-disabled);
-        --black: white;
-        --logo-horizontal-image-black: url("../img/logo-white.svg");
-        --logo-horizontal-image-white: url("../img/logo.svg");
-        --logo-vertical-image-black: url("../img/logo-vertical-white.svg");
-        --logo-vertical-image-white: url("../img/logo-vertical.svg");
-        --logo-image: var(--logo-horizontal-image);
-    }
-} */
 
 @media (max-width: 550px) {
     :root {
