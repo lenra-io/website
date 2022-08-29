@@ -121,6 +121,20 @@ label>img {
     box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2);
 }
 
+label>nav.social>a {
+    position: absolute;
+    top: 7%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+}
+
+label>nav.social>a:nth-of-type(2) {
+    top: 20%;
+}
+
+
+
 /* Slider Functionality */
 
 /* Active Slide ==*/
