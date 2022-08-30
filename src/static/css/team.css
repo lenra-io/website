@@ -38,6 +38,18 @@ figure>img {
 
 /*--------------------------*/
 
+main::before {
+    color: var(--background-color);
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: var(--background-color);
+    z-index: 0;
+}
+
 #slider {
     --text-opacity: 0;
     position: relative;
@@ -47,6 +59,13 @@ figure>img {
     margin: 0px auto 30px auto;
     perspective: 1400px;
     transform-style: preserve-3d;
+}
+
+
+#slider>#slide6>p>a.len {
+    opacity: 0;
+    transition: 400ms ease;
+
 }
 
 input[type=radio] {
@@ -61,17 +80,11 @@ input[type=radio] {
     cursor: pointer;
 }
 
-input[type=radio]:nth-child(10) {
-    margin-right: 0px;
-}
-
 #slider li {
     position: absolute;
     width: 100%;
     height: 50%;
     top: 0;
-    font-size: 40px;
-    font-weight: bold;
     transform: translate3d(0%, calc(var(--height) / -5), -500px);
     transform-origin: center calc(var(--height) / 2);
     transition-property: transform;
@@ -99,13 +112,12 @@ input[type=radio]:nth-child(10) {
     transition: opacity 400ms ease;
 }
 
-
 #slider li>label>h3 {
     text-align: center;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
-#slider p, #slider>#slide6>p>a {
+#slider p {
     font-size: 18px;
     text-align: justify;
     font-weight: 100;
@@ -121,6 +133,10 @@ label>img {
     box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2);
 }
 
+li#slide6>label>img {
+    object-position: 50% 30%;
+}
+
 label>nav.social>a {
     position: absolute;
     top: 7%;
@@ -133,16 +149,15 @@ label>nav.social>a:nth-of-type(2) {
     top: 20%;
 }
 
-
-
 /* Slider Functionality */
 
 /* Active Slide ==*/
 #s1:checked~ul>#slide1, #s2:checked~ul>#slide2, #s3:checked~ul>#slide3, #s4:checked~ul>#slide4, #s5:checked~ul>#slide5,
-#s6:checked~ul>#slide6, #s7:checked~ul>#slide7, #s8:checked~ul>#slide8, #s9:checked~ul>#slide9, #s10:checked~ul>#slide10 {
+#s6:checked~ul>#slide6, #s6:checked~ul>#slide6>p>a.len, #s7:checked~ul>#slide7, #s8:checked~ul>#slide8, #s9:checked~ul>#slide9, #s10:checked~ul>#slide10 {
     transform: translate3d(0%, 0, 0px);
     z-index: 10;
     --text-opacity: 1;
+    opacity: 1;
 }
 
 /*Not active slide*/
