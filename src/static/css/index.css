@@ -116,7 +116,6 @@ header>nav:last-of-type {
 }
 
 header>nav:last-of-type>img {
-  /* align-items: center; */
   height: 100px;
   width: 100px;
 }

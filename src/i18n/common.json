@@ -23,8 +23,7 @@
         },
         {
             "name": "contact",
-            "group": "contact",
-            "disabled": true
+            "group": "contact"
         },
         {
             "name": "legal",
