@@ -57,7 +57,7 @@ block content
 
     section#social.invert-colors
         h2 
-            span.lenra-icon-at-sign 
+            span.lenra-icon-at-sign
             | Social Media
         h3 Follow us
         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis ante ante.
@@ -74,18 +74,28 @@ block content
             |Newsletter
         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis ante ante. Duis accumsan luctus nibh eget convallis. Proin fringilla ac nunc a vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc ac convallis dolor, vitae feugiat ligula. Praesent nisi nisl, iaculis sed erat nec, accumsan porta dui. Donec ullamcorper convallis purus, eu pulvinar arcu lobortis id. Nam eu erat magna. Aliquam eget sagittis justo. Maecenas at ex ex. Vivamus a blandit lorem. Aenean id tortor nunc.
         p Donec non risus eget ex lobortis porta eget nec nulla. Aliquam a hendrerit felis, vel aliquet ante. Nulla congue condimentum lorem, vel blandit lacus auctor ac. Pellentesque elementum massa arcu, sit amet fringilla leo interdum in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat, mauris eget dignissim sagittis, nibh velit tristique dui, vel bibendum mauris nisi in sem. Nulla non auctor turpis, et elementum orci.
-        textarea(placeholder="Your name" name="name" cols="20" rows="1")
-        textarea(placeholder="Your email" name="mail" cols="20" rows="1") 
-        br
-        a.btn.primary(href="https://dev.lenra.io/#/register") Sign up
+        section
+            form(class="search" action="")
+                input( name="name" type="text" class="input" required="required") 
+                span Your name
+            form(class="search" action="")
+                input( name="email" type="text" class="input" required="required") 
+                span Your email
+            a.btn.primary(href="https://dev.lenra.io/#/register") Sign up
     section#email.invert-colors
         h2 
             span.lenra-icon-send
             | Email
         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis ante ante. Duis accumsan luctus nibh eget convallis. Proin fringilla ac nunc a vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc ac convallis dolor, vitae feugiat ligula. Praesent nisi nisl, iaculis sed erat nec, accumsan porta dui. Donec ullamcorper convallis purus, eu pulvinar arcu lobortis id. Nam eu erat magna. Aliquam eget sagittis justo. Maecenas at ex ex. Vivamus a blandit lorem. Aenean id tortor nunc.
         p Donec non risus eget ex lobortis porta eget nec nulla. Aliquam a hendrerit felis, vel aliquet ante. Nulla congue condimentum lorem, vel blandit lacus auctor ac. Pellentesque elementum massa arcu, sit amet fringilla leo interdum in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat, mauris eget dignissim sagittis, nibh velit tristique dui, vel bibendum mauris nisi in sem. Nulla non auctor turpis, et elementum orci.
-        form(action="") 
-            input(placeholder="Your name" name="name" type="text") 
-            input(placeholder="Your email" name="name" type="email")
-            textarea(placeholder="Your message" name="name" cols="60" rows="10")
-            button.primary(href="https://dev.lenra.io/#/register") Send your message
+        section
+            form(class="search" action="")
+                input( name="name" type="text" class="input" required="required") 
+                span Your name
+            form(class="search" action="")
+                input(name="email" type="email" class="input" required="required")
+                span Your email
+            form(class="search" action="")
+                textarea(name="text" cols="60" rows="10" class="textarea" required="required")
+                span Your message
+            a.btn.primary(href="https://dev.lenra.io/#/register") Send your message
