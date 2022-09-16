@@ -2,12 +2,25 @@
     "login": "Login",
     "documentation": "Documentation",
     "register": "Register on Lenra",
-    "contact_us": "Contact us", 
+    "contact_us": "Contact us",
+    "programmingLanguages": [
+        "JavaScript",
+        "TypeScript",
+        "Rust",
+        "Elixir",
+        "C++",
+        "C#",
+        "Java",
+        "Python",
+        "Ruby",
+        "Brainfuck"
+    ],
+    "anyLanguage": "any language",
     "page": {
         "index": {
             "name": "Lenra",
-            "title": "The open source all-in-one application development solution!",
-            "description": "The Lenra platform is made to accelerate the creation of your applications and simplify their hosting while preserving the personal data of your users."
+            "title": "Create your cross-platform JavaScript / Python / C app.",
+            "description": "Lenra is an open source framework to create your app using any language, and deploy it without any Ops scale, built on ethical values."
         },
         "beta": {
             "name": "Beta",

@@ -1,18 +1,18 @@
-body > header {
+body>header {
     text-align: left;
     --figure-max-width: 500px;
 }
 
-body > header > * {
+body>header>* {
     margin-left: 0;
 }
 
-body > header > h1 {
+body>header>h1 {
     max-width: 400px;
 }
 
-body > header > h2,
-body > header > p {
+body>header>h2,
+body>header>p {
     width: calc(100% - var(--figure-max-width) - 50px);
 }
 
@@ -27,80 +27,80 @@ figure {
     right: 0;
 }
 
-figure > img {
+figure>img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    padding-top: 20px;
 }
 
-main > section {
+section>h2 {
     text-align: center;
 }
 
-main > section > p {
-    max-width: 600px;
-    text-align: left;
-    margin: auto;
-}
-
-main > section > p + a.btn {
-    margin-top: calc(var(--base) * 2);
-}
-
-section.feature {
+section.cases {
     --text-width: 60%;
     --text-max-width: 550px;
     --spacing: 40px;
     position: relative;
     padding-top: calc(var(--base) * var(--section-padding-top));
     padding-bottom: calc(var(--base) * var(--section-padding-bottom));
+    text-align: center;
 }
 
-section.feature:first-of-type {
-    margin-top: calc(var(--base) * var(--section-padding-top));
-}
-
-section.feature > * {
+section.cases>p,
+section.cases>h2 {
     width: var(--text-width);
     max-width: var(--text-max-width);
     text-align: left;
+    padding-bottom: calc(var(--base) * 2);
 }
 
-section.feature > img {
+section.cases>img {
     position: absolute;
-    top: calc(var(--base) * var(--section-padding-top));
+    top: 0;
     right: 0;
+    height: 100%;
     width: calc(100% - var(--text-width));
     padding-left: var(--spacing);
-    height: calc(100% - var(--base) * (var(--section-padding-bottom) + var(--section-padding-top)));
+    height: calc(100% - var(--base) * (var(--section-padding-bottom) - var(--section-padding-top)));
 }
 
-section.feature:nth-of-type(2n+1) > * {
+section.invert-colors>* {
     margin-left: auto;
     margin-right: 0;
 }
 
-section.feature:nth-of-type(2n+1) > img {
+section.cases>img {
+    top: calc(var(--base) * var(--section-padding-top));
+    height: calc(100% - var(--base) * (var(--section-padding-bottom) + var(--section-padding-top)));
+}
+
+section.invert-colors>img {
     left: 0;
     right: auto;
     padding-right: var(--spacing);
     padding-left: 0;
 }
 
+section.cases>.btn {
+    margin-top: calc(var(--base) * var(--section-padding-top));
+}
+
 @media (max-width: 1150px) {
-    body > header {
+    body>header {
         text-align: center;
     }
 
-    body > header > * {
+    body>header>* {
         margin-left: auto;
         margin-right: auto;
     }
 
-    body > header > h2,
-    body > header > p {
+    body>header>h2,
+    body>header>p {
         width: 100%;
     }
 
@@ -109,23 +109,45 @@ section.feature:nth-of-type(2n+1) > img {
         margin-bottom: calc(var(--base) * var(--top-padding));
     }
 
-    figure > img {
+    figure>img {
         position: initial;
     }
 }
 
 @media (max-width: 800px) {
-    section.feature {
-        --text-width: 100%;
-        --text-max-width: none;
-        padding-top: 0;
-    }
-
-    section.feature > h3 {
+    body>header {
         text-align: center;
     }
 
-    section.feature > img {
+    body>header>* {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body>header>h2,
+    body>header>p {
+        width: 100%;
+    }
+
+    figure {
+        position: initial;
+        margin-bottom: calc(var(--base) * var(--top-padding));
+    }
+
+    figure>img {
+        position: initial;
+    }
+
+    section.cases {
+        --text-width: 100%;
+        --text-max-width: none;
+    }
+
+    section.cases>h2 {
+        text-align: center;
+    }
+
+    section.cases>img {
         position: initial;
         display: block;
         top: auto;
@@ -138,15 +160,15 @@ section.feature:nth-of-type(2n+1) > img {
         height: auto;
     }
 
-    section.feature > h2 {
+    section.cases>h2 {
         text-align: center;
     }
 
-    section.feature:nth-of-type(2n+1) > * {
+    section.cases>* {
         margin-right: auto;
     }
 
-    section.feature:nth-of-type(2n+1) > img {
+    section.cases>img {
         padding-right: 0;
     }
 }

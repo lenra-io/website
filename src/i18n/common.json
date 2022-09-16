@@ -11,13 +11,11 @@
         },
         {
             "name": "usecases",
-            "group": "platform",
-            "disabled": true
+            "group": "platform"
         },
         {
             "name": "manifesto",
-            "group": "company",
-            "disabled": true
+            "group": "company"
         },
         {
             "name": "team",

@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'Lenra-icons';
   src:
-    url('../fonts/Lenra-icons.ttf?dsghqz') format('truetype'),
-    url('../fonts/Lenra-icons.woff?dsghqz') format('woff'),
-    url('../fonts/Lenra-icons.svg?dsghqz#Lenra-icons') format('svg');
+    url('../fonts/Lenra-icons.ttf?xaavuf') format('truetype'),
+    url('../fonts/Lenra-icons.woff?xaavuf') format('woff'),
+    url('../fonts/Lenra-icons.svg?xaavuf#Lenra-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="lenra-icon-"]::before, [class*=" lenra-icon-"]::before {
+[class^="lenra-icon-"], [class*=" lenra-icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'Lenra-icons' !important;
   speak: never;
@@ -24,44 +24,67 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.lenra-icon-zap:before {
+.lenra-icon-at-sign:before {
   content: "\e900";
 }
-.lenra-icon-upload-cloud:before {
+
+.lenra-icon-send:before {
   content: "\e901";
 }
-.lenra-icon-shield:before {
+
+.lenra-icon-mail:before {
   content: "\e902";
 }
+
+.lenra-icon-zap:before {
+  content: "\e90c";
+}
+
+.lenra-icon-upload-cloud:before {
+  content: "\e90d";
+}
+
+.lenra-icon-shield:before {
+  content: "\e90e";
+}
+
 .lenra-icon-dev-dot-to:before {
   content: "\e90b";
 }
+
 .lenra-icon-medium:before {
   content: "\e909";
 }
+
 .lenra-icon-reddit:before {
   content: "\e90a";
   color: #ff4500;
 }
+
 .lenra-icon-facebook:before {
   content: "\e903";
   color: #1877f2;
 }
+
 .lenra-icon-github:before {
   content: "\e904";
 }
+
 .lenra-icon-instagram:before {
   content: "\e905";
   color: #e4405f;
 }
+
 .lenra-icon-linkedin:before {
   content: "\e906";
   color: #0077b5;
 }
+
 .lenra-icon-twitter:before {
   content: "\e907";
   color: #1da1f2;
 }
+
 .lenra-icon-youtube:before {
   content: "\e908";
   color: #f00;

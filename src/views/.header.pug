@@ -9,17 +9,8 @@ mixin displayPageLink(p)
         a(href=path)= trad.name
 
 mixin displayPageGroup(group, pages)
-    - var disabled = pages.filter(p => !p.disabled).length==0
-    if (disabled)
-        details
-            summary(disabled aria-disabled="true" tabindex="-1" title="Coming soon")= group.name
-            each page in pages
-                +displayPageLink(page)
-    else
-        details
-            summary= group.name
-            each page in pages
-                +displayPageLink(page)
+    each page in pages
+        +displayPageLink(page)
 
 mixin displayNavElement(element)
     - var type = typeof element
@@ -48,7 +39,7 @@ header.invert-colors
 
         each el in items
             +displayNavElement(el)
-    
+
     block header
         h1 !{currentPage.titleHtml ? currentPage.titleHtml : currentPage.title}
         if currentPage.subtitle
