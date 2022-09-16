@@ -136,7 +136,7 @@ main>section {
 
 main>section>p {
     max-width: 800px;
-    text-align: justify;
+    text-align: left;
     margin: auto;
 }
 

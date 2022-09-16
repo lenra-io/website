@@ -42,7 +42,7 @@ main>section {
 
 main>section>p {
     max-width: 600px;
-    text-align: justify;
+    text-align: left;
     margin: auto;
 }
 
@@ -62,7 +62,7 @@ section.manifesto:first-of-type {
 section.manifesto>* {
     width: var(--text-width);
     max-width: var(--text-max-width);
-    text-align: justify;
+    text-align: left;
 }
 
 section.manifesto>ul>li::before {
@@ -129,7 +129,7 @@ section:nth-of-type(2n)>section.manifesto:nth-of-type(2n)>img {
 
 section.invert-colors>section>p {
     max-width: 600px;
-    text-align: justify;
+    text-align: left;
     margin-left: auto;
     margin-right: auto;
 }

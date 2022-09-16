@@ -4,15 +4,18 @@
     "register": "Register on Lenra",
     "contact_us": "Contact us",
     "programmingLanguages": [
-        "any language",
         "JavaScript",
+        "TypeScript",
         "Rust",
         "Elixir",
         "C++",
+        "C#",
         "Java",
         "Python",
+        "Ruby",
         "Brainfuck"
     ],
+    "anyLanguage": "any language",
     "page": {
         "index": {
             "name": "Lenra",

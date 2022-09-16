@@ -83,6 +83,10 @@
     --section-padding-bottom: 8;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     height: 100%;
     background-color: var(--background-color);
