@@ -19,11 +19,13 @@
         },
         {
             "name": "team",
-            "group": "company"
+            "group": "company",
+            "disabled": true
         },
         {
             "name": "contact",
-            "group": "contact"
+            "group": "contact",
+            "disabled": true
         },
         {
             "name": "legal",
