@@ -1,20 +1,24 @@
 :root {
     --body-height: 100vh;
     --green-data: 87, 192, 179;
+    --green-pulse-data: 56, 149, 137;
     --green: rgb(var(--green-data));
     --blue-data: 112, 203, 242;
+    --blue-pulse-data: 25, 172, 234;
     --blue: rgb(var(--blue-data));
     --yellow-data: 246, 194, 139;
     --yellow: rgb(var(--yellow-data));
+    --yellow-pulse-data: 239, 144, 44;
     --red-data: 242, 122, 134;
+    --red-pulse-data: 233, 34, 54;
     --red: rgb(var(--red-data));
     --unit: 1px;
     --base-value: 8;
     --base: calc(var(--base-value) * var(--unit));
-    --primary-color-data: 18, 105, 237;
+    --primary-color-data: var(--green-pulse-data);
     --primary-color-opacity: 1;
     --primary-color: rgba(var(--primary-color-data), var(--primary-color-opacity));
-    --primary-color-hover-data: 13, 77, 174;
+    --primary-color-hover-data: 42, 111, 102;
     --primary-color-hover: rgb(var(--primary-color-hover-data));
     --disabled-opacity: 0.3;
     --dark-grey-opacity: 0.7;
@@ -79,6 +83,10 @@
     --section-padding-bottom: 8;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     height: 100%;
     background-color: var(--background-color);
@@ -138,26 +146,31 @@ p {
     z-index: -1;
 }
 
-body > main,
-body > header,
-body > footer {
+.invert-colors>img,
+header>figure>img {
+    background-image: radial-gradient(closest-side, rgba(255, 255, 255, 0.5), transparent 100%);
+}
+
+body>main,
+body>header,
+body>footer {
     margin: auto;
     width: 90%;
     max-width: 1200px;
 }
 
-body > header,
-body > footer {
+body>header,
+body>footer {
     padding: calc(var(--base) * var(--top-padding)) 0;
 }
 
-body > header > nav > a[href="/"],
-body > footer > nav > h2 > a[href="/"] {
+body>header>nav>a[href="/"],
+body>footer>nav>h2>a[href="/"] {
     position: relative;
     display: inline-block;
     width: calc(var(--logo-height) * var(--logo-horizontal-ratio));
     height: var(--logo-height);
-    text-align: left; 
+    text-align: left;
     text-indent: -200px;
     overflow: hidden;
     transition-property: none;
@@ -176,33 +189,18 @@ a[href="/"]::before {
     background-position: var(--logo-position);
 }
 
-
-/* @media (prefers-color-scheme: dark) {
-    :root {
-        --white: #1E232C;
-        --primary-color-disabled: var(--dark-primary-color-disabled);
-        --invert-primary-color-disabled: var(--light-primary-color-disabled);
-        --black: white;
-        --logo-horizontal-image-black: url("../img/logo-white.svg");
-        --logo-horizontal-image-white: url("../img/logo.svg");
-        --logo-vertical-image-black: url("../img/logo-vertical-white.svg");
-        --logo-vertical-image-white: url("../img/logo-vertical.svg");
-        --logo-image: var(--logo-horizontal-image);
-    }
-} */
-
 @media (max-width: 550px) {
     :root {
         --logo-height: calc(var(--base) * 10);
         --logo-image: var(--logo-vertical-image);
     }
-    
+
     .invert-colors {
         --logo-image: var(--logo-vertical-image);
     }
 
-    body > header > nav > a[href="/"],
-    body > footer > nav > h2 > a[href="/"] {
+    body>header>nav>a[href="/"],
+    body>footer>nav>h2>a[href="/"] {
         width: var(--logo-height);
         height: var(--logo-height);
     }

@@ -8,11 +8,12 @@ button {
 
 a {
     --btn-text-color-data: var(--primary-color-data);
+    --btn-text-color-hover-data: var(--primary-color-hover-data);
     transition-property: color;
 }
 
 a:hover {
-    --btn-text-color-data: var(--primary-color-hover-data);
+    color: rgba(var(--btn-text-color-hover-data), var(--btn-text-opacity));
 }
 
 a[disabled],
@@ -57,6 +58,7 @@ button.primary,
 a.btn.primary {
     --btn-background-color-data: var(--primary-color-data);
     --btn-text-color-data: var(--white-data);
+    --btn-text-color-hover-data: var(--white-data);
     --border-size: 0px;
 }
 
@@ -71,10 +73,10 @@ a.btn.link {
     --border-size: 0px;
 }
 
-button + button,
-button + a.btn,
-a.btn + button,
-a.btn + a.btn {
+button+button,
+button+a.btn,
+a.btn+button,
+a.btn+a.btn {
     margin-left: calc(var(--base) * 2);
 }
 
@@ -84,7 +86,7 @@ nav.social {
     margin: calc(var(--vertical-spacing) * -1) calc(var(--horizontal-spacing) / -2) 0;
 }
 
-nav.social > a {
+nav.social>a {
     --size: var(--button-height);
     position: relative;
     display: inline-block;
@@ -97,17 +99,17 @@ nav.social > a {
     border-radius: 20%;
     background-color: rgb(var(--background-color-data));
     --btn-text-color-data: var(--text-color-data);
+    --btn-text-color-hover-data: var(--background-color-data);
     /* border: 1px solid; */
     margin: var(--vertical-spacing) calc(var(--horizontal-spacing) / 2) 0;
     transition-property: color, background;
 }
 
-nav.social > a:hover {
+nav.social>a:hover {
     background-color: rgb(var(--text-color-data));
-    --btn-text-color-data: var(--background-color-data);
 }
 
-nav.social > a::before {
+nav.social>a::before {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -117,16 +119,17 @@ nav.social > a::before {
 }
 
 @media (max-width: 450px) {
+
     button,
     a.btn {
         display: block;
         margin-top: calc(var(--base) * 2);
     }
 
-    button + button,
-    button + a.btn,
-    a.btn + button,
-    a.btn + a.btn {
+    button+button,
+    button+a.btn,
+    a.btn+button,
+    a.btn+a.btn {
         margin-left: 0;
     }
 }

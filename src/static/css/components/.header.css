@@ -1,69 +1,69 @@
-body > header {
+body>header {
     text-align: center;
     margin-bottom: calc(var(--base) * var(--top-padding));
 }
 
-body > header::before {
-    background-image: 
+body>header::before {
+    background-image:
         /* url(../../img/fond.svg), */
         linear-gradient(to right, var(--green), var(--green) 25%, var(--yellow) 25%, var(--yellow) 50%, var(--red) 50%, var(--red) 75%, var(--blue) 75%, var(--blue));
-    background-size: 
+    background-size:
         /* cover, */
         100% calc(var(--base) / 2);
-    background-position: 
+    background-position:
         /* 50% 50%,  */
         50% 100%;
     background-repeat: no-repeat;
 }
 
-body > header::after {
+body>header::after {
     content: " ";
     display: block;
     height: 0;
     clear: both;
 }
 
-body > header > * {
+body>header>* {
     margin-left: auto;
     margin-right: auto;
 }
 
-body > header > nav {
+body>header>nav {
     position: relative;
     height: var(--button-height);
     text-align: right;
     margin-bottom: calc(var(--base) * var(--top-padding));
 }
 
-body > header > nav > * {
+body>header>nav>* {
     display: inline-block;
     width: calc(var(--base) * 12);
     height: 100%;
     text-align: center;
 }
 
-body > header > nav > a[href="/"] {
+body>header>nav>a[href="/"] {
     position: absolute;
     top: 0;
     left: 0;
 }
 
-body > header > nav a {
+body>header>nav a {
     --btn-text-color-data: var(--background-contrast-color-data);
 }
 
-body > header > nav > details {
+body>header>nav>details {
     position: relative;
 }
 
-body > header > nav > details > * {
+body>header>nav>details>* {
     width: 100%;
     height: 100%;
     text-align: center;
 }
 
-body > header > nav > a::before,
-body > header > nav > details > *::before {
+body>header>nav>a::before,
+body>header>nav>details>*::before {
     content: " ";
     display: inline-block;
     vertical-align: middle;
@@ -71,53 +71,55 @@ body > header > nav > details > *::before {
     width: 0;
 }
 
-body > header > nav > details > a {
+body>header>nav>details>a {
     display: block;
     position: absolute;
     z-index: 100;
     background-color: rgba(var(--background-color-data), var(--background-color-opacity));
 }
 
-body > header > nav > details > a + a {
+body>header>nav>details>a+a {
     transform: translateY(100%);
 }
 
-body > header > nav > details > a:last-of-type {
+body>header>nav>details>a:last-of-type {
     border-bottom-left-radius: calc(var(--base) / 2);
     border-bottom-right-radius: calc(var(--base) / 2);
 }
 
-body > header > h1,
-body > header > h2,
-body > header > p {
-    max-width: 600px;
+body>header>h1,
+body>header>h2,
+body>header>p {
+    /*max-width: 600px;*/
     padding-bottom: calc(var(--base) * 3);
 }
 
-body > header > p {
-    max-width: 600px;
+body>header>p {
+    /*max-width: 600px;*/
     font-size: 110%;
     --text-opacity: var(--dark-grey-opacity);
     padding-bottom: calc(var(--base) * 2);
 }
 
-body > header > p > a {
+body>header>p>a {
     --text-opacity: 1;
 }
 
-@media (max-width: 550px) {
-    body > header > nav {
+@media (max-width: 700px) {
+    body>header>nav {
         padding-top: calc(var(--logo-height) + var(--base) * 3);
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         height: auto;
+        flex-wrap: wrap;
     }
 
-    body > header > nav > * {
+    body>header>nav>* {
         height: var(--button-height);
+        min-width: 100px;
     }
 
-    body > header > nav > a[href="/"] {
+    body>header>nav>a[href="/"] {
         left: 50%;
         transform: translateX(-50%);
     }
