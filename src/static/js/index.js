@@ -2,7 +2,7 @@ setTimeout(closeLanguage, 1500);
 
 const languageList = document.querySelector("h1 > ul");
 let lastLanguagePosition = 0;
-const animationDuration = 1500;
+const animationDuration = 900;
 
 /**
  * select randomly a language position and open it
