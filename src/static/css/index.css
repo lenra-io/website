@@ -47,7 +47,7 @@ body>header>section>h1>ul {
   overflow: hidden;
   position: relative;
   vertical-align: top;
-  margin-left: -1px;
+  margin-left: 6px;
   text-indent: 1px;
 }
 
