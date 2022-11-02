@@ -1,5 +1,5 @@
 body>header {
-    text-align: center;
+    text-align: left;
     margin-bottom: calc(var(--base) * var(--top-padding));
 }
 
@@ -40,6 +40,7 @@ body>header>nav>* {
     width: calc(var(--base) * 12);
     height: 100%;
     text-align: center;
+    font-weight: 700;
 }
 
 body>header>nav>a[href="/"] {

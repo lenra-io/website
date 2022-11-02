@@ -27,18 +27,25 @@ summary:disabled {
 
 button,
 a.btn {
-    --btn-text-color-data: var(--primary-color-data);
-    --btn-background-color-data: var(--background-color-data);
-    --btn-background-color-opacity: 1;
-    --border-size: 1px;
+    --btn-text-color-data: var(--white-data);
+    --btn-text-color-hover-data: var(--white-data);
+    --btn-background-color-data: var(--text-color-data);
+    --btn-background-color-opacity: 0.1;
+    --border-size: 0px;
     min-width: calc(var(--base) * 20);
     background-color: rgba(var(--btn-background-color-data), var(--btn-background-color-opacity));
     display: inline-block;
+    font-weight: 700;
     text-align: center;
-    padding: calc(var(--base) - var(--border-size)) calc(var(--base) * 2 - var(--border-size));
+    padding: calc(calc(var(--base) * 1.5) - var(--border-size)) calc(var(--base) * 5 - var(--border-size));
     border: var(--border-size) solid;
     border-radius: calc(var(--base) / 2);
     transition-property: color, background;
+}
+
+button:focus,
+a.btn:focus {
+    --border-size: 2px;
 }
 
 button[disabled],
@@ -50,16 +57,13 @@ a.btn:disabled {
 
 button:hover,
 a.btn:hover {
-    --btn-background-color-data: var(--primary-color-data);
-    --btn-background-color-opacity: var(--disabled-opacity);
+    --btn-background-color-opacity: 0.2;
 }
 
 button.primary,
 a.btn.primary {
     --btn-background-color-data: var(--primary-color-data);
-    --btn-text-color-data: var(--white-data);
-    --btn-text-color-hover-data: var(--white-data);
-    --border-size: 0px;
+    --btn-background-color-opacity: 1;
 }
 
 button.primary:hover,
