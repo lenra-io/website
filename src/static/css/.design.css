@@ -80,7 +80,7 @@
     --top-reduction: var(--base) * (var(--top-padding) + var(--button-size));
     --bottom-reduction: var(--base) * var(--bottom-padding);
     --height-reduction: var(--top-reduction) + var(--bottom-reduction);
-    --section-padding-top: 4;
+    --section-padding-top: 5;
     --section-padding-bottom: 8;
 }
 

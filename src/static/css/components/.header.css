@@ -1,6 +1,5 @@
 body>header {
     text-align: left;
-    margin-bottom: calc(var(--base) * var(--top-padding));
 }
 
 body>header::before {
@@ -51,6 +50,7 @@ body>header>nav>a[href="/"] {
 
 body>header>nav a {
     --btn-text-color-data: var(--background-contrast-color-data);
+    text-decoration: none;
 }
 
 body>header>nav>details {

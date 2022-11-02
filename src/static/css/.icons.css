@@ -9,7 +9,7 @@
   font-display: block;
 }
 
-[class^="lenra-icon-"], [class*=" lenra-icon-"] {
+[class^="lenra-icon-"]::before, [class*=" lenra-icon-"]::before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'Lenra-icons' !important;
   speak: never;
