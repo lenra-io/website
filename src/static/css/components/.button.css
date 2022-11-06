@@ -137,10 +137,21 @@ nav.social>a::before {
     color: inherit;
 }
 
-@media (max-width: 450px) {
+
+@media (max-width: 800px) {
 
     button,
     a.btn {
+        padding-left: calc(var(--base) * 4 - var(--border-size));
+        padding-right: calc(var(--base) * 4 - var(--border-size));
+    }
+}
+
+@media (max-width: 460px) {
+
+    button,
+    a.btn,
+    a.link {
         display: block;
         margin-top: calc(var(--base) * 2);
     }

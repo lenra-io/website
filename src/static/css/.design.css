@@ -194,6 +194,23 @@ a[href="/"]::before {
     :root {
         --logo-height: calc(var(--base) * 10);
         --logo-image: var(--logo-vertical-image);
+        --logo-position: 50%;
+    }
+
+    h1 {
+        --font-size-multiplier: 2;
+    }
+    
+    h2 {
+        --font-size-multiplier: calc(3 / 2);
+    }
+    
+    h3 {
+        --font-size-multiplier: calc(4 / 3);
+    }
+    
+    h4 {
+        --font-size-multiplier: calc(5 / 4);
     }
 
     .invert-colors {

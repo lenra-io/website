@@ -33,6 +33,7 @@ body > footer > nav > section > a {
     display: block;
     padding-bottom: calc(var(--base) * 2);
     --btn-text-color-data: var(--text-color-data);
+    text-decoration: none;
 }
 
 body > footer > ul > li:last-of-type {
@@ -45,6 +46,10 @@ body > footer > ul > li > nav.social {
 }
 
 @media (max-width: 800px) {
+    body > footer {
+        max-width: 360px;
+    }
+
     body > footer > nav {
         padding-bottom: calc(var(--base) * 2);
     }
