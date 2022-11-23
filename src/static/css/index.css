@@ -3,18 +3,7 @@
 }
 
 body>header {
-  --figure-max-width: 500px;
-  --content-multiplier: calc(5 / 3);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  min-height: 100%;
-}
-
-body>header::after {
-  display: none;
+  padding-bottom: calc(var(--base) * 10);
 }
 
 body>header>nav:first-of-type {
@@ -22,20 +11,17 @@ body>header>nav:first-of-type {
 }
 
 body>header>section {
-  color: #333;
-  --font-size: calc(1px * var(--font-size-value) * var(--content-multiplier));
-  font-size: var(--font-size);
-  font-weight: bolder;
-  overflow: hidden;
   position: relative;
-  width: 95%;
-  margin-bottom: calc(var(--base) * var(--top-padding));
+  margin-left: 0;
+  max-width: 600px;
+  /* padding: calc(var(--base) * 15) 0; */
+  padding: 10% 0;
 }
 
 body>header>section>h1 {
-  --font-size-multiplier: calc(5 / 3);
   --height: calc(var(--font-size) * var(--font-size-multiplier) * var(--line-height-multiplier));
   padding-bottom: var(--font-size);
+  max-width: 500px;
 }
 
 body>header>section>h1>ul {
@@ -74,63 +60,42 @@ body>header>section>h1>ul li::after {
 }
 
 body>header>section>p {
-  --text-opacity: var(--dark-grey-opacity);
   padding-bottom: var(--font-size);
 }
 
-body>header>section>a.btn {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-radius: calc(var(--font-size) / 3);
-  padding: calc(var(--font-size) / 2) calc(var(--font-size) * 2);
+body>header>section>p+nav {
+  padding-bottom: calc(var(--base) * 3);
 }
 
-header>nav:last-of-type {
-  --size: calc(var(--base) * var(--content-multiplier) * 8);
-  display: flex;
-  width: 90%;
-  max-width: 600px;
-  height: auto;
-  justify-content: space-between;
-  margin: 0 auto;
+body>header>section>a {
+  --btn-text-color-data: var(--text-color-data);
+  --btn-text-color-hover-data: var(--text-color-data);
 }
 
-header>nav:last-of-type>a {
-  position: relative;
-  text-indent: calc(var(--size) * -10);
-  overflow: hidden;
-  height: var(--size);
-  width: var(--size);
-  min-width: 0;
+body>header>section>a::before {
+  --text-color-data: var(--yellow-pulse-data);
+  font-size: calc(var(--font-size) * 5 / 4);
+  margin-right: var(--base);
+  vertical-align: text-bottom;
 }
 
-header>nav:last-of-type>a::before {
+body>header>section>figure {
+  --image-margin: 100px;
+  --image-height: 720px;
+  --image-width: 1280px;
+  --image-multiplier: calc(2 / 3);
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  text-indent: 0;
-  align-items: center;
-  font-size: var(--size);
+  left: calc(100% + var(--image-margin));
+  width: calc(50vw - var(--image-margin));
+  height: 100%;
+  overflow: hidden;
 }
 
-header>nav:last-of-type>a::before {
-  color: inherit;
-}
-
-header>nav:last-of-type>a:first-of-type {
-  --btn-text-color-data: var(--green-data);
-  --btn-text-color-hover-data: var(--green-pulse-data);
-}
-
-header>nav:last-of-type>a:nth-of-type(2) {
-  --btn-text-color-data: var(--blue-data);
-  --btn-text-color-hover-data: var(--blue-pulse-data);
-}
-
-header>nav:last-of-type>a:nth-of-type(3) {
-  --btn-text-color-data: var(--red-data);
-  --btn-text-color-hover-data: var(--red-pulse-data);
+body>header>section>figure>img {
+  height: 100%;
+  border: 1px solid rgb(var(--text-color-data));
+  border-radius: calc(var(--base) * 2);
 }
 
 /*------------------*/
@@ -152,16 +117,8 @@ section.key-point>* {
   text-align: left;
 }
 
-section#speedup.key-point>h2>span.lenra-icon-zap::before {
-  color: var(--green);
-}
-
-section#deploy.key-point>h2>span.lenra-icon-upload-cloud::before {
-  color: var(--blue);
-}
-
-section#preserve.key-point>h2>span.lenra-icon-shield::before {
-  color: var(--red);
+section.key-point {
+  margin-top: calc(var(--base) * var(--section-padding-top));
 }
 
 section.key-point>img {
@@ -191,6 +148,7 @@ section.key-point:nth-of-type(2)>img {
 }
 
 #partners>nav {
+  --spacing: calc(var(--base) * 3);
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -207,7 +165,11 @@ section.key-point:nth-of-type(2)>img {
   width: var(--size);
   height: var(--size);
   border-radius: 25%;
-  margin: calc(var(--base) * 3) calc(var(--base) * 3) 0;
+  margin: var(--spacing) var(--spacing) 0;
+}
+
+#partners>nav>a::after {
+  content: none;
 }
 
 #partners>nav>a>img {
@@ -226,33 +188,25 @@ section.key-point:nth-of-type(2)>img {
 }
 
 @media (max-width: 1200px) {
-  body>header {
-    --content-multiplier: calc(4 / 3);
-  }
-
-  figure {
-    --width: 90vw;
-    --max-width: 800px;
-    width: 100%;
-    float: none;
-    margin-bottom: calc(var(--base) * var(--top-padding));
+  body>header>section>figure {
+    --image-margin: 50px;
   }
 }
 
 @media (max-width: 960px) {
-  body>header {
-    --content-multiplier: calc(3 / 2);
-  }
-
-  body>header>section>h1>ul>li {
-    text-align: center;
-    margin: auto;
+  body>header>section {
+    max-width: 500px;
   }
 }
 
 @media (max-width: 800px) {
-  body>header {
-    --content-multiplier: calc(4 / 3);
+  body>header>section {
+    max-width: 600px;
+    padding: 0;
+  }
+
+  body>header>section>figure {
+    display: none;
   }
 
   section.key-point {
@@ -275,10 +229,6 @@ section.key-point:nth-of-type(2)>img {
     height: auto;
   }
 
-  section.key-point>h2 {
-    text-align: center;
-  }
-
   section.key-point:nth-of-type(2)>* {
     margin-right: auto;
   }
@@ -288,15 +238,9 @@ section.key-point:nth-of-type(2)>img {
   }
 }
 
-@media (max-width: 700px) {
-  body>header {
-    --content-multiplier: 1;
-  }
-}
-
 @media (max-width: 550px) {
-  body>header {
-    --content-multiplier: calc(6 / 5);
+  body>header>section>h1 {
+    max-width: 400px;
   }
 
   body>header>section>h1>ul>li {
@@ -310,21 +254,9 @@ section.key-point:nth-of-type(2)>img {
 }
 
 @media (max-width: 460px) {
-  body>header {
-    --content-multiplier: 1;
-  }
-}
 
-@media (max-width: 380px) {
-  body>header {
-    --content-multiplier: calc(6 / 5);
-  }
-  body>header>section>h1>ul>li {
-    text-align: center;
-    margin: auto;
-  }
-
-  header>nav:last-of-type {
-    --size: calc(var(--base) * var(--content-multiplier) * 5);
+  body>header>section>p,
+  body>header>section>p+nav {
+    padding-bottom: 0;
   }
 }

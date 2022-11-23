@@ -2,6 +2,7 @@
     --body-height: 100vh;
     --green-data: 87, 192, 179;
     --green-pulse-data: 56, 149, 137;
+    --green-pulse-hover-data: 42, 111, 102;
     --green: rgb(var(--green-data));
     --blue-data: 112, 203, 242;
     --blue-pulse-data: 25, 172, 234;
@@ -15,11 +16,13 @@
     --unit: 1px;
     --base-value: 8;
     --base: calc(var(--base-value) * var(--unit));
-    --primary-color-data: var(--green-pulse-data);
+    --primary-color-data: 18, 105, 237;
+    --primary-color-hover-data: 13, 77, 174;
     --primary-color-opacity: 1;
     --primary-color: rgba(var(--primary-color-data), var(--primary-color-opacity));
-    --primary-color-hover-data: 42, 111, 102;
     --primary-color-hover: rgb(var(--primary-color-hover-data));
+    --secondary-color-data: 56, 149, 137;
+    --secondary-color-hover-data: 42, 111, 102;
     --disabled-opacity: 0.3;
     --dark-grey-opacity: 0.7;
     --grey-opacity: 0.5;
@@ -79,7 +82,7 @@
     --top-reduction: var(--base) * (var(--top-padding) + var(--button-size));
     --bottom-reduction: var(--base) * var(--bottom-padding);
     --height-reduction: var(--top-reduction) + var(--bottom-reduction);
-    --section-padding-top: 4;
+    --section-padding-top: 5;
     --section-padding-bottom: 8;
 }
 
@@ -99,25 +102,25 @@ body {
     color: rgba(var(--text-color-data), var(--text-opacity));
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
     font-size: calc(var(--font-size) * var(--font-size-multiplier));
-    font-weight: bold;
+    font-weight: 700;
 }
 
 h1 {
-    --font-size-multiplier: 2;
+    --font-size-multiplier: calc(5 / 2);
 }
 
 h2 {
-    --font-size-multiplier: calc(5 / 3);
+    --font-size-multiplier: 2;
 }
 
 h3 {
-    --font-size-multiplier: calc(4 / 3);
+    --font-size-multiplier: calc(3 / 2);
 }
 
 h4 {
-    --font-size-multiplier: 1;
+    --font-size-multiplier: calc(4 / 3);
 }
 
 p {
@@ -193,6 +196,23 @@ a[href="/"]::before {
     :root {
         --logo-height: calc(var(--base) * 10);
         --logo-image: var(--logo-vertical-image);
+        --logo-position: 50%;
+    }
+
+    h1 {
+        --font-size-multiplier: 2;
+    }
+    
+    h2 {
+        --font-size-multiplier: calc(3 / 2);
+    }
+    
+    h3 {
+        --font-size-multiplier: calc(4 / 3);
+    }
+    
+    h4 {
+        --font-size-multiplier: calc(5 / 4);
     }
 
     .invert-colors {

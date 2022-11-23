@@ -1,6 +1,5 @@
 body>header {
-    text-align: center;
-    margin-bottom: calc(var(--base) * var(--top-padding));
+    text-align: left;
 }
 
 body>header::before {
@@ -40,6 +39,7 @@ body>header>nav>* {
     width: calc(var(--base) * 12);
     height: 100%;
     text-align: center;
+    font-weight: 700;
 }
 
 body>header>nav>a[href="/"] {
@@ -50,6 +50,11 @@ body>header>nav>a[href="/"] {
 
 body>header>nav a {
     --btn-text-color-data: var(--background-contrast-color-data);
+    text-decoration: none;
+}
+
+body>header>nav a::after {
+    content: none;
 }
 
 body>header>nav>details {
@@ -90,12 +95,10 @@ body>header>nav>details>a:last-of-type {
 body>header>h1,
 body>header>h2,
 body>header>p {
-    /*max-width: 600px;*/
     padding-bottom: calc(var(--base) * 3);
 }
 
 body>header>p {
-    /*max-width: 600px;*/
     font-size: 110%;
     --text-opacity: var(--dark-grey-opacity);
     padding-bottom: calc(var(--base) * 2);
