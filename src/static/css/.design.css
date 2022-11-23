@@ -118,11 +118,11 @@ h2 {
 }
 
 h3 {
-    --font-size-multiplier: calc(3 / 2);
+    --font-size-multiplier: calc(5 / 4);
 }
 
 h4 {
-    --font-size-multiplier: calc(4 / 3);
+    --font-size-multiplier: 1;
 }
 
 p {

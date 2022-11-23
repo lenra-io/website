@@ -19,6 +19,7 @@ a::after {
     content: " ";
     position: absolute;
     border-bottom: 1px solid;
+    color: inherit;
     width: 100%;
     left: 0;
     bottom: 4px;
