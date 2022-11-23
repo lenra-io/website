@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'Lenra-icons';
   src:
-    url('../fonts/Lenra-icons.ttf?l8jri8') format('truetype'),
-    url('../fonts/Lenra-icons.woff?l8jri8') format('woff'),
-    url('../fonts/Lenra-icons.svg?l8jri8#Lenra-icons') format('svg');
+    url('../fonts/Lenra-icons.ttf?s5ct8b') format('truetype'),
+    url('../fonts/Lenra-icons.woff?s5ct8b') format('woff'),
+    url('../fonts/Lenra-icons.svg?s5ct8b#Lenra-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -33,11 +33,32 @@
 .lenra-icon-mail:before {
   content: "\e902";
 }
-.lenra-icon-zap:before {
+.lenra-icon-book-open:before {
+  content: "\e903";
+}
+.lenra-icon-check-circle:before {
   content: "\e90c";
 }
-.lenra-icon-upload-cloud:before {
+.lenra-icon-clock:before {
   content: "\e90d";
+}
+.lenra-icon-dollar-sign:before {
+  content: "\e910";
+}
+.lenra-icon-folder:before {
+  content: "\e911";
+}
+.lenra-icon-list:before {
+  content: "\e912";
+}
+.lenra-icon-mouse-pointer:before {
+  content: "\e913";
+}
+.lenra-icon-sun:before {
+  content: "\e914";
+}
+.lenra-icon-users:before {
+  content: "\e915";
 }
 .lenra-icon-shield:before {
   content: "\e90e";
@@ -54,10 +75,6 @@
 .lenra-icon-reddit:before {
   content: "\e90a";
   color: #ff4500;
-}
-.lenra-icon-facebook:before {
-  content: "\e903";
-  color: #1877f2;
 }
 .lenra-icon-github:before {
   content: "\e904";
