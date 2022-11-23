@@ -18,9 +18,8 @@ main > section {
     padding-bottom: calc(var(--base) * var(--section-padding-bottom));
 }
 
-main > section > h2,
-main > section > h3 {
-    padding-bottom: calc(var(--base) * 2);
+main > section > nav {
+    text-align: center;
 }
 
 @media (max-aspect-ratio: 1/1) {
