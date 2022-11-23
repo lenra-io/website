@@ -44,15 +44,6 @@
     --primary-color-disabled: var(--light-primary-color-disabled);
     --invert-primary-color-disabled: var(--dark-primary-color-disabled);
     --background-image: url("../img/fond.svg");
-    --logo-horizontal-image-black: url("../img/logo.svg");
-    --logo-vertical-image-black: url("../img/logo-vertical.svg");
-    --logo-horizontal-image-white: url("../img/logo-white.svg");
-    --logo-vertical-image-white: url("../img/logo-vertical-white.svg");
-    --logo-horizontal-image: var(--logo-horizontal-image-black);
-    --logo-vertical-image: var(--logo-vertical-image-black);
-    --logo-image: var(--logo-horizontal-image);
-    --logo-position: left;
-    --logo-horizontal-ratio: 3.646153846153846;
     --font-size-value: 16;
     --font-size: calc(1px * var(--font-size-value));
     --line-height-value: 20;
@@ -76,7 +67,6 @@
     --padding-big-multiplier: 1.5;
     --padding-big: calc(var(--padding-big-multiplier) * var(--base));
     --button-height: calc(var(--line-height) + var(--padding-medium) * 2);
-    --logo-height: var(--button-height);
     --top-padding: 6;
     --bottom-padding: 5;
     --top-reduction: var(--base) * (var(--top-padding) + var(--button-size));
@@ -84,6 +74,18 @@
     --height-reduction: var(--top-reduction) + var(--bottom-reduction);
     --section-padding-top: 5;
     --section-padding-bottom: 8;
+    --logo-horizontal-image-black: url("../img/logo.svg");
+    --logo-vertical-image-black: url("../img/logo-vertical.svg");
+    --logo-horizontal-image-white: url("../img/logo-white.svg");
+    --logo-vertical-image-white: url("../img/logo-vertical-white.svg");
+    --logo-horizontal-image: var(--logo-horizontal-image-black);
+    --logo-vertical-image: var(--logo-vertical-image-black);
+    --logo-image: var(--logo-horizontal-image);
+    --logo-position: left;
+    --logo-horizontal-ratio: 3.646153846153846;
+    --logo-horizontal-height: var(--button-height);
+    --logo-vertical-height: calc(var(--base) * 10);
+    --logo-height: var(--logo-horizontal-height);
 }
 
 html {
@@ -179,6 +181,13 @@ body>footer>nav>h2>a[href="/"] {
     transition-property: none;
 }
 
+body>footer>nav>h2>a[href="/"] {
+    --logo-image: var(--logo-horizontal-image);
+    --logo-position: left;
+    width: calc(var(--logo-horizontal-height) * var(--logo-horizontal-ratio));
+    height: var(--logo-horizontal-height);
+}
+
 a[href="/"]::before {
     content: " ";
     position: absolute;
@@ -194,7 +203,7 @@ a[href="/"]::before {
 
 @media (max-width: 550px) {
     :root {
-        --logo-height: calc(var(--base) * 10);
+        --logo-height: var(--logo-vertical-height);
         --logo-image: var(--logo-vertical-image);
         --logo-position: 50%;
     }
@@ -219,8 +228,7 @@ a[href="/"]::before {
         --logo-image: var(--logo-vertical-image);
     }
 
-    body>header>nav>a[href="/"],
-    body>footer>nav>h2>a[href="/"] {
+    body>header>nav>a[href="/"] {
         width: var(--logo-height);
         height: var(--logo-height);
     }

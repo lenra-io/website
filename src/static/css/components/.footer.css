@@ -1,16 +1,20 @@
-body > footer > nav {
+body>footer>nav {
     position: relative;
     text-align: right;
-    padding-bottom: calc(var(--base) * 2);
+    padding-bottom: var(--base);
 }
 
-body > footer > nav > * {
+body>footer>nav>* {
     text-align: left;
 }
 
-body > footer > nav > h2 {
+body>footer>nav>h2 {
     font-size: 0;
-    margin-bottom: calc(var(--base) * 2);
+    margin-bottom: calc(var(--base) * 3);
+}
+
+body>footer>nav>h2>a[href="/"]::after {
+    content: none;
 }
 
 body > footer > nav > h2 > a[href="/"]::after {
@@ -31,7 +35,7 @@ body > footer > ul > li {
     font-weight: 700;
 }
 
-body > footer > nav > section > h3 {
+body>footer>nav>section>h3 {
     padding-bottom: calc(var(--base) * 2);
 }
 
@@ -40,42 +44,24 @@ body > footer > nav > section > a {
     --btn-text-color-data: var(--text-color-data);
 }
 
-body > footer > ul > li:last-of-type {
+body>footer>ul>li:last-of-type {
     margin-top: calc(var(--base) * 2);
 }
 
-body > footer > ul > li > nav.social {
+body>footer>ul>li>nav.social {
     margin-top: calc(var(--base) / 2);
     --text-opacity: 1;
 }
 
 @media (max-width: 800px) {
-    body > footer {
+    body>footer>nav {
+        text-align: left;
         max-width: 360px;
-    }
-
-    body > footer > nav {
-        padding-bottom: calc(var(--base) * 2);
-    }
-
-    body > footer > nav > h2 > a[href="/"] {
-        display: block;
-        margin: auto;
-    }
-
-    body > footer > nav > section {
-        width: 50%;
-        margin-top: calc(var(--base) * 3);
-        text-align: center;
-    }
-
-    body > footer > ul > li {
-        text-align: center;
     }
 }
 
-@media (max-width: 420px) {
-    body > footer > nav > section {
+@media (max-width: 320px) {
+    body>footer>nav>section {
         width: 100%;
     }
 }
