@@ -1,19 +1,38 @@
 a,
 summary,
 button {
+    position: relative;
     --btn-text-color-data: var(--text-color-data);
     --btn-text-opacity: 1;
     color: rgba(var(--btn-text-color-data), var(--btn-text-opacity));
+    text-decoration: none;
 }
 
 a {
     --btn-text-color-data: var(--primary-color-data);
     --btn-text-color-hover-data: var(--primary-color-hover-data);
     transition-property: color;
+    padding-bottom: 4px;
+}
+
+a::after {
+    content: " ";
+    position: absolute;
+    border-bottom: 1px solid;
+    width: 100%;
+    left: 0;
+    bottom: 4px;
+    opacity: 0;
+    transition-property: opacity, bottom, color;
 }
 
 a:hover {
     color: rgba(var(--btn-text-color-hover-data), var(--btn-text-opacity));
+}
+
+a:hover::after {
+    bottom: 0;
+    opacity: 1;
 }
 
 a[disabled],
@@ -26,8 +45,7 @@ summary:disabled {
 }
 
 button,
-a.btn,
-a.link {
+a.btn {
     --btn-text-color-data: var(--white-data);
     --btn-text-color-hover-data: var(--white-data);
     --btn-background-color-data: var(--text-color-data);
@@ -45,17 +63,12 @@ a.link {
     transition-property: color, background;
 }
 
-a.link {
-    --btn-text-color-data: var(--text-color-data);
-    --btn-text-color-hover-data: var(--text-color-data);
-    --btn-background-color-opacity: 0;
-    min-width: 0;
-    padding: calc(calc(var(--base) * 1.5) - var(--border-size)) 0;
+a.btn::after {
+    content: none;
 }
 
 button:focus,
-a.btn:focus,
-a.link:focus {
+a.btn:focus {
     --border-size: 2px;
 }
 
@@ -69,10 +82,7 @@ a.btn:disabled {
 button:hover,
 a.btn:hover {
     --btn-background-color-opacity: 0.2;
-}
-
-a.link:hover {
-    --btn-background-color-opacity: 0.2;
+    text-decoration: none;
 }
 
 button.primary,
@@ -87,9 +97,16 @@ a.btn.primary:hover {
     --btn-background-color-opacity: 1;
 }
 
-button.link,
-a.btn.link {
-    --border-size: 0px;
+button.secondary,
+a.btn.secondary {
+    --btn-background-color-data: var(--secondary-color-data);
+    --btn-background-color-opacity: 1;
+}
+
+button.secondary:hover,
+a.btn.secondary:hover {
+    --btn-background-color-data: var(--secondary-color-hover-data);
+    --btn-background-color-opacity: 1;
 }
 
 button+button,
@@ -124,6 +141,10 @@ nav.social>a {
     transition-property: color, background;
 }
 
+nav.social>a::after {
+    content: none;
+}
+
 nav.social>a:hover {
     background-color: rgb(var(--text-color-data));
 }
@@ -150,8 +171,7 @@ nav.social>a::before {
 @media (max-width: 460px) {
 
     button,
-    a.btn,
-    a.link {
+    a.btn {
         display: block;
         margin-top: calc(var(--base) * 2);
     }

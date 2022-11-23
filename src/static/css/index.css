@@ -59,13 +59,21 @@ body>header>section>h1>ul li::after {
   vertical-align: middle;
 }
 
-body>header>section>p,
-body>header>section>p+nav {
+body>header>section>p {
   padding-bottom: var(--font-size);
 }
 
-body>header>section>a.link::before {
-  --text-color-data: var(--yellow-data);
+body>header>section>p+nav {
+  padding-bottom: calc(var(--base) * 3);
+}
+
+body>header>section>a {
+  --btn-text-color-data: var(--text-color-data);
+  --btn-text-color-hover-data: var(--text-color-data);
+}
+
+body>header>section>a::before {
+  --text-color-data: var(--yellow-pulse-data);
   font-size: calc(var(--font-size) * 5 / 4);
   margin-right: var(--base);
   vertical-align: text-bottom;
@@ -158,6 +166,10 @@ section.key-point:nth-of-type(2)>img {
   height: var(--size);
   border-radius: 25%;
   margin: var(--spacing) var(--spacing) 0;
+}
+
+#partners>nav>a::after {
+  content: none;
 }
 
 #partners>nav>a>img {

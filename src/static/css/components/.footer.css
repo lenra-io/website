@@ -13,10 +13,16 @@ body > footer > nav > h2 {
     margin-bottom: calc(var(--base) * 2);
 }
 
+body > footer > nav > h2 > a[href="/"]::after {
+    content: none;
+}
+
 body > footer > nav > section {
-    display: inline-block;
+    display: inline-flex;
     vertical-align: top;
     width: 160px;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 body > footer > nav > section > h3,
@@ -30,10 +36,8 @@ body > footer > nav > section > h3 {
 }
 
 body > footer > nav > section > a {
-    display: block;
-    padding-bottom: calc(var(--base) * 2);
+    margin-bottom: calc(var(--base) * 2);
     --btn-text-color-data: var(--text-color-data);
-    text-decoration: none;
 }
 
 body > footer > ul > li:last-of-type {

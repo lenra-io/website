@@ -17,10 +17,12 @@
     --base-value: 8;
     --base: calc(var(--base-value) * var(--unit));
     --primary-color-data: 18, 105, 237;
+    --primary-color-hover-data: 13, 77, 174;
     --primary-color-opacity: 1;
     --primary-color: rgba(var(--primary-color-data), var(--primary-color-opacity));
-    --primary-color-hover-data: 13, 77, 174;
     --primary-color-hover: rgb(var(--primary-color-hover-data));
+    --secondary-color-data: 56, 149, 137;
+    --secondary-color-hover-data: 42, 111, 102;
     --disabled-opacity: 0.3;
     --dark-grey-opacity: 0.7;
     --grey-opacity: 0.5;

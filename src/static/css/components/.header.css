@@ -53,6 +53,10 @@ body>header>nav a {
     text-decoration: none;
 }
 
+body>header>nav a::after {
+    content: none;
+}
+
 body>header>nav>details {
     position: relative;
 }
