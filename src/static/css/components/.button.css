@@ -110,6 +110,27 @@ a.btn.secondary:hover {
     --btn-background-color-opacity: 1;
 }
 
+a.btn.link {
+    --btn-text-color-data: var(--primary-color-data);
+    --btn-text-color-hover-data: var(--primary-color-hover-data);
+    --btn-background-color-opacity: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+a.btn.link:hover {
+    --btn-background-color-opacity: 0;
+}
+
+a.btn.link::after {
+    content: " ";
+    bottom: calc((100% - var(--font-size)) / 2);
+}
+
+a.btn.link:hover::after {
+    bottom: calc((100% - var(--font-size)) / 2 - 4px);
+}
+
 button+button,
 button+a.btn,
 a.btn+button,

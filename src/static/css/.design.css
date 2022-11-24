@@ -121,7 +121,7 @@ h1 {
 }
 
 h2 {
-    --font-size-multiplier: 2;
+    --font-size-multiplier: calc(5 / 2);
     padding-bottom: calc(var(--base) * 3);
 }
 

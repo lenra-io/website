@@ -26,6 +26,16 @@ main > section > nav {
     text-align: center;
 }
 
+h2[data-title]::before {
+    --text-opacity: 0.6;
+    content: attr(data-title);
+    display: block;
+    text-transform: uppercase;
+    font-size: var(--font-size);
+    font-weight: 600;
+    padding-bottom: var(--base);
+}
+
 h3[data-emoji] {
     padding-bottom: calc(var(--base) / 2);
 }
