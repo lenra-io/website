@@ -14,7 +14,6 @@ body>header>section {
   position: relative;
   margin-left: 0;
   max-width: 600px;
-  /* padding: calc(var(--base) * 15) 0; */
   padding: 10% 0;
 }
 
@@ -98,54 +97,15 @@ body>header>section>figure>img {
   border-radius: calc(var(--base) * 2);
 }
 
-/*------------------*/
+/*--------- Adventages ---------*/
 
-section>h2 {
-  text-align: center;
+#advantages>ul>li {
+  --color-data: var(--green-pulse-data);
+  --background-color-data: var(--green-data);
+  --background-opacity: 0.5;
 }
 
-section.key-point {
-  --text-width: 60%;
-  --text-max-width: 550px;
-  --spacing: 40px;
-  position: relative;
-}
-
-section.key-point>* {
-  width: var(--text-width);
-  max-width: var(--text-max-width);
-  text-align: left;
-}
-
-section.key-point {
-  margin-top: calc(var(--base) * var(--section-padding-top));
-}
-
-section.key-point>img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: calc(100% - var(--text-width));
-  padding-left: var(--spacing);
-  height: calc(100% - var(--base) * (var(--section-padding-bottom) - var(--section-padding-top)));
-}
-
-section.key-point:nth-of-type(2)>* {
-  margin-left: auto;
-  margin-right: 0;
-}
-
-section.key-point:nth-of-type(1)>img {
-  top: calc(var(--base) * var(--section-padding-top));
-  height: calc(100% - var(--base) * (var(--section-padding-bottom) + var(--section-padding-top)));
-}
-
-section.key-point:nth-of-type(2)>img {
-  left: 0;
-  right: auto;
-  padding-right: var(--spacing);
-  padding-left: 0;
-}
+/*--------- Partners ---------*/
 
 #partners>nav {
   --spacing: calc(var(--base) * 3);
@@ -209,14 +169,12 @@ section.key-point:nth-of-type(2)>img {
     display: none;
   }
 
-  section.key-point {
+  section.alternate {
     --text-width: 100%;
     --text-max-width: none;
-    padding-top: 16px;
-    padding-bottom: 32px;
   }
 
-  section.key-point>img {
+  section.alternate>img {
     position: initial;
     display: block;
     top: auto;
@@ -229,11 +187,11 @@ section.key-point:nth-of-type(2)>img {
     height: auto;
   }
 
-  section.key-point:nth-of-type(2)>* {
+  section.alternate:nth-of-type(2)>* {
     margin-right: auto;
   }
 
-  section.key-point:nth-of-type(2)>img {
+  section.alternate:nth-of-type(2)>img {
     padding-right: 0;
   }
 }

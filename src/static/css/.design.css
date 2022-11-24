@@ -72,8 +72,8 @@
     --top-reduction: var(--base) * (var(--top-padding) + var(--button-size));
     --bottom-reduction: var(--base) * var(--bottom-padding);
     --height-reduction: var(--top-reduction) + var(--bottom-reduction);
-    --section-padding-top: 5;
-    --section-padding-bottom: 8;
+    --section-padding-top: 12;
+    --section-padding-bottom: 12;
     --logo-horizontal-image-black: url("../img/logo.svg");
     --logo-vertical-image-black: url("../img/logo-vertical.svg");
     --logo-horizontal-image-white: url("../img/logo-white.svg");
@@ -100,11 +100,18 @@ body {
     line-height: var(--line-height-multiplier);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     color: rgba(var(--text-color-data), var(--text-opacity));
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-size: calc(var(--font-size) * var(--font-size-multiplier));
     font-weight: 700;
 }
@@ -127,28 +134,17 @@ h4 {
     --font-size-multiplier: 1;
 }
 
-h3[data-emoji] {
-    padding-bottom: calc(var(--base) / 2);
-}
-
-h3[data-emoji]::before {
-    content: attr(data-emoji);
-    display: inline-block;
-    font-size: 80%;
-    width: 28px;
-    vertical-align: baseline;
-}
-
-h3[data-emoji]+p {
-    padding-left: 28px;
-}
-
 p {
     padding-bottom: var(--base);
 }
 
 p+h3 {
     margin-top: calc(var(--base) * 2);
+}
+
+h2>strong,
+h3>strong {
+    color: rgba(var(--primary-color-data), var(--primary-color-opacity));
 }
 
 .invert-colors {
@@ -233,15 +229,15 @@ a[href="/"]::before {
     h1 {
         --font-size-multiplier: 2;
     }
-    
+
     h2 {
         --font-size-multiplier: calc(3 / 2);
     }
-    
+
     h3 {
         --font-size-multiplier: calc(4 / 3);
     }
-    
+
     h4 {
         --font-size-multiplier: calc(5 / 4);
     }
