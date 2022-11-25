@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'Lenra-icons';
   src:
-    url('../fonts/Lenra-icons.ttf?s5ct8b') format('truetype'),
-    url('../fonts/Lenra-icons.woff?s5ct8b') format('woff'),
-    url('../fonts/Lenra-icons.svg?s5ct8b#Lenra-icons') format('svg');
+    url('../fonts/Lenra-icons.ttf?n6wz1p') format('truetype'),
+    url('../fonts/Lenra-icons.woff?n6wz1p') format('woff'),
+    url('../fonts/Lenra-icons.svg?n6wz1p#Lenra-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -32,6 +32,30 @@
 }
 .lenra-icon-mail:before {
   content: "\e902";
+}
+.lenra-icon-arrow-up:before {
+  content: "\e917";
+}
+.lenra-icon-arrow-up-left:before {
+  content: "\e918";
+}
+.lenra-icon-arrow-left:before {
+  content: "\e919";
+}
+.lenra-icon-arrow-down-left:before {
+  content: "\e91a";
+}
+.lenra-icon-arrow-down:before {
+  content: "\e91b";
+}
+.lenra-icon-arrow-down-right:before {
+  content: "\e91c";
+}
+.lenra-icon-arrow-right:before {
+  content: "\e916";
+}
+.lenra-icon-arrow-up-right:before {
+  content: "\e91d";
 }
 .lenra-icon-book-open:before {
   content: "\e903";
