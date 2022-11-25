@@ -6,10 +6,11 @@
 
 main {
     position: relative;
-    display: block;/*IE*/
+    display: block;
+    /*IE*/
 }
 
-main > h2 {
+main>h2 {
     padding-top: calc(var(--base) * var(--section-padding-top));
 }
 
@@ -22,7 +23,7 @@ main>section>h2 {
     text-align: center;
 }
 
-main > section > nav {
+main>section>nav {
     text-align: center;
 }
 
@@ -52,42 +53,72 @@ h3[data-emoji]+p {
     padding-left: 28px;
 }
 
+/*********** .alternate ************/
+
 .alternate {
-  --text-width: 60%;
-  --text-max-width: 550px;
-  --spacing: 40px;
-  position: relative;
-  padding-right: calc(100% - min(var(--text-width), var(--text-max-width)));
+    --text-width: 60%;
+    --text-max-width: 550px;
+    --spacing: 40px;
+    position: relative;
+    padding-right: calc(100% - min(var(--text-width), var(--text-max-width)));
 }
 
 .alternate>img {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: calc(100% - var(--text-width));
-  padding-left: var(--spacing);
-  height: calc(100% - var(--base) * (var(--section-padding-bottom) + var(--section-padding-top)));
-  max-height: 280px;
-  max-width: 340px;
-  transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: calc(100% - var(--text-width));
+    padding-left: var(--spacing);
+    height: calc(100% - var(--base) * (var(--section-padding-bottom) + var(--section-padding-top)));
+    max-height: 280px;
+    max-width: 340px;
+    transform: translateY(-50%);
 }
 
 .alternate.first-alternate+.alternate,
 .alternate.first-alternate+.alternate+.alternate+.alternate {
-  padding-right: 0;
-  padding-left: calc(100% - min(var(--text-width), var(--text-max-width)));
+    padding-right: 0;
+    padding-left: calc(100% - min(var(--text-width), var(--text-max-width)));
 }
 
 .alternate.first-alternate+.alternate>img,
 .alternate.first-alternate+.alternate+.alternate+.alternate>img {
-  left: 0;
-  right: auto;
-  padding-right: var(--spacing);
-  padding-left: 0;
+    left: 0;
+    right: auto;
+    padding-right: var(--spacing);
+    padding-left: 0;
 }
 
 main>section.alternate>h2 {
     text-align: left;
+}
+
+
+/*********** .colored-block ************/
+
+.colored-block {
+    --primary-color-data: var(--green-pulse-data);
+    --background-color-data: var(--green-data);
+    --background-opacity: 0.1;
+    padding: calc(var(--base) * 3);
+    background-color: rgba(var(--background-color-data), var(--background-opacity));
+    margin: calc(var(--base) * 3) calc(var(--base) * 3 / 2) 0;
+    border-radius: var(--base);
+}
+
+.colored-block[class^="lenra-icon-"]::before,
+.colored-block[class*=" lenra-icon-"]::before {
+    --size: calc(var(--base) * 6);
+    display: inline-block;
+    width: var(--size);
+    height: var(--size);
+    line-height: var(--size);
+    font-size: calc(var(--size) / 2);
+    text-align: center;
+    color: rgb(var(--primary-color-data));
+    border: 1px solid rgb(var(--background-color-data));
+    border-radius: calc(var(--base) * 2);
+    margin-bottom: calc(var(--base) * 3);
 }
 
 @media (max-aspect-ratio: 1/1) {

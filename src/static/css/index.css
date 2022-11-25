@@ -58,12 +58,9 @@ body>header>section>h1>ul li::after {
   vertical-align: middle;
 }
 
-body>header>section>p {
-  padding-bottom: var(--font-size);
-}
-
 body>header>section>p+nav {
-  padding-bottom: calc(var(--base) * 3);
+  margin-top: calc(var(--base) * 2);
+  padding-bottom: calc(var(--base) * 2);
 }
 
 body>header>section>a.btn.link {
@@ -105,68 +102,94 @@ body>header>section>figure>img {
 }
 
 #advantages>ul>li {
-  --color-data: var(--green-pulse-data);
-  --background-color-data: var(--green-data);
-  --background-opacity: 0.1;
   display: inline-block;
   text-align: left;
   width: 290px;
-  padding: calc(var(--base) * 3);
-  background-color: rgba(var(--background-color-data), var(--background-opacity));
   margin: calc(var(--base) * 3) calc(var(--base) * 3 / 2) 0;
-  border-radius: var(--base);
 }
 
 #advantages>ul>li:nth-of-type(6n+2) {
-  --color-data: var(--red-pulse-data);
+  --primary-color-data: var(--red-pulse-data);
   --background-color-data: var(--red-data);
 }
 
 #advantages>ul>li:nth-of-type(6n+4) {
-  --color-data: var(--yellow-pulse-data);
+  --primary-color-data: var(--yellow-pulse-data);
   --background-color-data: var(--yellow-data);
 }
 
 #advantages>ul>li:nth-of-type(6n+6) {
-  --color-data: var(--blue-pulse-data);
+  --primary-color-data: var(--blue-pulse-data);
   --background-color-data: var(--blue-data);
 }
 
-#advantages>ul>li::before {
-  --size: calc(var(--base) * 6);
-  display: inline-block;
-  width: var(--size);
-  height: var(--size);
-  line-height: var(--size);
-  font-size: calc(var(--size) / 2);
+/********** Use cases **********/
+
+#use-cases {
   text-align: center;
-  color: rgb(var(--color-data));
-  border: 1px solid rgb(var(--background-color-data));
-  border-radius: calc(var(--base) * 2);
-  margin-bottom: calc(var(--base) * 3);
+}
+
+#use-cases>.colored-block {
+  width: 330px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#use-cases>.colored-block:first-of-type {
+  --primary-color-data: var(--yellow-pulse-data);
+  --background-color-data: var(--yellow-data);
+  margin-top: calc(var(--base) * 10);
+}
+
+#use-cases>.colored-block:last-of-type {
+  margin-top: calc(var(--base) * 20);
+}
+
+#use-cases>.colored-block>h3 {
+  padding-bottom: calc(var(--base) * 5);
+}
+
+#use-cases>nav {
+  margin-top: calc(var(--base) * 14);
+}
+
+/********** Try **********/
+
+#try {
+  text-align: center;
+}
+
+#try>img {
+  margin-bottom: calc(var(--base) * 2);
+}
+
+#try>nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#try>nav>a:last-of-type {
+  margin-left: 0;
+  margin-top: var(--base);
 }
 
 /*--------- Partners ---------*/
 
+#partners {
+  padding-bottom: calc(var(--base) * 5);
+}
+
 #partners>nav {
   --spacing: calc(var(--base) * 3);
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
 }
 
 #partners>nav>a {
-  --size: 150px;
   position: relative;
   display: inline-block;
-  background-color: white;
-  border: 1px solid #1E232C;
-  width: var(--size);
-  height: var(--size);
-  border-radius: 25%;
-  margin: var(--spacing) var(--spacing) 0;
+  vertical-align: middle;
+  margin: 0 var(--spacing) var(--spacing);
 }
 
 #partners>nav>a::after {
@@ -174,18 +197,8 @@ body>header>section>figure>img {
 }
 
 #partners>nav>a>img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80%;
-  height: 80%;
-  object-fit: contain;
-  transform: translate(-50%, -50%);
-}
-
-#partners>nav>a[href*="naos-cluster.com"]>img {
-  width: 70%;
-  height: 70%;
+  max-width: calc(var(--base) * 20);
+  max-height: calc(var(--base) * 10);
 }
 
 @media (max-width: 1200px) {

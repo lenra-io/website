@@ -134,12 +134,12 @@ h4 {
     --font-size-multiplier: 1;
 }
 
-p {
-    padding-bottom: var(--base);
+p+* {
+    margin-top: calc(var(--base) * 3);
 }
 
-p+h3 {
-    margin-top: calc(var(--base) * 2);
+p+p {
+    margin-top: var(--base);
 }
 
 h2>strong,
