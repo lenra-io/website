@@ -138,6 +138,18 @@ a.btn+a.btn {
     margin-left: calc(var(--base) * 2);
 }
 
+a.btn.link.lenra-icon-arrow-right {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+a.btn.link.lenra-icon-arrow-right::before {
+    color: inherit;
+    margin-left: var(--base);
+    font-size: 120%;
+}
+
 nav.social {
     --vertical-spacing: var(--base);
     --horizontal-spacing: calc(var(--base) * 2);

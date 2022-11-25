@@ -86,6 +86,7 @@
     --logo-horizontal-height: var(--button-height);
     --logo-vertical-height: calc(var(--base) * 10);
     --logo-height: var(--logo-horizontal-height);
+    --lenra-bar-gradient: var(--green), var(--green) 25%, var(--yellow) 25%, var(--yellow) 50%, var(--red) 50%, var(--red) 75%, var(--blue) 75%, var(--blue);
 }
 
 html {
@@ -182,8 +183,7 @@ body>footer {
     max-width: 1200px;
 }
 
-body>header,
-body>footer {
+body>header {
     padding: calc(var(--base) * var(--top-padding)) 0;
 }
 

@@ -1,3 +1,20 @@
+body>footer {
+    padding: calc(var(--base) * 10) 0;
+}
+
+body>footer::before {
+    background-image:
+        /* url(../../img/fond.svg), */
+        linear-gradient(to right, var(--lenra-bar-gradient));
+    background-size:
+        /* cover, */
+        100% calc(var(--base) * 3 / 4);
+    background-position:
+        /* 50% 50%,  */
+        50% 0%;
+    background-repeat: no-repeat;
+}
+
 body>footer>nav {
     position: relative;
     text-align: right;
