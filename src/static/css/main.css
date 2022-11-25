@@ -17,10 +17,12 @@ main>h2 {
 main>section {
     padding-top: calc(var(--base) * var(--section-padding-top));
     padding-bottom: calc(var(--base) * var(--section-padding-bottom));
+    text-align: center;
 }
 
-main>section>h2 {
-    text-align: center;
+main>section>h3,
+main>section>p {
+    text-align: left;
 }
 
 main>section>nav {
@@ -61,6 +63,7 @@ h3[data-emoji]+p {
     --spacing: 40px;
     position: relative;
     padding-right: calc(100% - min(var(--text-width), var(--text-max-width)));
+    text-align: left;
 }
 
 .alternate>img {
@@ -138,5 +141,32 @@ main>section.alternate>h2 {
 
     h1::before {
         display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .alternate {
+        --text-width: 100%;
+        --text-max-width: none;
+        text-align: center;
+    }
+
+    .alternate>img {
+        position: initial;
+        display: block;
+        top: auto;
+        left: auto;
+        right: auto;
+        margin: calc(var(--base) * 4) auto 0;
+        width: 100%;
+        max-width: calc(var(--base) * 40);
+        height: auto;
+        max-height: calc(var(--base) * 30);
+        padding: 0;
+        transform: none;
+    }
+
+    main>section.alternate>h2 {
+        text-align: center;
     }
 }

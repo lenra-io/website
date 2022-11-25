@@ -219,6 +219,15 @@ a[href="/"]::before {
     background-position: var(--logo-position);
 }
 
+
+
+@media (max-width: 800px) {
+    :root {
+        --section-padding-top: 6;
+        --section-padding-bottom: 6;
+    }
+}
+
 @media (max-width: 550px) {
     :root {
         --logo-height: var(--logo-vertical-height);
@@ -231,15 +240,7 @@ a[href="/"]::before {
     }
 
     h2 {
-        --font-size-multiplier: calc(3 / 2);
-    }
-
-    h3 {
-        --font-size-multiplier: calc(4 / 3);
-    }
-
-    h4 {
-        --font-size-multiplier: calc(5 / 4);
+        --font-size-multiplier: 2;
     }
 
     .invert-colors {
