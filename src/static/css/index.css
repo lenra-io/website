@@ -96,6 +96,13 @@ body>header>section>figure>img {
 
 /*--------- Adventages ---------*/
 
+#advantages {
+  background-repeat: no-repeat;
+  background-image: url(../img/);
+  background-position: calc(50% - var(--base) * 50);
+  background-size: auto;
+}
+
 #advantages>ul {
   text-align: center;
   padding-bottom: calc(var(--base) * 6);
@@ -266,6 +273,15 @@ body>header>section>figure>img {
 }
 
 @media (max-width: 460px) {
+
+  body>header>section {
+    text-align: center;
+  }
+
+  body>header>section>h1,
+  body>header>section>p {
+    text-align: left;
+  }
 
   body>header>section>p,
   body>header>section>p+nav {

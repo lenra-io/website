@@ -47,10 +47,10 @@ summary:disabled {
 
 button,
 a.btn {
-    --btn-text-color-data: var(--white-data);
-    --btn-text-color-hover-data: var(--white-data);
+    --btn-text-color-data: var(--text-color-data);
+    --btn-text-color-hover-data: var(--text-color-data);
     --btn-background-color-data: var(--text-color-data);
-    --btn-background-color-opacity: 0.4;
+    --btn-background-color-opacity: 0.1;
     --border-size: 0px;
     min-width: calc(var(--base) * 20);
     background-color: rgba(var(--btn-background-color-data), var(--btn-background-color-opacity));
@@ -88,6 +88,8 @@ a.btn:hover {
 
 button.primary,
 a.btn.primary {
+    --btn-text-color-data: var(--white-data);
+    --btn-text-color-hover-data: var(--white-data);
     --btn-background-color-data: var(--primary-color-data);
     --btn-background-color-opacity: 1;
 }
@@ -215,5 +217,11 @@ nav.social>a::before {
     a.btn+button,
     a.btn+a.btn {
         margin-left: 0;
+    }
+
+    a.btn.link {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
