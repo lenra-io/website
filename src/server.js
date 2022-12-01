@@ -31,5 +31,5 @@ app.get('/(*.html)?', async (req, res) => {
 app.use(express.static(staticPath, {dotfiles: 'allow'}));
 
 app.listen(port, '0.0.0.0', () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`App listening at http://localhost:${port}`);
 })

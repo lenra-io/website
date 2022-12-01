@@ -34,7 +34,7 @@ h2[data-title]::before {
     content: attr(data-title);
     display: block;
     text-transform: uppercase;
-    font-size: var(--font-size);
+    font-size: calc(var(--font-size) / var(--font-size-multiplier));
     font-weight: 600;
     padding-bottom: var(--base);
 }
@@ -111,12 +111,14 @@ main>section.alternate>h2 {
 
 .colored-block[class^="lenra-icon-"]::before,
 .colored-block[class*=" lenra-icon-"]::before {
+    --font-size-multiplier: calc(3 / 2);
+    --base: calc(1em / (2 * var(--font-size-multiplier)));
     --size: calc(var(--base) * 6);
     display: inline-block;
     width: var(--size);
     height: var(--size);
+    font-size: calc(var(--font-size) * var(--font-size-multiplier));
     line-height: var(--size);
-    font-size: calc(var(--size) / 2);
     text-align: center;
     color: rgb(var(--primary-color-data));
     border: 1px solid rgb(var(--background-color-data));

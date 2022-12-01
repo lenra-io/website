@@ -1,7 +1,3 @@
-:root {
-    --line-height-size: 1em;
-}
-
 body>header {
     text-align: center;
     --figure-max-width: 500px;
@@ -44,9 +40,7 @@ section.text {
 }
 
 section.text>h1 {
-    --font-size: 40px;
     --height: calc(var(--font-size) * var(--line-height-multiplier));
-    font-size: var(--font-size);
     padding-bottom: 20px;
 }
 

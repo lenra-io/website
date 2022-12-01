@@ -1,6 +1,4 @@
-:root {
-  --line-height-size: 1em;
-}
+@import url('http://localhost:8081/ghorgaggre.css');
 
 body>header {
   padding-bottom: calc(var(--base) * 10);
@@ -18,8 +16,8 @@ body>header>section {
 }
 
 body>header>section>h1 {
-  --height: calc(var(--font-size) * var(--font-size-multiplier) * var(--line-height-multiplier));
-  padding-bottom: var(--font-size);
+  --height: calc(var(--font-size) * var(--line-height-multiplier));
+  padding-bottom: calc(var(--font-size) / var(--font-size-multiplier));
   max-width: 500px;
 }
 
@@ -70,7 +68,7 @@ body>header>section>a.btn.link {
 
 body>header>section>a::before {
   --text-color-data: var(--yellow-pulse-data);
-  font-size: calc(var(--font-size) * 5 / 4);
+  font-size: 125%;
   margin-right: var(--base);
   vertical-align: text-bottom;
 }
@@ -191,7 +189,7 @@ body>header>section>figure>img {
   margin-top: calc(var(--base) * 10);
 }
 
-#use-cases>.colored-block:last-of-type {
+#use-cases>.colored-block+.colored-block {
   margin-top: calc(var(--base) * 20);
 }
 
@@ -201,6 +199,23 @@ body>header>section>figure>img {
 
 #use-cases>nav {
   margin-top: calc(var(--base) * 14);
+}
+
+#use-cases>#contributors {
+  --ghorgaggre-contributors-image-spacing: 0;
+}
+
+#use-cases>#contributors>h3 {
+  margin-top: calc(var(--base) * 6);
+  padding-bottom: calc(var(--base) * 4);
+}
+
+#use-cases>#contributors>nav.contributors>a::after {
+  content: none;
+}
+
+#use-cases>#contributors>nav.contributors figcaption {
+  display: none;
 }
 
 /********** Try **********/
@@ -269,6 +284,62 @@ body>header>section>figure>img {
   }
 }
 
+@media (min-width: 801px) {
+  #use-cases>#contributors {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    --ghorgaggre-contributors-spacing: 0;
+    z-index: -1;
+  }
+
+  #use-cases>#contributors>h3 {
+    display: none;
+  }
+
+  #use-cases>#contributors>nav.contributors>a {
+    position: absolute;
+  }
+
+  #use-cases>#contributors>nav.contributors>a:nth-of-type(1) {
+    --ghorgaggre-contributors-image-size: 8.125em;
+    top: 15%;
+    left: calc(50% - var(--base) * 55);
+  }
+
+  #use-cases>#contributors>nav.contributors>a:nth-of-type(2) {
+    --ghorgaggre-contributors-image-size: 6.75em;
+    top: 45%;
+    left: calc(50% - var(--base) * 77);
+  }
+
+  #use-cases>#contributors>nav.contributors>a:nth-of-type(3) {
+    --ghorgaggre-contributors-image-size: 12.5em;
+    top: 65%;
+    left: calc(50% - var(--base) * 59);
+  }
+
+  #use-cases>#contributors>nav.contributors>a:nth-of-type(4) {
+    --ghorgaggre-contributors-image-size: 11.25em;
+    top: 15%;
+    left: calc(50% + var(--base) * 43);
+  }
+
+  #use-cases>#contributors>nav.contributors>a:nth-of-type(5) {
+    --ghorgaggre-contributors-image-size: 8.125em;
+    top: 48%;
+    left: calc(50% + var(--base) * 57);
+  }
+
+  #use-cases>#contributors>nav.contributors>a:nth-of-type(6) {
+    --ghorgaggre-contributors-image-size: 6.75em;
+    top: 83%;
+    left: calc(50% + var(--base) * 39);
+  }
+}
+
 @media (max-width: 800px) {
   body>header>section {
     max-width: 600px;
@@ -279,7 +350,7 @@ body>header>section>figure>img {
     display: none;
   }
 
-  .first-alternate>img{
+  .first-alternate>img {
     transform: translateX(10%);
   }
 
@@ -293,12 +364,17 @@ body>header>section>figure>img {
   }
 
   #use-cases>.colored-block:first-of-type,
-  #use-cases>.colored-block:last-of-type {
+  #use-cases>.colored-block+.colored-block {
     margin: calc(var(--base) * 3) 0 0;
   }
-  
-  #use-cases > nav {
+
+  #use-cases>nav {
     margin-top: calc(var(--base) * 6);
+  }
+
+  #use-cases>#contributors {
+    max-width: 20em;
+    margin: auto;
   }
 }
 

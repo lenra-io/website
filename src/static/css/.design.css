@@ -13,9 +13,7 @@
     --red-data: 242, 122, 134;
     --red-pulse-data: 233, 34, 54;
     --red: rgb(var(--red-data));
-    --unit: 1px;
-    --base-value: 8;
-    --base: calc(var(--base-value) * var(--unit));
+    --base: 0.5em;
     --primary-color-data: 18, 105, 237;
     --primary-color-hover-data: 13, 77, 174;
     --primary-color-opacity: 1;
@@ -44,11 +42,9 @@
     --primary-color-disabled: var(--light-primary-color-disabled);
     --invert-primary-color-disabled: var(--dark-primary-color-disabled);
     --background-image: url("../img/fond.svg");
-    --font-size-value: 16;
-    --font-size: calc(1px * var(--font-size-value));
-    --line-height-value: 20;
-    --line-height: calc(var(--line-height-value) * var(--unit));
-    --line-height-multiplier: calc(var(--line-height-value) / var(--font-size-value));
+    --font-size: 1em;
+    --line-height-multiplier: calc(5 / 4);
+    --line-height: calc(1em * var(--line-height-multiplier));
     --title-font-size-multiplier: 2.5;
     --title-font-size: calc(var(--font-size) * var(--title-font-size-multiplier));
     --title-size: calc(var(--title-font-size) / var(--base));
@@ -114,6 +110,7 @@ h4,
 h5,
 h6 {
     font-size: calc(var(--font-size) * var(--font-size-multiplier));
+    --base: calc(1em / (2 * var(--font-size-multiplier)));
     font-weight: 700;
 }
 
@@ -180,7 +177,7 @@ body>header,
 body>footer {
     margin: auto;
     width: 90%;
-    max-width: 1200px;
+    max-width: 75em;
 }
 
 body>header {
@@ -194,7 +191,7 @@ body>footer>nav>h2>a[href="/"] {
     width: calc(var(--logo-height) * var(--logo-horizontal-ratio));
     height: var(--logo-height);
     text-align: left;
-    text-indent: -200px;
+    text-indent: -100vw;
     overflow: hidden;
     transition-property: none;
 }
