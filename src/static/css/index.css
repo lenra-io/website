@@ -1,5 +1,3 @@
-@import url('http://localhost:8081/ghorgaggre.css');
-
 body>header {
   padding-bottom: calc(var(--base) * 10);
 }
@@ -117,15 +115,12 @@ body>header>section>figure>img {
 }
 
 #advantages>ul {
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 290px);
+  grid-gap: calc(var(--base) * 3);
   padding-bottom: calc(var(--base) * 6);
-}
-
-#advantages>ul>li {
-  display: inline-block;
-  text-align: left;
-  width: 290px;
-  margin: calc(var(--base) * 3) calc(var(--base) * 3 / 2) 0;
+  width: fit-content;
+  margin: auto;
 }
 
 #advantages>ul>li:nth-of-type(6n+2) {
@@ -181,6 +176,7 @@ body>header>section>figure>img {
   display: inline-block;
   vertical-align: top;
   text-align: left;
+  margin: calc(var(--base) * 3) calc(var(--base) * 3 / 2) 0;
 }
 
 #use-cases>.colored-block:first-of-type {
@@ -217,6 +213,44 @@ body>header>section>figure>img {
 #use-cases>#contributors>nav.contributors figcaption {
   display: none;
 }
+
+/********** Features ***********/
+
+#features>ul {
+  display: grid;
+  grid-template-columns: repeat(3, 17.5em);
+  grid-gap: calc(var(--base) * 3);
+  width: fit-content;
+  margin: auto;
+}
+
+#features>ul>li.colored-block {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: start;
+  height: 25em;
+}
+
+#features>ul>li.colored-block:nth-of-type(2) {
+  --primary-color-data: var(--yellow-pulse-data);
+  --background-color-data: var(--yellow-data);
+}
+
+#features>ul>li.colored-block:nth-of-type(3) {
+  --primary-color-data: var(--red-pulse-data);
+  --background-color-data: var(--red-data);
+}
+
+#features>ul>li.colored-block>a {
+  --btn-text-color-data: var(--text-color-data);
+  --btn-text-color-hover-data: var(--text-color-data);
+}
+
+#features>ul>li.colored-block>h3 {
+  flex: 1;
+}
+
+
 
 /********** Try **********/
 
@@ -275,6 +309,32 @@ body>header>section>figure>img {
 @media (max-width: 1050px) {
   #advantages::before {
     display: none;
+  }
+
+  #advantages>ul {
+    grid-template-columns: repeat(2, 290px);
+  }
+
+  #features>ul {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 30em;
+  }
+  
+  #features>ul>li.colored-block {
+    display: block;
+    height: auto;
+  }
+}
+
+@media (max-width: 1050px) and (min-width: 671px) {
+  #advantages>ul>li:nth-of-type(6n+3) {
+    --primary-color-data: var(--yellow-pulse-data);
+    --background-color-data: var(--yellow-data);
+  }
+
+  #advantages>ul>li:nth-of-type(6n+4) {
+    --primary-color-data: var(--green-pulse-data);
+    --background-color-data: var(--green-data);
   }
 }
 
@@ -375,6 +435,13 @@ body>header>section>figure>img {
   #use-cases>#contributors {
     max-width: 20em;
     margin: auto;
+  }
+}
+
+@media (max-width: 670px) {
+  #advantages>ul {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: calc(var(--base) * 50);
   }
 }
 

@@ -118,6 +118,7 @@ a.btn.link {
     --btn-background-color-opacity: 0;
     padding-left: 0;
     padding-right: 0;
+    min-width: 0;
 }
 
 a.btn.link:hover {

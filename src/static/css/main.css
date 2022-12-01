@@ -103,9 +103,9 @@ main>section.alternate>h2 {
     --primary-color-data: var(--green-pulse-data);
     --background-color-data: var(--green-data);
     --background-opacity: 0.1;
+    text-align: left;
     padding: calc(var(--base) * 3);
     background-color: rgba(var(--background-color-data), var(--background-opacity));
-    margin: calc(var(--base) * 3) calc(var(--base) * 3 / 2) 0;
     border-radius: var(--base);
 }
 
