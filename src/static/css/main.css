@@ -47,20 +47,20 @@ h3[data-emoji]::before {
     content: attr(data-emoji);
     display: inline-block;
     font-size: 80%;
-    width: 28px;
+    width: calc(var(--base) * 3.5);
     vertical-align: baseline;
 }
 
 h3[data-emoji]+p {
-    padding-left: 28px;
+    padding-left: calc(var(--base) * 3.5);
 }
 
 /*********** .alternate ************/
 
 .alternate {
     --text-width: 60%;
-    --text-max-width: 550px;
-    --spacing: 40px;
+    --text-max-width: 37.5em;
+    --spacing: 2.5em;
     position: relative;
     padding-right: calc(100% - min(var(--text-width), var(--text-max-width)));
     text-align: left;
@@ -73,8 +73,8 @@ h3[data-emoji]+p {
     width: calc(100% - var(--text-width));
     padding-left: var(--spacing);
     height: calc(100% - var(--base) * (var(--section-padding-bottom) + var(--section-padding-top)));
-    max-height: 280px;
-    max-width: 340px;
+    max-height: 17.5em;
+    max-width: 21.25em;
     transform: translateY(-50%);
 }
 
@@ -121,7 +121,7 @@ main>section.alternate>h2 {
     line-height: var(--size);
     text-align: center;
     color: rgb(var(--primary-color-data));
-    border: 1px solid rgb(var(--background-color-data));
+    border: 0.0625em solid rgb(var(--background-color-data));
     border-radius: calc(var(--base) * 2);
     margin-bottom: calc(var(--base) * 3);
 }
@@ -146,7 +146,7 @@ main>section.alternate>h2 {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 50em) {
     .alternate {
         --text-width: 100%;
         --text-max-width: none;

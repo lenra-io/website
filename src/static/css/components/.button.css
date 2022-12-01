@@ -12,17 +12,17 @@ a {
     --btn-text-color-data: var(--primary-color-data);
     --btn-text-color-hover-data: var(--primary-color-hover-data);
     transition-property: color;
-    padding-bottom: 4px;
+    padding-bottom: calc(var(--base) / 2);
 }
 
 a::after {
     content: " ";
     position: absolute;
-    border-bottom: 1px solid;
+    border-bottom: 0.0625em solid;
     color: inherit;
     width: 100%;
     left: 0;
-    bottom: 4px;
+    bottom: calc(var(--base) / 2);
     opacity: 0;
     transition-property: opacity, bottom, color;
 }
@@ -51,7 +51,7 @@ a.btn {
     --btn-text-color-hover-data: var(--text-color-data);
     --btn-background-color-data: var(--text-color-data);
     --btn-background-color-opacity: 0.1;
-    --border-size: 0px;
+    --border-size: 0em;
     min-width: calc(var(--base) * 20);
     background-color: rgba(var(--btn-background-color-data), var(--btn-background-color-opacity));
     display: inline-block;
@@ -70,7 +70,7 @@ a.btn::after {
 
 button:focus,
 a.btn:focus {
-    --border-size: 2px;
+    --border-size: calc(var(--base) / 4);
 }
 
 button[disabled],
@@ -131,7 +131,7 @@ a.btn.link::after {
 }
 
 a.btn.link:hover::after {
-    bottom: calc((100% - var(--font-size)) / 2 - 4px);
+    bottom: calc((100% - var(--font-size)) / 2 - var(--base) / 2);
 }
 
 button+button,
@@ -167,13 +167,12 @@ nav.social>a {
     height: var(--size);
     font-size: calc(var(--size) * 0.6);
     overflow: hidden;
-    text-indent: -200px;
+    text-indent: -100vw;
     text-align: left;
     border-radius: 20%;
     background-color: rgb(var(--background-color-data));
     --btn-text-color-data: var(--text-color-data);
     --btn-text-color-hover-data: var(--background-color-data);
-    /* border: 1px solid; */
     margin: var(--vertical-spacing) calc(var(--horizontal-spacing) / 2) 0;
     transition-property: color, background;
 }
@@ -191,12 +190,12 @@ nav.social>a::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-indent: 0px;
+    text-indent: 0;
     color: inherit;
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 50em) {
 
     button,
     a.btn {
@@ -205,7 +204,7 @@ nav.social>a::before {
     }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 28.75em) {
 
     button,
     a.btn {

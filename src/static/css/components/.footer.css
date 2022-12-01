@@ -34,21 +34,23 @@ body>footer>nav>h2>a[href="/"]::after {
     content: none;
 }
 
-body > footer > nav > h2 > a[href="/"]::after {
+body>footer>nav>h2>a[href="/"]::after {
     content: none;
 }
 
-body > footer > nav > section {
+body>footer>nav>section {
     display: inline-flex;
     vertical-align: top;
-    width: 160px;
+    width: calc(var(--base) * 20);
     flex-direction: column;
     align-items: flex-start;
 }
 
-body > footer > nav > section > h3,
-body > footer > ul > li {
-    font-size: 18px;
+body>footer>nav>section>h3,
+body>footer>ul>li {
+    --font-size-multiplier: calc(9 / 8);
+    --base: calc(1em / (2 * var(--font-size-multiplier)));
+    font-size: calc(var(--font-size) * var(--font-size-multiplier));
     font-weight: 700;
 }
 
@@ -56,7 +58,7 @@ body>footer>nav>section>h3 {
     padding-bottom: calc(var(--base) * 2);
 }
 
-body > footer > nav > section > a {
+body>footer>nav>section>a {
     margin-bottom: calc(var(--base) * 2);
     --btn-text-color-data: var(--text-color-data);
 }
@@ -70,14 +72,14 @@ body>footer>ul>li>nav.social {
     --text-opacity: 1;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 50em) {
     body>footer>nav {
         text-align: left;
-        max-width: 360px;
+        max-width: 22.5em;
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 20em) {
     body>footer>nav>section {
         width: 100%;
     }

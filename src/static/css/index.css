@@ -9,49 +9,14 @@ body>header>nav:first-of-type {
 body>header>section {
   position: relative;
   margin-left: 0;
-  max-width: 600px;
+  max-width: 37.5em;
   padding: 10% 0;
 }
 
 body>header>section>h1 {
   --height: calc(var(--font-size) * var(--line-height-multiplier));
   padding-bottom: calc(var(--font-size) / var(--font-size-multiplier));
-  max-width: 500px;
-}
-
-body>header>section>h1>ul {
-  --language-position: 0;
-  height: var(--height);
-  width: calc(var(--height) * 250 / 50);
-  text-align: left;
-  display: inline-block;
-  overflow: hidden;
-  position: relative;
-  vertical-align: top;
-  margin-left: -1px;
-  text-indent: 1px;
-}
-
-
-body>header>section>h1>ul li {
-  display: block;
-  height: var(--height);
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  transition: width 700ms ease-in-out;
-  transform: translateY(calc(var(--height) * -1 * var(--language-position)));
-  white-space: nowrap;
-}
-
-body>header>section>h1>ul.close li {
-  width: 0;
-}
-
-body>header>section>h1>ul li::after {
-  content: " ";
-  display: inline-block;
-  vertical-align: middle;
+  max-width: 31.25em;
 }
 
 body>header>section>p+nav {
@@ -72,9 +37,9 @@ body>header>section>a::before {
 }
 
 body>header>section>figure {
-  --image-margin: 100px;
-  --image-height: 720px;
-  --image-width: 1280px;
+  --image-margin: 6.25em;
+  --image-height: 45em;
+  --image-width: 80em;
   --image-multiplier: calc(2 / 3);
   position: absolute;
   top: 0;
@@ -86,7 +51,7 @@ body>header>section>figure {
 
 body>header>section>figure>img {
   height: 100%;
-  border: 1px solid rgb(var(--text-color-data));
+  border: 0.0625em solid rgb(var(--text-color-data));
   border-radius: calc(var(--base) * 2);
 }
 
@@ -116,7 +81,7 @@ body>header>section>figure>img {
 
 #advantages>ul {
   display: grid;
-  grid-template-columns: repeat(3, 290px);
+  grid-template-columns: repeat(3, 18.125em);
   grid-gap: calc(var(--base) * 3);
   padding-bottom: calc(var(--base) * 6);
   width: fit-content;
@@ -172,7 +137,7 @@ body>header>section>figure>img {
 }
 
 #use-cases>.colored-block {
-  width: 330px;
+  width: 20.625em;
   display: inline-block;
   vertical-align: top;
   text-align: left;
@@ -300,19 +265,19 @@ body>header>section>figure>img {
   max-height: calc(var(--base) * 10);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 75em) {
   body>header>section>figure {
-    --image-margin: 50px;
+    --image-margin: 3.125em;
   }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 65.625em) {
   #advantages::before {
     display: none;
   }
 
   #advantages>ul {
-    grid-template-columns: repeat(2, 290px);
+    grid-template-columns: repeat(2, 18.125em);
   }
 
   #features>ul {
@@ -326,7 +291,7 @@ body>header>section>figure>img {
   }
 }
 
-@media (max-width: 1050px) and (min-width: 671px) {
+@media (max-width: 65.625em) and (min-width: 65.626em) {
   #advantages>ul>li:nth-of-type(6n+3) {
     --primary-color-data: var(--yellow-pulse-data);
     --background-color-data: var(--yellow-data);
@@ -338,13 +303,13 @@ body>header>section>figure>img {
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 60em) {
   body>header>section {
-    max-width: 500px;
+    max-width: 31.25em;
   }
 }
 
-@media (min-width: 801px) {
+@media (min-width: 50.001em) {
   #use-cases>#contributors {
     position: absolute;
     top: 0;
@@ -400,9 +365,9 @@ body>header>section>figure>img {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 50em) {
   body>header>section {
-    max-width: 600px;
+    max-width: 37.5em;
     padding: 0;
   }
 
@@ -420,7 +385,7 @@ body>header>section>figure>img {
 
   #use-cases>.colored-block {
     width: 100%;
-    max-width: 380px;
+    max-width: 23.75em;
   }
 
   #use-cases>.colored-block:first-of-type,
@@ -438,25 +403,20 @@ body>header>section>figure>img {
   }
 }
 
-@media (max-width: 670px) {
+@media (max-width: 41.875em) {
   #advantages>ul {
     grid-template-columns: repeat(1, 1fr);
     max-width: calc(var(--base) * 50);
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 37.5em) {
   body>header>section>h1 {
-    max-width: 400px;
-  }
-
-  body>header>section>h1>ul>li {
-    text-align: left;
-    margin-left: 0;
+    max-width: 25em;
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 28.75em) {
 
   body>header>section {
     text-align: center;

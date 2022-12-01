@@ -218,14 +218,14 @@ a[href="/"]::before {
 
 
 
-@media (max-width: 800px) {
+@media (max-width: 50em) {
     :root {
         --section-padding-top: 6;
         --section-padding-bottom: 6;
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 31.25em) {
     :root {
         --logo-height: var(--logo-vertical-height);
         --logo-image: var(--logo-vertical-image);

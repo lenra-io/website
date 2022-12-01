@@ -108,7 +108,7 @@ body>header>p>a {
     --text-opacity: 1;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 43.75em) {
     body>header>nav {
         padding-top: calc(var(--logo-height) + var(--base) * 3);
         display: flex;
@@ -119,7 +119,7 @@ body>header>p>a {
 
     body>header>nav>* {
         height: var(--button-height);
-        min-width: 100px;
+        min-width: 6.25em;
     }
 
     body>header>nav>a[href="/"] {

@@ -1,6 +1,6 @@
 body > header {
     text-align: left;
-    --figure-max-width: 500px;
+    --figure-max-width: 31.25em;
 }
 
 body > header > * {
@@ -8,17 +8,17 @@ body > header > * {
 }
 
 body > header > h1 {
-    max-width: 400px;
+    max-width: 25em;
 }
 
 body > header > h2,
 body > header > p {
-    width: calc(100% - var(--figure-max-width) - 50px);
+    width: calc(100% - var(--figure-max-width) - 3.125em);
 }
 
 figure {
     --width: 45vw;
-    --max-width: 500px;
+    --max-width: 31.25em;
     position: absolute;
     width: var(--width);
     max-width: var(--figure-max-width);
@@ -40,7 +40,7 @@ main > section {
 }
 
 main > section > p {
-    max-width: 600px;
+    max-width: 37.5em;
     text-align: left;
     margin: auto;
 }
@@ -51,8 +51,8 @@ main > section > p + a.btn {
 
 section.feature {
     --text-width: 60%;
-    --text-max-width: 550px;
-    --spacing: 40px;
+    --text-max-width: 37.5em;
+    --spacing: 2.5em;
     position: relative;
     padding-top: calc(var(--base) * var(--section-padding-top));
     padding-bottom: calc(var(--base) * var(--section-padding-bottom));
@@ -89,7 +89,7 @@ section.feature:nth-of-type(2n+1) > img {
     padding-left: 0;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 71.875em) {
     body > header {
         text-align: center;
     }
@@ -114,7 +114,7 @@ section.feature:nth-of-type(2n+1) > img {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 50em) {
     section.feature {
         --text-width: 100%;
         --text-max-width: none;
@@ -133,7 +133,7 @@ section.feature:nth-of-type(2n+1) > img {
         right: auto;
         margin: calc(var(--base) * 3) auto;
         width: 50%;
-        max-width: 300px;
+        max-width: 18.75em;
         padding: 0;
         height: auto;
     }
