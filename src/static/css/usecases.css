@@ -89,7 +89,7 @@ section.cases>.btn {
     margin-top: calc(var(--base) * var(--section-padding-top));
 }
 
-@media (max-width: 71.875em) {
+@media (max-width: 75em) {
     body>header {
         text-align: center;
     }

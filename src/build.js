@@ -101,8 +101,7 @@ Translations.loadTranslations()
         });
 
         fs.writeFile(Path.join(buildPath, `nginx.conf`), generateNginxConf(langs, {
-            'default-src': ['unsafe-inline', 'analytics.lenra.io'],
-            'frame-src': ['*.youtube-nocookie.com']
+            'default-src': ['unsafe-inline', 'analytics.lenra.io']
         }));
 
         // generate the sitemap.txt file

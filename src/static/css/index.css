@@ -1,58 +1,58 @@
 body>header {
-  padding-bottom: calc(var(--base) * 10);
+  padding-bottom: calc(var(--base) * (30 + 5));
 }
 
-body>header>nav:first-of-type {
-  width: 100%;
+body>header::before {
+    content: " ";
+    position: absolute;
+    top: calc(var(--base) * (var(--top-padding) + 12) + var(--button-height));
+    bottom: calc(var(--base) * 10);
+    width: var(--lenra-bar-width);
+    background-image: linear-gradient(to right, var(--lenra-bar-gradient));
+    background-size: 100% calc(var(--base) * 3 / 4);
+    background-position: 50% 100%;
+    border-radius: 0;
 }
 
-body>header>section {
-  position: relative;
-  margin-left: 0;
-  max-width: 37.5em;
-  padding: 10% 0;
+body>header::after {
+  aspect-ratio: 1364 / 694;
+  width: auto;
+  background-image: url("../img/back-office.jpg");
+  background-size: contain;
+  background-position: 0;
+  border: 0.0625em solid rgb(var(--text-color-data));
+  border-radius: calc(var(--base) * 2);
 }
 
-body>header>section>h1 {
+body>header>nav.menu {
+    margin-bottom: calc(var(--base) * (20 + 5));
+}
+
+body > header > nav.menu ~ * {
+  --elements-margin-left: 0em;
+}
+
+body>header>h1 {
   --height: calc(var(--font-size) * var(--line-height-multiplier));
   padding-bottom: calc(var(--font-size) / var(--font-size-multiplier));
   max-width: 31.25em;
 }
 
-body>header>section>p+nav {
+body>header>p+nav {
   margin-top: calc(var(--base) * 2);
   padding-bottom: calc(var(--base) * 2);
 }
 
-body>header>section>a.btn.link {
+body>header>a.btn.link {
   --btn-text-color-data: var(--text-color-data);
   --btn-text-color-hover-data: var(--text-color-data);
 }
 
-body>header>section>a::before {
+body>header>a::before {
   --text-color-data: var(--yellow-pulse-data);
   font-size: 125%;
   margin-right: var(--base);
   vertical-align: text-bottom;
-}
-
-body>header>section>figure {
-  --image-margin: 6.25em;
-  --image-height: 45em;
-  --image-width: 80em;
-  --image-multiplier: calc(2 / 3);
-  position: absolute;
-  top: 0;
-  left: calc(100% + var(--image-margin));
-  width: calc(50vw - var(--image-margin));
-  height: 100%;
-  overflow: hidden;
-}
-
-body>header>section>figure>img {
-  height: 100%;
-  border: 0.0625em solid rgb(var(--text-color-data));
-  border-radius: calc(var(--base) * 2);
 }
 
 /*--------- Adventages ---------*/
@@ -245,15 +245,16 @@ body>header>section>figure>img {
 }
 
 #partners>nav {
-  --spacing: calc(var(--base) * 3);
-  text-align: center;
+  --spacing: calc(var(--base) * 6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing);
 }
 
 #partners>nav>a {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 var(--spacing) var(--spacing);
+  padding-bottom: 0;
 }
 
 #partners>nav>a::after {
@@ -266,7 +267,7 @@ body>header>section>figure>img {
 }
 
 @media (max-width: 75em) {
-  body>header>section>figure {
+  body>header>figure {
     --image-margin: 3.125em;
   }
 }
@@ -284,7 +285,7 @@ body>header>section>figure>img {
     grid-template-columns: repeat(1, 1fr);
     max-width: 30em;
   }
-  
+
   #features>ul>li.colored-block {
     display: block;
     height: auto;
@@ -304,9 +305,9 @@ body>header>section>figure>img {
 }
 
 @media (max-width: 60em) {
-  body>header>section {
+  /* body>header>section {
     max-width: 31.25em;
-  }
+  } */
 }
 
 @media (min-width: 50.001em) {
@@ -366,12 +367,12 @@ body>header>section>figure>img {
 }
 
 @media (max-width: 50em) {
-  body>header>section {
+  /* body>header>section {
     max-width: 37.5em;
     padding: 0;
-  }
+  } */
 
-  body>header>section>figure {
+  body>header>figure {
     display: none;
   }
 
@@ -411,24 +412,24 @@ body>header>section>figure>img {
 }
 
 @media (max-width: 37.5em) {
-  body>header>section>h1 {
+  body>header>h1 {
     max-width: 25em;
   }
 }
 
 @media (max-width: 28.75em) {
 
-  body>header>section {
+  /* body>header>section {
     text-align: center;
-  }
+  } */
 
-  body>header>section>h1,
-  body>header>section>p {
+  body>header>h1,
+  body>header>p {
     text-align: left;
   }
 
-  body>header>section>p,
-  body>header>section>p+nav {
+  body>header>p,
+  body>header>p+nav {
     padding-bottom: 0;
   }
 

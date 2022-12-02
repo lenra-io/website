@@ -36,7 +36,7 @@
     --text-opacity: 1;
     --background-color-data: var(--white-data);
     --background-color-opacity: 1;
-    --background-color: var(--white);
+    --background-color: rgba(var(--background-color-data), var(--background-color-opacity));
     --background-contrast-color-data: var(--black-data);
     --text-color-data: var(--background-contrast-color-data);
     --primary-color-disabled: var(--light-primary-color-disabled);
@@ -83,6 +83,7 @@
     --logo-vertical-height: calc(var(--base) * 10);
     --logo-height: var(--logo-horizontal-height);
     --lenra-bar-gradient: var(--green), var(--green) 25%, var(--yellow) 25%, var(--yellow) 50%, var(--red) 50%, var(--red) 75%, var(--blue) 75%, var(--blue);
+    --lenra-bar-width: calc(var(--base) / 2);
 }
 
 html {
@@ -133,6 +134,11 @@ h4 {
 }
 
 p+* {
+    margin-top: var(--base);
+}
+
+p+h2,
+p+h3 {
     margin-top: calc(var(--base) * 3);
 }
 
@@ -160,10 +166,9 @@ h3>strong {
     position: absolute;
     background-color: rgb(var(--background-color-data));
     top: 0;
-    left: 50%;
+    left: calc(50% - 50vw);
     height: 100%;
     width: 100vw;
-    transform: translateX(-50%);
     z-index: -1;
 }
 
@@ -180,11 +185,7 @@ body>footer {
     max-width: 75em;
 }
 
-body>header {
-    padding: calc(var(--base) * var(--top-padding)) 0;
-}
-
-body>header>nav>a[href="/"],
+body>header>nav.menu>a[href="/"],
 body>footer>nav>h2>a[href="/"] {
     position: relative;
     display: inline-block;
@@ -216,7 +217,25 @@ a[href="/"]::before {
     background-position: var(--logo-position);
 }
 
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --background-contrast-color-data: var(--white-data);
+        --text-color-data: var(--background-contrast-color-data);
+        --background-color-data: var(--black-data);
+        --logo-horizontal-image: var(--logo-horizontal-image-white);
+        --logo-vertical-image: var(--logo-vertical-image-white);
+        --logo-image: var(--logo-horizontal-image);
+    }
 
+    .invert-colors {
+        --background-contrast-color-data: var(--black-data);
+        --text-color-data: var(--background-contrast-color-data);
+        --background-color-data: var(--white-data);
+        --logo-horizontal-image: var(--logo-horizontal-image-black);
+        --logo-vertical-image: var(--logo-vertical-image-black);
+        --logo-image: var(--logo-horizontal-image);
+    }
+} */
 
 @media (max-width: 50em) {
     :root {
@@ -244,7 +263,7 @@ a[href="/"]::before {
         --logo-image: var(--logo-vertical-image);
     }
 
-    body>header>nav>a[href="/"] {
+    body>header>nav.menu>a[href="/"] {
         width: var(--logo-height);
         height: var(--logo-height);
     }

@@ -14,7 +14,6 @@ const port = 8080;
 
 app.get('/(*.html)?', async (req, res) => {
     const lang = req.query.lang || languagePriority[0];
-    console.log(req.path, lang);
     const pTranslation = translations.loadTranslation(lang);
     const pLanguages = translations.getManagedLanguages();
     const path = req.path.replace(/^[/]/, '').replace(/[.]html$/, '') || 'index';

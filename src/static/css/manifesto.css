@@ -138,7 +138,7 @@ section.invert-colors>section {
     margin-top: 1.25em;
 }
 
-@media (max-width: 71.875em) {
+@media (max-width: 75em) {
     body>header {
         text-align: center;
     }

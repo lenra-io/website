@@ -22,7 +22,6 @@ mixin displayFooterPageGroup(group, pages)
                 +displayFooterPageLink(page)
 
 mixin displayFooterElement(element)
-    - console.log(element)
     - var pages = footerGroups[element]
     +displayFooterPageGroup(pageGroup[element], pages)
 
