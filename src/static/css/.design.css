@@ -104,6 +104,17 @@ body {
     color: rgba(var(--text-color-data), var(--text-opacity));
 }
 
+code *,
+code *::before,
+code *::after {
+    color: inherit;
+}
+
+code .command-line-prompt {
+    border-right: 0;
+    margin-right: 0;
+}
+
 h1,
 h2,
 h3,
@@ -126,11 +137,17 @@ h2 {
 
 h3 {
     --font-size-multiplier: calc(5 / 4);
+    /* #framework > ul>li.colored-block[class^="lenra-icon-"]::before,
+    #framework > ul>li.colored-block[class*=" lenra-icon-"]::before {
+        --font-size-multiplier: calc(3 / 2);
+        --size: calc(var(--base) * 2);
+    } */
     padding-bottom: var(--base);
 }
 
 h4 {
-    --font-size-multiplier: 1;
+    --font-size-multiplier: calc(9 / 8);
+    padding-bottom: calc(var(--base) / 2);
 }
 
 p+* {
@@ -182,7 +199,7 @@ body>header,
 body>footer {
     margin: auto;
     width: 90%;
-    max-width: 75em;
+    max-width: 82.5em;
 }
 
 body>header>nav.menu>a[href="/"],

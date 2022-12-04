@@ -266,7 +266,7 @@ body>header>a::before {
   max-height: calc(var(--base) * 10);
 }
 
-@media (max-width: 75em) {
+@media (max-width: 82.5em) {
   body>header>figure {
     --image-margin: 3.125em;
   }

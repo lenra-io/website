@@ -140,7 +140,7 @@ body>header>p>a {
     --text-opacity: 1;
 }
 
-@media (max-width: 75em) {
+@media (max-width: 82.5em) {
     body>header>nav.menu {
         gap: calc(var(--base) * 4);
     }
