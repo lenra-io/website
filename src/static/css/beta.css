@@ -54,6 +54,42 @@
     text-align: center;
 }
 
+#how-it-works>.tab>ul {
+    max-width: 65em;
+    margin: auto;
+}
+
+#how-it-works>.tab>ul>li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+#how-it-works>.tab>ul>li>section {
+    width: 50%;
+}
+
+#how-it-works>.tab>ul>li>aside>details {
+    --text-opacity: 0.5;
+    border: 0.0625em solid;
+    width: 26.25em;
+    padding: calc(var(--base) * 2);
+    border-radius: var(--base);
+    margin-top: calc(var(--base) * 2);
+}
+#how-it-works>.tab>ul>li>aside>details:first-of-type {
+    margin-top: 0;
+}
+
+#how-it-works>.tab>ul>li>aside>details>summary {
+    --btn-text-opacity: 0.8;
+}
+
+#how-it-works>.tab>ul>li>aside>details[open]>summary {
+    
+}
+
 @media (max-width: 87.5em) {
     #framework {
         text-align: center;

@@ -130,14 +130,21 @@ main>section.alternate>h2 {
 
 .tab {
     margin-top: calc(var(--base) * 4);
+    overflow: hidden;
+    --tab-gap: calc(var(--base) * 10);
 }
 
 .tab>input[type="radio"] {
-    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    left: -100vw;
 }
 
 .tab>label {
     position: relative;
+    display: inline-block;
     padding: var(--base) calc(var(--base) * 4);
     border-radius: calc(var(--button-height) / 2);
     background-color: transparent;
@@ -150,20 +157,70 @@ main>section.alternate>h2 {
     color: rgb(var(--white-data));
 }
 
+.tab>input[type="radio"]:focus+label {
+    outline: solid 0.125em;
+    outline-offset: -0.25em;
+}
+
+.tab>label::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background-color: rgba(var(--text-color-data), 0.1);
+    cursor: pointer;
+}
+
+.tab>label:first-of-type:before {
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.tab>label:last-of-type:before {
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+
 .tab>ul {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    gap: var(--tab-gap);
     margin-top: calc(var(--base) * 4);
     padding-top: calc(var(--base) * 6);
 }
 
 .tab>ul>li {
-    display: none;
+    flex: 0 0 100%;
+    opacity: 0;
+    transition-property: opacity, margin-left;
 }
 
 .tab>input[type="radio"]:checked:nth-of-type(1)~ul>li:nth-of-type(1),
 .tab>input[type="radio"]:checked:nth-of-type(2)~ul>li:nth-of-type(2),
 .tab>input[type="radio"]:checked:nth-of-type(3)~ul>li:nth-of-type(3),
 .tab>input[type="radio"]:checked:nth-of-type(4)~ul>li:nth-of-type(4) {
-    display: block;
+    /* display: block; */
+    opacity: 1;
+}
+
+.tab>input[type="radio"]:checked:nth-of-type(1)~ul>li:first-of-type {
+    margin-left: 0;
+}
+
+.tab>input[type="radio"]:checked:nth-of-type(2)~ul>li:first-of-type {
+    margin-left: calc((100% + var(--tab-gap)) * -1);
+}
+
+.tab>input[type="radio"]:checked:nth-of-type(3)~ul>li:first-of-type {
+    margin-left: calc((100% + var(--tab-gap)) * -2);
+}
+
+.tab>input[type="radio"]:checked:nth-of-type(4)~ul>li:first-of-type {
+    margin-left: calc((100% + var(--tab-gap)) * -3);
 }
 
 @media (max-aspect-ratio: 1/1) {
