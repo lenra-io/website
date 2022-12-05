@@ -56,47 +56,49 @@ block content
             label(for="online") Online
             ul
                 li
-                    h3 Download the binary
-                    p
-                        | The Lenra CLI needs Docker and Docker Compose.
-                        | You can install the Docker buildx command to use the Buildkit optimization given by Dofigen. 
-                    p Once you have the setup configuration, download the binary depending on your operating system and add it to your path environment variable.
-                    a.link.lenra-icon-arrow-right(href="|") Check out all the binary
+                    section
+                        h3 Download the binary
+                        p
+                            | The Lenra CLI needs Docker and Docker Compose.
+                            | You can install the Docker buildx command to use the Buildkit optimization given by Dofigen. 
+                        p Once you have the setup configuration, download the binary depending on your operating system and add it to your path environment variable.
+                        a.btn.link.lenra-icon-arrow-right(href="|") Check out all the binary
                     aside
                         details#download-linux
                             summary.lenra-icon-linux Lenra for Linux
                             ul
                                 li
-                                    a.link.lenra-icon-download(href="") lenra-linux-x86_64.tar.gz
+                                    a.btn.link.lenra-icon-download(href="") lenra-linux-x86_64.tar.gz
                                 li
-                                    a.link.lenra-icon-download(href="") lenra-linux-aarch64.tar.gz
+                                    a.btn.link.lenra-icon-download(href="") lenra-linux-aarch64.tar.gz
                         details#download-windows
                             summary.lenra-icon-windows Lenra for Windows
                             ul
                                 li
-                                    a.link.lenra-icon-download(href="") lenra-windows-x86_64.tar.gz
+                                    a.btn.link.lenra-icon-download(href="") lenra-windows-x86_64.tar.gz
                                 li
-                                    a.link.lenra-icon-download(href="") lenra-windows-aarch64.tar.gz
+                                    a.btn.link.lenra-icon-download(href="") lenra-windows-aarch64.tar.gz
                         details#download-macos
                             summary.lenra-icon-macos Lenra for MacoS
                             ul
                                 li
-                                    a.link.lenra-icon-download(href="") lenra-macos-x86_64.tar.gz
+                                    a.btn.link.lenra-icon-download(href="") lenra-macos-x86_64.tar.gz
                                 li
-                                    a.link.lenra-icon-download(href="") lenra-macos-aarch64.tar.gz
+                                    a.btn.link.lenra-icon-download(href="") lenra-macos-aarch64.tar.gz
                 li
-                    h3 Define your preferred language and create your app
-                    p
-                        | Once the Lenra client is downloaded, you can set your preferred language to start your application with!
-                        | Just type the command line
-                        |
-                        code lenra new
-                        |
-                        | which will be used to retrieve a project template from github. We already have several models available,
-                        |
-                        a(href="https://github.com/lenra-io?q=&type=template&language=&sort=") check out our github to see more
-                        | . Then all you have to do is code!
-                    a.link.lenra-icon-arrow-right(href="https://github.com/lenra-io?q=&type=template&language=&sort=") Discover all the possibilities with Lenra CLI
+                    section
+                        h3 Define your preferred language and create your app
+                        p
+                            | Once the Lenra client is downloaded, you can set your preferred language to start your application with!
+                            | Just type the command line
+                            |
+                            code lenra new
+                            |
+                            | which will be used to retrieve a project template from github. We already have several models available,
+                            |
+                            a(href="https://github.com/lenra-io?q=&type=template&language=&sort=") check out our github to see more
+                            | . Then all you have to do is code!
+                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io?q=&type=template&language=&sort=") Discover all the possibilities with Lenra CLI
                     aside
                         pre.command-line(data-filter-output='> ' data-prompt='you@lenra:~$')
                             code.language-bash
@@ -110,9 +112,10 @@ block content
                                 | code your_app_name/
 
                 li
-                    h3 Open your IDE and develop your app
-                    p Lenra is divided into several parts: views, listeners and data via databases. Create your app using the resources at your disposal, open the terminal of your IDE, you just have to type “lenra dev” to compile your application and test it in real time locally on your computer.
-                    a.link.lenra-icon-arrow-right(href="https://docs.lenra.io") Read our full documentation
+                    section
+                        h3 Open your IDE and develop your app
+                        p Lenra is divided into several parts: views, listeners and data via databases. Create your app using the resources at your disposal, open the terminal of your IDE, you just have to type “lenra dev” to compile your application and test it in real time locally on your computer.
+                        a.btn.link.lenra-icon-arrow-right(href="https://docs.lenra.io") Read our full documentation
                     aside 
                         pre.line-numbers
                             code.language-rust
@@ -128,9 +131,10 @@ block content
                             code.language-bash
                                 | lenra dev
                 li
-                    h3 Push your app to a Git repository and tadaaa
-                    p Is your app stable? Are you satisfied with what you have done? All you have to do is push your application to a Git repository, create an account on the Lenra back-office, configure your directory and present everything to your customers!
-                    a.link.lenra-icon-arrow-right(href="https://dev.lenra.io") Join the beta
+                    section
+                        h3 Push your app to a Git repository and tadaaa
+                        p Is your app stable? Are you satisfied with what you have done? All you have to do is push your application to a Git repository, create an account on the Lenra back-office, configure your directory and present everything to your customers!
+                        a.btn.link.lenra-icon-arrow-right(href="https://dev.lenra.io") Join the beta
                     aside 
 
     section#open-source.invert-colors
