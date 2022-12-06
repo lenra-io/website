@@ -20,11 +20,6 @@ main>section {
     text-align: center;
 }
 
-main>section>h3,
-main>section>p {
-    text-align: left;
-}
-
 main>section>nav {
     text-align: center;
 }

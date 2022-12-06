@@ -3,6 +3,10 @@ body>header {
     --figure-max-width: 31.25em;
 }
 
+body>header::after {
+    display: none;
+}
+
 body>header>* {
     margin-left: 0;
 }
@@ -92,6 +96,14 @@ section.cases>.btn {
 @media (max-width: 75em) {
     body>header {
         text-align: center;
+    }
+
+    body>header::before {
+        display: none;
+    }
+    
+    body > header > nav.menu ~ * {
+        margin-left: auto;
     }
 
     body>header>* {

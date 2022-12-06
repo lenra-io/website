@@ -8,6 +8,10 @@ body>header {
     padding-top: 0;
 }
 
+body > header::after {
+    display: none;
+}
+
 header>nav:first-of-type {
     margin-bottom: 0;
     width: 100%;

@@ -1,3 +1,7 @@
+/* body > header::after {
+    display: none;
+} */
+
 body > header > p {
     max-width: 31.25em;
 }

@@ -20,7 +20,7 @@ body>header::after {
     --spacing: calc(var(--base) * 10);
     content: " ";
     position: absolute;
-    top: 50%;
+    top: calc(50% + var(--button-height));
     left: calc(50% + var(--spacing));
     width: calc(50% - var(--spacing));
     height: 50%;
@@ -147,8 +147,17 @@ body>header>p>a {
 }
 
 @media (max-width: 50em) {
+    body>header {
+        padding-bottom: calc(var(--base) * 6);
+    }
+
+    body>header::after {
+      display: none;
+    }
+
     body>header>nav.menu {
         gap: calc(var(--base) * 3);
+        margin-bottom: calc(var(--base) * 5);
     }
 }
 

@@ -15,8 +15,10 @@ body>header::before {
 }
 
 body>header::after {
+  --spacing: calc(var(--base) * 20);
   aspect-ratio: 1364 / 694;
   width: auto;
+  height: 60%;
   background-image: url("../img/back-office.jpg");
   background-size: contain;
   background-position: 0;
@@ -101,6 +103,13 @@ body>header>a::before {
 #advantages>ul>li:nth-of-type(6n+6) {
   --primary-color-data: var(--blue-pulse-data);
   --background-color-data: var(--blue-data);
+}
+
+/********** Alternate **********/
+
+.alternate>h3,
+.alternate>p {
+    text-align: left;
 }
 
 /********** Use cases **********/
@@ -267,8 +276,16 @@ body>header>a::before {
 }
 
 @media (max-width: 82.5em) {
-  body>header>figure {
-    --image-margin: 3.125em;
+  body>header {
+    padding-bottom: calc(var(--base) * (15 + 5));
+  }
+
+  body>header::after {
+    --spacing: calc(var(--base) * 25);
+  }
+
+  body>header>nav.menu {
+      margin-bottom: calc(var(--base) * (10 + 5));
   }
 }
 
@@ -305,9 +322,9 @@ body>header>a::before {
 }
 
 @media (max-width: 60em) {
-  /* body>header>section {
+  body > header > nav.menu ~ * {
     max-width: 31.25em;
-  } */
+  }
 }
 
 @media (min-width: 50.001em) {
@@ -367,13 +384,16 @@ body>header>a::before {
 }
 
 @media (max-width: 50em) {
-  /* body>header>section {
-    max-width: 37.5em;
-    padding: 0;
-  } */
+  body>header {
+      padding-bottom: calc(var(--base) * 6);
+  }
 
-  body>header>figure {
-    display: none;
+  body>header>nav.menu {
+      margin-bottom: calc(var(--base) * 5);
+  }
+
+  body > header > nav.menu ~ * {
+    max-width: 37.5em;
   }
 
   .first-alternate>img {
@@ -418,11 +438,6 @@ body>header>a::before {
 }
 
 @media (max-width: 28.75em) {
-
-  /* body>header>section {
-    text-align: center;
-  } */
-
   body>header>h1,
   body>header>p {
     text-align: left;
