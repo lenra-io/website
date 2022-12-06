@@ -132,6 +132,7 @@ main>section.alternate>h2 {
     margin-top: calc(var(--base) * 4);
     overflow: hidden;
     --tab-gap: calc(var(--base) * 10);
+    counter-reset: tab-count;
 }
 
 .tab>input[type="radio"] {
@@ -140,6 +141,7 @@ main>section.alternate>h2 {
     height: 0;
     overflow: hidden;
     left: -100vw;
+    counter-increment: tab-count;
 }
 
 .tab>label {
@@ -185,18 +187,21 @@ main>section.alternate>h2 {
 
 .tab>ul {
     position: relative;
-    display: flex;
-    flex-wrap: nowrap;
-    align-content: flex-start;
-    gap: var(--tab-gap);
     margin-top: calc(var(--base) * 4);
     padding-top: calc(var(--base) * 6);
+    white-space: nowrap;
+    counter-reset: tab-count;
 }
 
 .tab>ul>li {
-    flex: 0 0 100%;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    margin-left: var(--tab-gap);
     opacity: 0;
+    white-space: initial;
     transition-property: opacity, margin-left;
+    counter-increment: tab-count;
 }
 
 .tab>input[type="radio"]:checked:nth-of-type(1)~ul>li:nth-of-type(1),
