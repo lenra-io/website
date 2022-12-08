@@ -93,7 +93,7 @@ section.feature:nth-of-type(2n+1)>img {
     padding-left: 0;
 }
 
-@media (max-width: 75em) {
+@media (max-width: 75rem) {
     body>header {
         text-align: center;
     }
@@ -126,7 +126,7 @@ section.feature:nth-of-type(2n+1)>img {
     }
 }
 
-@media (max-width: 50em) {
+@media (max-width: 50rem) {
     section.feature {
         --text-width: 100%;
         --text-max-width: none;

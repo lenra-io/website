@@ -18,7 +18,7 @@ a {
 a::after {
     content: " ";
     position: absolute;
-    border-bottom: 0.0625em solid;
+    border-bottom: 0.0625rem solid;
     color: inherit;
     width: 100%;
     left: 0;
@@ -51,7 +51,7 @@ a.btn {
     --btn-text-color-hover-data: var(--text-color-data);
     --btn-background-color-data: var(--text-color-data);
     --btn-background-color-opacity: 0.1;
-    --border-size: 0em;
+    --border-size: 0rem;
     min-width: calc(var(--base) * 20);
     background-color: rgba(var(--btn-background-color-data), var(--btn-background-color-opacity));
     display: inline-block;
@@ -195,7 +195,7 @@ nav.social>a::before {
 }
 
 
-@media (max-width: 50em) {
+@media (max-width: 50rem) {
 
     button,
     a.btn {
@@ -204,7 +204,7 @@ nav.social>a::before {
     }
 }
 
-@media (max-width: 28.75em) {
+@media (max-width: 28.75rem) {
 
     button,
     a.btn {

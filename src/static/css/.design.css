@@ -13,7 +13,7 @@
     --red-data: 242, 122, 134;
     --red-pulse-data: 233, 34, 54;
     --red: rgb(var(--red-data));
-    --base: 0.5em;
+    --base: 0.5rem;
     --primary-color-data: 18, 105, 237;
     --primary-color-hover-data: 13, 77, 174;
     --primary-color-opacity: 1;
@@ -42,9 +42,9 @@
     --primary-color-disabled: var(--light-primary-color-disabled);
     --invert-primary-color-disabled: var(--dark-primary-color-disabled);
     --background-image: url("../img/fond.svg");
-    --font-size: 1em;
-    --line-height-multiplier: calc(5 / 4);
-    --line-height: calc(1em * var(--line-height-multiplier));
+    --font-size: 1rem;
+    --line-height-multiplier: calc(3 / 2);
+    --line-height: calc(1rem * var(--line-height-multiplier));
     --title-font-size-multiplier: 2.5;
     --title-font-size: calc(var(--font-size) * var(--title-font-size-multiplier));
     --title-size: calc(var(--title-font-size) / var(--base));
@@ -121,32 +121,25 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: calc(var(--font-size) * var(--font-size-multiplier));
-    --base: calc(1em / (2 * var(--font-size-multiplier)));
     font-weight: 700;
 }
 
 h1 {
-    --font-size-multiplier: calc(5 / 2);
+    font-size: calc(5 / 2 * 1rem);
 }
 
 h2 {
-    --font-size-multiplier: calc(5 / 2);
+    font-size: calc(5 / 2 * 1rem);
     padding-bottom: calc(var(--base) * 3);
 }
 
 h3 {
-    --font-size-multiplier: calc(5 / 4);
-    /* #framework > ul>li.colored-block[class^="lenra-icon-"]::before,
-    #framework > ul>li.colored-block[class*=" lenra-icon-"]::before {
-        --font-size-multiplier: calc(3 / 2);
-        --size: calc(var(--base) * 2);
-    } */
+    font-size: calc(5 / 4 * 1rem);
     padding-bottom: var(--base);
 }
 
 h4 {
-    --font-size-multiplier: calc(9 / 8);
+    font-size: calc(9 / 8 * 1rem);
     padding-bottom: calc(var(--base) / 2);
 }
 
@@ -199,7 +192,7 @@ body>header,
 body>footer {
     margin: auto;
     width: 90%;
-    max-width: 82.5em;
+    max-width: 82.5rem;
 }
 
 body>header>nav.menu>a[href="/"],
@@ -254,14 +247,14 @@ a[href="/"]::before {
     }
 } */
 
-@media (max-width: 50em) {
+@media (max-width: 50rem) {
     :root {
         --section-padding-top: 6;
         --section-padding-bottom: 6;
     }
 }
 
-@media (max-width: 31.25em) {
+@media (max-width: 31.25rem) {
     :root {
         --logo-height: var(--logo-vertical-height);
         --logo-image: var(--logo-vertical-image);
@@ -269,11 +262,11 @@ a[href="/"]::before {
     }
 
     h1 {
-        --font-size-multiplier: 2;
+        font-size: 2rem;
     }
 
     h2 {
-        --font-size-multiplier: 2;
+        font-size: 2rem;
     }
 
     .invert-colors {

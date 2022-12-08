@@ -121,7 +121,7 @@ body>header>nav.menu>details>a:last-of-type {
 
 body>header>nav.menu~* {
     --elements-margin-left: calc(var(--base) * 4 + var(--lenra-bar-width));
-    max-width: calc(37.5em - var(--elements-margin-left));
+    max-width: calc(37.5rem - var(--elements-margin-left));
     margin-left: var(--elements-margin-left);
 }
 
@@ -140,13 +140,13 @@ body>header>p>a {
     --text-opacity: 1;
 }
 
-@media (max-width: 82.5em) {
+@media (max-width: 82.5rem) {
     body>header>nav.menu {
         gap: calc(var(--base) * 4);
     }
 }
 
-@media (max-width: 50em) {
+@media (max-width: 50rem) {
     body>header {
         padding-bottom: calc(var(--base) * 6);
     }
@@ -161,7 +161,7 @@ body>header>p>a {
     }
 }
 
-@media (max-width: 43.75em) {
+@media (max-width: 43.75rem) {
     body>header>nav.menu {
         padding-top: calc(var(--logo-height) + var(--base) * 3);
         justify-content: center;

@@ -1,6 +1,6 @@
 body>header {
     text-align: left;
-    --figure-max-width: 31.25em;
+    --figure-max-width: 31.25rem;
 }
 
 body>header::after {
@@ -12,17 +12,17 @@ body>header>* {
 }
 
 body>header>h1 {
-    max-width: 25em;
+    max-width: 25rem;
 }
 
 body>header>h2,
 body>header>p {
-    width: calc(100% - var(--figure-max-width) - 3.125em);
+    width: calc(100% - var(--figure-max-width) - 3.125rem);
 }
 
 figure {
     --width: 45vw;
-    --max-width: 31.25em;
+    --max-width: 31.25rem;
     position: absolute;
     width: var(--width);
     max-width: var(--figure-max-width);
@@ -37,7 +37,7 @@ figure>img {
     left: 0;
     width: 100%;
     height: 100%;
-    padding-top: 1.25em;
+    padding-top: 1.25rem;
 }
 
 main>section {
@@ -45,15 +45,15 @@ main>section {
 }
 
 main>section>p {
-    max-width: 37.5em;
+    max-width: 37.5rem;
     text-align: left;
     margin: auto;
 }
 
 section.manifesto {
     --text-width: 60%;
-    --text-max-width: 37.5em;
-    --spacing: 2.5em;
+    --text-max-width: 37.5rem;
+    --spacing: 2.5rem;
     position: relative;
     padding-top: calc(var(--base) * var(--section-padding-top));
     padding-bottom: calc(var(--base) * var(--section-padding-bottom));
@@ -74,7 +74,7 @@ section.manifesto>ul>li::before {
 }
 
 section.manifesto>img {
-    max-height: 23.75em;
+    max-height: 23.75rem;
     position: absolute;
     top: calc(var(--base) * var(--section-padding-top));
     right: 0;
@@ -132,17 +132,17 @@ section:nth-of-type(2n)>section.manifesto:nth-of-type(2n)>img {
 }
 
 section.invert-colors>section>p {
-    max-width: 37.5em;
+    max-width: 37.5rem;
     text-align: left;
     margin-left: auto;
     margin-right: auto;
 }
 
 section.invert-colors>section {
-    margin-top: 1.25em;
+    margin-top: 1.25rem;
 }
 
-@media (max-width: 75em) {
+@media (max-width: 75rem) {
     body>header {
         text-align: center;
     }
@@ -175,7 +175,7 @@ section.invert-colors>section {
     }
 }
 
-@media (max-width: 50em) {
+@media (max-width: 50rem) {
     main>section:nth-of-type(1) {
         padding-bottom: 0;
     }
@@ -203,7 +203,7 @@ section.invert-colors>section {
         right: auto;
         margin: calc(var(--base) * 3) auto;
         width: 50%;
-        max-width: 18.75em;
+        max-width: 18.75rem;
         padding: 0;
         height: auto;
     }
@@ -221,7 +221,7 @@ section.invert-colors>section {
     }
 }
 
-@media (max-width: 46.875em) {
+@media (max-width: 46.875rem) {
     section.invert-colors>section:nth-of-type(2) {
         padding-bottom: calc(var(--base) * 25);
     }

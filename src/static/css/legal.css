@@ -3,7 +3,7 @@
 } */
 
 body > header > p {
-    max-width: 31.25em;
+    max-width: 31.25rem;
 }
 
 main > section:first-of-type,
@@ -37,7 +37,7 @@ main > section > ul > li:first-of-type:before {
 }
 
 
-@media (max-width: 50em) {
+@media (max-width: 50rem) {
     main > section:first-of-type,
     main > section:first-of-type + section {
         display: block;

@@ -22,7 +22,7 @@ body>header::after {
   background-image: url("../img/back-office.jpg");
   background-size: contain;
   background-position: 0;
-  border: 0.0625em solid rgb(var(--text-color-data));
+  border: 0.0625rem solid rgb(var(--text-color-data));
   border-radius: calc(var(--base) * 2);
 }
 
@@ -31,13 +31,13 @@ body>header>nav.menu {
 }
 
 body > header > nav.menu ~ * {
-  --elements-margin-left: 0em;
+  --elements-margin-left: 0rem;
 }
 
 body>header>h1 {
-  --height: calc(var(--font-size) * var(--line-height-multiplier));
-  padding-bottom: calc(var(--font-size) / var(--font-size-multiplier));
-  max-width: 31.25em;
+  --height: 1em;
+  padding-bottom: 1rem;
+  max-width: 31.25rem;
 }
 
 body>header>p+nav {
@@ -83,7 +83,7 @@ body>header>a::before {
 
 #advantages>ul {
   display: grid;
-  grid-template-columns: repeat(3, 18.125em);
+  grid-template-columns: repeat(3, 18.125rem);
   grid-gap: calc(var(--base) * 3);
   padding-bottom: calc(var(--base) * 6);
   width: fit-content;
@@ -146,7 +146,7 @@ body>header>a::before {
 }
 
 #use-cases>.colored-block {
-  width: 20.625em;
+  width: 20.625rem;
   display: inline-block;
   vertical-align: top;
   text-align: left;
@@ -192,7 +192,7 @@ body>header>a::before {
 
 #features>ul {
   display: grid;
-  grid-template-columns: repeat(3, 17.5em);
+  grid-template-columns: repeat(3, 17.5rem);
   grid-gap: calc(var(--base) * 3);
   width: fit-content;
   margin: auto;
@@ -202,7 +202,7 @@ body>header>a::before {
   display: inline-flex;
   flex-direction: column;
   align-items: start;
-  height: 25em;
+  height: 25rem;
 }
 
 #features>ul>li.colored-block:nth-of-type(2) {
@@ -275,7 +275,7 @@ body>header>a::before {
   max-height: calc(var(--base) * 10);
 }
 
-@media (max-width: 82.5em) {
+@media (max-width: 82.5rem) {
   body>header {
     padding-bottom: calc(var(--base) * (15 + 5));
   }
@@ -289,18 +289,18 @@ body>header>a::before {
   }
 }
 
-@media (max-width: 65.625em) {
+@media (max-width: 65.625rem) {
   #advantages::before {
     display: none;
   }
 
   #advantages>ul {
-    grid-template-columns: repeat(2, 18.125em);
+    grid-template-columns: repeat(2, 18.125rem);
   }
 
   #features>ul {
     grid-template-columns: repeat(1, 1fr);
-    max-width: 30em;
+    max-width: 30rem;
   }
 
   #features>ul>li.colored-block {
@@ -309,7 +309,7 @@ body>header>a::before {
   }
 }
 
-@media (max-width: 65.625em) and (min-width: 65.626em) {
+@media (max-width: 65.625rem) and (min-width: 65.626rem) {
   #advantages>ul>li:nth-of-type(6n+3) {
     --primary-color-data: var(--yellow-pulse-data);
     --background-color-data: var(--yellow-data);
@@ -321,13 +321,13 @@ body>header>a::before {
   }
 }
 
-@media (max-width: 60em) {
+@media (max-width: 60rem) {
   body > header > nav.menu ~ * {
-    max-width: 31.25em;
+    max-width: 31.25rem;
   }
 }
 
-@media (min-width: 50.001em) {
+@media (min-width: 50.001rem) {
   #use-cases>#contributors {
     position: absolute;
     top: 0;
@@ -347,43 +347,43 @@ body>header>a::before {
   }
 
   #use-cases>#contributors>nav.contributors>a:nth-of-type(1) {
-    --ghorgaggre-contributors-image-size: 8.125em;
+    --ghorgaggre-contributors-image-size: 8.125rem;
     top: 15%;
     left: calc(50% - var(--base) * 55);
   }
 
   #use-cases>#contributors>nav.contributors>a:nth-of-type(2) {
-    --ghorgaggre-contributors-image-size: 6.75em;
+    --ghorgaggre-contributors-image-size: 6.75rem;
     top: 45%;
     left: calc(50% - var(--base) * 77);
   }
 
   #use-cases>#contributors>nav.contributors>a:nth-of-type(3) {
-    --ghorgaggre-contributors-image-size: 12.5em;
+    --ghorgaggre-contributors-image-size: 12.5rem;
     top: 65%;
     left: calc(50% - var(--base) * 59);
   }
 
   #use-cases>#contributors>nav.contributors>a:nth-of-type(4) {
-    --ghorgaggre-contributors-image-size: 11.25em;
+    --ghorgaggre-contributors-image-size: 11.25rem;
     top: 15%;
     left: calc(50% + var(--base) * 43);
   }
 
   #use-cases>#contributors>nav.contributors>a:nth-of-type(5) {
-    --ghorgaggre-contributors-image-size: 8.125em;
+    --ghorgaggre-contributors-image-size: 8.125rem;
     top: 48%;
     left: calc(50% + var(--base) * 57);
   }
 
   #use-cases>#contributors>nav.contributors>a:nth-of-type(6) {
-    --ghorgaggre-contributors-image-size: 6.75em;
+    --ghorgaggre-contributors-image-size: 6.75rem;
     top: 83%;
     left: calc(50% + var(--base) * 39);
   }
 }
 
-@media (max-width: 50em) {
+@media (max-width: 50rem) {
   body>header {
       padding-bottom: calc(var(--base) * 6);
   }
@@ -393,7 +393,7 @@ body>header>a::before {
   }
 
   body > header > nav.menu ~ * {
-    max-width: 37.5em;
+    max-width: 37.5rem;
   }
 
   .first-alternate>img {
@@ -406,7 +406,7 @@ body>header>a::before {
 
   #use-cases>.colored-block {
     width: 100%;
-    max-width: 23.75em;
+    max-width: 23.75rem;
   }
 
   #use-cases>.colored-block:first-of-type,
@@ -419,25 +419,25 @@ body>header>a::before {
   }
 
   #use-cases>#contributors {
-    max-width: 20em;
+    max-width: 20rem;
     margin: auto;
   }
 }
 
-@media (max-width: 41.875em) {
+@media (max-width: 41.875rem) {
   #advantages>ul {
     grid-template-columns: repeat(1, 1fr);
     max-width: calc(var(--base) * 50);
   }
 }
 
-@media (max-width: 37.5em) {
+@media (max-width: 37.5rem) {
   body>header>h1 {
-    max-width: 25em;
+    max-width: 25rem;
   }
 }
 
-@media (max-width: 28.75em) {
+@media (max-width: 28.75rem) {
   body>header>h1,
   body>header>p {
     text-align: left;

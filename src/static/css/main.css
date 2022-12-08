@@ -29,7 +29,7 @@ h2[data-title]::before {
     content: attr(data-title);
     display: block;
     text-transform: uppercase;
-    font-size: calc(var(--font-size) / var(--font-size-multiplier));
+    font-size: 1rem;
     font-weight: 600;
     padding-bottom: var(--base);
 }
@@ -54,8 +54,8 @@ h3[data-emoji]+p {
 
 .alternate {
     --text-width: 60%;
-    --text-max-width: 37.5em;
-    --spacing: 2.5em;
+    --text-max-width: 37.5rem;
+    --spacing: 2.5rem;
     position: relative;
     padding-right: calc(100% - min(var(--text-width), var(--text-max-width)));
     text-align: left;
@@ -68,8 +68,8 @@ h3[data-emoji]+p {
     width: calc(100% - var(--text-width));
     padding-left: var(--spacing);
     height: calc(100% - var(--base) * (var(--section-padding-bottom) + var(--section-padding-top)));
-    max-height: 17.5em;
-    max-width: 21.25em;
+    max-height: 17.5rem;
+    max-width: 21.25rem;
     transform: translateY(-50%);
 }
 
@@ -97,7 +97,7 @@ main>section.alternate>h2 {
 .colored-block {
     --primary-color-data: var(--green-pulse-data);
     --background-color-data: var(--green-data);
-    --background-opacity: 0.1;
+    --background-opacity: 0.05;
     text-align: left;
     padding: calc(var(--base) * 3);
     background-color: rgba(var(--background-color-data), var(--background-opacity));
@@ -106,17 +106,15 @@ main>section.alternate>h2 {
 
 .colored-block[class^="lenra-icon-"]::before,
 .colored-block[class*=" lenra-icon-"]::before {
-    --font-size-multiplier: calc(3 / 2);
-    --base: calc(1em / (2 * var(--font-size-multiplier)));
     --size: calc(var(--base) * 6);
     display: inline-block;
     width: var(--size);
     height: var(--size);
-    font-size: calc(var(--font-size) * var(--font-size-multiplier));
+    font-size: calc(3 / 2 * 1rem);
     line-height: var(--size);
     text-align: center;
     color: rgb(var(--primary-color-data));
-    border: 0.0625em solid rgb(var(--background-color-data));
+    border: 0.0625rem solid rgb(var(--background-color-data));
     border-radius: calc(var(--base) * 2);
     margin-bottom: calc(var(--base) * 3);
 }
@@ -155,8 +153,8 @@ main>section.alternate>h2 {
 }
 
 .tab>input[type="radio"]:focus+label {
-    outline: solid 0.125em;
-    outline-offset: -0.25em;
+    outline: solid 0.125rem;
+    outline-offset: -0.25rem;
 }
 
 .tab>label::before {
@@ -243,7 +241,7 @@ main>section.alternate>h2 {
     }
 }
 
-@media (max-width: 50em) {
+@media (max-width: 50rem) {
     .alternate {
         --text-width: 100%;
         --text-max-width: none;

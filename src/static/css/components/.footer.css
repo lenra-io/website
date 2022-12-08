@@ -48,9 +48,7 @@ body>footer>nav>section {
 
 body>footer>nav>section>h3,
 body>footer>ul>li {
-    --font-size-multiplier: calc(9 / 8);
-    --base: calc(1em / (2 * var(--font-size-multiplier)));
-    font-size: calc(var(--font-size) * var(--font-size-multiplier));
+    font-size: calc(9 / 8 * 1rem);
     font-weight: 700;
 }
 
@@ -72,14 +70,14 @@ body>footer>ul>li>nav.social {
     --text-opacity: 1;
 }
 
-@media (max-width: 50em) {
+@media (max-width: 50rem) {
     body>footer>nav {
         text-align: left;
-        max-width: 22.5em;
+        max-width: 22.5rem;
     }
 }
 
-@media (max-width: 20em) {
+@media (max-width: 20rem) {
     body>footer>nav>section {
         width: 100%;
     }
