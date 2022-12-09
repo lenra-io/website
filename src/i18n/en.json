@@ -19,7 +19,7 @@
     "page": {
         "index": {
             "name": "Lenra",
-            "title": "Create your cross-platform JavaScript / Python / C app.",
+            "title": "Optimize your app creation",
             "description": "Lenra is an open source framework to create your app using any language, and deploy it without any Ops scale, built on ethical values."
         },
         "beta": {
