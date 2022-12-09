@@ -175,6 +175,7 @@ h3>strong {
     content: " ";
     position: absolute;
     background-color: rgb(var(--background-color-data));
+    background-image: none;
     top: 0;
     left: calc(50% - 50vw);
     height: 100%;

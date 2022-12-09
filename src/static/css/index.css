@@ -2,16 +2,10 @@ body>header {
   padding-bottom: calc(var(--base) * (30 + 5));
 }
 
-body>header::before {
-    content: " ";
-    position: absolute;
-    top: calc(var(--base) * (var(--top-padding) + 12) + var(--button-height));
-    bottom: calc(var(--base) * 10);
-    width: var(--lenra-bar-width);
+body>header.invert-colors::before {
     background-image: linear-gradient(to right, var(--lenra-bar-gradient));
     background-size: 100% calc(var(--base) * 3 / 4);
     background-position: 50% 100%;
-    border-radius: 0;
 }
 
 body>header::after {
