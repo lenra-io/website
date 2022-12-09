@@ -14,7 +14,6 @@ const port = 8080;
 
 app.get('/(*.html)?', async (req, res) => {
     const lang = req.query.lang || languagePriority[0];
-    console.log(req.path, lang);
     const pTranslation = translations.loadTranslation(lang);
     const pLanguages = translations.getManagedLanguages();
     const path = req.path.replace(/^[/]/, '').replace(/[.]html$/, '') || 'index';
@@ -31,5 +30,5 @@ app.get('/(*.html)?', async (req, res) => {
 app.use(express.static(staticPath, {dotfiles: 'allow'}));
 
 app.listen(port, '0.0.0.0', () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`App listening at http://localhost:${port}`);
 })
