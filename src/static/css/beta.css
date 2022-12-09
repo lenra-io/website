@@ -1,18 +1,22 @@
-body > header {
+body>header {
     text-align: left;
     --figure-max-width: 500px;
 }
 
-body > header > * {
+body>header::after {
+    display: none;
+}
+
+body>header>* {
     margin-left: 0;
 }
 
-body > header > h1 {
+body>header>h1 {
     max-width: 400px;
 }
 
-body > header > h2,
-body > header > p {
+body>header>h2,
+body>header>p {
     width: calc(100% - var(--figure-max-width) - 50px);
 }
 
@@ -27,7 +31,7 @@ figure {
     right: 0;
 }
 
-figure > img {
+figure>img {
     position: absolute;
     top: 0;
     left: 0;
@@ -35,17 +39,17 @@ figure > img {
     height: 100%;
 }
 
-main > section {
+main>section {
     text-align: center;
 }
 
-main > section > p {
+main>section>p {
     max-width: 600px;
     text-align: left;
     margin: auto;
 }
 
-main > section > p + a.btn {
+main>section>p+a.btn {
     margin-top: calc(var(--base) * 2);
 }
 
@@ -62,13 +66,13 @@ section.feature:first-of-type {
     margin-top: calc(var(--base) * var(--section-padding-top));
 }
 
-section.feature > * {
+section.feature>* {
     width: var(--text-width);
     max-width: var(--text-max-width);
     text-align: left;
 }
 
-section.feature > img {
+section.feature>img {
     position: absolute;
     top: calc(var(--base) * var(--section-padding-top));
     right: 0;
@@ -77,30 +81,38 @@ section.feature > img {
     height: calc(100% - var(--base) * (var(--section-padding-bottom) + var(--section-padding-top)));
 }
 
-section.feature:nth-of-type(2n+1) > * {
+section.feature:nth-of-type(2n+1)>* {
     margin-left: auto;
     margin-right: 0;
 }
 
-section.feature:nth-of-type(2n+1) > img {
+section.feature:nth-of-type(2n+1)>img {
     left: 0;
     right: auto;
     padding-right: var(--spacing);
     padding-left: 0;
 }
 
-@media (max-width: 1150px) {
-    body > header {
+@media (max-width: 75rem) {
+    body>header {
         text-align: center;
     }
 
-    body > header > * {
+    body>header::before {
+        display: none;
+    }
+
+    body > header > nav.menu ~ * {
+        margin-left: auto;
+    }
+
+    body>header>* {
         margin-left: auto;
         margin-right: auto;
     }
 
-    body > header > h2,
-    body > header > p {
+    body>header>h2,
+    body>header>p {
         width: 100%;
     }
 
@@ -109,23 +121,23 @@ section.feature:nth-of-type(2n+1) > img {
         margin-bottom: calc(var(--base) * var(--top-padding));
     }
 
-    figure > img {
+    figure>img {
         position: initial;
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 50rem) {
     section.feature {
         --text-width: 100%;
         --text-max-width: none;
         padding-top: 0;
     }
 
-    section.feature > h3 {
+    section.feature>h3 {
         text-align: center;
     }
 
-    section.feature > img {
+    section.feature>img {
         position: initial;
         display: block;
         top: auto;
@@ -138,15 +150,15 @@ section.feature:nth-of-type(2n+1) > img {
         height: auto;
     }
 
-    section.feature > h2 {
+    section.feature>h2 {
         text-align: center;
     }
 
-    section.feature:nth-of-type(2n+1) > * {
+    section.feature:nth-of-type(2n+1)>* {
         margin-right: auto;
     }
 
-    section.feature:nth-of-type(2n+1) > img {
+    section.feature:nth-of-type(2n+1)>img {
         padding-right: 0;
     }
 }

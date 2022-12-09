@@ -22,11 +22,10 @@ mixin displayFooterPageGroup(group, pages)
                 +displayFooterPageLink(page)
 
 mixin displayFooterElement(element)
-    - console.log(element)
     - var pages = footerGroups[element]
     +displayFooterPageGroup(pageGroup[element], pages)
 
-footer
+footer.invert-colors
     //- section 
     //-     h2 So, we're going up together?
     //-     p focus on what you love about developing, and forget about the painful tasks 

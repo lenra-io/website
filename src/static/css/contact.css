@@ -1,10 +1,6 @@
-:root {
-    --line-height-size: 1em;
-}
-
 body>header {
     text-align: center;
-    --figure-max-width: 500px;
+    --figure-max-width: 31.25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -12,12 +8,16 @@ body>header {
     padding-top: 0;
 }
 
+body > header::after {
+    display: none;
+}
+
 header>nav:first-of-type {
     margin-bottom: 0;
     width: 100%;
-    max-width: 1200px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    max-width: 82.5rem;
+    margin-top: 3.125rem;
+    margin-bottom: 3.125rem;
 }
 
 body>header.invert-colors {
@@ -44,16 +44,14 @@ section.text {
 }
 
 section.text>h1 {
-    --font-size: 40px;
-    --height: calc(var(--font-size) * var(--line-height-multiplier));
-    font-size: var(--font-size);
-    padding-bottom: 20px;
+    --height: 1em;
+    padding-bottom: 1.25rem;
 }
 
 section.text>p {
     --text-opacity: var(--dark-grey-opacity);
-    font-size: 35px;
-    padding-bottom: 40px;
+    font-size: 2.25rem;
+    padding-bottom: 2.5rem;
 }
 
 /*------------------Nav img header*/
@@ -61,7 +59,7 @@ section.text>p {
 header>nav:last-of-type {
     display: flex;
     width: 90%;
-    max-width: 1000px;
+    max-width: 62.5rem;
     height: auto;
     justify-content: space-between;
     margin: 0 auto;
@@ -82,7 +80,7 @@ header>nav:last-of-type>a::before {
     width: 100%;
     text-indent: 0;
     align-items: center;
-    font-size: 100px;
+    font-size: 6.25rem;
 }
 
 header>nav:last-of-type>a::before {
@@ -92,8 +90,8 @@ header>nav:last-of-type>a::before {
 /*------------------Img header*/
 
 header>nav:last-of-type>a>span {
-    font-size: 100px;
-    margin-bottom: 12px;
+    font-size: 6.25rem;
+    margin-bottom: calc(var(--base) * 1.5);
     display: block;
 }
 
@@ -135,28 +133,28 @@ main>section {
 }
 
 main>section>p {
-    max-width: 800px;
+    max-width: 50rem;
     text-align: left;
     margin: auto;
 }
 
 main>section>h2>span {
     position: relative;
-    padding-right: 10px;
-    padding-top: 10px;
+    padding-right: calc(var(--base) * 1.25);
+    padding-top: calc(var(--base) * 1.25);
     bottom: 0;
 }
 
 main>section>h2>span:before {
     content: " ";
-    padding-top: 10px;
+    padding-top: calc(var(--base) * 1.25);
     bottom: 0;
 }
 
 /*------------------Github body*/
 
 main>section#github>p:last-of-type {
-    padding-bottom: 40px;
+    padding-bottom: 2.5rem;
 }
 
 /*------------------Social Media body*/
@@ -171,7 +169,7 @@ section#social.invert-colors>p {
 }
 
 section#social.invert-colors>h3:last-of-type, section#social.invert-colors>nav.social {
-    margin-top: 25px;
+    margin-top: calc(var(--base) * 3);
 }
 
 section#social.invert-colors>nav.social>a {
@@ -182,44 +180,44 @@ section#social.invert-colors>nav.social>a {
 /*------------------Newsletter body*/
 section>a.btn.primary {
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 section#newsletter>section {
-    max-width: 650px;
+    max-width: 40.625rem;
     margin: auto;
 }
 
 /*------------------Email body*/
 main>section#email.invert-colors>p:nth-of-type(2),
 main>section#newsletter>p:nth-of-type(2) {
-    padding-bottom: 15px;
+    padding-bottom: calc(var(--base) * 2);
 }
 
 section#email.invert-colors>section {
-    max-width: 650px;
+    max-width: 40.625rem;
     margin: auto;
 }
 
 section>form.search:nth-of-type(2) {
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .search {
     position: relative;
-    width: 250px;
-    min-width: 250px;
+    width: 15.625rem;
+    min-width: 15.625rem;
     background-color: #fff;
     display: flex;
-    border-radius: 5px;
+    border-radius: calc(var(--base) / 2);
     margin: auto;
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 1.25rem;
 }
 
 .search:nth-of-type(3) {
-    margin-top: 20px;
-    width: 520px;
+    margin-top: 1.25rem;
+    width: 32.5rem;
 }
 
 .search::before {
@@ -228,7 +226,7 @@ section>form.search:nth-of-type(2) {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 2px;
+    height: calc(var(--base) / 4);
     background: var(--green);
     transform: scaleX(0);
     transform-origin: center;
@@ -239,10 +237,10 @@ section>form.search:nth-of-type(2) {
 .search span {
     position: absolute;
     left: 0;
-    padding: 10px;
+    padding: calc(var(--base) * 1.25);
     pointer-events: none;
-    font-size: 1.1em;
-    letter-spacing: 0.2em;
+    font-size: 1.1rem;
+    letter-spacing: 0.2rem;
     color: var(--black);
     text-transform: uppercase;
     transition: 0.5s;
@@ -253,12 +251,12 @@ section>form.search:nth-of-type(2) {
 .search input:valid~span,
 .search input:focus-within~span {
     color: var(--green);
-    transform: translateX(10px) translateY(-7px);
-    font-size: 0.65em;
-    padding: 0 10px;
+    transform: translateX(calc(var(--base) * 1.25)) translateY(calc(var(--base) * -1));
+    font-size: 0.65rem;
+    padding: 0 calc(var(--base) * 1.25);
     background: #fff;
-    border: 1px solid var(--green);
-    letter-spacing: 0.2em;
+    border: 0.0625rem solid var(--green);
+    letter-spacing: 0.2rem;
 }
 
 .search:focus-within::before {
@@ -277,10 +275,10 @@ section>form.search:nth-of-type(2) {
 .textarea,
 .input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid var(--green);
-    border-radius: 5px;
-    font-size: 1em;
+    padding: calc(var(--base) * 1.25);
+    border: 0.0625rem solid var(--green);
+    border-radius: calc(var(--base) / 2);
+    font-size: 1rem;
     transition: 0.5s;
 }
 
