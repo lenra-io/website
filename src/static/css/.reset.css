@@ -18,8 +18,8 @@ details>summary::-webkit-details-marker {
     display: none;
 }
 
-html {
-    height: 100%;
+html,
+body {
     overflow-x: hidden;
 }
 

@@ -54,7 +54,7 @@ block content
             | Everything takes place here, in a framework.
         a.btn.link.lenra-icon-arrow-right(href="beta.html#features") Learn more about our features
         //- empty alt since not useful for understanding
-        img(src="img/illustrations/conception.svg" alt="")
+        img(src="img/illustrations/conception.svg" alt="" loading="lazy")
     
     section#built.alternate
         h2(data-title="Built") Built on
@@ -69,7 +69,7 @@ block content
         p Pay only for what you use, the more you optimize your code the less you pay.
         a.btn.link.lenra-icon-arrow-right(href="manifesto.html") Discover our manifesto
         //- empty alt since not useful for understanding
-        img(src="img/illustrations/build.svg" alt="")
+        img(src="img/illustrations/build.svg" alt="" loading="lazy")
     
     section#deployment.alternate
         h2(data-title="Deployment")
@@ -86,7 +86,7 @@ block content
         h3(data-emoji="🤝") Showcase your app
         p You can now present your application to your customers and get a proof of concept for free.
         //- empty alt since not useful for understanding
-        img(src="img/illustrations/deployment.svg" alt="")
+        img(src="img/illustrations/deployment.svg" alt="" loading="lazy")
     
     section#use-cases
         h2(data-title="Use cases") Why should I use Lenra ?
@@ -124,10 +124,10 @@ block content
                 strong Just create it.
         nav 
             a.btn.primary(href="usecases.html") More use cases
-        section#contributors
-            h3 Meet our Github contributors
-            script(src="http://localhost:8081/ghorgaggre.js" data-type="contributors" data-size="6" defer)
-            link(rel='stylesheet' as='style' type='text/css' href='http://localhost:8081/ghorgaggre.css' media='print' onload='this.media="all"')
+        //- section#contributors
+        //-     h3 Meet our Github contributors
+        //-     script(src="http://localhost:8081/ghorgaggre.js" data-type="contributors" data-size="6" defer)
+        //-     link(rel='stylesheet' as='style' type='text/css' href='http://localhost:8081/ghorgaggre.css' media='print' onload='this.media="all"')
 
     section#features
         h2(data-title="Our features")
@@ -152,7 +152,7 @@ block content
 
     section#try
         //- empty alt since not useful for understanding
-        img(src="img/illustrations/try-lenra-for-free.svg" alt="")
+        img(src="img/illustrations/try-lenra-for-free.svg" alt="" loading="lazy")
         h2 
             | Try Lenra now for
             |
@@ -168,18 +168,16 @@ block content
             strong partners
         nav
             a(href="https://www.nouvelle-aquitaine.fr/")
-                img(src="img/partners/logo_nouvelle_aquitaine.svg" alt="Nouvelle Aquitaine")
+                img(src="img/partners/logo_nouvelle_aquitaine.svg" alt="Nouvelle Aquitaine" loading="lazy")
             a(href="https://lafrenchtech.com/fr/communaute/atlantic-valley/")
-                img(src="img/partners/french-tech.png" alt="French Tech")
+                img(src="img/partners/french-tech.png" alt="French Tech" loading="lazy")
             a(href="https://naos-cluster.com/")
-                img(src="img/partners/NAOS.png" alt="NAOS - Nouvelle Aquitaine Open Source")
+                img(src="img/partners/NAOS.png" alt="NAOS - Nouvelle Aquitaine Open Source" loading="lazy")
             a(href="https://startup.ovhcloud.com/fr/")
-                img(src="img/partners/OVHCloud-startup-program.png" alt="OVHCloud Startup Program")
+                img(src="img/partners/OVHCloud-startup-program.png" alt="OVHCloud Startup Program" loading="lazy")
             a(href="https://labanquiz.com/")
-                img(src="img/partners/LaBanquiz.png" alt="La Banquiz")
+                img(src="img/partners/LaBanquiz.png" alt="La Banquiz" loading="lazy")
             a(href="https://planet-techcare.green/manifeste/")
-                img(src="img/partners/Logo-PlaneteTC.png" alt="Planete Tech'Care")
+                img(src="img/partners/Logo-PlaneteTC.png" alt="Planete Tech'Care" loading="lazy")
             a(href="https://www.larochelle-technopole.fr/")
-                img(src="img/partners/la-rochelle-technopole.svg" alt="La Rochelle Technopole")
-
-    script(src='js/index.js' defer)
+                img(src="img/partners/la-rochelle-technopole.svg" alt="La Rochelle Technopole" loading="lazy")
