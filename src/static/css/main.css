@@ -90,6 +90,7 @@ h3[data-emoji]+p {
 
 main>section.alternate>h2 {
     text-align: left;
+    padding-bottom: calc(var(--base) * 3);
 }
 
 
