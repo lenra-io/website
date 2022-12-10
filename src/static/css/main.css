@@ -31,7 +31,7 @@ h2[data-title]::before {
     font-size: 1rem;
     font-weight: 600;
     line-height: var(--line-height-multiplier);
-    padding-bottom: 0.5rem;
+    padding-bottom: var(--base);
 }
 
 h3[data-emoji] {
