@@ -156,16 +156,42 @@
 /************* open-source *************/
 
 #open-source {
-    text-align: left;
     --primary-color-data: var(--secondary-color-data);
     --primary-color-hover-data: var(--secondary-color-hover-data);
+}
+
+#open-source>h2 {
+    padding-bottom: var(--base);
+}
+
+#open-source>a {
+    margin-top: calc(var(--base) * 4);
 }
 
 
 /************* features *************/
 
+#features {
+    overflow: hidden;
+}
+
+#features::before,
+#features::after {
+    position: fixed;
+    left: 0;
+}
+
+#features::before {
+    content: "Our mission in one work: ";
+}
+
+#features::after {
+    content: "Optimize";
+}
+
 #features>section {
     padding-left: 50%;
+    padding-top: calc(var(--base) * var(--section-padding-top));
     text-align: left;
 }
 
@@ -178,8 +204,7 @@
     grid-template-columns: repeat(2, 21.5rem);
 }
 
-#features>section>ul>li {
-}
+#features>section>ul>li {}
 
 #features>section>ul>li::before {
     font-size: calc(3 / 2 * 1rem);
@@ -198,6 +223,31 @@
     background-color: rgb(var(--secondary-color-data));
     color: rgb(var(--white-data));
     border-radius: calc(var(--base) / 4);
+}
+
+@media (min-width: 57.501rem) {
+    #open-source {
+        text-align: left;
+    }
+
+    #open-source>* {
+        max-width: calc(100% - 13.75rem - 2.5rem);
+    }
+
+    #open-source>a {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 50.001rem) {
+    #open-source {
+        --section-padding-top: 10;
+        --section-padding-bottom: 10;
+    }
 }
 
 @media (max-width: 87.5rem) {
