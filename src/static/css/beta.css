@@ -172,43 +172,72 @@
 /************* features *************/
 
 #features {
-    overflow: hidden;
-}
-
-#features::before,
-#features::after {
-    position: fixed;
-    left: 0;
+    --content-space: 5rem;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 #features::before {
-    content: "Our mission in one work: ";
-}
-
-#features::after {
-    content: "Optimize";
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    --section-header-height: calc(var(--base) * var(--section-padding-top) + var(--font-size) + var(--base) + var(--title-line-height));
+    --content-start: calc(var(--section-header-height) + var(--base) * 3 + var(--base) * var(--section-padding-top));
+    background-image: linear-gradient(to bottom, red, transparent);
+    background-image: linear-gradient(to bottom,
+            rgb(var(--background-color-data)) var(--section-header-height),
+            transparent var(--content-start),
+            transparent calc(100% - var(--base) * var(--section-padding-top)),
+            rgb(var(--background-color-data)) 100%);
 }
 
 #features>section {
-    padding-left: 50%;
+    position: relative;
+    padding-left: calc(50% - var(--content-space));
     padding-top: calc(var(--base) * var(--section-padding-top));
     text-align: left;
 }
 
+#features>section:first-of-type::before,
+#features>section:first-of-type::after {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: calc(3 / 2 * 1rem);
+    font-weight: 700;
+    z-index: -2;
+}
+
+#features>section:first-of-type::before {
+    content: "Our mission in one word:";
+    right: calc(50% + var(--content-space) + 6em);
+}
+
+#features>section:first-of-type::after {
+    content: "Optimize";
+    right: calc(50% + var(--content-space) + var(--base) * 4);
+    color: rgb(var(--primary-color-data));
+}
+
 #features>section>h3 {
     font-size: calc(3 / 2 * 1rem);
+    padding-bottom: calc(var(--base) * 6);
 }
 
 #features>section>ul {
     display: grid;
-    grid-template-columns: repeat(2, 21.5rem);
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: calc(var(--base) * 3);
+    row-gap: calc(var(--base) * 6);
 }
 
-#features>section>ul>li {}
-
-#features>section>ul>li::before {
+#features>section>ul>li>h4::before {
     font-size: calc(3 / 2 * 1rem);
-    display: inline-block;
+    display: block;
     padding-bottom: calc(var(--base) * 2);
 }
 
@@ -225,6 +254,18 @@
     border-radius: calc(var(--base) / 4);
 }
 
+#features>section>a {
+    margin-top: calc(var(--base) * 3);
+}
+
+
+/************** values ***************/
+
+#values > a {
+    margin-top: calc(var(--base) * 4);
+    margin-bottom: calc(var(--base) * 2);
+}
+
 @media (min-width: 57.501rem) {
     #open-source {
         text-align: left;
@@ -232,6 +273,7 @@
 
     #open-source>* {
         max-width: calc(100% - 13.75rem - 2.5rem);
+        margin-left: 0;
     }
 
     #open-source>a {
@@ -267,5 +309,62 @@
         margin: calc(var(--base) * 4) auto 0;
         padding-bottom: var(--base);
         justify-content: center;
+    }
+}
+
+@media (max-width: 75rem) {
+    #features {
+        --content-space: 20vw;
+    }
+
+    #features>section:first-of-type::before {
+        content: none;
+        display: none;
+    }
+}
+
+@media (max-width: 50rem) {
+    #features>section {
+        padding-left: 0;
+    }
+
+    #features>section:first-of-type::after {
+        content: none;
+        display: none;
+    }
+
+    #features>section>h3 {
+        /* display: flex; */
+        padding-bottom: calc(var(--base) * 3);
+    }
+
+    /* #features>section>h3::first-letter {
+        text-transform: lowercase;
+    } */
+
+    #features>section>h3::before {
+        content: "Optimize ";
+        color: rgb(var(--primary-color-data));
+        /* order: -1; */
+    }
+}
+
+@media (max-width: 31.25rem) {
+    #features>section>ul {
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--base) * 3);
+    }
+
+    #features>section>ul>li>h4 {
+        padding-bottom: calc(var(--base) / 2);
+    }
+
+    #features>section>ul>li>h4::before {
+        font-size: calc(3 / 2 * 1rem);
+        display: inline-block;
+        vertical-align: sub;
+        padding-right: var(--base);
+        padding-bottom: 0;
     }
 }

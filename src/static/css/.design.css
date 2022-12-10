@@ -47,7 +47,7 @@
     --title-font-size: calc(var(--font-size) * var(--title-font-size-multiplier));
     --title-line-height-multiplier: 1.3;
     --title-line-height: calc(var(--title-font-size) * var(--title-line-height-multiplier));
-    --title-size: calc(var(--title-font-size) / 0.5rem);
+    --title-size: calc(var(--title-font-size) / var(--base));
     --title-max-width-multiplier: 16;
     --text-max-width-multiplier: 18;
     --title-max-width: calc(var(--title-max-width-multiplier) * var(--title-font-size));
@@ -124,14 +124,14 @@ h6 {
 }
 
 h1 {
-    font-size: calc(5 / 2 * 1rem);
-    line-height: 1.3;
+    font-size: calc(var(--title-font-size-multiplier) * 1rem);
+    line-height: var(--title-line-height-multiplier);
 }
 
 h2 {
-    font-size: calc(5 / 2 * 1rem);
-    line-height: 1.3;
-    padding-bottom: calc(var(--base) * 3);
+    font-size: calc(var(--title-font-size-multiplier) * 1rem);
+    line-height: var(--title-line-height-multiplier);
+    padding-bottom: calc(var(--base) * 4);
 }
 
 h3 {
@@ -142,6 +142,12 @@ h3 {
 h4 {
     font-size: calc(9 / 8 * 1rem);
     padding-bottom: 0.25rem;
+}
+
+p {
+    max-width: 37.5rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 p {
@@ -260,10 +266,17 @@ a[href="/"]::after {
 
 @media (min-width: 31.25rem) {
     :root {
-        --logo-height: var(--logo-horizontal-height);
-        --logo-image: var(--logo-horizontal-image);
-        --logo-position: left;
-        --title-font-size-multiplier: 2.5;
+        --section-padding-top: 6;
+        --section-padding-bottom: 6;
+    }
+}
+
+@media (max-width: 31.25rem) {
+    :root {
+        --logo-height: var(--logo-vertical-height);
+        --logo-image: var(--logo-vertical-image);
+        --logo-position: 50%;
+        --title-font-size-multiplier: 2;
     }
 
     .invert-colors {

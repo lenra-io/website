@@ -47,7 +47,49 @@ h3[data-emoji]::before {
 }
 
 h3[data-emoji]+p {
-    padding-left: 1.75rem;
+    padding-left: calc(var(--base) * 3.5);
+}
+
+/*********** .alternate ************/
+
+.alternate {
+    --text-width: 60%;
+    --text-max-width: 37.5rem;
+    --spacing: 2.5rem;
+    position: relative;
+    padding-right: calc(100% - min(var(--text-width), var(--text-max-width)));
+    text-align: left;
+}
+
+.alternate>img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: calc(100% - var(--text-width));
+    padding-left: var(--spacing);
+    height: calc(100% - var(--base) * (var(--section-padding-bottom) + var(--section-padding-top)));
+    max-height: 17.5rem;
+    max-width: 21.25rem;
+    transform: translateY(-50%);
+}
+
+.alternate.first-alternate+.alternate,
+.alternate.first-alternate+.alternate+.alternate+.alternate {
+    padding-right: 0;
+    padding-left: calc(100% - min(var(--text-width), var(--text-max-width)));
+}
+
+.alternate.first-alternate+.alternate>img,
+.alternate.first-alternate+.alternate+.alternate+.alternate>img {
+    left: 0;
+    right: auto;
+    padding-right: var(--spacing);
+    padding-left: 0;
+}
+
+main>section.alternate>h2 {
+    text-align: left;
+    padding-bottom: calc(var(--base) * 3);
 }
 
 
