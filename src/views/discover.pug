@@ -15,6 +15,7 @@ block content
     link(rel='stylesheet' as='style' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css' media='print' onload='this.media="all"')
     link(rel='stylesheet' as='style' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/command-line/prism-command-line.min.css' media='print' onload='this.media="all"')
     link(rel='stylesheet' as='style' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css' media='print' onload='this.media="all"')
+    link(rel='stylesheet' as='style' type='text/css' href='css/prism.css' media='print' onload='this.media="all"')
     section#framework
         h2(data-title="Our framework") A framework to
             |
@@ -117,7 +118,7 @@ block content
                         p Lenra is divided into several parts: views, listeners and data via databases. Create your app using the resources at your disposal, open the terminal of your IDE, you just have to type “lenra dev” to compile your application and test it in real time locally on your computer.
                         a.btn.link.lenra-icon-arrow-right(href="https://docs.lenra.io") Read our full documentation
                     aside 
-                        pre.line-numbers
+                        pre.line-numbers.join
                             code.language-rust
                                 | pub fn home() -> Value {
                                 |    json!({
@@ -199,7 +200,7 @@ block content
                     p TODO: add text
             a.btn.primary(href="https://dev.lenra.io") Join the beta
 
-    section#values
+    section#values.arrows
         h2(data-title="Our values")
             | Not 
             | 

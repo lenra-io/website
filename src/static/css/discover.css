@@ -261,6 +261,10 @@
 
 /************** values ***************/
 
+#values {
+    --horizontal-pos-multiplier: 0.7;
+}
+
 #values > a {
     margin-top: calc(var(--base) * 4);
     margin-bottom: calc(var(--base) * 2);

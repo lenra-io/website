@@ -53,28 +53,6 @@ body>header>a::before {
 
 /*--------- Adventages ---------*/
 
-#advantages {
-  position: relative;
-}
-
-#advantages::before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: calc(50% - 50vw);
-  width: 100vw;
-  background-repeat: no-repeat;
-  background-image: url(../img/arrows/blue-big.svg), url(../img/arrows/green.svg), url(../img/arrows/yellow.svg), url(../img/arrows/red-big.svg);
-  background-position:
-    calc(50% - var(--base) * 75) 40%,
-    calc(50% - var(--base) * 65) 80%,
-    calc(50% + var(--base) * 75) 25%,
-    calc(50% + var(--base) * 75) 80%;
-  background-size: auto;
-  z-index: -1;
-}
-
 #advantages>ul {
   display: grid;
   grid-template-columns: repeat(3, 18.125rem);
@@ -109,18 +87,10 @@ body>header>a::before {
 /********** Use cases **********/
 
 #use-cases {
-  position: relative;
   text-align: center;
 }
 
 #use-cases::before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: calc(50% - 50vw);
-  width: 100vw;
-  background-repeat: no-repeat;
   background-image:
     url(../img/arrows/blue-big.svg),
     url(../img/arrows/green.svg),
@@ -135,8 +105,6 @@ body>header>a::before {
     calc(50% - var(--base) * 12) 67%,
     calc(50% + var(--base) * 70) 37%,
     calc(50% + var(--base) * 60) 75%;
-  background-size: auto;
-  z-index: -1;
 }
 
 #use-cases>.colored-block {
