@@ -50,6 +50,32 @@ h3[data-emoji]+p {
     padding-left: calc(var(--base) * 3.5);
 }
 
+/*********** .arrows ************/
+
+.arrows {
+    --horizontal-pos-multiplier: 1;
+    position: relative;
+}
+
+.arrows::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(50% - 50vw);
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-image: url(../img/arrows/blue-big.svg), url(../img/arrows/green.svg), url(../img/arrows/yellow.svg), url(../img/arrows/red-big.svg);
+    background-position:
+        calc(50% - var(--base) * 75 * var(--horizontal-pos-multiplier)) 40%,
+        calc(50% - var(--base) * 65 * var(--horizontal-pos-multiplier)) 80%,
+        calc(50% + var(--base) * 75 * var(--horizontal-pos-multiplier)) 25%,
+        calc(50% + var(--base) * 75 * var(--horizontal-pos-multiplier)) 80%;
+    background-size: auto;
+    z-index: -1;
+}
+
+
 /*********** .alternate ************/
 
 .alternate {
