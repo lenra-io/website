@@ -5,23 +5,24 @@
     "version": "0.0.0",
     "main": "build.js",
     "scripts": {
-        "build": "node src/build.js",
-        "start": "node src/server.js",
-        "dev": "nodemon src/server.js"
+        "start": "lesta express",
+        "build": "lesta nginx"
     },
     "dependencies": {
-        "dotenv": "^16.0.3",
-        "express": "^4.18.2",
-        "fs-extra": "^10.1.0",
-        "minify": "^7.0.2",
-        "node": "^17.9.1",
-        "pug": "^3.0.2",
-        "twitter": "^1.7.1"
+        "@lenra/lesta": "lenra-io/lesta#init-project"
     },
-    "devDependencies": {
-        "@types/fs-extra": "^9.0.12",
-        "@types/minify": "^6.0.1",
-        "@types/pug": "^2.0.5",
-        "nodemon": "^2.0.20"
+    "lesta": {
+        "languages": [
+            "en"
+        ],
+        "nginx": {
+            "additionalContentSecurityPolicies": {
+                "default-src": [
+                    "unsafe-inline",
+                    "analytics.lenra.io",
+                    "https://cdnjs.cloudflare.com/ajax/libs/prism/"
+                ]
+            }
+        }
     }
 }
