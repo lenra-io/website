@@ -8,7 +8,7 @@
         "build": "lesta nginx"
     },
     "dependencies": {
-        "@lenra/lesta": "github:lenra-io/lesta"
+        "@lenra/lesta": "lenra-io/lesta#init-project"
     },
     "lesta": {
         "languages": [
@@ -21,14 +21,7 @@
                     "analytics.lenra.io",
                     "https://cdnjs.cloudflare.com/ajax/libs/prism/"
                 ]
-            },
-            "rewriteRules": [
-                {
-                    "from": "^/beta.html$",
-                    "to": "/discover.html",
-                    "type": "permanent"
-                }
-            ]
+            }
         }
     }
 }
