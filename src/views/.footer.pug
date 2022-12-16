@@ -39,7 +39,7 @@ footer.invert-colors
             a(href="https://dev.lenra.io") Dev platform
             a(href="https://docs.lenra.io") Documentation
         
-        - const footerItems = pages.filter(p => p.group).flatMap(p => {
+        - const footerItems = pageList.filter(p => p.group).flatMap(p => {
         -    if (!footerGroups[p.group]) {
         -        footerGroups[p.group] = [p];
         -        return p.group;
