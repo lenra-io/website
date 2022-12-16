@@ -14,10 +14,15 @@
 }
 
 #framework>ul {
+    position: relative;
+    width: fit-content;
     float: right;
     margin-top: 0;
     display: grid;
     grid-template-columns: repeat(2, 21.5rem);
+    grid-template-areas: 
+        "data listeners"
+        "views users";
     grid-gap: calc(var(--base) * 10);
 }
 
@@ -28,16 +33,79 @@
 #framework>ul>li:nth-of-type(1) {
     --primary-color-data: var(--red-pulse-data);
     --background-color-data: var(--red-data);
+    grid-area: data;
 }
 
 #framework>ul>li:nth-of-type(2) {
-    --primary-color-data: var(--yellow-pulse-data);
-    --background-color-data: var(--yellow-data);
+    grid-area: views;
+}
+
+#framework>ul>li:nth-of-type(3) {
+    --primary-color-data: var(--blue-pulse-data);
+    --background-color-data: var(--blue-data);
+    grid-area: users;
 }
 
 #framework>ul>li:nth-of-type(4) {
-    --primary-color-data: var(--blue-pulse-data);
-    --background-color-data: var(--blue-data);
+    --primary-color-data: var(--yellow-pulse-data);
+    --background-color-data: var(--yellow-data);
+    grid-area: listeners;
+}
+
+#framework>ul>li::after {
+    --spacing: 4rem;
+    --big-size: 5rem;
+    --small-size: 3rem;
+    position: absolute;
+    color:rgb(var(--primary-color-data));
+    font-size: calc(1rem * 9 / 8);
+    font-weight: 700;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+#framework>ul>li:nth-of-type(1)::after {
+    content: "Draw UI";
+    background-image: url(../img/arrows/red-arrow.svg);
+    left: 50%;
+    bottom: var(--spacing);
+    transform: translateX(-50%);
+    min-width: var(--big-size);
+    padding-bottom: var(--small-size);
+    background-position: 50% 100%;
+}
+
+#framework>ul>li:nth-of-type(2)::after {
+    content: "Trigger";
+    background-image: url(../img/arrows/green-arrow.svg);
+    top: 50%;
+    right: var(--spacing);
+    transform: translateY(-50%);
+    line-height: var(--big-size);
+    padding-right: var(--small-size);
+    background-position: 100% 50%;
+}
+
+#framework>ul>li:nth-of-type(3)::after {
+    content: "Modify";
+    background-image: url(../img/arrows/blue-arrow.svg);
+    left: 50%;
+    top: var(--spacing);
+    transform: translateX(-50%);
+    min-width: var(--big-size);
+    padding-top: var(--small-size);
+    background-position: 50% 0%;
+}
+
+#framework>ul>li:nth-of-type(4)::after {
+    content: "Update";
+    background-image: url(../img/arrows/yellow-arrow.svg);
+    top: 50%;
+    left: var(--spacing);
+    transform: translateY(-50%);
+    line-height: var(--big-size);
+    padding-left: var(--small-size);
+    background-position: 0% 50%;
 }
 
 #framework>a {
