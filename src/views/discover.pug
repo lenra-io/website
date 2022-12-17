@@ -119,15 +119,15 @@ block content
                         a.btn.link.lenra-icon-arrow-right(href="https://docs.lenra.io") Read our full documentation
                     aside 
                         pre.line-numbers.join
-                            code.language-rust
-                                | pub fn home() -> Value {
-                                |    json!({
-                                |        “type”: “flex”,
-                                |        “direction”: “vertical”,
-                                |        “spacing”: 4,
-                                |        “mainAxisAlignement”: “spaceEvenly”,
-                                |        “crossAxisAlignement”: “center”,
-                                |        “children”: [
+                            code.language-javascript
+                                | function home() {
+                                |    return {
+                                |        type: “flex”,
+                                |        direction: “vertical”,
+                                |        spacing: 32,
+                                |        mainAxisAlignement: “spaceEvenly”,
+                                |        crossAxisAlignement: “center”,
+                                |        children: [
                         pre.command-line(data-prompt='you@lenra:~/your_app_name$')
                             code.language-bash
                                 | lenra dev
