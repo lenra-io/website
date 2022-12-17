@@ -20,7 +20,7 @@
     margin-top: 0;
     display: grid;
     grid-template-columns: repeat(2, 21.5rem);
-    grid-template-areas: 
+    grid-template-areas:
         "data listeners"
         "views users";
     grid-gap: calc(var(--base) * 10);
@@ -57,7 +57,7 @@
     --big-size: 5rem;
     --small-size: 3rem;
     position: absolute;
-    color:rgb(var(--primary-color-data));
+    color: rgb(var(--primary-color-data));
     font-size: calc(1rem * 9 / 8);
     font-weight: 700;
     text-align: center;
@@ -131,12 +131,14 @@
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    gap: calc(var(--base) * 5);
+    gap: calc(var(--base) * 10);
     text-align: left;
 }
 
 #how-it-works>.tab>ul>li>section {
-    max-width: 31.25rem;
+    flex-basis: 31.25rem;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 
 #how-it-works>.tab>ul>li>section>h3::before {
@@ -145,6 +147,17 @@
 
 #how-it-works>.tab>ul>li>section>a {
     margin-top: calc(var(--base) * 4);
+}
+
+#how-it-works>.tab>ul>li>aside {
+    flex-shrink: 1;
+    flex-grow: 1;
+    width: 0px;
+}
+
+#how-it-works>.tab>ul>li>aside>* {
+    margin-left: auto;
+    right: 0;
 }
 
 #how-it-works>.tab>ul>li>aside>details {
@@ -218,6 +231,32 @@
 #how-it-works>.tab>ul>li>aside>details>ul {
     padding-top: var(--base);
     padding-left: calc(var(--base) * 4);
+}
+
+#how-it-works>.tab>ul>li>aside.arrows::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-image: url(../img/arrows/blue-arrow.svg), url(../img/arrows/green.svg), url(../img/arrows/yellow.svg), url(../img/arrows/red.svg);
+    background-position:
+        37% 19%,
+        51% 5%,
+        67% 80%,
+        49% 92%;
+    transform: scale(-1.5, 1.5) rotate(-52deg);
+}
+
+#how-it-works>.tab>ul>li>aside>img {
+    width: 21.25rem;
+    border-radius: 0.5rem;
+}
+
+#how-it-works>.tab>ul>li>aside>img+img {
+    display: block;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 
@@ -333,7 +372,7 @@
     --horizontal-pos-multiplier: 0.7;
 }
 
-#values > a {
+#values>a {
     margin-top: calc(var(--base) * 4);
     margin-bottom: calc(var(--base) * 2);
 }

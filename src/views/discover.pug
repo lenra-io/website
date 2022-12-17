@@ -63,29 +63,29 @@ block content
                             | The Lenra CLI needs Docker and Docker Compose.
                             | You can install the Docker buildx command to use the Buildkit optimization given by Dofigen. 
                         p Once you have the setup configuration, download the binary depending on your operating system and add it to your path environment variable.
-                        a.btn.link.lenra-icon-arrow-right(href="|") Check out all the binary
+                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli/releases") Check out all the binary
                     aside
                         details#download-linux(open)
                             summary.lenra-icon-linux Lenra for Linux
                             ul
                                 li
-                                    a.btn.link.lenra-icon-download(href="") lenra-linux-x86_64.tar.gz
+                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-linux-x86_64.tar.gz") lenra-linux-x86_64.tar.gz
                                 li
-                                    a.btn.link.lenra-icon-download(href="") lenra-linux-aarch64.tar.gz
+                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-linux-aarch64.tar.gz") lenra-linux-aarch64.tar.gz
                         details#download-windows
                             summary.lenra-icon-windows Lenra for Windows
                             ul
                                 li
-                                    a.btn.link.lenra-icon-download(href="") lenra-windows-x86_64.tar.gz
+                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-windows-x86_64.zip") lenra-windows-x86_64.zip
                                 li
-                                    a.btn.link.lenra-icon-download(href="") lenra-windows-aarch64.tar.gz
+                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-windows-aarch64.zip") lenra-windows-aarch64.zip
                         details#download-macos
                             summary.lenra-icon-apple Lenra for MacoS
                             ul
                                 li
-                                    a.btn.link.lenra-icon-download(href="") lenra-macos-x86_64.tar.gz
+                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-macos-x86_64.tar.gz") lenra-macos-x86_64.tar.gz
                                 li
-                                    a.btn.link.lenra-icon-download(href="") lenra-macos-aarch64.tar.gz
+                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-macos-aarch64.tar.gz") lenra-macos-aarch64.tar.gz
                 li
                     section
                         h3 Define your preferred language and create your app
@@ -97,9 +97,9 @@ block content
                             |
                             | which will be used to retrieve a project template from github. We already have several models available,
                             |
-                            a(href="https://github.com/lenra-io?q=&type=template&language=&sort=") check out our github to see more
+                            a(href="https://github.com/orgs/lenra-io/repositories?q=&type=template&language=&sort=") check out our github to see more
                             | . Then all you have to do is code!
-                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io?q=&type=template&language=&sort=") Discover all the possibilities with Lenra CLI
+                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli#how-to-use-it") Discover all the possibilities with Lenra CLI
                     aside
                         pre.command-line(data-filter-output='> ' data-prompt='you@lenra:~$')
                             code.language-bash
@@ -119,15 +119,15 @@ block content
                         a.btn.link.lenra-icon-arrow-right(href="https://docs.lenra.io") Read our full documentation
                     aside 
                         pre.line-numbers.join
-                            code.language-rust
-                                | pub fn home() -> Value {
-                                |    json!({
-                                |        “type”: “flex”,
-                                |        “direction”: “vertical”,
-                                |        “spacing”: 4,
-                                |        “mainAxisAlignement”: “spaceEvenly”,
-                                |        “crossAxisAlignement”: “center”,
-                                |        “children”: [
+                            code.language-javascript
+                                | function home() {
+                                |    return {
+                                |        type: “flex”,
+                                |        direction: “vertical”,
+                                |        spacing: 32,
+                                |        mainAxisAlignement: “spaceEvenly”,
+                                |        crossAxisAlignement: “center”,
+                                |        children: [
                         pre.command-line(data-prompt='you@lenra:~/your_app_name$')
                             code.language-bash
                                 | lenra dev
@@ -136,8 +136,9 @@ block content
                         h3 Push your app to a Git repository and tadaaa
                         p Is your app stable? Are you satisfied with what you have done? All you have to do is push your application to a Git repository, create an account on the Lenra back-office, configure your directory and present everything to your customers!
                         a.btn.link.lenra-icon-arrow-right(href="https://dev.lenra.io") Join the beta
-                    aside 
-
+                    aside.arrows
+                        img(src="img/github-project.jpg" alt="A Lenra app source code on GitHub")
+                        img(src="img/back-office.jpg" alt="Lenra's dev back-office")
     section#open-source.invert-colors
         h2(data-title="Open Source")
             | Want to see more about
@@ -216,8 +217,7 @@ block content
 
 
     script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js' defer)
-    //- script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js' defer)
     script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/command-line/prism-command-line.min.js' defer)
     script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js' defer)
     script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js' defer)
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js' defer)
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js' defer)

@@ -1,15 +1,14 @@
 {
-    "name": "landing-page",
+    "name": "website",
     "description": "Lenra presentation website",
     "authors": "Lenra",
     "version": "0.0.0",
-    "main": "build.js",
     "scripts": {
         "start": "lesta express",
         "build": "lesta nginx"
     },
     "dependencies": {
-        "@lenra/lesta": "lenra-io/lesta#init-project"
+        "@lenra/lesta": "github:lenra-io/lesta#init-project"
     },
     "lesta": {
         "languages": [
@@ -23,11 +22,13 @@
                     "https://cdnjs.cloudflare.com/ajax/libs/prism/"
                 ]
             },
-            "rewriteRules": [{
-                "from": "^/beta.html$",
-                "to": "/discover.html",
-                "type": "permanent"
-            }]
+            "rewriteRules": [
+                {
+                    "from": "^/beta.html$",
+                    "to": "/discover.html",
+                    "type": "permanent"
+                }
+            ]
         }
     }
 }
