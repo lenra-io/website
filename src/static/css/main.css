@@ -294,4 +294,8 @@ main>section.alternate>h2 {
     main>section.alternate>h2 {
         text-align: center;
     }
+
+    .tab > label {
+        padding: calc(var(--base) * 3 / 4) calc(var(--base) * 2);
+    }
 }

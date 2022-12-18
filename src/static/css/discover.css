@@ -1,32 +1,12 @@
-#framework {
-    text-align: left;
-}
-
-#framework::after {
-    content: " ";
-    display: block;
-    clear: both;
-}
-
-#framework>p {
-    float: left;
-    max-width: 28.75rem;
-}
-
 #framework>ul {
-    position: relative;
-    width: fit-content;
-    float: right;
-    margin-top: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 21.5rem);
-    grid-template-areas:
-        "data listeners"
-        "views users";
-    grid-gap: calc(var(--base) * 10);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--base) * 3);
+    align-items: center;
 }
 
 #framework>ul>li {
+    max-width: 21.5rem;
     padding: calc(var(--base) * 2);
 }
 
@@ -50,62 +30,6 @@
     --primary-color-data: var(--yellow-pulse-data);
     --background-color-data: var(--yellow-data);
     grid-area: listeners;
-}
-
-#framework>ul>li::after {
-    --spacing: 4rem;
-    --big-size: 5rem;
-    --small-size: 3rem;
-    position: absolute;
-    color: rgb(var(--primary-color-data));
-    font-size: calc(1rem * 9 / 8);
-    font-weight: 700;
-    text-align: center;
-    background-repeat: no-repeat;
-}
-
-#framework>ul>li:nth-of-type(1)::after {
-    content: "Draw UI";
-    background-image: url(../img/arrows/red-arrow.svg);
-    left: 50%;
-    bottom: var(--spacing);
-    transform: translateX(-50%);
-    min-width: var(--big-size);
-    padding-bottom: var(--small-size);
-    background-position: 50% 100%;
-}
-
-#framework>ul>li:nth-of-type(2)::after {
-    content: "Trigger";
-    background-image: url(../img/arrows/green-arrow.svg);
-    top: 50%;
-    right: var(--spacing);
-    transform: translateY(-50%);
-    line-height: var(--big-size);
-    padding-right: var(--small-size);
-    background-position: 100% 50%;
-}
-
-#framework>ul>li:nth-of-type(3)::after {
-    content: "Modify";
-    background-image: url(../img/arrows/blue-arrow.svg);
-    left: 50%;
-    top: var(--spacing);
-    transform: translateX(-50%);
-    min-width: var(--big-size);
-    padding-top: var(--small-size);
-    background-position: 50% 0%;
-}
-
-#framework>ul>li:nth-of-type(4)::after {
-    content: "Update";
-    background-image: url(../img/arrows/yellow-arrow.svg);
-    top: 50%;
-    left: var(--spacing);
-    transform: translateY(-50%);
-    line-height: var(--big-size);
-    padding-left: var(--small-size);
-    background-position: 0% 50%;
 }
 
 #framework>a {
@@ -136,7 +60,7 @@
 }
 
 #how-it-works>.tab>ul>li>section {
-    flex-basis: 31.25rem;
+    flex-basis: 50%;
     flex-shrink: 0;
     flex-grow: 0;
 }
@@ -377,31 +301,6 @@
     margin-bottom: calc(var(--base) * 2);
 }
 
-@media (min-width: 57.501rem) {
-    #open-source {
-        text-align: left;
-    }
-
-    #open-source>* {
-        max-width: calc(100% - 13.75rem - 2.5rem);
-        margin-left: 0;
-    }
-
-    #open-source>a {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        margin-top: 0;
-    }
-}
-
-@media (min-width: 50.001rem) {
-    #open-source {
-        --section-padding-top: 10;
-        --section-padding-bottom: 10;
-    }
-}
 
 @media (max-width: 87.5rem) {
     #framework {
@@ -430,6 +329,16 @@
 
     #features>section:first-of-type::before {
         content: none;
+        display: none;
+    }
+
+    #how-it-works>.tab>ul>li>section {
+        max-width: 37.5rem;
+        margin: auto;
+        flex: auto;
+    }
+
+    #how-it-works>.tab>ul>li>aside {
         display: none;
     }
 }
@@ -477,5 +386,131 @@
         vertical-align: sub;
         padding-right: var(--base);
         padding-bottom: 0;
+    }
+}
+
+/* From mobile to desktop */
+
+@media (min-width: 38rem) {
+    #framework>ul {
+        position: relative;
+        width: fit-content;
+        display: grid;
+        grid-template-areas:
+            "data listeners"
+            "views users";
+        grid-gap: calc(var(--base) * 10);
+        margin: calc(var(--base) * 4) auto 0;
+        justify-content: center;
+    }
+
+    #framework>ul>li {
+        max-width: 21.5rem;
+        padding: calc(var(--base) * 2);
+    }
+
+    #framework>ul>li::after {
+        --spacing: 4rem;
+        --big-size: 5rem;
+        --small-size: 3rem;
+        position: absolute;
+        color: rgb(var(--primary-color-data));
+        font-size: calc(1rem * 9 / 8);
+        font-weight: 700;
+        text-align: center;
+        background-repeat: no-repeat;
+    }
+
+    #framework>ul>li:nth-of-type(1)::after {
+        content: "Draw UI";
+        background-image: url(../img/arrows/red-arrow.svg);
+        left: 50%;
+        bottom: var(--spacing);
+        transform: translateX(-50%);
+        min-width: var(--big-size);
+        padding-bottom: var(--small-size);
+        background-position: 50% 100%;
+    }
+
+    #framework>ul>li:nth-of-type(2)::after {
+        content: "Trigger";
+        background-image: url(../img/arrows/green-arrow.svg);
+        top: 50%;
+        right: var(--spacing);
+        transform: translateY(-50%);
+        line-height: var(--big-size);
+        padding-right: var(--small-size);
+        background-position: 100% 50%;
+    }
+
+    #framework>ul>li:nth-of-type(3)::after {
+        content: "Modify";
+        background-image: url(../img/arrows/blue-arrow.svg);
+        left: 50%;
+        top: var(--spacing);
+        transform: translateX(-50%);
+        min-width: var(--big-size);
+        padding-top: var(--small-size);
+        background-position: 50% 0%;
+    }
+
+    #framework>ul>li:nth-of-type(4)::after {
+        content: "Update";
+        background-image: url(../img/arrows/yellow-arrow.svg);
+        top: 50%;
+        left: var(--spacing);
+        transform: translateY(-50%);
+        line-height: var(--big-size);
+        padding-left: var(--small-size);
+        background-position: 0% 50%;
+    }
+}
+
+@media (min-width: 50.001rem) {
+    #open-source {
+        --section-padding-top: 10;
+        --section-padding-bottom: 10;
+    }
+}
+
+@media (min-width: 57.501rem) {
+    #open-source {
+        text-align: left;
+    }
+
+    #open-source>* {
+        max-width: calc(100% - 13.75rem - 2.5rem);
+        margin-left: 0;
+    }
+
+    #open-source>a {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 87.5rem) {
+    #framework {
+        text-align: left;
+    }
+
+    #framework::after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+
+    #framework>p {
+        float: left;
+        max-width: 28.75rem;
+    }
+
+    #framework>ul {
+        float: right;
+        margin-top: 0;
+        padding-bottom: var(--base);
     }
 }
