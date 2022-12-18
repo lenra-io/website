@@ -353,4 +353,8 @@ main>section.alternate>h2 {
         background-size: auto;
         z-index: -1;
     }
+
+    .tab > label {
+        padding: calc(var(--base) * 3 / 4) calc(var(--base) * 2);
+    }
 }
