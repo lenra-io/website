@@ -26,8 +26,8 @@ figure {
     position: absolute;
     width: var(--width);
     max-width: var(--figure-max-width);
-    top: calc(var(--base) * var(--top-padding) + var(--button-height));
-    bottom: calc(var(--base) * var(--top-padding));
+    top: calc(0.5rem * var(--top-padding) + var(--button-height));
+    bottom: calc(0.5rem * var(--top-padding));
     right: 0;
 }
 
@@ -49,8 +49,8 @@ section.cases {
     --text-max-width: 37.5rem;
     --spacing: 2.5rem;
     position: relative;
-    padding-top: calc(var(--base) * var(--section-padding-top));
-    padding-bottom: calc(var(--base) * var(--section-padding-bottom));
+    padding-top: calc(0.5rem * var(--section-padding-top));
+    padding-bottom: calc(0.5rem * var(--section-padding-bottom));
     text-align: center;
 }
 
@@ -59,7 +59,7 @@ section.cases>h2 {
     width: var(--text-width);
     max-width: var(--text-max-width);
     text-align: left;
-    padding-bottom: calc(var(--base) * 2);
+    padding-bottom: calc(0.5rem * 2);
 }
 
 section.cases>img {
@@ -69,7 +69,7 @@ section.cases>img {
     height: 100%;
     width: calc(100% - var(--text-width));
     padding-left: var(--spacing);
-    height: calc(100% - var(--base) * (var(--section-padding-bottom) - var(--section-padding-top)));
+    height: calc(100% - 0.5rem * (var(--section-padding-bottom) - var(--section-padding-top)));
 }
 
 section.invert-colors>* {
@@ -78,8 +78,8 @@ section.invert-colors>* {
 }
 
 section.cases>img {
-    top: calc(var(--base) * var(--section-padding-top));
-    height: calc(100% - var(--base) * (var(--section-padding-bottom) + var(--section-padding-top)));
+    top: calc(0.5rem * var(--section-padding-top));
+    height: calc(100% - 0.5rem * (var(--section-padding-bottom) + var(--section-padding-top)));
 }
 
 section.invert-colors>img {
@@ -90,7 +90,7 @@ section.invert-colors>img {
 }
 
 section.cases>.btn {
-    margin-top: calc(var(--base) * var(--section-padding-top));
+    margin-top: calc(0.5rem * var(--section-padding-top));
 }
 
 @media (max-width: 75rem) {
@@ -118,7 +118,7 @@ section.cases>.btn {
 
     figure {
         position: initial;
-        margin-bottom: calc(var(--base) * var(--top-padding));
+        margin-bottom: calc(0.5rem * var(--top-padding));
     }
 
     figure>img {
@@ -143,7 +143,7 @@ section.cases>.btn {
 
     figure {
         position: initial;
-        margin-bottom: calc(var(--base) * var(--top-padding));
+        margin-bottom: calc(0.5rem * var(--top-padding));
     }
 
     figure>img {
@@ -165,7 +165,7 @@ section.cases>.btn {
         top: auto;
         left: auto;
         right: auto;
-        margin: calc(var(--base) * 3) auto;
+        margin: calc(0.5rem * 3) auto;
         width: 50%;
         max-width: 18.75rem;
         padding: 0;

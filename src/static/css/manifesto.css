@@ -26,8 +26,8 @@ figure {
     position: absolute;
     width: var(--width);
     max-width: var(--figure-max-width);
-    top: calc(var(--base) * var(--top-padding) + var(--button-height));
-    bottom: calc(var(--base) * var(--top-padding));
+    top: calc(0.5rem * var(--top-padding) + var(--button-height));
+    bottom: calc(0.5rem * var(--top-padding));
     right: 0;
 }
 
@@ -55,12 +55,12 @@ section.manifesto {
     --text-max-width: 37.5rem;
     --spacing: 2.5rem;
     position: relative;
-    padding-top: calc(var(--base) * var(--section-padding-top));
-    padding-bottom: calc(var(--base) * var(--section-padding-bottom));
+    padding-top: calc(0.5rem * var(--section-padding-top));
+    padding-bottom: calc(0.5rem * var(--section-padding-bottom));
 }
 
 section.manifesto:first-of-type {
-    margin-top: calc(var(--base) * var(--section-padding-top));
+    margin-top: calc(0.5rem * var(--section-padding-top));
 }
 
 section.manifesto>* {
@@ -76,11 +76,11 @@ section.manifesto>ul>li::before {
 section.manifesto>img {
     max-height: 23.75rem;
     position: absolute;
-    top: calc(var(--base) * var(--section-padding-top));
+    top: calc(0.5rem * var(--section-padding-top));
     right: 0;
     width: calc(100% - var(--text-width));
     padding-left: var(--spacing);
-    height: calc(100% - var(--base) * (var(--section-padding-bottom) + var(--section-padding-top)));
+    height: calc(100% - 0.5rem * (var(--section-padding-bottom) + var(--section-padding-top)));
 }
 
 section.manifesto>* {
@@ -167,7 +167,7 @@ section.invert-colors>section {
 
     figure {
         position: initial;
-        margin-bottom: calc(var(--base) * var(--top-padding));
+        margin-bottom: calc(0.5rem * var(--top-padding));
     }
 
     figure>img {
@@ -201,7 +201,7 @@ section.invert-colors>section {
         top: auto;
         left: auto;
         right: auto;
-        margin: calc(var(--base) * 3) auto;
+        margin: calc(0.5rem * 3) auto;
         width: 50%;
         max-width: 18.75rem;
         padding: 0;
@@ -223,6 +223,6 @@ section.invert-colors>section {
 
 @media (max-width: 46.875rem) {
     section.invert-colors>section:nth-of-type(2) {
-        padding-bottom: calc(var(--base) * 25);
+        padding-bottom: calc(0.5rem * 25);
     }
 }

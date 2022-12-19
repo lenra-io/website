@@ -11,12 +11,12 @@ main {
 }
 
 main>h2 {
-    padding-top: calc(var(--base) * var(--section-padding-top));
+    padding-top: calc(0.5rem * var(--section-padding-top));
 }
 
 main>section {
-    padding-top: calc(var(--base) * var(--section-padding-top));
-    padding-bottom: calc(var(--base) * var(--section-padding-bottom));
+    padding-top: calc(0.5rem * var(--section-padding-top));
+    padding-bottom: calc(0.5rem * var(--section-padding-bottom));
     text-align: center;
 }
 
@@ -32,23 +32,23 @@ h2[data-title]::before {
     font-size: 1rem;
     font-weight: 600;
     line-height: var(--line-height-multiplier);
-    padding-bottom: var(--base);
+    padding-bottom: 0.5rem;
 }
 
 h3[data-emoji] {
-    padding-bottom: calc(var(--base) / 2);
+    padding-bottom: calc(0.5rem / 2);
 }
 
 h3[data-emoji]::before {
     content: attr(data-emoji);
     display: inline-block;
     font-size: 80%;
-    width: calc(var(--base) * 3.5);
+    width: calc(0.5rem * 3.5);
     vertical-align: baseline;
 }
 
 h3[data-emoji]+p {
-    padding-left: calc(var(--base) * 3.5);
+    padding-left: calc(0.5rem * 3.5);
 }
 
 /*********** .arrows ************/
@@ -68,10 +68,10 @@ h3[data-emoji]+p {
     background-repeat: no-repeat;
     background-image: url(../img/arrows/blue-big.svg), url(../img/arrows/green.svg), url(../img/arrows/yellow.svg), url(../img/arrows/red-big.svg);
     background-position:
-        calc(50% - var(--base) * 75 * var(--horizontal-pos-multiplier)) 40%,
-        calc(50% - var(--base) * 65 * var(--horizontal-pos-multiplier)) 80%,
-        calc(50% + var(--base) * 75 * var(--horizontal-pos-multiplier)) 25%,
-        calc(50% + var(--base) * 75 * var(--horizontal-pos-multiplier)) 80%;
+        calc(50% - 0.5rem * 75 * var(--horizontal-pos-multiplier)) 40%,
+        calc(50% - 0.5rem * 65 * var(--horizontal-pos-multiplier)) 80%,
+        calc(50% + 0.5rem * 75 * var(--horizontal-pos-multiplier)) 25%,
+        calc(50% + 0.5rem * 75 * var(--horizontal-pos-multiplier)) 80%;
     background-size: auto;
     z-index: -1;
 }
@@ -94,7 +94,7 @@ h3[data-emoji]+p {
     right: 0;
     width: calc(100% - var(--text-width));
     padding-left: var(--spacing);
-    height: calc(100% - var(--base) * (var(--section-padding-bottom) + var(--section-padding-top)));
+    height: calc(100% - 0.5rem * (var(--section-padding-bottom) + var(--section-padding-top)));
     max-height: 17.5rem;
     max-width: 21.25rem;
     transform: translateY(-50%);
@@ -116,7 +116,7 @@ h3[data-emoji]+p {
 
 main>section.alternate>h2 {
     text-align: left;
-    padding-bottom: calc(var(--base) * 3);
+    padding-bottom: calc(0.5rem * 3);
 }
 
 
@@ -127,14 +127,14 @@ main>section.alternate>h2 {
     --background-color-data: var(--green-data);
     --background-opacity: 0.05;
     text-align: left;
-    padding: calc(var(--base) * 3);
+    padding: calc(0.5rem * 3);
     background-color: rgba(var(--background-color-data), var(--background-opacity));
-    border-radius: var(--base);
+    border-radius: 0.5rem;
 }
 
 .colored-block[class^="lenra-icon-"]::before,
 .colored-block[class*=" lenra-icon-"]::before {
-    --size: calc(var(--base) * 6);
+    --size: calc(0.5rem * 6);
     display: inline-block;
     width: var(--size);
     height: var(--size);
@@ -143,16 +143,16 @@ main>section.alternate>h2 {
     text-align: center;
     color: rgb(var(--primary-color-data));
     border: 0.0625rem solid rgb(var(--background-color-data));
-    border-radius: calc(var(--base) * 2);
-    margin-bottom: calc(var(--base) * 3);
+    border-radius: calc(0.5rem * 2);
+    margin-bottom: calc(0.5rem * 3);
 }
 
 /************* Tab *************/
 
 .tab {
-    margin-top: calc(var(--base) * 4);
+    margin-top: calc(0.5rem * 4);
     overflow: hidden;
-    --tab-gap: calc(var(--base) * 10);
+    --tab-gap: calc(0.5rem * 10);
     counter-reset: tab-count;
 }
 
@@ -168,7 +168,7 @@ main>section.alternate>h2 {
 .tab>label {
     position: relative;
     display: inline-block;
-    padding: var(--base) calc(var(--base) * 4);
+    padding: 0.5rem calc(0.5rem * 4);
     border-radius: calc(var(--button-height) / 2);
     background-color: transparent;
     color: rgb(var(--primary-color-data));
@@ -208,8 +208,8 @@ main>section.alternate>h2 {
 
 .tab>ul {
     position: relative;
-    margin-top: calc(var(--base) * 4);
-    padding-top: calc(var(--base) * 6);
+    margin-top: calc(0.5rem * 4);
+    padding-top: calc(0.5rem * 6);
     white-space: nowrap;
     counter-reset: tab-count;
 }
@@ -282,11 +282,11 @@ main>section.alternate>h2 {
         top: auto;
         left: auto;
         right: auto;
-        margin: calc(var(--base) * 4) auto 0;
+        margin: calc(0.5rem * 4) auto 0;
         width: 100%;
-        max-width: calc(var(--base) * 40);
+        max-width: calc(0.5rem * 40);
         height: auto;
-        max-height: calc(var(--base) * 30);
+        max-height: calc(0.5rem * 30);
         padding: 0;
         transform: none;
     }
@@ -296,6 +296,6 @@ main>section.alternate>h2 {
     }
 
     .tab > label {
-        padding: calc(var(--base) * 3 / 4) calc(var(--base) * 2);
+        padding: calc(0.5rem * 3 / 4) calc(0.5rem * 2);
     }
 }

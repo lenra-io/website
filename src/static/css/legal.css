@@ -11,12 +11,12 @@ main > section:first-of-type + section {
     display: inline-block;
     vertical-align: top;
     width: 50%;
-    padding-right: calc(var(--base) * 3);
+    padding-right: calc(0.5rem * 3);
 }
 
 main > section > p > strong::after {
     content: ":";
-    margin-right: calc(var(--base) / 2);
+    margin-right: calc(0.5rem / 2);
 }
 
 main > section:last-of-type {
@@ -29,7 +29,7 @@ main > section > ul > li {
 
 main > section > ul > li::before {
     content: "-";
-    margin: 0 calc(var(--base) * 1.25);
+    margin: 0 calc(0.5rem * 1.25);
 }
 
 main > section > ul > li:first-of-type:before {

@@ -68,7 +68,7 @@ header>nav:last-of-type {
 header>nav:last-of-type>a {
     position: relative;
     width: auto;
-    width: calc(var(--base) * 20);
+    width: 10rem;
     display: inline-block;
 }
 
@@ -91,7 +91,7 @@ header>nav:last-of-type>a::before {
 
 header>nav:last-of-type>a>span {
     font-size: 6.25rem;
-    margin-bottom: calc(var(--base) * 1.5);
+    margin-bottom: calc(0.5rem * 1.5);
     display: block;
 }
 
@@ -140,14 +140,14 @@ main>section>p {
 
 main>section>h2>span {
     position: relative;
-    padding-right: calc(var(--base) * 1.25);
-    padding-top: calc(var(--base) * 1.25);
+    padding-right: calc(0.5rem * 1.25);
+    padding-top: calc(0.5rem * 1.25);
     bottom: 0;
 }
 
 main>section>h2>span:before {
     content: " ";
-    padding-top: calc(var(--base) * 1.25);
+    padding-top: calc(0.5rem * 1.25);
     bottom: 0;
 }
 
@@ -169,7 +169,7 @@ section#social.invert-colors>p {
 }
 
 section#social.invert-colors>h3:last-of-type, section#social.invert-colors>nav.social {
-    margin-top: calc(var(--base) * 3);
+    margin-top: 1.5rem;
 }
 
 section#social.invert-colors>nav.social>a {
@@ -191,7 +191,7 @@ section#newsletter>section {
 /*------------------Email body*/
 main>section#email.invert-colors>p:nth-of-type(2),
 main>section#newsletter>p:nth-of-type(2) {
-    padding-bottom: calc(var(--base) * 2);
+    padding-bottom: 1rem;
 }
 
 section#email.invert-colors>section {
@@ -209,7 +209,7 @@ section>form.search:nth-of-type(2) {
     min-width: 15.625rem;
     background-color: #fff;
     display: flex;
-    border-radius: calc(var(--base) / 2);
+    border-radius: 0.25rem;
     margin: auto;
     display: inline-block;
     margin-left: 1.25rem;
@@ -226,7 +226,7 @@ section>form.search:nth-of-type(2) {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: calc(var(--base) / 4);
+    height: 0.125rem;
     background: var(--green);
     transform: scaleX(0);
     transform-origin: center;
@@ -237,7 +237,7 @@ section>form.search:nth-of-type(2) {
 .search span {
     position: absolute;
     left: 0;
-    padding: calc(var(--base) * 1.25);
+    padding: calc(0.5rem * 1.25);
     pointer-events: none;
     font-size: 1.1rem;
     letter-spacing: 0.2rem;
@@ -251,9 +251,9 @@ section>form.search:nth-of-type(2) {
 .search input:valid~span,
 .search input:focus-within~span {
     color: var(--green);
-    transform: translateX(calc(var(--base) * 1.25)) translateY(calc(var(--base) * -1));
+    transform: translateX(calc(0.5rem * 1.25)) translateY(calc(0.5rem * -1));
     font-size: 0.65rem;
-    padding: 0 calc(var(--base) * 1.25);
+    padding: 0 calc(0.5rem * 1.25);
     background: #fff;
     border: 0.0625rem solid var(--green);
     letter-spacing: 0.2rem;
@@ -275,9 +275,9 @@ section>form.search:nth-of-type(2) {
 .textarea,
 .input {
     width: 100%;
-    padding: calc(var(--base) * 1.25);
+    padding: calc(0.5rem * 1.25);
     border: 0.0625rem solid var(--green);
-    border-radius: calc(var(--base) / 2);
+    border-radius: calc(0.5rem / 2);
     font-size: 1rem;
     transition: 0.5s;
 }

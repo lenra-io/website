@@ -22,8 +22,8 @@ figure {
     position: absolute;
     width: var(--width);
     max-width: var(--figure-max-width);
-    top: calc(var(--base) * var(--top-padding) + var(--button-height));
-    bottom: calc(var(--base) * var(--top-padding));
+    top: calc(0.5rem * var(--top-padding) + var(--button-height));
+    bottom: calc(0.5rem * var(--top-padding));
     right: 0;
 }
 
@@ -72,9 +72,9 @@ input[type=radio] {
     position: relative;
     top: 60%;
     left: 32%;
-    width: calc(var(--base) * 9 / 8);
-    height: calc(var(--base) * 9 / 8);
-    margin: 0 calc(var(--base) * 2) 0 0;
+    width: calc(0.5rem * 9 / 8);
+    height: calc(0.5rem * 9 / 8);
+    margin: 0 calc(0.5rem * 2) 0 0;
     opacity: 0;
     transform: translateX(-5.1875rem);
     cursor: pointer;
@@ -121,7 +121,7 @@ input[type=radio] {
     font-size: calc(9 / 8 * 1rem);
     text-align: left;
     font-weight: 100;
-    padding: calc(var(--base) / 2) calc(var(--base) * 2) calc(var(--base) * 3) calc(var(--base) * 2);
+    padding: calc(0.5rem / 2) calc(0.5rem * 2) calc(0.5rem * 3) calc(0.5rem * 2);
     transition: color 400ms ease;
 }
 
@@ -129,8 +129,8 @@ label>img {
     width: 100%;
     height: var(--height);
     object-fit: cover;
-    border-radius: calc(var(--base) / 2);
-    box-shadow: 0 calc(var(--base) * 1.5) calc(var(--base) * 3.25) rgba(0, 0, 0, 0.3), 0 calc(var(--base) * 1.5) calc(var(--base) * 0.75) rgba(0, 0, 0, 0.2);
+    border-radius: calc(0.5rem / 2);
+    box-shadow: 0 calc(0.5rem * 1.5) calc(0.5rem * 3.25) rgba(0, 0, 0, 0.3), 0 calc(0.5rem * 1.5) calc(0.5rem * 0.75) rgba(0, 0, 0, 0.2);
 }
 
 li#slide6>label>img {
@@ -169,14 +169,14 @@ label>nav.social>a:nth-of-type(2) {
 /* Previous Slide -1*/
 #s1:checked~ul>#slide10, #s2:checked~ul>#slide1, #s3:checked~ul>#slide2, #s4:checked~ul>#slide3, #s5:checked~ul>#slide4,
 #s6:checked~ul>#slide5, #s7:checked~ul>#slide6, #s8:checked~ul>#slide7, #s9:checked~ul>#slide8, #s10:checked~ul>#slide9 {
-    transform: translate3d(-100%, calc(var(--height) / -15), calc(var(--base) * -25));
+    transform: translate3d(-100%, calc(var(--height) / -15), calc(0.5rem * -25));
     z-index: 9;
 }
 
 /* Next Slide +1*/
 #s1:checked~ul>#slide2, #s2:checked~ul>#slide3, #s3:checked~ul>#slide4, #s4:checked~ul>#slide5, #s5:checked~ul>#slide6,
 #s6:checked~ul>#slide7, #s7:checked~ul>#slide8, #s8:checked~ul>#slide9, #s9:checked~ul>#slide10, #s10:checked~ul>#slide1 {
-    transform: translate3d(100%, calc(var(--height) / -15), calc(var(--base) * -25));
+    transform: translate3d(100%, calc(var(--height) / -15), calc(0.5rem * -25));
     z-index: 9;
 }
 
@@ -216,5 +216,5 @@ section.invert-colors {
 }
 
 section.invert-colors>a {
-    margin-top: calc(var(--base) * 3);
+    margin-top: calc(0.5rem * 3);
 }

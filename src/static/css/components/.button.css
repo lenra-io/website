@@ -12,7 +12,7 @@ a {
     --btn-text-color-data: var(--primary-color-data);
     --btn-text-color-hover-data: var(--primary-color-hover-data);
     transition-property: color;
-    padding-bottom: calc(var(--base) / 2);
+    padding-bottom: 0.25rem;
 }
 
 a::after {
@@ -22,7 +22,7 @@ a::after {
     color: inherit;
     width: 100%;
     left: 0;
-    bottom: calc(var(--base) / 2);
+    bottom: 0.25rem;
     opacity: 0;
     transition-property: opacity, bottom, color;
 }
@@ -51,16 +51,18 @@ a.btn {
     --btn-text-color-hover-data: var(--text-color-data);
     --btn-background-color-data: var(--text-color-data);
     --btn-background-color-opacity: 0.1;
+    --vertical-padding-multiplier: var(--vertical-padding-medium-multiplier);
+    --horizontal-padding-multiplier: var(--horizontal-padding-medium-multiplier);
     --border-size: 0rem;
-    min-width: calc(var(--base) * 20);
+    min-width: 10rem;
     background-color: rgba(var(--btn-background-color-data), var(--btn-background-color-opacity));
     display: inline-block;
     font-weight: 600;
     text-align: center;
     text-decoration: none;
-    padding: calc(calc(var(--base) * 1.5) - var(--border-size)) calc(var(--base) * 5 - var(--border-size));
+    padding: calc(0.5rem * var(--vertical-padding-multiplier) - var(--border-size)) calc(0.5rem * var(--horizontal-padding-multiplier) - var(--border-size));
     border: var(--border-size) solid;
-    border-radius: calc(var(--base) / 2);
+    border-radius: 0.25rem;
     transition-property: color, background;
 }
 
@@ -70,7 +72,7 @@ a.btn::after {
 
 button:focus,
 a.btn:focus {
-    --border-size: calc(var(--base) / 4);
+    --border-size: 0.125rem;
 }
 
 button[disabled],
@@ -84,6 +86,18 @@ button:hover,
 a.btn:hover {
     --btn-background-color-opacity: 0.2;
     text-decoration: none;
+}
+
+button.small,
+a.btn.small {
+    --vertical-padding-multiplier: var(--vertical-padding-small-multiplier);
+    --horizontal-padding-multiplier: var(--horizontal-padding-small-multiplier);
+}
+
+button.big,
+a.btn.big {
+    --vertical-padding-multiplier: var(--vertical-padding-big-multiplier);
+    --horizontal-padding-multiplier: var(--horizontal-padding-big-multiplier);
 }
 
 button.primary,
@@ -131,14 +145,14 @@ a.btn.link::after {
 }
 
 a.btn.link:hover::after {
-    bottom: calc((100% - var(--font-size)) / 2 - var(--base) / 2);
+    bottom: calc((100% - var(--font-size)) / 2 - 0.25rem);
 }
 
 button+button,
 button+a.btn,
 a.btn+button,
 a.btn+a.btn {
-    margin-left: calc(var(--base) * 2);
+    margin-left: 1rem;
 }
 
 a.btn.link.lenra-icon-arrow-right {
@@ -149,13 +163,13 @@ a.btn.link.lenra-icon-arrow-right {
 
 a.btn.link.lenra-icon-arrow-right::before {
     color: inherit;
-    margin-left: var(--base);
+    margin-left: 0.5rem;
     font-size: 120%;
 }
 
 nav.social {
-    --vertical-spacing: var(--base);
-    --horizontal-spacing: calc(var(--base) * 2);
+    --vertical-spacing: 0.5rem;
+    --horizontal-spacing: 1rem;
     margin: calc(var(--vertical-spacing) * -1) calc(var(--horizontal-spacing) / -2) 0;
 }
 
@@ -199,8 +213,8 @@ nav.social>a::before {
 
     button,
     a.btn {
-        padding-left: calc(var(--base) * 4 - var(--border-size));
-        padding-right: calc(var(--base) * 4 - var(--border-size));
+        padding-left: calc(2rem - var(--border-size));
+        padding-right: calc(2rem - var(--border-size));
     }
 }
 
@@ -209,7 +223,7 @@ nav.social>a::before {
     button,
     a.btn {
         display: block;
-        margin-top: calc(var(--base) * 2);
+        margin-top: 1rem;
     }
 
     button+button,

@@ -1,5 +1,5 @@
 body>footer {
-    padding: calc(var(--base) * 10) 0;
+    padding: 5rem 0;
 }
 
 body>footer::before {
@@ -8,7 +8,7 @@ body>footer::before {
         linear-gradient(to right, var(--lenra-bar-gradient));
     background-size:
         /* cover, */
-        100% calc(var(--base) * 3 / 4);
+        100% calc(0.5rem * 3 / 4);
     background-position:
         /* 50% 50%,  */
         50% 0%;
@@ -18,7 +18,7 @@ body>footer::before {
 body>footer>nav {
     position: relative;
     text-align: right;
-    padding-bottom: var(--base);
+    padding-bottom: 0.5rem;
 }
 
 body>footer>nav>* {
@@ -27,7 +27,14 @@ body>footer>nav>* {
 
 body>footer>nav>h2 {
     font-size: 0;
-    margin-bottom: calc(var(--base) * 3);
+    margin-bottom: 1.5rem;
+}
+
+body>footer>nav>h2>a[href="/"] {
+    --logo-image: var(--logo-horizontal-image);
+    --logo-position: left;
+    width: calc(var(--logo-horizontal-height) * var(--logo-horizontal-ratio));
+    height: var(--logo-horizontal-height);
 }
 
 body>footer>nav>h2>a[href="/"]::after {
@@ -41,7 +48,7 @@ body>footer>nav>h2>a[href="/"]::after {
 body>footer>nav>section {
     display: inline-flex;
     vertical-align: top;
-    width: calc(var(--base) * 20);
+    width: 10rem;
     flex-direction: column;
     align-items: flex-start;
 }
@@ -53,32 +60,32 @@ body>footer>ul>li {
 }
 
 body>footer>nav>section>h3 {
-    padding-bottom: calc(var(--base) * 2);
+    padding-bottom: 1rem;
 }
 
 body>footer>nav>section>a {
-    margin-bottom: calc(var(--base) * 2);
+    margin-bottom: 1rem;
     --btn-text-color-data: var(--text-color-data);
 }
 
 body>footer>ul>li:last-of-type {
-    margin-top: calc(var(--base) * 2);
+    margin-top: 1rem;
 }
 
 body>footer>ul>li>nav.social {
-    margin-top: calc(var(--base) / 2);
+    margin-top: 0.25rem;
     --text-opacity: 1;
+}
+
+@media (max-width: 20rem) {
+    body>footer>nav>section {
+        width: 100%;
+    }
 }
 
 @media (max-width: 50rem) {
     body>footer>nav {
         text-align: left;
         max-width: 22.5rem;
-    }
-}
-
-@media (max-width: 20rem) {
-    body>footer>nav>section {
-        width: 100%;
     }
 }
