@@ -168,15 +168,16 @@ a.btn.link.lenra-icon-arrow-right::before {
 }
 
 nav.social {
-    --vertical-spacing: 0.5rem;
-    --horizontal-spacing: 1rem;
-    margin: calc(var(--vertical-spacing) * -1) calc(var(--horizontal-spacing) / -2) 0;
+    display: flex;
+    row-gap: 0.5rem;
+    column-gap: 1rem;
+    flex-wrap: wrap;
 }
 
 nav.social>a {
     --size: var(--button-height);
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
     width: var(--size);
     height: var(--size);
     font-size: calc(var(--size) * 0.6);
@@ -187,7 +188,6 @@ nav.social>a {
     background-color: rgb(var(--background-color-data));
     --btn-text-color-data: var(--text-color-data);
     --btn-text-color-hover-data: var(--background-color-data);
-    margin: var(--vertical-spacing) calc(var(--horizontal-spacing) / 2) 0;
     transition-property: color, background;
 }
 

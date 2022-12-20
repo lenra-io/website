@@ -7,7 +7,6 @@
 main {
     position: relative;
     display: block;
-    /*IE*/
 }
 
 main>h2 {
@@ -36,19 +35,19 @@ h2[data-title]::before {
 }
 
 h3[data-emoji] {
-    padding-bottom: calc(0.5rem / 2);
+    padding-bottom: 0.25rem;
 }
 
 h3[data-emoji]::before {
     content: attr(data-emoji);
     display: inline-block;
     font-size: 80%;
-    width: calc(0.5rem * 3.5);
+    width: 1.75rem;
     vertical-align: baseline;
 }
 
 h3[data-emoji]+p {
-    padding-left: calc(0.5rem * 3.5);
+    padding-left: 1.75rem;
 }
 
 /*********** .arrows ************/
@@ -77,82 +76,37 @@ h3[data-emoji]+p {
 }
 
 
-/*********** .alternate ************/
-
-.alternate {
-    --text-width: 60%;
-    --text-max-width: 37.5rem;
-    --spacing: 2.5rem;
-    position: relative;
-    padding-right: calc(100% - min(var(--text-width), var(--text-max-width)));
-    text-align: left;
-}
-
-.alternate>img {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: calc(100% - var(--text-width));
-    padding-left: var(--spacing);
-    height: calc(100% - 0.5rem * (var(--section-padding-bottom) + var(--section-padding-top)));
-    max-height: 17.5rem;
-    max-width: 21.25rem;
-    transform: translateY(-50%);
-}
-
-.alternate.first-alternate+.alternate,
-.alternate.first-alternate+.alternate+.alternate+.alternate {
-    padding-right: 0;
-    padding-left: calc(100% - min(var(--text-width), var(--text-max-width)));
-}
-
-.alternate.first-alternate+.alternate>img,
-.alternate.first-alternate+.alternate+.alternate+.alternate>img {
-    left: 0;
-    right: auto;
-    padding-right: var(--spacing);
-    padding-left: 0;
-}
-
-main>section.alternate>h2 {
-    text-align: left;
-    padding-bottom: calc(0.5rem * 3);
-}
-
-
 /*********** .colored-block ************/
-
 .colored-block {
     --primary-color-data: var(--green-pulse-data);
     --background-color-data: var(--green-data);
     --background-opacity: 0.05;
     text-align: left;
-    padding: calc(0.5rem * 3);
+    padding: 1.5rem;
     background-color: rgba(var(--background-color-data), var(--background-opacity));
     border-radius: 0.5rem;
 }
 
 .colored-block[class^="lenra-icon-"]::before,
 .colored-block[class*=" lenra-icon-"]::before {
-    --size: calc(0.5rem * 6);
+    --size: 3rem;
     display: inline-block;
     width: var(--size);
     height: var(--size);
-    font-size: calc(3 / 2 * 1rem);
+    font-size: 1.5rem;
     line-height: var(--size);
     text-align: center;
     color: rgb(var(--primary-color-data));
     border: 0.0625rem solid rgb(var(--background-color-data));
-    border-radius: calc(0.5rem * 2);
-    margin-bottom: calc(0.5rem * 3);
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 /************* Tab *************/
-
 .tab {
-    margin-top: calc(0.5rem * 4);
+    margin-top: 2rem;
     overflow: hidden;
-    --tab-gap: calc(0.5rem * 10);
+    --tab-gap: 5rem;
     counter-reset: tab-count;
 }
 
@@ -168,7 +122,7 @@ main>section.alternate>h2 {
 .tab>label {
     position: relative;
     display: inline-block;
-    padding: 0.5rem calc(0.5rem * 4);
+    padding: calc(0.5rem * 3 / 4) 1rem;
     border-radius: calc(var(--button-height) / 2);
     background-color: transparent;
     color: rgb(var(--primary-color-data));
@@ -208,8 +162,8 @@ main>section.alternate>h2 {
 
 .tab>ul {
     position: relative;
-    margin-top: calc(0.5rem * 4);
-    padding-top: calc(0.5rem * 6);
+    margin-top: 2rem;
+    padding-top: 3rem;
     white-space: nowrap;
     counter-reset: tab-count;
 }
@@ -269,33 +223,55 @@ main>section.alternate>h2 {
     }
 }
 
-@media (max-width: 50rem) {
+@media (min-width: 50rem) {
+    /*********** .alternate ************/
+    .alternate {
+        --text-width: 60%;
+        --text-max-width: 37.5rem;
+        --spacing: 2.5rem;
+        position: relative;
+        padding-right: calc(100% - min(var(--text-width), var(--text-max-width)));
+        text-align: left;
+    }
+
+    .alternate>img {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: calc(100% - var(--text-width));
+        padding-left: var(--spacing);
+        height: calc(100% - 0.5rem * (var(--section-padding-bottom) + var(--section-padding-top)));
+        max-height: 17.5rem;
+        max-width: 21.25rem;
+        transform: translateY(-50%);
+    }
+
+    .alternate.first-alternate+.alternate,
+    .alternate.first-alternate+.alternate+.alternate+.alternate {
+        padding-right: 0;
+        padding-left: calc(100% - min(var(--text-width), var(--text-max-width)));
+    }
+
+    .alternate.first-alternate+.alternate>img,
+    .alternate.first-alternate+.alternate+.alternate+.alternate>img {
+        left: 0;
+        right: auto;
+        padding-right: var(--spacing);
+        padding-left: 0;
+    }
+
+    main>section.alternate>h2 {
+        text-align: left;
+        padding-bottom: 1.5rem;
+    }
+
     .alternate {
         --text-width: 100%;
         --text-max-width: none;
         text-align: center;
     }
 
-    .alternate>img {
-        position: initial;
-        display: block;
-        top: auto;
-        left: auto;
-        right: auto;
-        margin: calc(0.5rem * 4) auto 0;
-        width: 100%;
-        max-width: calc(0.5rem * 40);
-        height: auto;
-        max-height: calc(0.5rem * 30);
-        padding: 0;
-        transform: none;
-    }
-
-    main>section.alternate>h2 {
-        text-align: center;
-    }
-
-    .tab > label {
-        padding: calc(0.5rem * 3 / 4) calc(0.5rem * 2);
+    .tab>label {
+        padding: 0.5rem 2rem;
     }
 }

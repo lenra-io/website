@@ -356,11 +356,12 @@
     #features>section>h3 {
         /* display: flex; */
         padding-bottom: calc(0.5rem * 3);
+        text-transform: lowercase;
     }
 
-    /* #features>section>h3::first-letter {
-        text-transform: lowercase;
-    } */
+    #features>section>h3::first-letter {
+        text-transform: none;
+    }
 
     #features>section>h3::before {
         content: "Optimize ";

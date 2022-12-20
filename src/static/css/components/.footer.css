@@ -23,7 +23,6 @@ body>footer>a[href="/"] {
 
 body>footer>nav {
     position: relative;
-    /* max-width: 22.5rem; */
     padding-bottom: 0.5rem;
 
     display: flex;

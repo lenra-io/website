@@ -78,13 +78,6 @@ body>header>a::before {
   --background-color-data: var(--blue-data);
 }
 
-/********** Alternate **********/
-
-.alternate>h3,
-.alternate>p {
-  text-align: left;
-}
-
 /********** Use cases **********/
 
 #use-cases {
@@ -425,5 +418,12 @@ body>header>a::before {
 @media (min-width: 50rem) {
   body>header {
     grid-template-columns: auto 1fr;
+  }
+
+  /********** alternate **********/
+  .alternate>h3,
+  .alternate>p {
+    text-align: left;
+    margin-left: 0;
   }
 }
