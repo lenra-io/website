@@ -8,7 +8,7 @@
         "build": "lesta nginx"
     },
     "dependencies": {
-        "@lenra/lesta": "github:lenra-io/lesta#init-project"
+        "@lenra/lesta": "github:lenra-io/lesta"
     },
     "lesta": {
         "languages": [
