@@ -50,31 +50,6 @@ h3[data-emoji]+p {
     padding-left: 1.75rem;
 }
 
-/*********** .arrows ************/
-
-.arrows {
-    --horizontal-pos-multiplier: 1;
-    position: relative;
-}
-
-.arrows::before {
-    content: " ";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: calc(50% - 50vw);
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-image: url(../img/arrows/blue-big.svg), url(../img/arrows/green.svg), url(../img/arrows/yellow.svg), url(../img/arrows/red-big.svg);
-    background-position:
-        calc(50% - 0.5rem * 75 * var(--horizontal-pos-multiplier)) 40%,
-        calc(50% - 0.5rem * 65 * var(--horizontal-pos-multiplier)) 80%,
-        calc(50% + 0.5rem * 75 * var(--horizontal-pos-multiplier)) 25%,
-        calc(50% + 0.5rem * 75 * var(--horizontal-pos-multiplier)) 80%;
-    background-size: auto;
-    z-index: -1;
-}
-
 
 /*********** .colored-block ************/
 .colored-block {
@@ -183,7 +158,6 @@ h3[data-emoji]+p {
 .tab>input[type="radio"]:checked:nth-of-type(2)~ul>li:nth-of-type(2),
 .tab>input[type="radio"]:checked:nth-of-type(3)~ul>li:nth-of-type(3),
 .tab>input[type="radio"]:checked:nth-of-type(4)~ul>li:nth-of-type(4) {
-    /* display: block; */
     opacity: 1;
 }
 
@@ -273,5 +247,29 @@ h3[data-emoji]+p {
 
     .tab>label {
         padding: 0.5rem 2rem;
+    }
+
+    /*********** .arrows ************/
+    .arrows {
+        --horizontal-pos-multiplier: 1;
+        position: relative;
+    }
+    
+    .arrows::before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: calc(50% - 50vw);
+        width: 100vw;
+        background-repeat: no-repeat;
+        background-image: url(../img/arrows/blue-big.svg), url(../img/arrows/green.svg), url(../img/arrows/yellow.svg), url(../img/arrows/red-big.svg);
+        background-position:
+            calc(50% - 0.5rem * 75 * var(--horizontal-pos-multiplier)) 40%,
+            calc(50% - 0.5rem * 65 * var(--horizontal-pos-multiplier)) 80%,
+            calc(50% + 0.5rem * 75 * var(--horizontal-pos-multiplier)) 25%,
+            calc(50% + 0.5rem * 75 * var(--horizontal-pos-multiplier)) 80%;
+        background-size: auto;
+        z-index: -1;
     }
 }

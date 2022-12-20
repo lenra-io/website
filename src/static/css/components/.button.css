@@ -177,7 +177,6 @@ nav.social {
 nav.social>a {
     --size: var(--button-height);
     position: relative;
-    /* display: inline-block; */
     width: var(--size);
     height: var(--size);
     font-size: calc(var(--size) * 0.6);
