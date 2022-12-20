@@ -71,9 +71,6 @@
     --button-height: calc(var(--line-height) + var(--vertical-padding-small) * 2);
     --top-padding: 6;
     --bottom-padding: 5;
-    --top-reduction: 0.5rem * (var(--top-padding) + var(--button-size));
-    --bottom-reduction: 0.5rem * var(--bottom-padding);
-    --height-reduction: var(--top-reduction) + var(--bottom-reduction);
     --section-padding-top: 6;
     --section-padding-bottom: 6;
     --logo-horizontal-image-black: url("../img/logo.svg");
@@ -238,6 +235,10 @@ a[href="/"]::before {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: var(--logo-position);
+}
+
+a[href="/"]::after {
+    display: none;
 }
 
 /* @media (prefers-color-scheme: dark) {

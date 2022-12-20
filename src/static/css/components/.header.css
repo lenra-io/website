@@ -8,7 +8,8 @@ body>header {
 body>header>nav.menu {
     position: relative;
     display: flex;
-    gap: 1.5rem;
+    column-gap: 1.5rem;
+    row-gap: 0rem;
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 2.5rem;
@@ -51,10 +52,6 @@ body>header>nav.menu a::after {
     margin-right: 0.5rem;
 }
 
-body>header>nav.menu>a[href="/"]::after {
-    content: none;
-}
-
 body>header>nav.menu a:hover::after {
     bottom: auto;
     opacity: var(--disabled-opacity);
@@ -62,38 +59,6 @@ body>header>nav.menu a:hover::after {
 
 body>header>nav.menu a.current::after {
     opacity: 1;
-}
-
-body>header>nav.menu>details {
-    position: relative;
-}
-
-body>header>nav.menu>details>* {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
-
-body>header>nav.menu>details>a {
-    display: block;
-    position: absolute;
-    z-index: 100;
-    background-color: rgba(var(--background-color-data), var(--background-color-opacity));
-}
-
-body>header>nav.menu>details>a+a {
-    transform: translateY(100%);
-}
-
-body>header>nav.menu>details>a:last-of-type {
-    border-bottom-left-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
-}
-
-body>header>nav.menu~* {
-    --elements-margin-left: calc(2rem + var(--lenra-bar-width));
-    max-width: calc(37.5rem - var(--elements-margin-left));
-    margin-left: var(--elements-margin-left);
 }
 
 body>header>h1,
@@ -114,29 +79,36 @@ body>header>p>a {
 @media (min-width: 31.25rem) {
     body>header {
         display: grid;
-        grid-template-columns: auto 1fr 1fr;
+        grid-template-columns: auto 1fr;
         grid-template-rows: auto repeat(auto);
     }
 
     body>header>nav.menu {
-        grid-column: span 3;
+        grid-column: 1/-1;
     }
 
     body>header>nav.menu~* {
-        grid-column: span 2;
+        justify-self: start;
+        margin-left: 0;
+    }
+
+    body>header>nav.menu+* {
+        margin-top: 1.5rem;
+    }
+
+    body>header>nav.menu~*:last-child {
+        margin-bottom: 1.5rem;
     }
 
     body>header::before {
         content: " ";
         grid-row-start: 2;
         grid-row-end: span 10;
-        /* position: absolute;
-        top: calc(0.5rem * (var(--top-padding) + 12) + var(--button-height));
-        bottom: 5rem; */
         width: var(--lenra-bar-width);
         background-image: linear-gradient(to bottom, var(--lenra-bar-gradient));
         background-repeat: no-repeat;
         border-radius: calc(var(--lenra-bar-width) / 2);
+        margin-right: 2rem;
     }
 
     body>header>nav.menu>a[href="/"] {
@@ -147,26 +119,17 @@ body>header>p>a {
 
 @media (min-width: 50rem) {
     body>header {
-        padding-bottom: calc(5rem + 2rem);
-        grid-template:
-            "menu menu menu"
-            "bar content image"
-            "bar content image"
-            "bar content image"
-            "bar content image"
-            "bar content image"
-            "bar content image";
+        padding-bottom: 5rem;
+        grid-template-columns: auto 1fr 1fr;
     }
 
     body>header::after {
         --spacing: 5rem;
         content: " ";
-        grid-area: image;
-        position: absolute;
-        top: calc(50% + var(--button-height));
-        left: calc(50% + var(--spacing));
-        width: calc(50% - var(--spacing));
-        height: 50%;
+        grid-row-start: 2;
+        grid-row-end: span 10;
+        grid-column: 3;
+        margin-left: 2rem;
         background-repeat: no-repeat;
         background-image: url(../../img/arrows/yellow.svg), url(../../img/arrows/blue-big.svg), url(../../img/arrows/green.svg), url(../../img/arrows/red-big.svg);
         background-position:
@@ -175,16 +138,14 @@ body>header>p>a {
             65% 40%,
             95% 80%;
         background-size: auto;
-        transform: translateY(-50%);
     }
 
     body>header>nav.menu {
         padding-top: 0;
         justify-content: end;
         flex-wrap: nowrap;
-        gap: 2rem;
-        margin-bottom: calc(6rem + 2rem);
-
+        column-gap: 2rem;
+        margin-bottom: 6rem;
     }
 
     body>header>nav.menu>a[href="/"] {
@@ -195,6 +156,6 @@ body>header>p>a {
 
 @media (min-width: 82.5rem) {
     body>header>nav.menu {
-        gap: 3rem;
+        column-gap: 3rem;
     }
 }

@@ -3,9 +3,10 @@ body>header {
 }
 
 body>header.invert-colors::before {
-    background-image: linear-gradient(to right, var(--lenra-bar-gradient));
-    background-size: 100% calc(0.5rem * 3 / 4);
-    background-position: 50% 100%;
+  background-image: linear-gradient(to right, var(--lenra-bar-gradient));
+  background-size: 100% calc(0.5rem * 3 / 4);
+  background-position: 50% 100%;
+  grid-row: initial;
 }
 
 body>header::after {
@@ -21,10 +22,10 @@ body>header::after {
 }
 
 body>header>nav.menu {
-    margin-bottom: calc(0.5rem * (20 + 5));
+  margin-bottom: calc(0.5rem * (20 + 5));
 }
 
-body > header > nav.menu ~ * {
+body>header>nav.menu~* {
   --elements-margin-left: 0rem;
 }
 
@@ -81,7 +82,7 @@ body>header>a::before {
 
 .alternate>h3,
 .alternate>p {
-    text-align: left;
+  text-align: left;
 }
 
 /********** Use cases **********/
@@ -247,7 +248,7 @@ body>header>a::before {
   }
 
   body>header>nav.menu {
-      margin-bottom: calc(0.5rem * (10 + 5));
+    margin-bottom: calc(0.5rem * (10 + 5));
   }
 }
 
@@ -284,7 +285,7 @@ body>header>a::before {
 }
 
 @media (max-width: 60rem) {
-  body > header > nav.menu ~ * {
+  body>header>nav.menu~* {
     max-width: 31.25rem;
   }
 }
@@ -347,14 +348,14 @@ body>header>a::before {
 
 @media (max-width: 50rem) {
   body>header {
-      padding-bottom: calc(0.5rem * 6);
+    padding-bottom: calc(0.5rem * 6);
   }
 
   body>header>nav.menu {
-      margin-bottom: calc(0.5rem * 5);
+    margin-bottom: calc(0.5rem * 5);
   }
 
-  body > header > nav.menu ~ * {
+  body>header>nav.menu~* {
     max-width: 37.5rem;
   }
 
@@ -400,6 +401,7 @@ body>header>a::before {
 }
 
 @media (max-width: 28.75rem) {
+
   body>header>h1,
   body>header>p {
     text-align: left;
@@ -412,5 +414,16 @@ body>header>a::before {
 
   #try>nav {
     display: block;
+  }
+}
+
+
+/* mobile to desktop */
+
+
+
+@media (min-width: 50rem) {
+  body>header {
+    grid-template-columns: auto 1fr;
   }
 }

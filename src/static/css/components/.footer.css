@@ -4,45 +4,31 @@ body>footer {
 
 body>footer::before {
     background-image:
-        /* url(../../img/fond.svg), */
         linear-gradient(to right, var(--lenra-bar-gradient));
     background-size:
-        /* cover, */
         100% calc(0.5rem * 3 / 4);
     background-position:
-        /* 50% 50%,  */
         50% 0%;
     background-repeat: no-repeat;
 }
 
-body>footer>nav {
-    position: relative;
-    text-align: right;
-    padding-bottom: 0.5rem;
-}
-
-body>footer>nav>* {
-    text-align: left;
-}
-
-body>footer>nav>h2 {
-    font-size: 0;
+body>footer>a[href="/"] {
+    --logo-image: var(--logo-horizontal-image);
+    --logo-position: left;
+    display: block;
+    width: calc(var(--logo-horizontal-height) * var(--logo-horizontal-ratio));
+    height: var(--logo-horizontal-height);
     margin-bottom: 1.5rem;
 }
 
-body>footer>nav>h2>a[href="/"] {
-    --logo-image: var(--logo-horizontal-image);
-    --logo-position: left;
-    width: calc(var(--logo-horizontal-height) * var(--logo-horizontal-ratio));
-    height: var(--logo-horizontal-height);
-}
+body>footer>nav {
+    position: relative;
+    /* max-width: 22.5rem; */
+    padding-bottom: 0.5rem;
 
-body>footer>nav>h2>a[href="/"]::after {
-    content: none;
-}
-
-body>footer>nav>h2>a[href="/"]::after {
-    content: none;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
 }
 
 body>footer>nav>section {
@@ -77,15 +63,9 @@ body>footer>ul>li>nav.social {
     --text-opacity: 1;
 }
 
-@media (max-width: 20rem) {
-    body>footer>nav>section {
-        width: 100%;
-    }
-}
 
-@media (max-width: 50rem) {
+@media (min-width: 50rem) {
     body>footer>nav {
-        text-align: left;
-        max-width: 22.5rem;
+        justify-content: end;
     }
 }
