@@ -78,6 +78,7 @@ body>header>p>a {
 
 @media (min-width: 31.25rem) {
     body>header {
+        --header-content-padding: 1.5rem;
         display: grid;
         grid-template-columns: auto 1fr;
         grid-template-rows: auto repeat(auto);
@@ -93,11 +94,11 @@ body>header>p>a {
     }
 
     body>header>nav.menu+* {
-        margin-top: 1.5rem;
+        margin-top: var(--header-content-padding);
     }
 
     body>header>nav.menu~*:last-child {
-        margin-bottom: 1.5rem;
+        margin-bottom: var(--header-content-padding);
     }
 
     body>header::before {

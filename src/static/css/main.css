@@ -55,7 +55,7 @@ h3[data-emoji]+p {
 .colored-block {
     --primary-color-data: var(--green-pulse-data);
     --background-color-data: var(--green-data);
-    --background-opacity: 0.05;
+    --background-opacity: 0.08;
     text-align: left;
     padding: 1.5rem;
     background-color: rgba(var(--background-color-data), var(--background-opacity));

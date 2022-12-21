@@ -193,6 +193,9 @@ p+h3 {
     position: absolute;
     background-color: rgb(var(--background-color-data));
     background-image: none;
+    grid-row: initial;
+    grid-column: initial;
+    flex: initial;
     top: 0;
     left: calc(50% - 50vw);
     height: 100%;

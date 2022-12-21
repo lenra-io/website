@@ -63,7 +63,7 @@
 }
 
 #how-it-works>.tab>ul>li>section>a {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 #how-it-works>.tab>ul>li>aside {
@@ -331,6 +331,10 @@
         flex-basis: 50%;
         flex-shrink: 0;
         flex-grow: 0;
+    }
+
+    #how-it-works>.tab>ul>li>section>a {
+        margin-top: 2rem;
     }
 
     #how-it-works>.tab>ul>li>aside {
