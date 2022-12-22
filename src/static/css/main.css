@@ -60,6 +60,10 @@ h3[data-emoji]+p {
     padding: 1.5rem;
     background-color: rgba(var(--background-color-data), var(--background-opacity));
     border-radius: 0.5rem;
+    width: 100%;
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .colored-block[class^="lenra-icon-"]::before,
@@ -76,6 +80,17 @@ h3[data-emoji]+p {
     border-radius: 1rem;
     margin-bottom: 1.5rem;
 }
+
+
+
+/*********** .alternate ************/
+.alternate>img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 
 /************* Tab *************/
 .tab {
@@ -220,14 +235,18 @@ h3[data-emoji]+p {
         transform: translateY(-50%);
     }
 
-    .alternate.first-alternate+.alternate,
-    .alternate.first-alternate+.alternate+.alternate+.alternate {
+    .alternate:first-child+.alternate,
+    .alternate:first-child+.alternate+.alternate+.alternate,
+    :not(.alternate)+.alternate+.alternate,
+    :not(.alternate)+.alternate+.alternate+.alternate+.alternate {
         padding-right: 0;
         padding-left: calc(100% - min(var(--text-width), var(--text-max-width)));
     }
 
-    .alternate.first-alternate+.alternate>img,
-    .alternate.first-alternate+.alternate+.alternate+.alternate>img {
+    .alternate:first-child+.alternate>img,
+    .alternate:first-child+.alternate+.alternate+.alternate>img,
+    :not(.alternate)+.alternate+.alternate>img,
+    :not(.alternate)+.alternate+.alternate+.alternate+.alternate>img {
         left: 0;
         right: auto;
         padding-right: var(--spacing);
@@ -237,12 +256,6 @@ h3[data-emoji]+p {
     main>section.alternate>h2 {
         text-align: left;
         padding-bottom: 1.5rem;
-    }
-
-    .alternate {
-        --text-width: 100%;
-        --text-max-width: none;
-        text-align: center;
     }
 
     .tab>label {
