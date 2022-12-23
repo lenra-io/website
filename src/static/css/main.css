@@ -31,7 +31,7 @@ h2[data-title]::before {
     font-size: 1rem;
     font-weight: 600;
     line-height: var(--line-height-multiplier);
-    padding-bottom: var(--base);
+    padding-bottom: 0.5rem;
 }
 
 h3[data-emoji] {
@@ -47,75 +47,7 @@ h3[data-emoji]::before {
 }
 
 h3[data-emoji]+p {
-    padding-left: calc(var(--base) * 3.5);
-}
-
-/*********** .arrows ************/
-
-.arrows {
-    --horizontal-pos-multiplier: 1;
-    position: relative;
-}
-
-.arrows::before {
-    content: " ";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: calc(50% - 50vw);
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-image: url(../img/arrows/blue-big.svg), url(../img/arrows/green.svg), url(../img/arrows/yellow.svg), url(../img/arrows/red-big.svg);
-    background-position:
-        calc(50% - var(--base) * 75 * var(--horizontal-pos-multiplier)) 40%,
-        calc(50% - var(--base) * 65 * var(--horizontal-pos-multiplier)) 80%,
-        calc(50% + var(--base) * 75 * var(--horizontal-pos-multiplier)) 25%,
-        calc(50% + var(--base) * 75 * var(--horizontal-pos-multiplier)) 80%;
-    background-size: auto;
-    z-index: -1;
-}
-
-
-/*********** .alternate ************/
-
-.alternate {
-    --text-width: 60%;
-    --text-max-width: 37.5rem;
-    --spacing: 2.5rem;
-    position: relative;
-    padding-right: calc(100% - min(var(--text-width), var(--text-max-width)));
-    text-align: left;
-}
-
-.alternate>img {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: calc(100% - var(--text-width));
-    padding-left: var(--spacing);
-    height: calc(100% - var(--base) * (var(--section-padding-bottom) + var(--section-padding-top)));
-    max-height: 17.5rem;
-    max-width: 21.25rem;
-    transform: translateY(-50%);
-}
-
-.alternate.first-alternate+.alternate,
-.alternate.first-alternate+.alternate+.alternate+.alternate {
-    padding-right: 0;
-    padding-left: calc(100% - min(var(--text-width), var(--text-max-width)));
-}
-
-.alternate.first-alternate+.alternate>img,
-.alternate.first-alternate+.alternate+.alternate+.alternate>img {
-    left: 0;
-    right: auto;
-    padding-right: var(--spacing);
-    padding-left: 0;
-}
-
-main>section.alternate>h2 {
-    text-align: left;
-    padding-bottom: calc(var(--base) * 3);
+    padding-left: 1.75rem;
 }
 
 
@@ -352,9 +284,5 @@ main>section.alternate>h2 {
             calc(50% + 0.5rem * 75 * var(--horizontal-pos-multiplier)) 80%;
         background-size: auto;
         z-index: -1;
-    }
-
-    .tab > label {
-        padding: calc(var(--base) * 3 / 4) calc(var(--base) * 2);
     }
 }

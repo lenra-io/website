@@ -58,35 +58,6 @@ body>header>a::before {
 
 /********** Use cases **********/
 
-#use-cases {
-  text-align: center;
-}
-
-#use-cases::before {
-  background-image:
-    url(../img/arrows/blue-big.svg),
-    url(../img/arrows/green.svg),
-    url(../img/arrows/red.svg),
-    url(../img/arrows/blue.svg),
-    url(../img/arrows/yellow.svg),
-    url(../img/arrows/red-big.svg);
-  background-position:
-    calc(50% - var(--base) * 55) 40%,
-    calc(50% - var(--base) * 65) 70%,
-    calc(50% + var(--base) * 20) 33%,
-    calc(50% - var(--base) * 12) 67%,
-    calc(50% + var(--base) * 70) 37%,
-    calc(50% + var(--base) * 60) 75%;
-}
-
-#use-cases>.colored-block {
-  width: 20.625rem;
-  display: inline-block;
-  vertical-align: top;
-  text-align: left;
-  margin: calc(var(--base) * 3) calc(var(--base) * 3 / 2) 0;
-}
-
 #use-cases>.colored-block:first-of-type {
   --primary-color-data: var(--yellow-pulse-data);
   --background-color-data: var(--yellow-data);
