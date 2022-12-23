@@ -54,9 +54,10 @@ a.btn {
     --vertical-padding-multiplier: var(--vertical-padding-medium-multiplier);
     --horizontal-padding-multiplier: var(--horizontal-padding-medium-multiplier);
     --border-size: 0rem;
-    min-width: 10rem;
+    min-width: 6rem;
     background-color: rgba(var(--btn-background-color-data), var(--btn-background-color-opacity));
-    display: inline-block;
+    display: block;
+    margin-top: 1rem;
     font-weight: 600;
     text-align: center;
     text-decoration: none;
@@ -130,6 +131,7 @@ a.btn.link {
     --btn-text-color-data: var(--primary-color-data);
     --btn-text-color-hover-data: var(--primary-color-hover-data);
     --btn-background-color-opacity: 0;
+    display: inline-block;
     padding-left: 0;
     padding-right: 0;
     min-width: 0;
@@ -146,13 +148,6 @@ a.btn.link::after {
 
 a.btn.link:hover::after {
     bottom: calc((100% - var(--font-size)) / 2 - 0.25rem);
-}
-
-button+button,
-button+a.btn,
-a.btn+button,
-a.btn+a.btn {
-    margin-left: 1rem;
 }
 
 a.btn.link.lenra-icon-arrow-right {
@@ -207,34 +202,23 @@ nav.social>a::before {
     color: inherit;
 }
 
-
-@media (max-width: 50rem) {
-
+@media (min-width: 28.75rem) {
     button,
-    a.btn {
-        padding-left: calc(2rem - var(--border-size));
-        padding-right: calc(2rem - var(--border-size));
-    }
-}
-
-@media (max-width: 28.75rem) {
-
-    button,
-    a.btn {
-        display: block;
-        margin-top: 1rem;
+    a.btn:not(.link) {
+        display: inline-block;
+        margin-top: initial;
     }
 
     button+button,
-    button+a.btn,
+    button+a.btn:not(.link),
     a.btn+button,
-    a.btn+a.btn {
-        margin-left: 0;
+    a.btn+a.btn:not(.link) {
+        margin-left: 1rem;
     }
 
-    a.btn.link {
-        display: inline-block;
-        margin-left: auto;
-        margin-right: auto;
+    button+a.btn.link,
+    a.btn+a.btn.link {
+        display: block;
+        width: fit-content;
     }
 }

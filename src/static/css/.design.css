@@ -57,18 +57,12 @@
     --seprataion-size: 2;
     --nav-seprataion-size: 4;
     --vertical-padding-small-multiplier: 1;
-    --vertical-padding-small: calc(var(--vertical-padding-small-multiplier) * 0.5rem);
     --vertical-padding-medium-multiplier: 1.5;
-    --vertical-padding-medium: calc(var(--vertical-padding-medium-multiplier) * 0.5rem);
     --vertical-padding-big-multiplier: 2;
-    --vertical-padding-big: calc(var(--vertical-padding-big-multiplier) * 0.5rem);
-    --horizontal-padding-small-multiplier: 3;
-    --horizontal-padding-small: calc(var(--horizontal-padding-small-multiplier) * 0.5rem);
-    --horizontal-padding-medium-multiplier: 5;
-    --horizontal-padding-medium: calc(var(--horizontal-padding-medium-multiplier) * 0.5rem);
-    --horizontal-padding-big-multiplier: 5;
-    --horizontal-padding-big: calc(var(--horizontal-padding-big-multiplier) * 0.5rem);
-    --button-height: calc(var(--line-height) + var(--vertical-padding-small) * 2);
+    --horizontal-padding-small-multiplier: 2;
+    --horizontal-padding-medium-multiplier: 3;
+    --horizontal-padding-big-multiplier: 3;
+    --button-height: calc(var(--line-height) + var(--vertical-padding-small-multiplier) * 0.5rem * 2);
     --top-padding: 6;
     --bottom-padding: 5;
     --section-padding-top: 6;
@@ -281,5 +275,8 @@ a[href="/"]::after {
     :root {
         --section-padding-top: 12;
         --section-padding-bottom: 12;
+        --horizontal-padding-small-multiplier: 3;
+        --horizontal-padding-medium-multiplier: 5;
+        --horizontal-padding-big-multiplier: 5;
     }
 }

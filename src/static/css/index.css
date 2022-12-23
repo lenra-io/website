@@ -117,23 +117,8 @@ body>header>a::before {
 
 /********** Try **********/
 
-#try {
-  text-align: center;
-}
-
 #try>img {
   margin-bottom: 1rem;
-}
-
-#try>nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#try>nav>a:last-of-type {
-  margin-left: 0;
-  margin-top: 0.5rem;
 }
 
 /*--------- Partners ---------*/
@@ -166,10 +151,10 @@ body>header>a::before {
 
 /******** Media queries *********/
 
-/* Reversed because of button rule */
-@media (max-width: 28.75rem) {
-  #try>nav {
-    display: block;
+@media (min-width: 28.75rem) {
+  #try>nav>a:last-of-type {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
