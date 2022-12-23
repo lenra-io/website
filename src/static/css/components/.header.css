@@ -1,59 +1,31 @@
 body>header {
     position: relative;
     text-align: left;
-    padding-top: calc(var(--base) * var(--top-padding));
-    padding-bottom: calc(var(--base) * (10 + 4));
-}
-
-body>header::before {
-    content: " ";
-    position: absolute;
-    top: calc(var(--base) * (var(--top-padding) + 12) + var(--button-height));
-    bottom: calc(var(--base) * 10);
-    width: var(--lenra-bar-width);
-    background-image: linear-gradient(to bottom, var(--lenra-bar-gradient));
-    background-repeat: no-repeat;
-    border-radius: calc(var(--lenra-bar-width) / 2);
-}
-
-body>header::after {
-    --spacing: calc(var(--base) * 10);
-    content: " ";
-    position: absolute;
-    top: calc(50% + var(--button-height));
-    left: calc(50% + var(--spacing));
-    width: calc(50% - var(--spacing));
-    height: 50%;
-    background-repeat: no-repeat;
-    background-image: url(../../img/arrows/yellow.svg), url(../../img/arrows/blue-big.svg), url(../../img/arrows/green.svg), url(../../img/arrows/red-big.svg);
-    background-position:
-        5% 25%,
-        35% 65%,
-        65% 40%,
-        95% 80%;
-    background-size: auto;
-    transform: translateY(-50%);
+    padding-top: calc(0.5rem * var(--top-padding));
+    padding-bottom: 3rem;
 }
 
 body>header>nav.menu {
     position: relative;
     display: flex;
-    gap: calc(var(--base) * 6);
-    justify-content: end;
-    height: var(--button-height);
-    margin-bottom: calc(var(--base) * (12 + 4));
+    column-gap: 1.5rem;
+    row-gap: 0rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+    padding-top: calc(var(--logo-height) + 1.5rem);
 }
 
-body>header>nav.menu>* {
+body>header>nav.menu>*:not(a[href="/"]) {
     display: inline-block;
-    min-width: calc(var(--base) * 6);
+    min-width: 3rem;
     height: var(--button-height);
     text-align: left;
     font-weight: 700;
 }
 
-body>header>nav.menu a {
-    --size: var(--base);
+body>header>nav.menu a:not(a[href="/"]) {
+    --size: 0.5rem;
     --btn-text-color-data: var(--background-contrast-color-data);
     --btn-text-color-hover-data: var(--background-contrast-color-data);
     padding-bottom: 0;
@@ -65,8 +37,8 @@ body>header>nav.menu a {
 body>header>nav.menu>a[href="/"] {
     position: absolute;
     top: 0;
-    left: 0;
-    padding-left: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 body>header>nav.menu a::after {
@@ -77,11 +49,7 @@ body>header>nav.menu a::after {
     background-color: rgb(var(--primary-color-data));
     border: none;
     border-radius: 50%;
-    margin-right: var(--base);
-}
-
-body>header>nav.menu>a[href="/"]::after {
-    content: none;
+    margin-right: 0.5rem;
 }
 
 body>header>nav.menu a:hover::after {
@@ -93,84 +61,102 @@ body>header>nav.menu a.current::after {
     opacity: 1;
 }
 
-body>header>nav.menu>details {
-    position: relative;
-}
-
-body>header>nav.menu>details>* {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
-
-body>header>nav.menu>details>a {
-    display: block;
-    position: absolute;
-    z-index: 100;
-    background-color: rgba(var(--background-color-data), var(--background-color-opacity));
-}
-
-body>header>nav.menu>details>a+a {
-    transform: translateY(100%);
-}
-
-body>header>nav.menu>details>a:last-of-type {
-    border-bottom-left-radius: calc(var(--base) / 2);
-    border-bottom-right-radius: calc(var(--base) / 2);
-}
-
-body>header>nav.menu~* {
-    --elements-margin-left: calc(var(--base) * 4 + var(--lenra-bar-width));
-    max-width: calc(37.5rem - var(--elements-margin-left));
-    margin-left: var(--elements-margin-left);
-}
-
 body>header>h1,
 body>header>h2 {
-    padding-bottom: calc(var(--base) * 2);
+    padding-bottom: 1rem;
 }
 
 body>header>p {
     font-size: 110%;
     --text-opacity: var(--dark-grey-opacity);
-    padding-bottom: var(--base);
+    padding-bottom: 0.5rem;
 }
 
 body>header>p>a {
     --text-opacity: 1;
 }
 
-@media (max-width: 82.5rem) {
-    body>header>nav.menu {
-        gap: calc(var(--base) * 4);
-    }
-}
-
-@media (max-width: 50rem) {
+@media (min-width: 31.25rem) {
     body>header {
-        padding-bottom: calc(var(--base) * 6);
-    }
-
-    body>header::after {
-      display: none;
+        --header-content-padding: 1.5rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto repeat(auto);
     }
 
     body>header>nav.menu {
-        gap: calc(var(--base) * 3);
-        margin-bottom: calc(var(--base) * 5);
+        grid-column: 1/-1;
     }
-}
 
-@media (max-width: 43.75rem) {
-    body>header>nav.menu {
-        padding-top: calc(var(--logo-height) + var(--base) * 3);
-        justify-content: center;
-        height: auto;
-        flex-wrap: wrap;
+    body>header>nav.menu~* {
+        justify-self: start;
+        margin-left: 0;
+    }
+
+    body>header>nav.menu+* {
+        margin-top: var(--header-content-padding);
+    }
+
+    body>header>nav.menu~*:last-child {
+        margin-bottom: var(--header-content-padding);
+    }
+
+    body>header::before {
+        content: " ";
+        grid-row-start: 2;
+        grid-row-end: span 10;
+        width: var(--lenra-bar-width);
+        background-image: linear-gradient(to bottom, var(--lenra-bar-gradient));
+        background-repeat: no-repeat;
+        border-radius: calc(var(--lenra-bar-width) / 2);
+        margin-right: 2rem;
     }
 
     body>header>nav.menu>a[href="/"] {
-        left: 50%;
-        transform: translateX(-50%);
+        width: calc(var(--logo-height) * var(--logo-horizontal-ratio));
+        height: var(--logo-height);
+    }
+}
+
+@media (min-width: 50rem) {
+    body>header {
+        padding-bottom: 5rem;
+        grid-template-columns: auto 1fr 1fr;
+    }
+
+    body>header::after {
+        --spacing: 5rem;
+        content: " ";
+        grid-row-start: 2;
+        grid-row-end: span 10;
+        grid-column: 3;
+        margin-left: 2rem;
+        background-repeat: no-repeat;
+        background-image: url(../../img/arrows/yellow.svg), url(../../img/arrows/blue-big.svg), url(../../img/arrows/green.svg), url(../../img/arrows/red-big.svg);
+        background-position:
+            5% 25%,
+            35% 65%,
+            65% 40%,
+            95% 80%;
+        background-size: auto;
+    }
+
+    body>header>nav.menu {
+        padding-top: 0;
+        justify-content: end;
+        flex-wrap: nowrap;
+        column-gap: 2rem;
+        margin-bottom: 6rem;
+    }
+
+    body>header>nav.menu>a[href="/"] {
+        left: 0;
+        transform: none;
+    }
+}
+
+@media (min-width: 82.5rem) {
+    body>header>nav.menu {
+        column-gap: 3rem;
     }
 }

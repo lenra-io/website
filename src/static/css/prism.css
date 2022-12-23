@@ -1,10 +1,10 @@
 pre {
-    border-radius: var(--base);
+    border-radius: 0.5rem;
 }
 
 pre.command-line {
     padding: 0;
-    border-radius: var(--base);
+    border-radius: 0.5rem;
 }
 
 pre.command-line::before {
