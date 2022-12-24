@@ -1,3 +1,24 @@
-section>.btn {
-    margin-top: 1rem;
+#values>h2 {
+    font-size: 1.5rem;
+    text-align: left;
+    padding-bottom: 1.5rem;
+}
+
+#values>*+h2 {
+    margin-top: 3rem;
+}
+
+#documentation>img {
+    display: block;
+    width: 90%;
+    max-width: 54rem;
+    margin: 1.5rem auto;
+}
+
+#framework {
+    --horizontal-pos-multiplier: 0.8;
+}
+
+#framework>a.btn.primary {
+    margin-top: 1.5rem;
 }

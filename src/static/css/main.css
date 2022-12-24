@@ -28,14 +28,16 @@ h2[data-title]::before {
     content: attr(data-title);
     display: block;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: calc(1rem * 7 / 8);
     font-weight: 600;
     line-height: var(--line-height-multiplier);
     padding-bottom: 0.5rem;
 }
 
 h3[data-emoji] {
+    font-size: 1.25rem;
     padding-bottom: 0.25rem;
+    text-align: left;
 }
 
 h3[data-emoji]::before {
@@ -48,6 +50,8 @@ h3[data-emoji]::before {
 
 h3[data-emoji]+p {
     padding-left: 1.75rem;
+    text-align: left;
+    margin-left: 0;
 }
 
 
