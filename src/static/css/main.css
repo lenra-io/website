@@ -100,10 +100,25 @@ h4[data-emoji]+p {
 
 
 /*********** .alternate ************/
+.alternate {
+    text-align: left;
+}
+
+.alternate>h2 {
+    padding-bottom: 1.5rem;
+}
+
+.alternate>p {
+    margin-left: 0;
+}
+
 .alternate>img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    max-width: 90%;
+    max-height: 18.5rem;
+    margin-top: 2rem;
 }
 
 
@@ -236,7 +251,6 @@ h4[data-emoji]+p {
         --spacing: 2.5rem;
         position: relative;
         padding-right: calc(100% - min(var(--text-width), var(--text-max-width)));
-        text-align: left;
     }
 
     .alternate>img {
@@ -244,10 +258,11 @@ h4[data-emoji]+p {
         top: 50%;
         right: 0;
         width: calc(100% - var(--text-width));
+        margin-top: 0;
         padding-left: var(--spacing);
         height: calc(100% - 0.5rem * (var(--section-padding-bottom) + var(--section-padding-top)));
-        max-height: 17.5rem;
-        max-width: 21.25rem;
+        max-height: 27rem;
+        max-width: 28rem;
         transform: translateY(-50%);
     }
 
