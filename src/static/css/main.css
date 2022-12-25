@@ -23,7 +23,8 @@ main>section>nav {
     text-align: center;
 }
 
-h2[data-title]::before {
+h2[data-title]::before,
+h3[data-title]::before {
     --text-opacity: 0.6;
     content: attr(data-title);
     display: block;
@@ -34,13 +35,18 @@ h2[data-title]::before {
     padding-bottom: 0.5rem;
 }
 
-h3[data-emoji] {
-    font-size: 1.25rem;
-    padding-bottom: 0.25rem;
+h3[data-emoji],
+h4[data-emoji] {
     text-align: left;
 }
 
-h3[data-emoji]::before {
+h3[data-emoji] {
+    font-size: 1.25rem;
+    padding-bottom: 0.25rem;
+}
+
+h3[data-emoji]::before,
+h4[data-emoji]::before {
     content: attr(data-emoji);
     display: inline-block;
     font-size: 80%;
@@ -48,7 +54,8 @@ h3[data-emoji]::before {
     vertical-align: baseline;
 }
 
-h3[data-emoji]+p {
+h3[data-emoji]+p,
+h4[data-emoji]+p {
     padding-left: 1.75rem;
     text-align: left;
     margin-left: 0;
@@ -83,6 +90,11 @@ h3[data-emoji]+p {
     border: 0.0625rem solid rgb(var(--background-color-data));
     border-radius: 1rem;
     margin-bottom: 1.5rem;
+}
+
+.colored-block>h3 {
+    font-size: 1.25rem;
+    padding-bottom: 0.25rem;
 }
 
 
@@ -288,5 +300,38 @@ h3[data-emoji]+p {
             calc(50% + 0.5rem * 75 * var(--horizontal-pos-multiplier)) 80%;
         background-size: auto;
         z-index: -1;
+    }
+
+    /********** .fixed-content ***********/
+    .fixed-content {
+        --content-space: 20vw;
+        --section-header-height: 0rem;
+        --section-footer-height: 0rem;
+        --content-start: calc(var(--section-header-height) + 1.5rem + 0.5rem * var(--section-padding-top));
+        --content-end: calc(var(--section-footer-height) + 1.5rem + 0.5rem * var(--section-padding-bottom));
+        position: relative;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        padding-left: calc(50% - var(--content-space));
+    }
+
+    .fixed-content::before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-image: linear-gradient(to bottom,
+                rgb(var(--background-color-data)) var(--section-header-height),
+                transparent var(--content-start),
+                transparent calc(100% - var(--content-end)),
+                rgb(var(--background-color-data)) calc(100% - var(--section-footer-height)));
+    }
+}
+
+@media (min-width: 75rem) {
+    .fixed-content {
+        --content-space: 5rem;
     }
 }

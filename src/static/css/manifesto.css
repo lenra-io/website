@@ -1,10 +1,12 @@
 #values>h2 {
-    font-size: 1.5rem;
-    text-align: left;
-    padding-bottom: 1.5rem;
+    display: none;
 }
 
-#values>*+h2 {
+#values>h3 {
+    text-align: left;
+}
+
+#values>*:not(h2)+h3 {
     margin-top: 3rem;
 }
 
@@ -16,9 +18,35 @@
 }
 
 #framework {
-    --horizontal-pos-multiplier: 0.8;
+    --horizontal-pos-multiplier: 0.75;
 }
 
 #framework>a.btn.primary {
     margin-top: 1.5rem;
+}
+
+
+
+@media (min-width: 50rem) {
+    #values>h2 {
+        display: block;
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -2;
+        right: calc(50% + var(--content-space) + 0.5rem * 4);
+        font-size: 1.5rem;
+        padding-bottom: 1.5rem;
+        text-align: right;
+    }
+
+    #values>h2>strong {
+        color: inherit;
+    }
+}
+
+@media (min-width: 75rem) {
+    #values>h2::after {
+        content: " are to";
+    }
 }
