@@ -22,10 +22,10 @@
             "title": "Optimize your app creation",
             "description": "Lenra is an open source framework to create your app using any language, and deploy it without any Ops scale, built on ethical values."
         },
-        "beta": {
-            "name": "Beta",
-            "title": "Beta version",
-            "description": "The Lenra platform is made to accelerate the creation of your applications and simplify their hosting while preserving the personal data of your users."
+        "discover": {
+            "name": "Discover",
+            "title": "Discover Lenra",
+            "description": "Lenra is an open source framework to create your app using any language, and deploy it without any Ops scale, built on ethical values."
         },
         "usecases": {
             "name": "Use cases"

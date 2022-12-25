@@ -7,16 +7,15 @@
 main {
     position: relative;
     display: block;
-    /*IE*/
 }
 
 main>h2 {
-    padding-top: calc(var(--base) * var(--section-padding-top));
+    padding-top: calc(0.5rem * var(--section-padding-top));
 }
 
 main>section {
-    padding-top: calc(var(--base) * var(--section-padding-top));
-    padding-bottom: calc(var(--base) * var(--section-padding-bottom));
+    padding-top: calc(0.5rem * var(--section-padding-top));
+    padding-bottom: calc(0.5rem * var(--section-padding-bottom));
     text-align: center;
 }
 
@@ -31,100 +30,73 @@ h2[data-title]::before {
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 600;
-    padding-bottom: var(--base);
+    line-height: var(--line-height-multiplier);
+    padding-bottom: 0.5rem;
 }
 
 h3[data-emoji] {
-    padding-bottom: calc(var(--base) / 2);
+    padding-bottom: 0.25rem;
 }
 
 h3[data-emoji]::before {
     content: attr(data-emoji);
     display: inline-block;
     font-size: 80%;
-    width: calc(var(--base) * 3.5);
+    width: 1.75rem;
     vertical-align: baseline;
 }
 
 h3[data-emoji]+p {
-    padding-left: calc(var(--base) * 3.5);
-}
-
-/*********** .alternate ************/
-
-.alternate {
-    --text-width: 60%;
-    --text-max-width: 37.5rem;
-    --spacing: 2.5rem;
-    position: relative;
-    padding-right: calc(100% - min(var(--text-width), var(--text-max-width)));
-    text-align: left;
-}
-
-.alternate>img {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: calc(100% - var(--text-width));
-    padding-left: var(--spacing);
-    height: calc(100% - var(--base) * (var(--section-padding-bottom) + var(--section-padding-top)));
-    max-height: 17.5rem;
-    max-width: 21.25rem;
-    transform: translateY(-50%);
-}
-
-.alternate.first-alternate+.alternate,
-.alternate.first-alternate+.alternate+.alternate+.alternate {
-    padding-right: 0;
-    padding-left: calc(100% - min(var(--text-width), var(--text-max-width)));
-}
-
-.alternate.first-alternate+.alternate>img,
-.alternate.first-alternate+.alternate+.alternate+.alternate>img {
-    left: 0;
-    right: auto;
-    padding-right: var(--spacing);
-    padding-left: 0;
-}
-
-main>section.alternate>h2 {
-    text-align: left;
+    padding-left: 1.75rem;
 }
 
 
 /*********** .colored-block ************/
-
 .colored-block {
     --primary-color-data: var(--green-pulse-data);
     --background-color-data: var(--green-data);
-    --background-opacity: 0.05;
+    --background-opacity: 0.08;
     text-align: left;
-    padding: calc(var(--base) * 3);
+    padding: 1.5rem;
     background-color: rgba(var(--background-color-data), var(--background-opacity));
-    border-radius: var(--base);
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .colored-block[class^="lenra-icon-"]::before,
 .colored-block[class*=" lenra-icon-"]::before {
-    --size: calc(var(--base) * 6);
+    --size: 3rem;
     display: inline-block;
     width: var(--size);
     height: var(--size);
-    font-size: calc(3 / 2 * 1rem);
+    font-size: 1.5rem;
     line-height: var(--size);
     text-align: center;
     color: rgb(var(--primary-color-data));
     border: 0.0625rem solid rgb(var(--background-color-data));
-    border-radius: calc(var(--base) * 2);
-    margin-bottom: calc(var(--base) * 3);
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-/************* Tab *************/
 
+
+/*********** .alternate ************/
+.alternate>img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/************* Tab *************/
 .tab {
-    margin-top: calc(var(--base) * 4);
+    margin-top: 2rem;
     overflow: hidden;
-    --tab-gap: calc(var(--base) * 10);
+    --tab-gap: 5rem;
     counter-reset: tab-count;
 }
 
@@ -140,7 +112,7 @@ main>section.alternate>h2 {
 .tab>label {
     position: relative;
     display: inline-block;
-    padding: var(--base) calc(var(--base) * 4);
+    padding: calc(0.5rem * 3 / 4) 1rem;
     border-radius: calc(var(--button-height) / 2);
     background-color: transparent;
     color: rgb(var(--primary-color-data));
@@ -162,7 +134,7 @@ main>section.alternate>h2 {
     position: absolute;
     width: 100%;
     height: 100%;
-    top:0;
+    top: 0;
     left: 0;
     background-color: rgba(var(--text-color-data), 0.1);
     cursor: pointer;
@@ -180,8 +152,8 @@ main>section.alternate>h2 {
 
 .tab>ul {
     position: relative;
-    margin-top: calc(var(--base) * 4);
-    padding-top: calc(var(--base) * 6);
+    margin-top: 2rem;
+    padding-top: 3rem;
     white-space: nowrap;
     counter-reset: tab-count;
 }
@@ -201,7 +173,6 @@ main>section.alternate>h2 {
 .tab>input[type="radio"]:checked:nth-of-type(2)~ul>li:nth-of-type(2),
 .tab>input[type="radio"]:checked:nth-of-type(3)~ul>li:nth-of-type(3),
 .tab>input[type="radio"]:checked:nth-of-type(4)~ul>li:nth-of-type(4) {
-    /* display: block; */
     opacity: 1;
 }
 
@@ -241,29 +212,77 @@ main>section.alternate>h2 {
     }
 }
 
-@media (max-width: 50rem) {
+@media (min-width: 50rem) {
+    /*********** .alternate ************/
     .alternate {
-        --text-width: 100%;
-        --text-max-width: none;
-        text-align: center;
+        --text-width: 60%;
+        --text-max-width: 37.5rem;
+        --spacing: 2.5rem;
+        position: relative;
+        padding-right: calc(100% - min(var(--text-width), var(--text-max-width)));
+        text-align: left;
     }
 
     .alternate>img {
-        position: initial;
-        display: block;
-        top: auto;
-        left: auto;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: calc(100% - var(--text-width));
+        padding-left: var(--spacing);
+        height: calc(100% - 0.5rem * (var(--section-padding-bottom) + var(--section-padding-top)));
+        max-height: 17.5rem;
+        max-width: 21.25rem;
+        transform: translateY(-50%);
+    }
+
+    .alternate:first-child+.alternate,
+    .alternate:first-child+.alternate+.alternate+.alternate,
+    :not(.alternate)+.alternate+.alternate,
+    :not(.alternate)+.alternate+.alternate+.alternate+.alternate {
+        padding-right: 0;
+        padding-left: calc(100% - min(var(--text-width), var(--text-max-width)));
+    }
+
+    .alternate:first-child+.alternate>img,
+    .alternate:first-child+.alternate+.alternate+.alternate>img,
+    :not(.alternate)+.alternate+.alternate>img,
+    :not(.alternate)+.alternate+.alternate+.alternate+.alternate>img {
+        left: 0;
         right: auto;
-        margin: calc(var(--base) * 4) auto 0;
-        width: 100%;
-        max-width: calc(var(--base) * 40);
-        height: auto;
-        max-height: calc(var(--base) * 30);
-        padding: 0;
-        transform: none;
+        padding-right: var(--spacing);
+        padding-left: 0;
     }
 
     main>section.alternate>h2 {
-        text-align: center;
+        text-align: left;
+        padding-bottom: 1.5rem;
+    }
+
+    .tab>label {
+        padding: 0.5rem 2rem;
+    }
+
+    /*********** .arrows ************/
+    .arrows {
+        --horizontal-pos-multiplier: 1;
+        position: relative;
+    }
+    
+    .arrows::before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: calc(50% - 50vw);
+        width: 100vw;
+        background-repeat: no-repeat;
+        background-image: url(../img/arrows/blue-big.svg), url(../img/arrows/green.svg), url(../img/arrows/yellow.svg), url(../img/arrows/red-big.svg);
+        background-position:
+            calc(50% - 0.5rem * 75 * var(--horizontal-pos-multiplier)) 40%,
+            calc(50% - 0.5rem * 65 * var(--horizontal-pos-multiplier)) 80%,
+            calc(50% + 0.5rem * 75 * var(--horizontal-pos-multiplier)) 25%,
+            calc(50% + 0.5rem * 75 * var(--horizontal-pos-multiplier)) 80%;
+        background-size: auto;
+        z-index: -1;
     }
 }

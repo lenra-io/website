@@ -1,12 +1,12 @@
 {
     "title": "Lenra",
-    "pages": [
+    "pageList": [
         {
             "name": "index",
             "path": "/"
         },
         {
-            "name": "beta",
+            "name": "discover",
             "group": "platform"
         },
         {
