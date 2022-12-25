@@ -1,3 +1,6 @@
-section>.btn {
-    margin-top: 1rem;
-}
+#twitch > img {
+    display: block;
+    width: 90%;
+    max-width: 54rem;
+    margin: 1.5rem auto;
+  }
