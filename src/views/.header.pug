@@ -44,7 +44,7 @@ header(class=headerClass)
             +displayNavElement(el)
 
     block header
-        h1 !{currentPage.titleHtml ? currentPage.titleHtml : currentPage.title}
+        h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
         if currentPage.subtitle
             h2 !{currentPage.subtitle}
         if currentPage.headerTexts

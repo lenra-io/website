@@ -1,7 +1,7 @@
 doctype html
 html(lang=language)
   head
-    - var pageTitle = currentPage.titleTag ? currentPage.titleTag : `${title} - ${currentPage.title}`
+    - var pageTitle = currentPage.titleTag ? currentPage.titleTag : `${title} - ${currentPage.title || currentPage.name}`
     title= pageTitle
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1')
