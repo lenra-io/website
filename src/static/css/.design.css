@@ -135,11 +135,16 @@ h2 {
 }
 
 h3 {
-    font-size: calc(5 / 4 * 1rem);
-    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 h4 {
+    font-size: 1.25rem;
+    padding-bottom: 0.25rem;
+}
+
+h5 {
     font-size: calc(9 / 8 * 1rem);
     padding-bottom: 0.25rem;
 }
