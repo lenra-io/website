@@ -36,21 +36,6 @@ body>header>a::before {
 }
 
 /********** alternate **********/
-.alternate>h3,
-.alternate>p {
-  text-align: left;
-  margin-left: 0;
-}
-
-.alternate>a.btn.link.lenra-icon-arrow-right {
-  display: flex;
-  margin-left: 0;
-  width: fit-content;
-}
-
-.alternate>img {
-  margin-top: 2rem;
-}
 
 :not(.alternate)+.alternate>img {
   transform: translateX(10%);
@@ -211,6 +196,13 @@ body>header>a::before {
   body>header>nav.menu~* {
     grid-column: 1;
     min-width: 420px;
+  }
+
+  .alternate>img {
+      width: calc(100% - var(--text-width));
+      height: calc(100% - 0.5rem * (var(--section-padding-bottom) + var(--section-padding-top)));
+      max-height: 17.5rem;
+      max-width: 21.25rem;
   }
 
   :not(.alternate)+.alternate>img {
