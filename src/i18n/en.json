@@ -28,7 +28,9 @@
             "description": "Lenra is an open source framework to create your app using any language, and deploy it without any Ops scale, built on ethical values."
         },
         "usecases": {
-            "name": "Use cases"
+            "name": "Use cases",
+            "title": "The main Lenra use cases",
+            "description": "Yet another \"great\" app development framework, but why should I use it ?"
         },
         "manifesto": {
             "name": "Manifesto",

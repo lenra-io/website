@@ -2,21 +2,49 @@ extends .layout.pug
 
 block header 
     h1 The main Lenra use cases
-    p Yet another “great” app development framework, but why should I use it ?
+    p Yet another "great" app development framework, but why should I use it ?
 
 block content
     section.alternate
-        h2 Your side projects
-        img(src="img/undraw/undraw_mobile_apps.svg" alt="Your side projects")
-        p You have an app idea and want to create it but don’t have much time for it ? With Lenra you don’t need to install many tools to create, build and deploy your project. To create a Lenra app you’ll just need git and Docker (and a text editor of course).
-        p Use the language you already know. The Lenra’s framework is based on JSON and REST APIs so you can use any language that can handle it.
-        p Once you’re done deploy it on our servers with one click and use it for free.
-        a.btn.primary(href="https://docs.lenra.io/getting-started.html") Get started
+        h2 
+            | Your
+            |
+            strong side projects
+        h3(data-emoji="⏱️") Save time
+        p
+            | You have an app idea and want to create it but don't have much time for it ?
+            | With Lenra you don't need to install many tools to create, build and deploy your project.
+            | To create a Lenra app you'll just need git and Docker (and a text editor of course).
+        h3(data-emoji="🌐") Use the language you already know
+        p
+            | The Lenra's framework is based on JSON and REST APIs so you can use any language that can handle it.
+        h3(data-emoji="❤️") In all simplicity
+        p
+            | Once you're done, deploy it on our servers with one click and use it for free.
+        a.btn.link.lenra-icon-arrow-right(href="https://docs.lenra.io/getting-started.html") Get started
+        //- empty alt since not useful for understanding
+        img(src="img/illustrations/use-case-1.svg" alt="" loading="lazy")
 
     section.alternate
-        h2 Your start-up app
-        img(src="img/undraw/undraw_processing.svg" alt="Your start-up app")
-        p You’re creating a tech start-up and need to bootstrap an app to create a PoC or a MVP? Lenra will make you start your project faster. Don’t lose time choosing the best technologies to create your app. Just create it. Lenra has many built-in tools to make you start your development faster.
-        p Our infrastructure will scale your app automatically based on your users needs. Your app will use the resources it needs and only when they’re required. This will reduce carbon footprint.
-        p The Lenra’s framework will make the GDPR management easier since you just need  to implement some event listeners to handle the right to be forgotten.
-        a.btn.primary(href="https://docs.lenra.io/getting-started.html") Get started
+        h2
+            | Your
+            |
+            strong start-up app
+        h3(data-emoji="🖋️") Create your Poc or MVP
+        p 
+            | You're creating a tech start-up and need to bootstrap an app to create a PoC or a MVP ?
+            | Lenra will make you start your project faster.
+            | Don't lose time choosing the best technologies to create your app.
+            | Just create it.
+            | Lenra has many built-in tools to make you start your development faster.
+        h3(data-emoji="📈") Scale your app on your users needs
+        p
+            | Our infrastructure will scale your app automatically based on your users needs.
+            | Your app will use the resources it needs and only when they're required.
+            | This will reduce carbon footprint.
+        h3(data-emoji="🔑") Make the GDPR management easier
+        p
+            | The Lenra's framework will make the GDPR management easier since you just need to implement some event listeners to handle the right to be forgotten.
+        a.btn.link.lenra-icon-arrow-right(href="https://docs.lenra.io/getting-started.html") Get started
+        //- empty alt since not useful for understanding
+        img(src="img/illustrations/use-case-2.svg" alt="" loading="lazy")
