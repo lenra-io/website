@@ -30,16 +30,16 @@ footer.invert-colors
     //-     h2 So, we're going up together?
     //-     p focus on what you love about developing, and forget about the painful tasks 
 
+
+    a(href="/") Lenra
     nav
-        h2
-            a(href="/") Lenra
         section
             h3 Developpers
             //- a(href="https://app.lenra.io") app.lenra.io
             a(href="https://dev.lenra.io") Dev platform
             a(href="https://docs.lenra.io") Documentation
         
-        - const footerItems = pages.filter(p => p.group).flatMap(p => {
+        - const footerItems = pageList.filter(p => p.group).flatMap(p => {
         -    if (!footerGroups[p.group]) {
         -        footerGroups[p.group] = [p];
         -        return p.group;

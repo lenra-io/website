@@ -11,7 +11,7 @@ block header
     //-     img(src="img/back-office.jpg" alt="The Lenra's back-office")
 
 block content
-    section#advantages
+    section#advantages.arrows
         h2(data-title="Our advantages")
             | What's Lenra
             |
@@ -37,9 +37,9 @@ block content
                 p Transparency, allows anyone to take ownership of the platform
         nav 
             a.btn.primary(href="https://docs.lenra.io/getting-started.html") Getting started
-            a.btn(href="beta.html") Discover Lenra
+            a.btn(href="discover.html") Discover Lenra
     
-    section#conception.alternate.first-alternate
+    section#conception.alternate
         h2(data-title="Conception")
             strong Speed up
             |
@@ -52,7 +52,7 @@ block content
         p
             | You no longer need to use dozens of different tools with all their logins and passwords.
             | Everything takes place here, in a framework.
-        a.btn.link.lenra-icon-arrow-right(href="beta.html#features") Learn more about our features
+        a.btn.link.lenra-icon-arrow-right(href="discover.html#features") Learn more about our features
         //- empty alt since not useful for understanding
         img(src="img/illustrations/conception.svg" alt="" loading="lazy")
     
@@ -88,7 +88,7 @@ block content
         //- empty alt since not useful for understanding
         img(src="img/illustrations/deployment.svg" alt="" loading="lazy")
     
-    section#use-cases
+    section#use-cases.arrows
         h2(data-title="Use cases") Why should I use Lenra ?
         section.colored-block 
             h3 
@@ -122,12 +122,11 @@ block content
                 | Lenra will make you start your project faster. Don't lose time choosing the best technologies to create your app.
                 |
                 strong Just create it.
-        nav 
-            a.btn.primary(href="usecases.html") More use cases
-        //- section#contributors
-        //-     h3 Meet our Github contributors
-        //-     script(src="http://localhost:8081/ghorgaggre.js" data-type="contributors" data-size="6" defer)
-        //-     link(rel='stylesheet' as='style' type='text/css' href='http://localhost:8081/ghorgaggre.css' media='print' onload='this.media="all"')
+        a.btn.primary(href="usecases.html") More use cases
+        section#contributors
+            h3 Meet our Github contributors
+            script(src="http://localhost:8081/ghorgaggre.js" data-type="contributors" data-size="6" defer)
+            link(rel='stylesheet' as='style' type='text/css' href='http://localhost:8081/ghorgaggre.css' media='print' onload='this.media="all"')
 
     section#features
         h2(data-title="Our features")
@@ -140,15 +139,15 @@ block content
             li.colored-block.lenra-icon-list
                 h3 Development
                 p You can use any language you want and take advantage of features like CRON tasks and webhooks.
-                a.btn.link.lenra-icon-arrow-right(href="beta.html#development") Know more
+                a.btn.link.lenra-icon-arrow-right(href="discover.html#development") Know more
             li.colored-block.lenra-icon-folder
                 h3 App management
                 p Deploy your app(s) in one single click, manage your data in one or more environments.
-                a.btn.link.lenra-icon-arrow-right(href="beta.html#management") Know more
+                a.btn.link.lenra-icon-arrow-right(href="discover.html#management") Know more
             li.colored-block.lenra-icon-mouse-pointer
                 h3 Online
                 p Access your app from any platform, use as many tools as you want to manage your users and their data.
-                a.btn.link.lenra-icon-arrow-right(href="beta.html#hosting") Know more
+                a.btn.link.lenra-icon-arrow-right(href="discover.html#hosting") Know more
 
     section#try
         //- empty alt since not useful for understanding

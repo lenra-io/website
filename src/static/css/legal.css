@@ -1,26 +1,5 @@
-/* body > header::after {
-    display: none;
-} */
-
-body > header > p {
-    max-width: 31.25rem;
-}
-
-main > section:first-of-type,
-main > section:first-of-type + section {
-    display: inline-block;
-    vertical-align: top;
-    width: 50%;
-    padding-right: calc(var(--base) * 3);
-}
-
 main > section > p > strong::after {
     content: ":";
-    margin-right: calc(var(--base) / 2);
-}
-
-main > section:last-of-type {
-    text-align: center;
 }
 
 main > section > ul > li {
@@ -29,7 +8,7 @@ main > section > ul > li {
 
 main > section > ul > li::before {
     content: "-";
-    margin: 0 calc(var(--base) * 1.25);
+    margin: 0 0.75rem;
 }
 
 main > section > ul > li:first-of-type:before {
@@ -37,12 +16,12 @@ main > section > ul > li:first-of-type:before {
 }
 
 
-@media (max-width: 50rem) {
+@media (min-width: 50rem) {
     main > section:first-of-type,
     main > section:first-of-type + section {
-        display: block;
-        width: auto;
-        padding-right: 0;
-        text-align: center;
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        padding-right: calc(0.5rem * 3);
     }
 }

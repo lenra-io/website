@@ -5,7 +5,7 @@ mixin displayPageLink(p)
     - const path = p.path || `/${p.name}.html`
     if (p.disabled)
         a(href=path disabled aria-disabled="true" tabindex="-1" title="Coming soon")= trad.name
-    else if (p.name == currentPage.path)
+    else if (p.name == currentPage.basicPath)
         a.current(href=path)= trad.name
     else 
         a(href=path)= trad.name
@@ -25,10 +25,10 @@ mixin displayNavElement(element)
     else 
         +displayPageLink(element)
 
-- const headerClass = currentPage.path=="index" ? "invert-colors" : ""
+- const headerClass = currentPage.basicPath=="index" ? "invert-colors" : ""
 header(class=headerClass)
     nav.menu
-        - const items = pages.filter(p => !p.notOnTop).flatMap(p => {
+        - const items = pageList.filter(p => !p.notOnTop).flatMap(p => {
         -    if (!p.group) return [p];
         -    if (!headerGroups[p.group]) {
         -        headerGroups[p.group] = [p];
