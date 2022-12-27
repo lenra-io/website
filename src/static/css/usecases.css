@@ -1,6 +1,11 @@
-#twitch > img {
-    display: block;
-    width: 90%;
-    max-width: 54rem;
-    margin: 1.5rem auto;
-  }
+#twitch>img {
+  display: block;
+  width: 90%;
+  max-width: 54rem;
+  margin: 1.5rem auto;
+}
+
+/* Temporary since img is disabled */
+#twitch>a.btn.primary {
+  margin-top: 2rem;
+}
