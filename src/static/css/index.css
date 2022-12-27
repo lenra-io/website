@@ -182,7 +182,7 @@ body>header>a::before {
     grid-row-end: 6;
     margin-left: 4rem;
     aspect-ratio: 1362 / 694;
-    background-image: url("../img/back-office.jpg");
+    background-image: url("../img/capture/back-office.jpg");
     background-size: cover;
     background-position: 0;
     border: 0.0625rem solid rgb(var(--text-color-data));
