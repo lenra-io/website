@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'Lenra-icons';
   src:
-    url('../fonts/Lenra-icons.ttf?rw4obt') format('truetype'),
-    url('../fonts/Lenra-icons.woff?rw4obt') format('woff'),
-    url('../fonts/Lenra-icons.svg?rw4obt#Lenra-icons') format('svg');
+    url('../fonts/Lenra-icons.ttf?jxsam5') format('truetype'),
+    url('../fonts/Lenra-icons.woff?jxsam5') format('woff'),
+    url('../fonts/Lenra-icons.svg?jxsam5#Lenra-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -33,11 +33,15 @@
 .lenra-icon-cron:before {
   content: "\e930";
 }
+.lenra-icon-tiktok:before {
+  content: "\e934";
+}
+.lenra-icon-twitch:before {
+  content: "\e933";
+  color: #6441a4;
+}
 .lenra-icon-dev-dot-to:before {
   content: "\e90b";
-}
-.lenra-icon-medium:before {
-  content: "\e909";
 }
 .lenra-icon-reddit:before {
   content: "\e90a";
