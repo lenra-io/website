@@ -38,14 +38,17 @@
             "description": "This should be the standard for anyone starting a digital project. Not because greenwashing is trending, but because climate change tells us it's time to act. Strongly. Here're some insights on how you act by choosing Lenra."
         },
         "team": {
-            "name": "Team"
+            "name": "Team",
+            "title": "Meet our amazing team !",
+            "description": "Learn more about the people behind the scenes."
         },
         "contact": {
-            "name": "Contact us"
+            "name": "Contact us",
+            "title": "Do you have any questions ?",
+            "description": "Let's get in touch with us !"
         },
         "legal": {
             "name": "Legal informations",
-            "title": "Legal informations",
             "description": "The Lenra platform and websites legal informations."
         }
     },

@@ -1,12 +1,12 @@
 extends .layout.pug
 
 block header
-    h1 Optimize your app creation
+    h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
     p Lenra is an open source framework to create your app using any language, and deploy it without any Ops scale, built on ethical values.
     nav
         a.btn.primary(href="https://dev.lenra.io") Join the beta
         a.btn(href="https://docs.lenra.io") Read documentation
-    a.btn.link.lenra-icon-star(href="https://github.com/lenra-io/lenra_cli") Add stars in our eyes on Github
+    a.btn.link.lenra-icon-star(href="https://github.com/lenra-io/lenra_cli" rel="noopener") Add stars in our eyes on Github
 
 block content
     section#advantages.arrows
@@ -164,15 +164,15 @@ block content
             |
             strong partners
         nav
-            a(href="https://lafrenchtech.com/fr/communaute/atlantic-valley/")
+            a(href="https://lafrenchtech.com/fr/communaute/atlantic-valley" target="_blank" rel="noopener")
                 img(src="img/partners/french-tech.png" alt="French Tech" loading="lazy")
-            a(href="https://naos-cluster.com/")
+            a(href="https://naos-cluster.com" target="_blank" rel="noopener")
                 img(src="img/partners/NAOS.png" alt="NAOS - Nouvelle Aquitaine Open Source" loading="lazy")
-            a(href="https://startup.ovhcloud.com/fr/")
+            a(href="https://startup.ovhcloud.com/fr" target="_blank" rel="noopener")
                 img(src="img/partners/OVHCloud-startup-program.png" alt="OVHCloud Startup Program" loading="lazy")
-            a(href="https://labanquiz.com/")
+            a(href="https://labanquiz.com" target="_blank" rel="noopener")
                 img(src="img/partners/LaBanquiz.png" alt="La Banquiz" loading="lazy")
-            a(href="https://planet-techcare.green/manifeste/")
+            a(href="https://planet-techcare.green/manifeste" target="_blank" rel="noopener")
                 img(src="img/partners/Logo-PlaneteTC.png" alt="Planete Tech'Care" loading="lazy")
-            a(href="https://www.larochelle-technopole.fr/")
+            a(href="https://www.larochelle-technopole.fr" target="_blank" rel="noopener")
                 img(src="img/partners/la-rochelle-technopole.svg" alt="La Rochelle Technopole" loading="lazy")

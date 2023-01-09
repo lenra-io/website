@@ -163,6 +163,8 @@ a.btn.link.lenra-icon-arrow-right::before {
 }
 
 nav.social {
+    --size: var(--button-height);
+    --font-size-multiplier: calc(2 / 3);
     display: flex;
     row-gap: 0.5rem;
     column-gap: 1rem;
@@ -170,11 +172,11 @@ nav.social {
 }
 
 nav.social>a {
-    --size: var(--button-height);
     position: relative;
     width: var(--size);
     height: var(--size);
-    font-size: calc(var(--size) * 0.6);
+    padding-bottom: 0;
+    font-size: calc(var(--size) * var(--font-size-multiplier));
     overflow: hidden;
     text-indent: -100vw;
     text-align: left;

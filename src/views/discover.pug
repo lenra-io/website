@@ -1,7 +1,7 @@
 extends .layout.pug
 
 block header 
-    h1 Discover Lenra
+    h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
     p Lenra is an
         |
         |
@@ -46,7 +46,7 @@ block content
             |
             strong Lenra project
         p So you've decided to create an app. That's great! But before you can start coding and designing, you need to set up the back end.
-        section.tab
+        section.tab.pages
             input#download(type="radio" name="tab" checked)
             label(for="download") Download
             input#terminal(type="radio" name="tab")
@@ -63,29 +63,29 @@ block content
                             | The Lenra CLI needs Docker and Docker Compose.
                             | You can install the Docker buildx command to use the Buildkit optimization given by Dofigen. 
                         p Once you have the setup configuration, download the binary depending on your operating system and add it to your path environment variable.
-                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli/releases") Check out all the binary
+                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli/releases" rel="noopener") Check out all the binary
                     aside
                         details#download-linux(open)
                             summary.lenra-icon-linux Lenra for Linux
                             ul
                                 li
-                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-linux-x86_64.tar.gz") lenra-linux-x86_64.tar.gz
+                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-linux-x86_64.tar.gz" target="_blank" rel="noopener") lenra-linux-x86_64.tar.gz
                                 li
-                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-linux-aarch64.tar.gz") lenra-linux-aarch64.tar.gz
+                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-linux-aarch64.tar.gz" target="_blank" rel="noopener") lenra-linux-aarch64.tar.gz
                         details#download-windows
                             summary.lenra-icon-windows Lenra for Windows
                             ul
                                 li
-                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-windows-x86_64.zip") lenra-windows-x86_64.zip
-                                li
-                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-windows-aarch64.zip") lenra-windows-aarch64.zip
+                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-windows-x86_64.zip" target="_blank" rel="noopener") lenra-windows-x86_64.zip
+                                //- li
+                                //-     a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-windows-aarch64.zip" target="_blank" rel="noopener") lenra-windows-aarch64.zip
                         details#download-macos
                             summary.lenra-icon-apple Lenra for MacoS
                             ul
                                 li
-                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-macos-x86_64.tar.gz") lenra-macos-x86_64.tar.gz
+                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-macos-x86_64.tar.gz" target="_blank" rel="noopener") lenra-macos-x86_64.tar.gz
                                 li
-                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-macos-aarch64.tar.gz") lenra-macos-aarch64.tar.gz
+                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-macos-aarch64.tar.gz" target="_blank" rel="noopener") lenra-macos-aarch64.tar.gz
                 li
                     section
                         h3 Define your preferred language and create your app
@@ -97,14 +97,14 @@ block content
                             |
                             | which will be used to retrieve a project template from github. We already have several models available,
                             |
-                            a(href="https://github.com/orgs/lenra-io/repositories?q=&type=template&language=&sort=") check out our github to see more
+                            a(href="https://github.com/orgs/lenra-io/repositories?q=&type=template&language=&sort=" rel="noopener") check out our github to see more
                             | . Then all you have to do is code!
-                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli#how-to-use-it") Discover all the possibilities with Lenra CLI
+                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli#how-to-use-it" rel="noopener") Discover all the possibilities with Lenra CLI
                     aside
                         pre.command-line(data-filter-output='> ' data-prompt='you@lenra:~$')
                             code.language-bash
                                 | lenra new your_langage your_app_name
-                                | > Cloning into ‘your_app_name'...
+                                | > Cloning into 'your_app_name'...
                                 | > remote: Enumerating objects: 27, done.
                                 | > remote: Counting objects: 100% (27/27), done.
                                 | > remote: Compressing objects: 100% (25/25), done.
@@ -145,7 +145,7 @@ block content
             |
             strong Lenra ?
         p We already released some of our tools and dependencies under an open source license and more is coming!
-        a.btn.primary(href="https://github.com/lenra-io/Lenra" target="_blank" rel="noopener") Check out our Github
+        a.btn.primary(href="https://github.com/lenra-io/Lenra" rel="noopener") Check out our Github
 
     section#features.fixed-content
         h2(data-title="Our features")
@@ -171,7 +171,7 @@ block content
                     h4.lenra-icon-webhooks Webhooks
                     p
                         | Connect external tools to your app with our Webhook system.
-            a.btn.primary(href="https://github.com/lenra-io") See more on Github
+            a.btn.primary(href="https://github.com/lenra-io" rel="noopener") See more on Github
         section#management
             h3 Your management
             ul
@@ -213,20 +213,7 @@ block content
                         | Observe the usage habits of your users without breaking their privacy.
             a.btn.primary(href="https://dev.lenra.io") Join the beta
 
-    section#values.arrows
-        h2(data-title="Our values")
-            | Not 
-            | 
-            strong just
-            |
-            | a framework
-        p We build a more sustainable coding environment, which matches with today's big concerns both for the planet and for us. And the best part of it all? Our framework is based on strong values ​​by combining ethics, security, protection of private data and more...
-        a.btn.primary(href="manifesto.html") Discover our manifesto
-        p
-            | Already convinced?
-            |
-            a.btn.link(href="https://dev.lenra.io") Start for free
-
+    include .manifesto-footer-link.pug
 
     script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js' defer)
     script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/command-line/prism-command-line.min.js' defer)

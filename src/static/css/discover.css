@@ -136,18 +136,6 @@
     margin-top: calc(0.5rem * 3);
 }
 
-
-/************** values ***************/
-
-#values {
-    --horizontal-pos-multiplier: 0.7;
-}
-
-#values>a {
-    margin-top: calc(0.5rem * 4);
-    margin-bottom: calc(0.5rem * 2);
-}
-
 /* From mobile to desktop */
 
 @media (min-width: 31.25rem) {
