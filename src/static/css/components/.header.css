@@ -68,7 +68,6 @@ body>header>h2 {
 
 body>header>p {
     font-size: 110%;
-    --text-opacity: var(--dark-grey-opacity);
     padding-bottom: 0.5rem;
 }
 
