@@ -1,7 +1,7 @@
 extends .layout.pug
 
 block header 
-    h1 The main Lenra use cases
+    h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
     p Yet another "great" app development framework, but why should I use it ?
 
 block content

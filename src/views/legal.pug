@@ -1,7 +1,7 @@
 extends .layout.pug
 
 block header 
-    h1=currentPage.title
+    h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
     p
         | The
         |
@@ -72,13 +72,15 @@ block content
 
     section
         h2 Credits
-        h3 Illustrations and icons
+        h3 Design, illustrations and icons
         ul
             li 
-                a(href="https://undraw.co/" target="_blank" rel="noopener") Undraw
+                a(href="https://www.ipsoon.fr" target="_blank" rel="noopener") Ipsoon
             li 
-                a(href="https://icomoon.io/" target="_blank" rel="noopener") Icomoon
+                a(href="https://undraw.co" target="_blank" rel="noopener") Undraw
             li 
-                a(href="https://feathericons.com/" target="_blank" rel="noopener") Feather
+                a(href="https://icomoon.io" target="_blank" rel="noopener") Icomoon
             li 
-                a(href="https://simpleicons.org/" target="_blank" rel="noopener") Simple Icons
+                a(href="https://feathericons.com" target="_blank" rel="noopener") Feather
+            li 
+                a(href="https://simpleicons.org" target="_blank" rel="noopener") Simple Icons
