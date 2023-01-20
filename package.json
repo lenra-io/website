@@ -19,7 +19,8 @@
                 "default-src": [
                     "unsafe-inline",
                     "analytics.lenra.io",
-                    "https://cdnjs.cloudflare.com/ajax/libs/prism/"
+                    "https://cdnjs.cloudflare.com/ajax/libs/prism/",
+                    "https://api.producthunt.com/"
                 ]
             },
             "rewriteRules": [
