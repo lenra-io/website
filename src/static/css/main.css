@@ -4,21 +4,6 @@
 @import '.components.css';
 @import '.font.css';
 
-/**************************  Product Hunt  ********************/
-
-body>header>a[href^="https://www.producthunt.com"] {
-    min-width: 0;
-    padding: 0;
-    margin-bottom: 0;
-}
-
-body>header>a[href^="https://www.producthunt.com"]::after {
-    display: none;
-}
-
-
-/*********** end **********/
-
 
 main {
     position: relative;
