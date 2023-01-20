@@ -1,5 +1,6 @@
 body>footer {
-    padding: 5rem 0;
+    --vertical-padding: 5rem;
+    padding: var(--vertical-padding) 0;
 }
 
 body>footer::before {
@@ -93,6 +94,19 @@ body>footer>ul>li>nav.social {
     --text-opacity: 1;
 }
 
+body>footer>a[href^="https://www.producthunt.com"] {
+    display: inline-block;
+    min-width: 0;
+    padding: 0;
+    margin-bottom: 0;
+    line-height: 0;
+    margin-top: 1rem;
+}
+
+body>footer>a[href^="https://www.producthunt.com"]::after {
+    display: none;
+}
+
 
 @media (min-width: 44rem) {
     body>footer>nav {
@@ -109,6 +123,12 @@ body>footer>ul>li>nav.social {
 @media (min-width: 50rem) {
     body>footer>nav>section#financed-by {
         flex-basis: 25rem;
+    }
+
+    body>footer>a[href^="https://www.producthunt.com"] {
+        position: absolute;
+        right: 0;
+        bottom: var(--vertical-padding);
     }
 }
 
