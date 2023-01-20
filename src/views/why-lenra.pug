@@ -1,0 +1,39 @@
+extends .layout.pug
+
+block header 
+    h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
+    p
+        | Why our solution and not another ?
+        | With Lenra, we make sure to  
+        |
+        strong solve a problem
+        |
+        | that is more than present in our society, all with strong values.
+
+block content
+    section#observation
+        h2(data-title="The observation")
+            | Developing a
+            |
+            strong cross-platform app
+            | , what it means,
+            |
+            strong today
+            |
+            | ?
+        ul
+            li.colored-block.lenra-icon-database
+                h3 Too much complexity
+                p
+                    | Nowadays, developing an app for the web or mobile devices means using various systems, technologies and languages.
+            li.colored-block.lenra-icon-clock
+                h3 Too much wasted time
+                p
+                    | It can be a real waste of time, while creating the app or exploiting it for instance (initialization, hosting, data management, etc.).
+            li.colored-block.lenra-icon-users
+                h3 Too many tools
+                p
+                    | A developer is not always on the edge to respond efficiently to the various needs an app requests.
+                    | Generally, it takes one tool for each precise aspect of the app creation.
+
+    include .try-lenra-footer-link.pug

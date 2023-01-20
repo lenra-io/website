@@ -27,6 +27,11 @@
             "title": "Discover Lenra",
             "description": "Lenra is an open source framework to create your app using any language, and deploy it without any Ops scale, built on ethical values."
         },
+        "why-lenra": {
+            "name": "Why Lenra",
+            "title": "Why should I use Lenra ?",
+            "description": "Why our solution and not another? With Lenra, we make sure to solve a problem that is more than present in our society, all with strong values."
+        },
         "usecases": {
             "name": "Use cases",
             "title": "The main Lenra use cases",

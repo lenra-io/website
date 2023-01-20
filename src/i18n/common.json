@@ -10,6 +10,10 @@
             "group": "platform"
         },
         {
+            "name": "why-lenra",
+            "group": "platform"
+        },
+        {
             "name": "usecases",
             "group": "platform"
         },
