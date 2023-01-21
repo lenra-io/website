@@ -1,0 +1,27 @@
+section>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#problem .colored-block {
+    --primary-color-data: var(--yellow-pulse-data);
+    --background-color-data: var(--yellow-data);
+}
+
+#solution .colored-block {
+    --primary-color-data: var(--blue-pulse-data);
+    --background-color-data: var(--blue-data);
+}
+
+@media (min-width: 50rem) {
+    section>ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    section>ul>li.colored-block {
+        max-width: 18.75rem;
+        margin: 0;
+    }
+}

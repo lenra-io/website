@@ -100,11 +100,6 @@ body>header>a::before {
 
 
 
-/********** Try **********/
-
-#try>img {
-  margin-bottom: 1rem;
-}
 
 /*--------- Partners ---------*/
 
@@ -135,13 +130,6 @@ body>header>a::before {
 }
 
 /******** Media queries *********/
-
-@media (min-width: 28.75rem) {
-  #try>nav>a:last-of-type {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
 @media (min-width: 31.25rem) {
   body>header {
