@@ -36,19 +36,65 @@
             "notOnTop": true
         }
     ],
-    "concurrentsFields": [
+    "competitorsFields": [
         "anyLanguage",
+        "opensource",
         "frontEnd",
         "allOS",
         "backEnd",
-        "scalable",
+        "autoscaling",
         "optimized",
         "encourageOptimizing",
         "gdpr"
     ],
-    "concurrents": [
+    "competitors": [
         {
-            "name": "MeteorJS"
+            "name": "MeteorJS",
+            "anyLanguage": "no",
+            "opensource": "yes",
+            "frontEnd": "yes",
+            "allOS": "partially",
+            "backEnd": "yes",
+            "autoscaling": "no",
+            "optimized": "no",
+            "encourageOptimizing": "no",
+            "gdpr": "no"
+        },
+        {
+            "name": "Supabase",
+            "anyLanguage": "partially",
+            "opensource": "yes",
+            "frontEnd": "no",
+            "allOS": "",
+            "backEnd": "yes",
+            "autoscaling": "partially",
+            "optimized": "no",
+            "encourageOptimizing": "no",
+            "gdpr": "no"
+        },
+        {
+            "name": "Firebase",
+            "anyLanguage": "no",
+            "opensource": "no",
+            "frontEnd": "no",
+            "allOS": "",
+            "backEnd": "yes",
+            "autoscaling": "partially",
+            "optimized": "partially",
+            "encourageOptimizing": "no",
+            "gdpr": "no"
+        },
+        {
+            "name": "AWS Lambda",
+            "anyLanguage": "yes",
+            "opensource": "no",
+            "frontEnd": "no",
+            "allOS": "",
+            "backEnd": "yes",
+            "autoscaling": "yes",
+            "optimized": "no",
+            "encourageOptimizing": "no",
+            "gdpr": "no"
         }
     ]
 }

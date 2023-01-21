@@ -109,8 +109,19 @@ block content
             h3(data-title="With us")
                 strong Lenra
                 | , I can
-            p Code using any language
-            +managed("true")
+            each field in competitorsFields
+                p=competitorsFieldsText[field]
+                    +managed("yes")
+        
+        each competitor in competitors
+            section
+                h3(data-title="With them")
+                    strong=competitor.name
+                    | , I can
+                each field in competitorsFields
+                    p=competitorsFieldsText[field]
+                        |
+                        +managed(competitor[field])
 
 
     include .try-lenra-footer-link.pug
