@@ -1047,19 +1047,33 @@
     {
       "selection": [
         {
+          "id": 25,
+          "order": 504,
+          "prevSize": 32
+        },
+        {
           "id": 22,
           "order": 500,
-          "prevSize": 32
+          "prevSize": 32,
+          "code": 59703,
+          "name": "help-circle",
+          "tempChar": ""
         },
         {
           "id": 23,
           "order": 501,
-          "prevSize": 32
+          "prevSize": 32,
+          "code": 59704,
+          "name": "share-2",
+          "tempChar": ""
         },
         {
           "id": 24,
           "order": 502,
-          "prevSize": 32
+          "prevSize": 32,
+          "code": 59705,
+          "name": "tool",
+          "tempChar": ""
         },
         {
           "order": 483,
@@ -1083,7 +1097,7 @@
           "prevSize": 32,
           "code": 59678,
           "name": "activity",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 19,
@@ -1091,7 +1105,7 @@
           "prevSize": 32,
           "code": 59679,
           "name": "layers",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 13,
@@ -1099,7 +1113,7 @@
           "prevSize": 32,
           "code": 59682,
           "name": "bell",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 15,
@@ -1107,7 +1121,7 @@
           "prevSize": 32,
           "code": 59684,
           "name": "grid",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 4,
@@ -1115,7 +1129,7 @@
           "prevSize": 32,
           "code": 59651,
           "name": "book-open",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 5,
@@ -1123,7 +1137,7 @@
           "prevSize": 32,
           "code": 59660,
           "name": "check-circle",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 6,
@@ -1131,7 +1145,7 @@
           "prevSize": 32,
           "code": 59661,
           "name": "clock",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 7,
@@ -1139,7 +1153,7 @@
           "prevSize": 32,
           "code": 59664,
           "name": "dollar-sign",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 8,
@@ -1147,7 +1161,7 @@
           "prevSize": 32,
           "code": 59665,
           "name": "folder",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 9,
@@ -1155,7 +1169,7 @@
           "prevSize": 32,
           "code": 59666,
           "name": "list",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 10,
@@ -1163,7 +1177,7 @@
           "prevSize": 32,
           "code": 59667,
           "name": "mouse-pointer",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 11,
@@ -1171,7 +1185,7 @@
           "prevSize": 32,
           "code": 59668,
           "name": "sun",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 12,
@@ -1179,7 +1193,7 @@
           "prevSize": 32,
           "code": 59669,
           "name": "users",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 1,
@@ -1202,7 +1216,7 @@
           "order": 472,
           "prevSize": 32,
           "name": "shield",
-          "tempChar": "",
+          "tempChar": "",
           "code": 59662
         },
         {
@@ -1211,7 +1225,7 @@
           "prevSize": 32,
           "code": 59663,
           "name": "star",
-          "tempChar": ""
+          "tempChar": ""
         }
       ],
       "id": 8,
@@ -1221,6 +1235,19 @@
       "height": 1024,
       "prevSize": 32,
       "icons": [
+        {
+          "id": 25,
+          "paths": [
+            "M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+          ],
+          "attrs": [],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "tags": [
+            "minus"
+          ],
+          "grid": 16
+        },
         {
           "id": 22,
           "paths": [
@@ -2236,11 +2263,6 @@
           "code": 59666,
           "name": "minimize-2",
           "tempChar": ""
-        },
-        {
-          "id": 442,
-          "order": 0,
-          "prevSize": 32
         },
         {
           "id": 443,
@@ -4545,19 +4567,6 @@
           "isMulticolor2": false,
           "tags": [
             "minimize-2"
-          ],
-          "grid": 16
-        },
-        {
-          "id": 441,
-          "paths": [
-            "M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
-          ],
-          "attrs": [],
-          "isMulticolor": false,
-          "isMulticolor2": false,
-          "tags": [
-            "minus"
           ],
           "grid": 16
         },
