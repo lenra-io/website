@@ -35,5 +35,20 @@
             "group": "contact",
             "notOnTop": true
         }
+    ],
+    "concurrentsFields": [
+        "anyLanguage",
+        "frontEnd",
+        "allOS",
+        "backEnd",
+        "scalable",
+        "optimized",
+        "encourageOptimizing",
+        "gdpr"
+    ],
+    "concurrents": [
+        {
+            "name": "MeteorJS"
+        }
     ]
 }

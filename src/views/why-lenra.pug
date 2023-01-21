@@ -1,5 +1,19 @@
 extends .layout.pug
 
+mixin managed(value)
+  case value 
+    when "yes"
+        span.lenra-icon-check-circle Yes
+    when "partially"
+        span.lenra-icon-wave Partially
+    when "no"
+        span.lenra-icon-minus No
+    when ""
+        span Not applicable
+    default
+        - throw new Error(`Not managed value '${value}'`)
+    
+
 block header 
     h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
     p
@@ -90,5 +104,13 @@ block content
             strong us
             |
             | ?
+        
+        section#lenra
+            h3(data-title="With us")
+                strong Lenra
+                | , I can
+            p Code using any language
+            +managed("true")
+
 
     include .try-lenra-footer-link.pug
