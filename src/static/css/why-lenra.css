@@ -34,13 +34,14 @@ section>ul {
 
 #difference>section>h3>strong {
     --text-opacity: 1;
+    color: rgba(var(--text-color-data), var(--text-opacity));
 }
 
 #difference>section#lenra>h3>strong {
     display: inline-block;
-    text-indent: -100vw;
+    text-indent: -500vw;
     height: 2rem;
-    width: 7.3rem;
+    aspect-ratio: 7.3 / 2;
     overflow: hidden;
     background-image: var(--logo-horizontal-image-white);
     background-repeat: no-repeat;
@@ -49,9 +50,12 @@ section>ul {
 }
 
 #difference>section>p {
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
     padding: 1rem 0;
-    padding-right: 2.75rem;
+    margin-top: 0;
     border-bottom: 1px solid rgba(var(--text-color-data), 0.2);
 }
 
@@ -60,8 +64,9 @@ section>ul {
 }
 
 #difference>section>p>span {
-    display: inline-block;
-    text-indent: -100vw;
+    position: relative;
+    text-indent: -500vw;
+    flex: 0 0 1.5rem;
 }
 
 #difference>section>p>span::before {
@@ -88,18 +93,179 @@ section>ul {
         max-width: 18.75rem;
         margin: 0;
     }
+}
+
+
+@media (min-width: 60rem) {
+    #difference {
+        --col-width: 8rem;
+        display: grid;
+        grid-template-columns: 1fr repeat(4, var(--col-width));
+        grid-template-rows: auto auto;
+        justify-items: stretch;
+        align-items: stretch;
+    }
+
+    #difference>h2 {
+        grid-column: 1/-1;
+    }
 
     #difference>section {
         display: inline-block;
         text-align: center;
-        width: 8rem;
+        padding: 1rem 0;
+        margin-top: 0;
+        width: 100%;
     }
 
-    #difference>section#lenra {
-        width: 12.5rem;
+    #difference>section#lenra { 
+        max-width: none;
+    }
+
+    #difference>section>h3,
+    #difference>section>p {
+        --row-height: 3.75rem;
+        height: var(--row-height);
+        text-indent: -500vw;
+        padding: 0;
+    }
+
+    #difference>section:not(#lenra)>h3 {
+        font-size: 0rem;
+    }
+
+    #difference>section>h3::before {
+        text-indent: 0vw;
+        padding-bottom: 0;
+    }
+
+    #difference>section>h3>strong {
+        font-size: calc(1rem * 9 / 8);
     }
 
     #difference>section>p {
-        height: 3.75rem;
+        border-bottom: none;
+    }
+
+    #difference>section:last-of-type>p:nth-of-type(2n+1):before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: var(--row-height);
+        background-color: rgba(var(--text-color-data), 0.15);
+        border-radius: 0.5rem;
+        z-index: -1;
+    }
+
+    #difference>section>p>span {
+        flex: 0 0 0;
+    }
+
+    #difference>section>p>span::before {
+        right: calc(var(--col-width) / 2);
+        transform: translate(50%, -50%);
+    }
+
+    #difference>section#lenra>p {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1rem;
+        text-indent: 0;
+        text-align: left;
+        padding: 0;
+        gap: 1.5rem;
+    }
+
+    #difference>section#lenra>p>span {
+        position: relative;
+        flex-basis: 1.5rem;
+    }
+
+    #difference>section#lenra>p>span::before {
+        right: 50%;
+    }
+}
+
+
+@media (min-width: 75rem) {
+    #difference {
+        position: relative;
+    }
+
+    #difference>section#lenra {
+        --text-color-data: var(--text-color-data);
+        --col-width: 10.5rem;
+        --row-padding: 2rem;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr var(--col-width);
+        justify-items: stretch;
+        align-items: center;
+        background: none;
+        padding: 1rem 0;
+    }
+
+    #difference>section#lenra::before {
+        --text-opacity: 1;
+        content: "Can I ... ?";
+        text-align: left;
+        padding-left: var(--row-padding);
+        font-size: 1.5rem;
+        font-weight: 700;
+        order: 1;
+    }
+
+    #difference>section#lenra::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: auto;
+        right: 0;
+        width: var(--col-width);
+        background-color: rgb(var(--primary-color-data));
+        border-radius: 0.5rem;
+        order: 0;
+    }
+
+    #difference>section>h3 {
+        --row-height: 5rem;
+    }
+
+    #difference>section#lenra>h3 {
+        --text-color-data: var(--white-data);
+        position: relative;
+        margin-left: auto;
+        margin-right: 0;
+        width: var(--col-width);
+        font-size: 0rem;
+        order: 2;
+    }
+
+    #difference>section#lenra>p {
+        grid-column: 1/-1;
+        width: 100%;
+        max-width: none;
+        padding-left: var(--row-padding);
+        gap: var(--row-padding);
+        order: 3;
+    }
+
+    #difference>section#lenra>p>span {
+        flex: 0 0 var(--col-width);
+        --text-color-data: var(--white-data);
+    }
+}
+
+
+@media (min-width: 80rem) {
+    #difference {
+        --col-width: 9rem;
+    }
+
+    #difference>section#lenra {
+        --col-width: 12rem;
     }
 }
