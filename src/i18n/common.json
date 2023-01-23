@@ -28,7 +28,8 @@
         {
             "name": "contact",
             "group": "contact",
-            "disabled": true
+            "disabled": true,
+            "notOnTop": true
         },
         {
             "name": "legal",
