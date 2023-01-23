@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'Lenra-icons';
   src:
-    url('../fonts/Lenra-icons.ttf?c1cic6') format('truetype'),
-    url('../fonts/Lenra-icons.woff?c1cic6') format('woff'),
-    url('../fonts/Lenra-icons.svg?c1cic6#Lenra-icons') format('svg');
+    url('../fonts/Lenra-icons.ttf?fkmt5b') format('truetype'),
+    url('../fonts/Lenra-icons.woff?fkmt5b') format('woff'),
+    url('../fonts/Lenra-icons.svg?fkmt5b#Lenra-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -32,64 +32,6 @@
 }
 .lenra-icon-cron:before {
   content: "\e930";
-}
-.lenra-icon-tiktok:before {
-  content: "\e934";
-}
-.lenra-icon-twitch:before {
-  content: "\e933";
-  color: #6441a4;
-}
-.lenra-icon-dev-dot-to:before {
-  content: "\e90b";
-}
-.lenra-icon-reddit:before {
-  content: "\e90a";
-  color: #ff4500;
-}
-.lenra-icon-github:before {
-  content: "\e904";
-}
-.lenra-icon-instagram:before {
-  content: "\e905";
-  color: #e4405f;
-}
-.lenra-icon-linkedin:before {
-  content: "\e906";
-  color: #0077b5;
-}
-.lenra-icon-twitter:before {
-  content: "\e907";
-  color: #1da1f2;
-}
-.lenra-icon-youtube:before {
-  content: "\e908";
-  color: #f00;
-}
-.lenra-icon-android:before {
-  content: "\e925";
-  color: #3ddc84;
-}
-.lenra-icon-ios:before {
-  content: "\e926";
-}
-.lenra-icon-apple:before {
-  content: "\e927";
-  color: #999;
-}
-.lenra-icon-linux:before {
-  content: "\e928";
-  color: #fcc624;
-}
-.lenra-icon-windows:before {
-  content: "\e929";
-  color: #0078d6;
-}
-.lenra-icon-devices:before {
-  content: "\e931";
-}
-.lenra-icon-auto-scaling:before {
-  content: "\e932";
 }
 .lenra-icon-cpu:before {
   content: "\e920";
@@ -154,8 +96,11 @@
 .lenra-icon-arrow-up-right:before {
   content: "\e91d";
 }
+.lenra-icon-tilde:before {
+  content: "\e903";
+}
 .lenra-icon-minus:before {
-  content: "\e93a";
+  content: "\e90c";
 }
 .lenra-icon-help-circle:before {
   content: "\e937";
@@ -165,6 +110,12 @@
 }
 .lenra-icon-tool:before {
   content: "\e939";
+}
+.lenra-icon-devices:before {
+  content: "\e931";
+}
+.lenra-icon-auto-scaling:before {
+  content: "\e932";
 }
 .lenra-icon-activity:before {
   content: "\e91e";
@@ -179,13 +130,13 @@
   content: "\e924";
 }
 .lenra-icon-book-open:before {
-  content: "\e903";
+  content: "\e90d";
 }
 .lenra-icon-check-circle:before {
-  content: "\e90c";
+  content: "\e90e";
 }
 .lenra-icon-clock:before {
-  content: "\e90d";
+  content: "\e90f";
 }
 .lenra-icon-dollar-sign:before {
   content: "\e910";
@@ -206,8 +157,60 @@
   content: "\e915";
 }
 .lenra-icon-shield:before {
-  content: "\e90e";
+  content: "\e93a";
 }
 .lenra-icon-star:before {
-  content: "\e90f";
+  content: "\e93b";
+}
+.lenra-icon-tiktok:before {
+  content: "\e934";
+}
+.lenra-icon-twitch:before {
+  content: "\e933";
+  color: #6441a4;
+}
+.lenra-icon-dev-dot-to:before {
+  content: "\e90b";
+}
+.lenra-icon-reddit:before {
+  content: "\e90a";
+  color: #ff4500;
+}
+.lenra-icon-github:before {
+  content: "\e904";
+}
+.lenra-icon-instagram:before {
+  content: "\e905";
+  color: #e4405f;
+}
+.lenra-icon-linkedin:before {
+  content: "\e906";
+  color: #0077b5;
+}
+.lenra-icon-twitter:before {
+  content: "\e907";
+  color: #1da1f2;
+}
+.lenra-icon-youtube:before {
+  content: "\e908";
+  color: #f00;
+}
+.lenra-icon-android:before {
+  content: "\e925";
+  color: #3ddc84;
+}
+.lenra-icon-ios:before {
+  content: "\e926";
+}
+.lenra-icon-apple:before {
+  content: "\e927";
+  color: #999;
+}
+.lenra-icon-linux:before {
+  content: "\e928";
+  color: #fcc624;
+}
+.lenra-icon-windows:before {
+  content: "\e929";
+  color: #0078d6;
 }
