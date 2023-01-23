@@ -1,0 +1,12 @@
+body>header {
+    padding-bottom: 0;
+}
+
+main {
+    text-align: center;
+    padding-bottom: calc(0.5rem * var(--section-padding-bottom));
+}
+
+nav.social {
+    justify-content: center;
+}
