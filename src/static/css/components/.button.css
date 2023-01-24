@@ -171,6 +171,11 @@ nav.social {
     flex-wrap: wrap;
 }
 
+nav.social.small {
+    --size: 1.5rem;
+    column-gap: 0.5rem;
+}
+
 nav.social>a {
     position: relative;
     width: var(--size);
@@ -180,19 +185,22 @@ nav.social>a {
     overflow: hidden;
     text-indent: -100vw;
     text-align: left;
+    transition-property: color, background;
+}
+
+nav.social.app>a {
     border-radius: 20%;
     background-color: rgb(var(--background-color-data));
     --btn-text-color-data: var(--text-color-data);
     --btn-text-color-hover-data: var(--background-color-data);
-    transition-property: color, background;
+}
+
+nav.social.app>a:hover {
+    background-color: rgb(var(--text-color-data));
 }
 
 nav.social>a::after {
     content: none;
-}
-
-nav.social>a:hover {
-    background-color: rgb(var(--text-color-data));
 }
 
 nav.social>a::before {
@@ -201,6 +209,10 @@ nav.social>a::before {
     left: 50%;
     transform: translate(-50%, -50%);
     text-indent: 0;
+    transition-property: color;
+}
+
+nav.social.app>a::before {
     color: inherit;
 }
 
