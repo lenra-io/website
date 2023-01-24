@@ -1,0 +1,127 @@
+extends .layout.pug
+
+mixin managed(value)
+  case value 
+    when "yes"
+        span.lenra-icon-check-circle Yes
+    when "partially"
+        span.lenra-icon-tilde Partially
+    when "no"
+        span.lenra-icon-minus No
+    when ""
+        span Not applicable
+    default
+        - throw new Error(`Not managed value '${value}'`)
+    
+
+block header 
+    h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
+    p
+        | Why our solution and not another ?
+        | With Lenra, we make sure to  
+        |
+        strong solve a problem
+        |
+        | that is more than present in our society, all with strong values.
+
+block content
+    section#observation
+        h2(data-title="The observation")
+            | Developing a
+            |
+            strong cross-platform app
+            | ,
+            br
+            | what does it mean
+            |
+            strong today
+            |
+            | ?
+        ul
+            li.colored-block.lenra-icon-meh
+                h3 Too much complexity
+                p
+                    | Nowadays, developing an app for the web or mobile devices means using various systems, technologies and languages.
+            li.colored-block.lenra-icon-clock
+                h3 Too much wasted time
+                p
+                    | It can be a real waste of time, while creating the app or exploiting it for instance (initialization, hosting, data management, etc.).
+            li.colored-block.lenra-icon-tool
+                h3 Too many tools
+                p
+                    | A developer is not always on the edge to respond efficiently to the various needs an app requests.
+                    | Generally, it takes one tool for each precise aspect of the app creation.
+
+    section#problem
+        h2(data-title="The problem")
+            | The
+            |
+            strong excessive
+            |
+            | presence of big techs
+        ul
+            li.colored-block.lenra-icon-help-circle
+                h3 Ethical problems
+                p
+                    | They run their strategies through the stock exchange regardless of environmental issues, ethics on privacy, ethics on business.
+            li.colored-block.lenra-icon-share-2
+                h3 Overwhelmed
+                p
+                    | It’s now a known fact that our personal data have their prints in the numeric world.
+                    | It has taken the lead in our lives, as we all depend on Tech giants.
+            li.colored-block.lenra-icon-database
+                h3 Data insecurity
+                p
+                    | A very small group of companies own a tremendous amount of data about who we are, what we do, where we go, our interactions with others, with no way for us to take them back, to control what is done with it.
+                    | Their policies on that subject are far from being crystal clear.
+
+    section#solution
+        h2(data-title="The solution")
+            | Our
+            |
+            strong all-in-one
+            |
+            | framework
+        ul
+            li.colored-block.lenra-icon-arrow-up-right
+                h3 Accelerate
+                p
+                    | Accelerate development and distribution of applications: cross-platform environment, support of hosting and deployment, data management.
+            li.colored-block.lenra-icon-book-open
+                h3 Open-source
+                p
+                    | Contribution is the key to create the most accurate platform for developpers.
+                    | It guarantees transparency and continuous improvement.
+            li.colored-block.lenra-icon-logo-lenra
+                h3 Optimize
+                p
+                    | Address environmental issues: optimize the environmental impact of apps by optimizing network exchanges and encouraging developers to act economically, limit obsolescence and limit the use of personal data.
+
+    section#difference
+        h2(data-title="The difference")
+            | Why
+            |
+            strong us
+            |
+            | ?
+        
+        section#lenra
+            h3(data-title="With us")
+                strong Lenra
+                | , I can
+            each field in competitorsFields
+                p=competitorsFieldsText[field]
+                    +managed("yes")
+        
+        each competitor in competitors
+            section
+                h3(data-title="With them")
+                    strong=competitor.name
+                    | , I can
+                each field in competitorsFields
+                    p=competitorsFieldsText[field]
+                        |
+                        +managed(competitor[field])
+
+
+    include .try-lenra-footer-link.pug

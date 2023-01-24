@@ -262,6 +262,14 @@ h4[data-emoji]+p {
 }
 
 
+
+/********** Try **********/
+
+#try>img {
+  margin-bottom: 1rem;
+}
+
+
 @media (max-aspect-ratio: 1/1) {
     :root {
         --background-image: url("../img/fond-vertical.svg");
@@ -280,6 +288,13 @@ h4[data-emoji]+p {
     h1::before {
         display: none;
     }
+}
+
+@media (min-width: 28.75rem) {
+  #try>nav>a:last-of-type {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (min-width: 50rem) {
