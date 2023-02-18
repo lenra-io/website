@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'Lenra-icons';
   src:
-    url('../fonts/Lenra-icons.ttf?fkmt5b') format('truetype'),
-    url('../fonts/Lenra-icons.woff?fkmt5b') format('woff'),
-    url('../fonts/Lenra-icons.svg?fkmt5b#Lenra-icons') format('svg');
+    url('../fonts/Lenra-icons.ttf?bgj6za') format('truetype'),
+    url('../fonts/Lenra-icons.woff?bgj6za') format('woff'),
+    url('../fonts/Lenra-icons.svg?bgj6za#Lenra-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,9 @@
 .lenra-icon-logo-lenra:before {
   content: "\e92e";
 }
+.lenra-icon-code:before {
+  content: "\e921";
+}
 .lenra-icon-webhooks:before {
   content: "\e92f";
 }
@@ -34,13 +37,31 @@
   content: "\e930";
 }
 .lenra-icon-cpu:before {
-  content: "\e920";
+  content: "\e923";
 }
 .lenra-icon-terminal:before {
-  content: "\e921";
+  content: "\e931";
 }
 .lenra-icon-database:before {
-  content: "\e923";
+  content: "\e93c";
+}
+.lenra-icon-tilde:before {
+  content: "\e903";
+}
+.lenra-icon-help-circle:before {
+  content: "\e937";
+}
+.lenra-icon-check-circle:before {
+  content: "\e90e";
+}
+.lenra-icon-clock:before {
+  content: "\e90f";
+}
+.lenra-icon-dollar-sign:before {
+  content: "\e910";
+}
+.lenra-icon-minus:before {
+  content: "\e90c";
 }
 .lenra-icon-frown:before {
   content: "\e909";
@@ -96,23 +117,26 @@
 .lenra-icon-arrow-up-right:before {
   content: "\e91d";
 }
-.lenra-icon-tilde:before {
-  content: "\e903";
+.lenra-icon-play-circle:before {
+  content: "\e93d";
 }
-.lenra-icon-minus:before {
-  content: "\e90c";
+.lenra-icon-bell:before {
+  content: "\e922";
 }
-.lenra-icon-help-circle:before {
-  content: "\e937";
+.lenra-icon-sliders:before {
+  content: "\e93e";
 }
 .lenra-icon-share-2:before {
   content: "\e938";
 }
+.lenra-icon-devices:before {
+  content: "\e93f";
+}
+.lenra-icon-home:before {
+  content: "\e90d";
+}
 .lenra-icon-tool:before {
   content: "\e939";
-}
-.lenra-icon-devices:before {
-  content: "\e931";
 }
 .lenra-icon-auto-scaling:before {
   content: "\e932";
@@ -123,38 +147,26 @@
 .lenra-icon-layers:before {
   content: "\e91f";
 }
-.lenra-icon-bell:before {
-  content: "\e922";
-}
 .lenra-icon-grid:before {
   content: "\e924";
 }
 .lenra-icon-book-open:before {
-  content: "\e90d";
-}
-.lenra-icon-check-circle:before {
-  content: "\e90e";
-}
-.lenra-icon-clock:before {
-  content: "\e90f";
-}
-.lenra-icon-dollar-sign:before {
-  content: "\e910";
-}
-.lenra-icon-folder:before {
   content: "\e911";
 }
-.lenra-icon-list:before {
+.lenra-icon-folder:before {
   content: "\e912";
 }
-.lenra-icon-mouse-pointer:before {
+.lenra-icon-list:before {
   content: "\e913";
 }
-.lenra-icon-sun:before {
+.lenra-icon-mouse-pointer:before {
   content: "\e914";
 }
-.lenra-icon-users:before {
+.lenra-icon-sun:before {
   content: "\e915";
+}
+.lenra-icon-users:before {
+  content: "\e920";
 }
 .lenra-icon-shield:before {
   content: "\e93a";
