@@ -1,8 +1,8 @@
 extends .layout.pug
 
-block header 
+block header
     h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
-    p 
+    p
         | This should be the standard for anyone starting a digital project.
         | Not because greenwashing is trending, but because climate change tells us it's time to act.
         |
@@ -29,8 +29,8 @@ block content
             | Resource-based billing will encourage developers to produce sober code, avoiding the use of unnecessary computing resources or excessive data storage.
         h4(data-emoji="⚒️") By our tools
         p
-            | Tools will be provided to developers to encourage them to identify and resolve weaknesses in their applications on this point. In the first phase of the project, we will provide tools to monitor the state of applications and the associated metrics and indicators. 
-        
+            | Tools will be provided to developers to encourage them to identify and resolve weaknesses in their applications on this point. In the first phase of the project, we will provide tools to monitor the state of applications and the associated metrics and indicators.
+
         h3(data-title="Digital sovereignty")
             strong Stop depending
             |
@@ -39,15 +39,15 @@ block content
         p
             | Hosting the components of the platform and the apps stored in the Lenra system will lean within european union by european companies, outside what we consider a threat for personal data (like the U.S Cloud Act).
         h4(data-emoji="🕊️") With our freedom
-        p 
+        p
             | Lenra is Big techs free and uses none of their service or components (even if some technologies are made by FAANG, like Flutter –but it's open source now).
-        h4(data-emoji="🧑‍💻") With an open-source solution 
+        h4(data-emoji="🧑‍💻") With an open-source solution
         p
             | The open source aspect of the Lenra components guarantees transparency and allows anyone to take ownership of the platform, to use it in a independant way or to make it evolve through time.
             | Although accessing apps via the App Store or Play Store is known to offer the best possible performance on mobile devices, the Lenra system leaves the choice to the user of how to access apps.
             | In particular, access via web browser will be possible.
             | This will also extend with the objective to propose the Lenra system to independent mobile operating systems (we already have contact with the /e/ foundation).
-        
+
         h3(data-title="Data protection")
             | Give back to our users the
             |
@@ -71,7 +71,7 @@ block content
             br
             | We follow the Institut du Numérique Responsable recommandations.
         img(src="img/capture/docs.jpg" alt="A screenshot of the getting started documentation page" loading="lazy")
-        a.btn.primary(href="https://docs.lenra.io/getting-started.html") Get started
+        a.btn.primary(href="https://docs.lenra.io/getting-started.html" target="_blank") Get started
 
     section#framework.arrows
         h2(data-title="Our framework")
@@ -86,4 +86,4 @@ block content
         p
             | Already convinced ?
             |
-            a.btn.link(href="https://dev.lenra.io") Start for free
+            a.btn.link(href="https://dev.lenra.io" target="_blank") Start for free

@@ -4,16 +4,16 @@ block header
     h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
     p Lenra is an open source framework to create your app using any language, and deploy it without any Ops scale, built on ethical values.
     nav
-        a.btn.primary(href="https://dev.lenra.io") Join the beta
-        a.btn(href="https://docs.lenra.io") Read documentation
-    a.btn.link.lenra-icon-star(href="https://github.com/lenra-io/lenra_cli" rel="noopener") Add stars in our eyes on Github
+        a.btn.primary(href="https://dev.lenra.io" target="_blank") Join the beta
+        a.btn(href="https://docs.lenra.io" target="_blank") Read documentation
+    a.btn.link.lenra-icon-star(href="https://github.com/lenra-io/lenra_cli" target="_blank" rel="noopener") Add stars in our eyes on Github
 
 block content
     section#advantages.arrows
         h2(data-title="Our advantages")
             | What's Lenra
             |
-            strong all about 
+            strong all about
         ul
             li.colored-block.lenra-icon-check-circle
                 h3 Easy
@@ -33,10 +33,10 @@ block content
             li.colored-block.lenra-icon-book-open
                 h3 Open-source
                 p Transparency, allows anyone to take ownership of the platform
-        nav 
-            a.btn.primary(href="https://docs.lenra.io/getting-started.html") Getting started
+        nav
+            a.btn.primary(href="https://docs.lenra.io/getting-started.html" target="_blank") Getting started
             a.btn(href="discover.html") Discover Lenra
-    
+
     section#conception.alternate
         h2(data-title="Conception")
             strong Speed up
@@ -53,7 +53,7 @@ block content
         a.btn.link.lenra-icon-arrow-right(href="discover.html#features") Learn more about our features
         //- empty alt since not useful for understanding
         img(src="img/illustrations/conception.svg" alt="" loading="lazy")
-    
+
     section#built.alternate
         h2(data-title="Built") Built on
             |
@@ -68,7 +68,7 @@ block content
         a.btn.link.lenra-icon-arrow-right(href="manifesto.html") Discover our manifesto
         //- empty alt since not useful for understanding
         img(src="img/illustrations/build.svg" alt="" loading="lazy")
-    
+
     section#deployment.alternate
         h2(data-title="Deployment")
             | Test your market
@@ -85,11 +85,11 @@ block content
         p You can now present your application to your customers and get a proof of concept for free.
         //- empty alt since not useful for understanding
         img(src="img/illustrations/deployment.svg" alt="" loading="lazy")
-    
+
     section#use-cases.arrows
         h2(data-title="Use cases") Why should I use Lenra ?
-        section.colored-block 
-            h3 
+        section.colored-block
+            h3
                 | Your
                 |
                 strong side projects
@@ -104,10 +104,10 @@ block content
                 | Your
                 |
                 strong start-up app
-            p 
+            p
                 | You're creating a tech start-up and
                 |
-                strong 
+                strong
                     | need to bootstrap an app to create a
                     |
                     abbr(title="Proof of Concept") PoC
@@ -150,7 +150,7 @@ block content
     include .try-lenra-footer-link.pug
 
     section#partners
-        h2 
+        h2
             | Our
             |
             strong partners

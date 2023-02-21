@@ -1,12 +1,12 @@
 extends .layout.pug
 
-block header 
+block header
     h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
     p Yet another "great" app development framework, but why should I use it ?
 
 block content
     section.alternate
-        h2 
+        h2
             | Your
             |
             strong side projects
@@ -21,7 +21,7 @@ block content
         h3(data-emoji="❤️") In all simplicity
         p
             | Once you're done, deploy it on our servers with one click and use it for free.
-        a.btn.link.lenra-icon-arrow-right(href="https://docs.lenra.io/getting-started.html") Get started
+        a.btn.link.lenra-icon-arrow-right(href="https://docs.lenra.io/getting-started.html" target="_blank") Get started
         //- empty alt since not useful for understanding
         img(src="img/illustrations/use-case-1.svg" alt="" loading="lazy")
 
@@ -31,7 +31,7 @@ block content
             |
             strong start-up app
         h3(data-emoji="🖋️") Create your Poc or MVP
-        p 
+        p
             | You're creating a tech start-up and need to bootstrap an app to create a PoC or a MVP ?
             | Lenra will make you start your project faster.
             | Don't lose time choosing the best technologies to create your app.
@@ -45,10 +45,10 @@ block content
         h3(data-emoji="🔑") Make the GDPR management easier
         p
             | The Lenra's framework will make the GDPR management easier since you just need to implement some event listeners to handle the right to be forgotten.
-        a.btn.link.lenra-icon-arrow-right(href="https://docs.lenra.io/getting-started.html") Get started
+        a.btn.link.lenra-icon-arrow-right(href="https://docs.lenra.io/getting-started.html" target="_blank") Get started
         //- empty alt since not useful for understanding
         img(src="img/illustrations/use-case-2.svg" alt="" loading="lazy")
-    
+
     section#twitch.arrows
         h2(data-title="Live coding")
             | Want to see
@@ -59,8 +59,8 @@ block content
         p
             | Find our developers live on Twitch for a demo of the framework.
         //- img(src="img/back-office.jpg" alt="" loading="lazy")
-        a.btn.primary(href="https://twitch.lenra.io") Discover our Twitch channel
+        a.btn.primary(href="https://twitch.lenra.io" target="_blank") Discover our Twitch channel
         p
             | Already convinced ?
             |
-            a.btn.link(href="https://dev.lenra.io") Start for free
+            a.btn.link(href="https://dev.lenra.io" target="_blank") Start for free

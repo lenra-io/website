@@ -1,6 +1,6 @@
 extends .layout.pug
 
-block header 
+block header
     h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
     p Lenra is an
         |
@@ -9,7 +9,7 @@ block header
         |
         |
         | to create your app using any language, and deploy it without any Ops scale, built on ethical values.
-    a.btn.link(href="https://dev.lenra.io") Try it now
+    a.btn.link(href="https://dev.lenra.io" target="_blank") Try it now
 
 block content
     link(rel='stylesheet' as='style' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css' media='print' onload='this.media="all"')
@@ -28,7 +28,7 @@ block content
         ul
             li.colored-block.lenra-icon-database
                 h3 Data
-                p Without data, there is no app. That's why our framework starts with data. We believe that data should be simple and easy to understand. 
+                p Without data, there is no app. That's why our framework starts with data. We believe that data should be simple and easy to understand.
             li.colored-block.lenra-icon-grid
                 h3 Views
                 p The views are what the user sees and interacts with. It should be clear and concise. It should be easy to use and navigate.
@@ -38,7 +38,7 @@ block content
             li.colored-block.lenra-icon-bell
                 h3 Listeners
                 p Listeners are what make an app interactive. They listen for user input and then respond accordingly.
-        a.btn.primary(href="https://docs.lenra.io/getting-started.html") Getting started
+        a.btn.primary(href="https://docs.lenra.io/getting-started.html" target="_blank") Getting started
 
     section#how-it-works
         h2(data-title='How it works')
@@ -61,7 +61,7 @@ block content
                         h3 Download the binary
                         p
                             | The Lenra CLI needs Docker and Docker Compose.
-                            | You can install the Docker buildx command to use the Buildkit optimization given by Dofigen. 
+                            | You can install the Docker buildx command to use the Buildkit optimization given by Dofigen.
                         p Once you have the setup configuration, download the binary depending on your operating system and add it to your path environment variable.
                         a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli/releases" rel="noopener") Check out all the binary
                     aside
@@ -97,9 +97,9 @@ block content
                             |
                             | which will be used to retrieve a project template from github. We already have several models available,
                             |
-                            a(href="https://github.com/orgs/lenra-io/repositories?q=&type=template&language=&sort=" rel="noopener") check out our github to see more
+                            a(href="https://github.com/orgs/lenra-io/repositories?q=&type=template&language=&sort=" target="_blank" rel="noopener") check out our github to see more
                             | . Then all you have to do is code!
-                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli#how-to-use-it" rel="noopener") Discover all the possibilities with Lenra CLI
+                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli#how-to-use-it" target="_blank" rel="noopener") Discover all the possibilities with Lenra CLI
                     aside
                         pre.command-line(data-filter-output='> ' data-prompt='you@lenra:~$')
                             code.language-bash
@@ -116,8 +116,8 @@ block content
                     section
                         h3 Open your IDE and develop your app
                         p Lenra is divided into several parts: views, listeners and data via databases. Create your app using the resources at your disposal, open the terminal of your IDE, you just have to type “lenra dev” to compile your application and test it in real time locally on your computer.
-                        a.btn.link.lenra-icon-arrow-right(href="https://docs.lenra.io") Read our full documentation
-                    aside 
+                        a.btn.link.lenra-icon-arrow-right(href="https://docs.lenra.io" target="_blank") Read our full documentation
+                    aside
                         pre.line-numbers.join
                             code.language-javascript
                                 | function home() {
@@ -135,7 +135,7 @@ block content
                     section
                         h3 Push your app to a Git repository and tadaaa
                         p Is your app stable? Are you satisfied with what you have done? All you have to do is push your application to a Git repository, create an account on the Lenra back-office, configure your directory and present everything to your customers!
-                        a.btn.link.lenra-icon-arrow-right(href="https://dev.lenra.io") Join the beta
+                        a.btn.link.lenra-icon-arrow-right(href="https://dev.lenra.io" target="_blank") Join the beta
                     aside.arrows
                         img(src="img/github-project.jpg" alt="A Lenra app source code on GitHub")
                         img(src="img/capture/back-office.jpg" alt="Lenra's dev back-office")
@@ -145,7 +145,7 @@ block content
             |
             strong Lenra ?
         p We already released some of our tools and dependencies under an open source license and more is coming!
-        a.btn.primary(href="https://github.com/lenra-io" rel="noopener") Check out our Github
+        a.btn.primary(href="https://github.com/lenra-io" target="_blank" rel="noopener") Check out our Github
 
     section#features.fixed-content
         h2(data-title="Our features")
@@ -171,7 +171,7 @@ block content
                     h4.lenra-icon-webhooks Webhooks
                     p
                         | Connect external tools to your app with our Webhook system.
-            a.btn.primary(href="https://github.com/lenra-io" rel="noopener") See more on Github
+            a.btn.primary(href="https://github.com/lenra-io" target="_blank" rel="noopener") See more on Github
         section#management
             h3 Your management
             ul
@@ -191,7 +191,7 @@ block content
                     h4.lenra-icon-layers Multiple environments
                     p
                         | Manage your development, test and production environments.
-            a.btn.primary(href="https://docs.lenra.io/getting-started.html") Getting started
+            a.btn.primary(href="https://docs.lenra.io/getting-started.html" target="_blank") Getting started
         section#hosting
             h3 Your hosting
             ul
@@ -211,7 +211,7 @@ block content
                     h4.lenra-icon-activity Analytics
                     p
                         | Observe the usage habits of your users without breaking their privacy.
-            a.btn.primary(href="https://dev.lenra.io") Join the beta
+            a.btn.primary(href="https://dev.lenra.io" target="_blank") Join the beta
 
     include .manifesto-footer-link.pug
 
