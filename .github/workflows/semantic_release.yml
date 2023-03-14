@@ -26,7 +26,7 @@ jobs:
           node-version: "14"
       - name: build node
         run: |
-          npm i
+          npm ci
           npm run build
       - name: Setup node deps
         run: npm i conventional-changelog-conventionalcommits@4 @semantic-release/exec @semantic-release/git -D
