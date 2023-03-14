@@ -1,0 +1,175 @@
+body>#cookies {
+    position: fixed;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(var(--text-color-data), 0.5);
+    z-index: 1000;
+    transition-property: left, width, height, background;
+}
+
+body>#cookies.open {
+    left: 0%;
+}
+
+body>#cookies>button {
+    position: fixed;
+    left: 1rem;
+    bottom: 1rem;
+    width: 3rem;
+    min-width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+    text-indent: -100vw;
+}
+
+body>#cookies>button::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 1.5rem;
+    text-indent: 0;
+    transform: translate(-50%, -50%);
+}
+
+body>#cookies>button::after {
+    content: " ";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0.125rem;
+    height: 2rem;
+    background-color: rgb(var(--red-data));
+    border-radius: 0.0625rem;
+    transform-origin: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+body>#cookies>section {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 90%;
+    padding: 1.5rem;
+    padding-top: 2.5rem;
+    background: rgb(var(--background-color-data));
+    border-radius: 0.5rem;
+    transform: translateY(-50%);
+}
+
+body>#cookies>section>button.lenra-icon-x {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    margin-top: 0;
+    padding: 0;
+    background: 0;
+    width: auto;
+    min-width: 0;
+    font-size: 1.5rem;
+}
+
+body>#cookies>section>nav {
+    margin-top: 0;
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+body>#cookies>section>nav>* {
+    width: 100%;
+    margin-top: 0;
+}
+
+
+@media (min-width: 45rem) {
+    body>#cookies {
+        --left: calc(1rem + 3rem + 1.5rem);
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        left: var(--left);
+        right: 1.5rem;
+        bottom: -100%;
+        transition-property: bottom, width, height;
+    }
+
+    body>#cookies.open {
+        left: var(--left);
+        bottom: 0.75rem;
+    }
+
+    body>#cookies>section {
+        position: initial;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        padding-top: 1.5rem;
+        transform: none;
+        box-shadow: 0px 4px 16px rgba(169, 178, 196, 0.25), 0px 1px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    body>#cookies>section::before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 2rem;
+        height: 2rem;
+        background-color: rgb(var(--background-color-data));
+        border-radius: 0.125rem;
+        transform: translate(-30%, -40%) rotate(45deg);
+        box-shadow: -6px 7px 6px -6px rgba(169, 178, 196, 0.25), -6px 7px 8px -6px rgba(0, 0, 0, 0.15);
+    }
+
+    body>#cookies>section>button.lenra-icon-x {
+        display: none;
+    }
+
+    body>#cookies>section>p {
+        max-width: none;
+    }
+}
+
+
+@media (min-width: 50rem) {
+    body>#cookies>section>nav {
+        display: flex;
+        gap: 1rem;
+    }
+
+    body>#cookies>section>nav>* {
+        width: auto;
+        margin-top: 0;
+        display: inline-block;
+    }
+}
+
+
+@media (min-width: 60rem) {
+    body>#cookies>section {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "title .  "
+            "text  nav";
+        column-gap: 1.5rem;
+    }
+
+    body>#cookies>section>h3 {
+        grid-area: title;
+    }
+
+    body>#cookies>section>p {
+        grid-area: text;
+    }
+
+    body>#cookies>section>nav {
+        grid-area: nav;
+        padding: 0;
+        align-self: center;
+    }
+}
