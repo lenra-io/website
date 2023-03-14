@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'Lenra-icons';
   src:
-    url('../fonts/Lenra-icons.ttf?bgj6za') format('truetype'),
-    url('../fonts/Lenra-icons.woff?bgj6za') format('woff'),
-    url('../fonts/Lenra-icons.svg?bgj6za#Lenra-icons') format('svg');
+    url('../fonts/Lenra-icons.ttf?8wn1hx') format('truetype'),
+    url('../fonts/Lenra-icons.woff?8wn1hx') format('woff'),
+    url('../fonts/Lenra-icons.svg?8wn1hx#Lenra-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -62,6 +62,9 @@
 }
 .lenra-icon-minus:before {
   content: "\e90c";
+}
+.lenra-icon-x:before {
+  content: "\e940";
 }
 .lenra-icon-frown:before {
   content: "\e909";
@@ -225,4 +228,8 @@
 .lenra-icon-windows:before {
   content: "\e929";
   color: #0078d6;
+}
+.lenra-icon-cookies:before {
+  content: "\e941";
+  color: #f6c28b;
 }
