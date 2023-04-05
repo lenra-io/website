@@ -11,22 +11,23 @@ h1 {
     padding-bottom: 1rem;
 }
 
-main>ul {
+main>section {
     padding-top: 2rem;
+    padding-bottom: 0;
+    text-align: inherit;
+}
+
+main>section>h2 {
     font-size: calc(1rem * 9 / 8);
-    font-weight: 700;
+    padding-bottom: 0.5rem;
 }
 
-main>ul>li:first-of-type {
-    padding-bottom: 1.5rem;
-}
-
-nav.social {
+main nav.social {
     justify-content: center;
     padding-top: 0.5rem;
 }
 
-nav.social>a:not(:hover)::before {
+main nav.social>a:not(:hover)::before {
     color: rgb(var(--text-color-data));
 }
 
@@ -40,6 +41,7 @@ form {
 label {
     margin-bottom: 0.25rem;
     font-weight: 600;
+    padding-top: 2rem;
 }
 
 input,
@@ -68,8 +70,8 @@ form button {
         column-gap: 2.5rem;
         grid-template:
             "header form"
-            ". form"
-            "social form" / 1fr 1fr;
+            "social form"
+            "dev form" / 1fr 1fr;
         text-align: left;
         max-width: 70rem;
     }
@@ -82,8 +84,13 @@ form button {
         margin-left: 0;
     }
 
-    main>ul {
+    main>section {
         grid-area: social;
+        align-self: end;
+    }
+
+    main>section:last-of-type {
+        grid-area: dev;
     }
 
     main nav.social {

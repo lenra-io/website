@@ -7,11 +7,13 @@ block content
         h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
         p Let's get in touch with us!
 
-    ul 
-        li Follow us
-            +social()
-        li For developers
-            +social(true)
+    section 
+        h2 Follow us
+        +social()
+            
+    section
+        h2 For developers
+        +social(true)
 
     form
         label(for="name") Name

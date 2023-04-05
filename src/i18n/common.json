@@ -27,7 +27,8 @@
         },
         {
             "name": "contact",
-            "group": "contact"
+            "group": "contact",
+            "notOnTop": true
         },
         {
             "name": "legal",
