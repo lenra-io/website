@@ -20,7 +20,8 @@
                     "unsafe-inline",
                     "analytics.lenra.io",
                     "https://cdnjs.cloudflare.com/ajax/libs/prism/",
-                    "https://api.producthunt.com/"
+                    "https://api.producthunt.com/",
+                    "https://avatars.githubusercontent.com"
                 ]
             },
             "rewriteRules": [
@@ -29,7 +30,12 @@
                     "to": "/discover.html",
                     "type": "permanent"
                 }
-            ]
+            ],
+            "additionalLocationConfigs": {
+                "/ghorgamel/": [
+                    "proxy_pass http://ghorgamel:8080/;"
+                ]
+            }
         }
     }
 }
