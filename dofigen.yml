@@ -1,0 +1,26 @@
+builders:
+  - from: bitnami/node:18
+    workdir: /app
+    adds: [.]
+    script:
+      - npm i --cache /tmp/cache
+      - npm run build
+    caches:
+      - /tmp/cache
+  - name: cleaned-nginx
+    from: bitnami/nginx
+    root:
+      run: [rm -Rf /app/*]
+from: cleaned-nginx
+workdir: /app
+artifacts:
+  - builder: builder-0
+    source: "/app/build/www"
+    destination: "/app"
+  - builder: builder-0
+    source: "/app/build/nginx.conf"
+    destination: "/opt/bitnami/nginx/conf/server_blocks/"
+ignores:
+  - "**"
+  - "!/*.json"
+  - "!/src/"
