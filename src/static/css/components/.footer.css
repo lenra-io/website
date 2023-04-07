@@ -94,17 +94,27 @@ body>footer>ul>li>nav.social {
     --text-opacity: 1;
 }
 
-body>footer>a[href^="https://www.producthunt.com"] {
+body>footer>aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+body>footer>aside>a[href^="https://www.producthunt.com"] {
     display: inline-block;
     min-width: 0;
     padding: 0;
     margin-bottom: 0;
     line-height: 0;
-    margin-top: 1rem;
 }
 
-body>footer>a[href^="https://www.producthunt.com"]::after {
+body>footer>aside>a[href^="https://www.producthunt.com"]::after {
     display: none;
+}
+
+body>footer>aside>#wcb.carbonbadge {
+    text-align: inherit;
 }
 
 
@@ -125,10 +135,11 @@ body>footer>a[href^="https://www.producthunt.com"]::after {
         flex-basis: 25rem;
     }
 
-    body>footer>a[href^="https://www.producthunt.com"] {
+    body>footer>aside {
         position: absolute;
         right: 0;
         bottom: var(--vertical-padding);
+        text-align: right;
     }
 }
 
