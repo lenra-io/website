@@ -20,6 +20,7 @@
                     "unsafe-inline",
                     "analytics.lenra.io",
                     "https://cdnjs.cloudflare.com/ajax/libs/prism/",
+                    "https://unpkg.com/website-carbon-badges@1.1.3/",
                     "https://api.producthunt.com/",
                     "https://avatars.githubusercontent.com"
                 ]
