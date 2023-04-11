@@ -42,7 +42,7 @@ You can run this project from the [Docker image](https://hub.docker.com/r/lenra/
 docker run --rm -it -p 8080:8080 lenra/website
 ```
 
-Or you run it with NodeJS:
+Or you can run it with NodeJS:
 ```console
 npm i
 npm start
@@ -50,14 +50,14 @@ npm start
 
 The website will be available at http://localhost:8080/
 
-To run it locally with the [Ghorgamel](https://github.com/lenra-io/ghorgamel) integration (needs [Dofigen](https://github.com/lenra-io/dofigen)):
+To run it locally with the [Ghorgamel](https://github.com/lenra-io/ghorgamel) integration (requires [Dofigen](https://github.com/lenra-io/dofigen)):
 ```console
 dofigen dofigen.yml
 docker-compose build
 docker-compose up -d
 ```
 
-You'd rather define the `GITHUB_TOKEN` with a [GitHub personnal access token](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) in a `.env` file avoid GitHub API limitations.
+It is recommended to define the `GITHUB_TOKEN` with a [GitHub personnal access token](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) in a `.env` file avoid GitHub API limitations.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
