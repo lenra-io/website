@@ -20,16 +20,13 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - name: Install dofigen
+        uses: actions-rs/cargo@v1
         with:
-          node-version: "14"
-      - name: build node
-        run: |
-          npm ci
-          npm run build
-      - name: Setup node deps
-        run: npm i conventional-changelog-conventionalcommits@4 @semantic-release/exec @semantic-release/git -D
+          command: install
+          args: dofigen -F cli
+      - name: Generate Dockerfile
+        run: dofigen dofigen.yml
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
@@ -41,6 +38,10 @@ jobs:
           path: |
             ~/cache
           key: ${{ runner.os }}-${{ hashFiles('./Dockerfile') }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18"
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PERSONNAL_TOKEN }}
@@ -48,4 +49,4 @@ jobs:
         run: |
           sudo chown $USER:$USER .github/release.sh
           sudo chmod +x .github/release.sh
-          npx semantic-release@18
+          npx -p conventional-changelog-conventionalcommits@4 -p @semantic-release/exec -p @semantic-release/git semantic-release@18
