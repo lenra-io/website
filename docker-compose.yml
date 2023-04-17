@@ -1,0 +1,16 @@
+services:
+  website:
+    image: lenra/website:local
+    build:
+      context: .
+    ports:
+    - 8080:8080
+  ghorgamel:
+    image: lenra/ghorgamel:beta
+    environment:
+      GITHUB_ORGANIZATION: lenra-io
+      CORS_ORIGIN: ""
+      GITHUB_IGNORED_CONTRIBUTORS: "dependabot[bot],github-actions[bot],semantic-release-bot"
+      # 24h cache
+      CACHE_DURATION: 21600000
+      GITHUB_TOKEN: ${GITHUB_TOKEN}
