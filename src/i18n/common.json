@@ -28,7 +28,6 @@
         {
             "name": "contact",
             "group": "contact",
-            "disabled": true,
             "notOnTop": true
         },
         {

@@ -1,0 +1,29 @@
+extends .layout.pug
+
+block header
+
+block content
+    header
+        h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
+        p Let's get in touch with us!
+
+    section 
+        h2 Follow us
+        +social()
+            
+    section
+        h2 For developers
+        +social(true)
+
+    form
+        label(for="name") Name
+        input#name(type="text" name="name" placeholder="Your name" required)
+        label(for="name") Email
+        input#email(type="email" name="email" placeholder="Your email" required)
+        label(for="name") Message
+        textarea#message(name="message" placeholder="Your message" required)
+        button.primary Send your message
+
+    script(src='js/contact.js' defer)
+
+    

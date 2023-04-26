@@ -1,0 +1,105 @@
+body>header {
+    padding-bottom: 0;
+}
+
+main {
+    text-align: center;
+    padding-bottom: calc(0.5rem * var(--section-padding-bottom));
+}
+
+h1 {
+    padding-bottom: 1rem;
+}
+
+main>section {
+    padding-top: 2rem;
+    padding-bottom: 0;
+    text-align: inherit;
+}
+
+main>section>h2 {
+    font-size: calc(1rem * 9 / 8);
+    padding-bottom: 0.5rem;
+}
+
+main nav.social {
+    justify-content: center;
+    padding-top: 0.5rem;
+}
+
+main nav.social>a:not(:hover)::before {
+    color: rgb(var(--text-color-data));
+}
+
+form {
+    text-align: left;
+    padding-top: 3rem;
+    max-width: 37.5rem;
+    margin: auto;
+}
+
+label {
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    padding-top: 2rem;
+}
+
+input,
+textarea {
+    --text-opacity: 0.65;
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 0.0625rem solid;
+    border-radius: 0.25rem;
+}
+
+textarea {
+    height: 7.5rem;
+    resize: vertical;
+}
+
+form button {
+    width: 100%;
+}
+
+@media (min-width: 50rem) {
+    body>main {
+        display: grid;
+        column-gap: 2.5rem;
+        grid-template:
+            "header form"
+            "social form"
+            "dev form" / 1fr 1fr;
+        text-align: left;
+        max-width: 70rem;
+    }
+
+    main>header {
+        grid-area: header;
+    }
+
+    main>header>p {
+        margin-left: 0;
+    }
+
+    main>section {
+        grid-area: social;
+        align-self: end;
+    }
+
+    main>section:last-of-type {
+        grid-area: dev;
+    }
+
+    main nav.social {
+        justify-content: left;
+    }
+
+    main>form {
+        grid-area: form;
+        padding-top: 0;
+        margin: 0;
+    }
+}
