@@ -46,6 +46,17 @@
     text-align: center;
 }
 
+#how-it-works>.tab>label {
+    display: inline-flex;
+}
+
+#how-it-works>.tab>label::after {
+    content: counter(tab-count) ". ";
+    color: inherit;
+    order: -1;
+    margin-right: 0.25rem;
+}
+
 #how-it-works>.tab>ul {
     max-width: 65rem;
     margin: auto;
@@ -312,7 +323,7 @@
         margin-left: auto;
         right: 0;
     }
-    
+
     #how-it-works>.tab>ul>li>aside>details {
         --text-opacity: 0.5;
         border: 0.0625rem solid;
@@ -321,16 +332,16 @@
         border-radius: 0.5rem;
         margin-top: 1rem;
     }
-    
+
     #how-it-works>.tab>ul>li>aside>details:first-of-type {
         margin-top: 0;
     }
-    
+
     #how-it-works>.tab>ul>li>aside>details>summary {
         position: relative;
         --btn-text-opacity: 0.8;
     }
-    
+
     #how-it-works>.tab>ul>li>aside>details>summary::before {
         --size: 2.5rem;
         display: inline-block;
@@ -346,15 +357,15 @@
         border-radius: 0.75rem;
         background-color: rgba(var(--text-color-data), 0.1);
     }
-    
+
     #how-it-works>.tab>ul>li>aside>details>summary.lenra-icon-linux::before {
         font-size: calc(3 / 2 * 1rem);
     }
-    
+
     #how-it-works>.tab>ul>li>aside>details>summary::after {
         /* lenra-icon-chevron-right */
         content: "\e92c";
-    
+
         font-family: 'Lenra-icons' !important;
         speak: never;
         font-style: normal;
@@ -364,28 +375,28 @@
         line-height: 1;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-    
+
         --text-opacity: 0.8;
         font-size: calc(3 / 2 * 1rem);
-    
+
         position: absolute;
         right: 0;
         top: 50%;
         transform: translateY(-50%);
         transform-origin: center;
-    
+
         transition-property: transform;
     }
-    
+
     #how-it-works>.tab>ul>li>aside>details[open]>summary::after {
         transform: translateY(-50%) rotate(90deg);
     }
-    
+
     #how-it-works>.tab>ul>li>aside>details>ul {
         padding-top: 0.5rem;
         padding-left: 2rem;
     }
-    
+
     #how-it-works>.tab>ul>li>aside.arrows::before {
         content: " ";
         position: absolute;
@@ -399,12 +410,12 @@
             49% 92%;
         transform: scale(-1.5, 1.5) rotate(-52deg);
     }
-    
+
     #how-it-works>.tab>ul>li>aside>img {
         width: 21.25rem;
         border-radius: 0.5rem;
     }
-    
+
     #how-it-works>.tab>ul>li>aside>img+img {
         display: block;
         margin-top: 2rem;
