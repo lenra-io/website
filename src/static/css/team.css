@@ -63,8 +63,6 @@
 
 .tab.filter>ul>li>details>summary>.social {
     margin-top: 0;
-    --size: 1.5rem;
-    gap: 0.5rem;
 }
 
 .tab.filter>ul>li>details>p {
