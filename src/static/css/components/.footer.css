@@ -107,6 +107,7 @@ body>footer>aside>a[href^="https://www.producthunt.com"] {
     padding: 0;
     margin-bottom: 0;
     line-height: 0;
+    margin-top: 2rem;
 }
 
 body>footer>aside>a[href^="https://www.producthunt.com"]::after {
