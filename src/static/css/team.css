@@ -74,6 +74,22 @@
     border-radius: 0.5rem;
 }
 
+
+/************* Sponsor *************/
+
+#sponsor {
+    --primary-color-data: var(--secondary-color-data);
+    --primary-color-hover-data: var(--secondary-color-hover-data);
+}
+
+#sponsor>h2 {
+    padding-bottom: 0.5rem;
+}
+
+#sponsor>a {
+    margin-top: 2rem;
+}
+
 /*********** Join ************/
 
 #join>ul {
@@ -132,8 +148,32 @@
 }
 
 @media (min-width: 50rem) {
+    #sponsor {
+        --section-padding-top: 10;
+        --section-padding-bottom: 10;
+    }
+
     #join {
         --text-width: 70%;
         --text-max-width: 45rem;
+    }
+}
+
+@media (min-width: 62rem) {
+    #sponsor {
+        text-align: left;
+    }
+
+    #sponsor>* {
+        max-width: calc(100% - 13.75rem - 2.5rem);
+        margin-left: 0;
+    }
+
+    #sponsor>a {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        margin-top: 0;
     }
 }
