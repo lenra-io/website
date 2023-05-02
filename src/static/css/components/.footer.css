@@ -46,7 +46,7 @@ body>footer>nav>section#financed-by {
     width: auto;
 }
 
-body>footer>nav>section#financed-by>a {
+body>footer>nav>section#financed-by>a.organization {
     display: inline-flex;
     background-color: rgb(var(--white-data));
     border-radius: 0.5rem;
@@ -57,17 +57,29 @@ body>footer>nav>section#financed-by>a {
     padding: 0;
 }
 
-body>footer>nav>section#financed-by>a+a {
+body>footer>nav>section#financed-by>a.organization+a.organization {
     margin-left: 1rem;
 }
 
-body>footer>nav>section#financed-by>a::after {
+body>footer>nav>section#financed-by>a.organization::after {
     display: none;
 }
 
-body>footer>nav>section#financed-by>a>img {
+body>footer>nav>section#financed-by>a.organization>img {
     max-width: 80%;
     max-height: 80%;
+}
+
+body>footer>nav>section#financed-by>a.btn {
+    display: block;
+    margin-top: 0;
+    width: fit-content;
+}
+
+body>footer>nav>section#financed-by>a.btn::before {
+    vertical-align: sub;
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
 }
 
 body>footer>nav>section>h3,
