@@ -5,7 +5,7 @@ body>header>a.btn.link {
 }
 
 body>header>a::before {
-  --text-color-data: var(--yellow-pulse-data);
+  --text-color-data: var(--red-data);
   font-size: 125%;
   margin-right: 0.5rem;
   vertical-align: text-bottom;
