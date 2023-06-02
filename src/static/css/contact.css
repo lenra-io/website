@@ -53,6 +53,7 @@ textarea {
     margin-bottom: 1.5rem;
     border: 0.0625rem solid;
     border-radius: 0.25rem;
+    background: transparent;
 }
 
 textarea {
