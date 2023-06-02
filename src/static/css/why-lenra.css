@@ -155,7 +155,7 @@ section>ul {
         height: var(--row-height);
         background-color: rgba(var(--text-color-data), 0.15);
         border-radius: 0.5rem;
-        z-index: -1;
+        z-index: -2;
     }
 
     #difference>section>p>span {
@@ -228,6 +228,7 @@ section>ul {
         background-color: rgb(var(--primary-color-data));
         border-radius: 0.5rem;
         order: 0;
+        z-index: -1;
     }
 
     #difference>section>h3 {
