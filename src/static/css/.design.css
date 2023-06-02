@@ -257,13 +257,8 @@ a[href="/"]::after {
     }
 
     .invert-colors {
-        /* --background-contrast-color-data: var(--black-data); */
-        /* --text-color-data: var(--background-contrast-color-data); */
         --background-color-data: var(--white-data);
         --background-color-opcatity: 0.1;
-        /* --logo-horizontal-image: var(--logo-horizontal-image-black);
-        --logo-vertical-image: var(--logo-vertical-image-black);
-        --logo-image: var(--logo-horizontal-image); */
     }
 }
 
