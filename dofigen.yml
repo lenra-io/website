@@ -2,15 +2,17 @@ builders:
   - from: bitnami/node:18
     workdir: /app
     adds: [.]
-    script:
+    run:
       - npm i --cache /tmp/cache
       - npm run build
     caches:
       - /tmp/cache
   - name: cleaned-nginx
-    from: bitnami/nginx
+    from: bitnami/nginx:1.24
     root:
-      run: [rm -Rf /app/*]
+      run: 
+        - rm -Rf /app/*
+        - install_packages gettext-base
 from: cleaned-nginx
 workdir: /app
 artifacts:
@@ -19,8 +21,16 @@ artifacts:
     destination: "/app"
   - builder: builder-0
     source: "/app/build/nginx.conf"
-    destination: "/opt/bitnami/nginx/conf/server_blocks/"
+    destination: "/opt/bitnami/nginx/conf/server_blocks/nginx.conf.template"
+  - builder: builder-0
+    source: "/app/entrypoint.sh"
+    destination: "/opt/lesta/entrypoint.sh"
+root:
+  run: [chmod +x /opt/lesta/entrypoint.sh]
+# entrypoint:
+#   - /opt/lesta/entrypoint.sh
 ignores:
   - "**"
   - "!/*.json"
   - "!/src/"
+  - "!/entrypoint.sh"
