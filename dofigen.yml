@@ -8,7 +8,7 @@ builders:
     caches:
       - /tmp/cache
   - name: cleaned-nginx
-    from: bitnami/nginx:1.24
+    from: bitnami/nginx
     root:
       run: 
         - rm -Rf /app/*
@@ -27,8 +27,10 @@ artifacts:
     destination: "/opt/lesta/entrypoint.sh"
 root:
   run: [chmod +x /opt/lesta/entrypoint.sh]
-# entrypoint:
-#   - /opt/lesta/entrypoint.sh
+entrypoint:
+  - /opt/lesta/entrypoint.sh
+cmd: 
+  - /opt/bitnami/scripts/nginx/run.sh
 ignores:
   - "**"
   - "!/*.json"
