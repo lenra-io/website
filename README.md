@@ -59,6 +59,8 @@ docker-compose up -d
 
 It is recommended to define the `GITHUB_TOKEN` with a [GitHub personnal access token](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) in a `.env` file avoid GitHub API limitations.
 
+The Ghorgamel url will be managed by the `GHORGAMEL_URL` environment variable. If not defined, it will be `http://localhost:8081/`.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
