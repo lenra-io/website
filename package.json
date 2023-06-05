@@ -34,7 +34,7 @@
             ],
             "additionalLocationConfigs": {
                 "/ghorgamel/": [
-                    "proxy_pass http://ghorgamel:8080/;"
+                    "proxy_pass ${GHORGAMEL_URL};"
                 ]
             }
         }
