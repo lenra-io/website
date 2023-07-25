@@ -1,0 +1,71 @@
+{
+    "login": "Connexion",
+    "documentation": "Documentation",
+    "register": "S'inscrire sur Lenra",
+    "contact_us": "Nous contacter",
+    "anyLanguage": "n'importe quel langage",
+    "page": {
+        "index": {
+            "name": "Lenra",
+            "title": "Optimisez la création de vos apps",
+            "description": "Lenra est un framework open source pour créer votre application en utilisant n'importe quel langage et le déployer sans avoir de connaissances d'Ops, construit sur des valeurs éthiques."
+        },
+        "discover": {
+            "name": "Découvrir",
+            "title": "Découvrez Lenra",
+            "description": "Lenra est un framework open source pour créer votre application en utilisant n'importe quel langage et le déployer sans avoir de connaissances d'Ops, construit sur des valeurs éthiques."
+        },
+        "why-lenra": {
+            "name": "Pourquoi ?",
+            "title": "Pourquoi devrais-je utiliser Lenra ?",
+            "description": "Pourquoi notre solution plutôt qu'une autre ? Avec Lenra, nous nous assurons de résoudre un problème qui est plus que présent dans notre société, le tout avec des valeurs fortes."
+        },
+        "usecases": {
+            "name": "Cas d'usage",
+            "title": "Les principaux cas d'usage de Lenra",
+            "description": "Encore un autre framework de développement d'applications \"formidable\", mais pourquoi devrais-je l'utiliser ?"
+        },
+        "manifesto": {
+            "name": "Manifeste",
+            "title": "La Tech Verte est la nouvelle technologie",
+            "description": "Cela devrait être la norme pour quiconque lance un projet numérique. Non pas parce que le greenwashing est à la mode, mais parce que le changement climatique nous dit qu'il est temps d'agir. Fortement. Voici quelques idées sur la façon dont vous pouvez agir en choisissant Lenra."
+        },
+        "team": {
+            "name": "Équipe",
+            "title": "Rencontrez notre incroyable équipe !",
+            "description": "Apprenez-en plus sur les personnes qui se cachent derrière les coulisses."
+        },
+        "contact": {
+            "name": "Nous contacter",
+            "title": "Vous avez des questions ?",
+            "titleHtml": "Vous avez des <strong>questions</strong> ?",
+            "description": "Contactez-nous !"
+        },
+        "legal": {
+            "name": "Informations légales",
+            "description": "Informations légales concernant la plateforme et les sites web de Lenra."
+        }
+    },
+    "pageGroup": {
+        "platform": {
+            "name": "Plateforme"
+        },
+        "company": {
+            "name": "Entreprise"
+        },
+        "contact": {
+            "name": "Contact"
+        }
+    },
+    "competitorsFieldsText": {
+        "anyLanguage": "Coder en utilisant n'importe quel langage",
+        "opensource": "Utiliser une solution open source",
+        "frontEnd": "Gérer le front-end",
+        "allOS": "Utiliser mon application sur n'importe quel système d'exploitation",
+        "backEnd": "Gérer le back-end",
+        "autoscaling": "Avoir un environnement auto-évolutif",
+        "optimized": "Consommer un minimum de données",
+        "encourageOptimizing": "Être accompagné pour optimiser mes ressources",
+        "gdpr": "Être accompagné pour se conformer à la législation européenne (GDPR, INR, etc.)"
+    }
+}

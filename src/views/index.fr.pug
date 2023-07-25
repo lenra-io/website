@@ -1,0 +1,169 @@
+extends .layout.pug
+
+block header
+    h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
+    p Lenra est un framework open source pour créer votre application en utilisant n'importe quel langage et le déployer sans avoir de connaissances d'Ops, construit sur des valeurs éthiques.
+    nav
+        a.btn.primary(href="https://docs.lenra.io/getting-started/") Commencer
+        a.btn(href="https://dev.lenra.io") Rejoindre la bêta
+    a.btn.link.lenra-icon-heart(href="https://github.com/sponsors/lenra-io" rel="noopener") Rejoindre la guilde Lenra et devenir sponsor GitHub
+
+block content
+    section#advantages.arrows
+        h2(data-title="Nos avantages")
+            | Les atouts de Lenra
+            |
+            strong en bref 
+        ul
+            li.colored-block.lenra-icon-check-circle
+                h3 Facilité d'utilisation
+                p Utilisez n'importe quel langage (JavaScript, C++, C#, TypeScript, ...), déployez en un clic
+            li.colored-block.lenra-icon-clock
+                h3 Rapidité
+                p Plateforme tout-en-un, outils de développement optimisés, installation locale
+            li.colored-block.lenra-icon-shield
+                h3 Sécurité
+                p Conformité GDPR, système SSO, protection contre les logiciels malveillants
+            li.colored-block.lenra-icon-sun
+                h3 Éthique
+                p Libre des géants de la tech, code sobre, hébergé au sein de l'Union européenne
+            li.colored-block.lenra-icon-dollar-sign
+                h3 Gratuit
+                p Utilisez uniquement ce dont vous avez besoin, jusqu'à 3 utilisateurs
+            li.colored-block.lenra-icon-book-open
+                h3 Open-source
+                p Transparence, permet à quiconque de prendre possession de la plateforme
+        nav 
+            a.btn.primary(href="https://docs.lenra.io") Lire la documentation
+            a.btn(href="discover.html") Découvrir Lenra
+    
+    section#conception.alternate
+        h2(data-title="Conception")
+            strong Accélérez
+            |
+            | la création de votre application
+        h3(data-emoji="💪") Créé par des développeurs, pour des développeurs
+        p Que vous soyez un développeur expérimenté ou que vous débutiez, la documentation du framework vous mettra rapidement et facilement en selle.
+        h3(data-emoji="🤯") Utilisez n'importe quel langage
+        p Pour créer et livrer des applications, vous n'avez plus besoin de jongler avec les technologies et les services.
+        h3(data-emoji="🔑") Plateforme tout-en-un
+        p
+            | Vous n'avez plus besoin d'utiliser des dizaines d'outils différents avec tous leurs identifiants et mots de passe.
+            | Tout se passe ici, dans un même framework.
+        a.btn.link.lenra-icon-arrow-right(href="discover.html#features") En savoir plus sur nos fonctionnalités
+        //- Balise "alt" vide car elle n'est pas utile pour la compréhension
+        img(src="/img/illustrations/conception.svg" alt="" loading="lazy")
+    
+    section#built.alternate
+        h2(data-title="Bâti") Bâti sur
+            |
+            |
+            strong des valeurs éthiques
+        h3(data-emoji="🔒") Sécurité
+        p La protection contre les logiciels malveillants est un point clé de notre plateforme et a été respectée grâce à l'amélioration de la sécurité de vos données.
+        h3(data-emoji="💾") Protection des données
+        p La plateforme respecte la conformité GDPR et offre également au utilisateur le contrôle de ses données personnelles.
+        h3(data-emoji="💡") Sobriété numérique
+        p Payez seulement ce que vous utilisez, plus vous optimisez votre code, moins vous payez.
+        a.btn.link.lenra-icon-arrow-right(href="manifesto.html") Découvrez notre manifeste
+        //- Balise "alt" vide car elle n'est pas utile pour la compréhension
+        img(src="/img/illustrations/build.svg" alt="" loading="lazy")
+    
+    section#deployment.alternate
+        h2(data-title="Déploiement")
+            | Testez votre marché
+            |
+            strong plus rapidement
+        h3(data-emoji="🌿") Durable
+        p
+            | Vos utilisateurs ont-ils un iPhone 6 mais aussi un iPhone 14 ?
+            | Un Samsung Galaxy s7 mais aussi un Galaxy Z Fold 4 ?
+            | Pas de problème, le framework permet à votre application de perdurer dans le temps.
+        h3(data-emoji="🚀") Déploiement facile
+        p Le déploiement de votre application est grandement simplifié et peut être réalisé en un seul clic.
+        h3(data-emoji="🤝") Présentez votre application
+        p Vous pouvez désormais présenter votre application à vos clients et obtenir une preuve de concept gratuitement.
+        //- Balise "alt" vide car elle n'est pas utile pour la compréhension
+        img(src="/img/illustrations/deployment.svg" alt="" loading="lazy")
+    
+    section#use-cases.arrows
+        h2(data-title="Cas d'utilisation") Pourquoi devrais-je utiliser Lenra ?
+        section.colored-block 
+            h3 
+                | Vos projets
+                |
+                strong personnels
+            p
+                | Vous avez une idée d'application et souhaitez la créer mais vous
+                |
+                strong manquez de temps
+                |
+                | ? Avec Lenra, vous n'avez pas besoin d'installer une multitude d'outils pour créer, construire et déployer votre projet.
+        section.colored-block
+            h3
+                | Votre application de
+                |
+                strong start-up
+            p 
+                | Vous créez une start-up technologique et
+                |
+                strong 
+                    | avez besoin de démarrer une application pour créer un
+                    |
+                    abbr(title="Proof of Concept") PoC
+                    |
+                    | ou un
+                    |
+                    abbr(title="Minimum Viable Product") MVP
+                |
+                | ?
+                | Lenra vous permettra de lancer votre projet plus rapidement. Ne perdez pas de temps à choisir les meilleures technologies pour créer votre application.
+                |
+                strong Créez-la simplement.
+        a.btn.primary(href="usecases.html") Plus de cas d'utilisation
+        section#contributors
+            h3 Rencontrez nos contributeurs GitHub
+            script(src="/ghorgamel/ghorgamel.js" data-type="contributors" data-size="6" defer)
+            link(rel='stylesheet' as='style' type='text/css' href='/ghorgamel/ghorgamel.css' media='print' onload='this.media="all"')
+
+    section#features
+        h2(data-title="Nos fonctionnalités")
+            | Comment
+            |
+            strong Lenra
+            |
+            | fonctionne-t-il ?
+        ul
+            li.colored-block.lenra-icon-list
+                h3 Développement
+                p Vous pouvez utiliser n'importe quel langage de votre choix et profiter de fonctionnalités telles que les tâches CRON et les webhooks.
+                a.btn.link.lenra-icon-arrow-right(href="discover.html#development") En savoir plus
+            li.colored-block.lenra-icon-folder
+                h3 Gestion des applications
+                p Déployez votre ou vos applications en un seul clic, gérez vos données dans un ou plusieurs environnements.
+                a.btn.link.lenra-icon-arrow-right(href="discover.html#management") En savoir plus
+            li.colored-block.lenra-icon-mouse-pointer
+                h3 En ligne
+                p Accédez à votre application depuis n'importe quelle plateforme, utilisez autant d'outils que vous le souhaitez pour gérer vos utilisateurs et leurs données.
+                a.btn.link.lenra-icon-arrow-right(href="discover.html#hosting") En savoir plus
+
+    include .try-lenra-footer-link.pug
+
+    section#partners
+        h2 
+            | Nos
+            |
+            strong partenaires
+        nav
+            a(href="https://lafrenchtech.com/fr/communaute/atlantic-valley" target="_blank" rel="noopener")
+                img(src="/img/partners/french-tech.png" alt="French Tech" loading="lazy")
+            a(href="https://naos-cluster.com" target="_blank" rel="noopener")
+                img(src="/img/partners/NAOS.png" alt="NAOS - Nouvelle Aquitaine Open Source" loading="lazy")
+            a(href="https://startup.ovhcloud.com/fr" target="_blank" rel="noopener")
+                img(src="/img/partners/OVHCloud-startup-program.png" alt="OVHCloud Startup Program" loading="lazy")
+            a(href="https://labanquiz.com" target="_blank" rel="noopener")
+                img(src="/img/partners/LaBanquiz.png" alt="La Banquiz" loading="lazy")
+            a(href="https://planet-techcare.green/manifeste" target="_blank" rel="noopener")
+                img(src="/img/partners/Logo-PlaneteTC.png" alt="Planete Tech'Care" loading="lazy")
+            a(href="https://www.larochelle-technopole.fr" target="_blank" rel="noopener")
+                img(src="/img/partners/la-rochelle-technopole.svg" alt="La Rochelle Technopole" loading="lazy")

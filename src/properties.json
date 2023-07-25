@@ -3,7 +3,7 @@
     "pageList": [
         {
             "name": "index",
-            "path": "/"
+            "path": "./"
         },
         {
             "name": "discover",

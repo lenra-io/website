@@ -1,8 +1,8 @@
 - const footerGroups = {};
 
 mixin displayFooterPageLink(p)
-    - const trad = page[p.name]
-    - const path = p.path || `/${p.name}.html`
+    - const trad = t(`page.${p.name}`)
+    - const path = p.path || `${p.name}.html`
     if (p.disabled)
         a(href=path disabled aria-disabled="true" tabindex="-1" title="Coming soon")= trad.name
     else 
@@ -23,7 +23,7 @@ mixin displayFooterPageGroup(group, pages)
 
 mixin displayFooterElement(element)
     - var pages = footerGroups[element]
-    +displayFooterPageGroup(pageGroup[element], pages)
+    +displayFooterPageGroup(t(`pageGroup.${element}`), pages)
 
 footer.invert-colors
     //- section 
@@ -31,14 +31,14 @@ footer.invert-colors
     //-     p focus on what you love about developing, and forget about the painful tasks 
 
 
-    a(href="/") Lenra
+    a(href="./") Lenra
     nav
         section#financed-by
             h3 Project financed by
             a.organization(href="https://www.nouvelle-aquitaine.fr" target="_blank" rel="noopener")
-                img(src="img/partners/NouvelleAquitaine-vertical.svg" alt="Nouvelle Aquitaine" loading="lazy")
+                img(src="/img/partners/NouvelleAquitaine-vertical.svg" alt="Nouvelle Aquitaine" loading="lazy")
             a.organization(href="https://www.bpifrance.fr" target="_blank" rel="noopener")
-                img(src="img/partners/bpi.svg" alt="Bpifrance" loading="lazy")
+                img(src="/img/partners/bpi.svg" alt="Bpifrance" loading="lazy")
             a.btn.primary.lenra-icon-heart(href="https://github.com/sponsors/lenra-io" rel="noopener") GitHub Sponsor
         section
             h3 Developpers

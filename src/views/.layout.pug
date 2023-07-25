@@ -14,16 +14,17 @@ html(lang=language)
     //- meta(property="og:image" content="!IMAGE_URL!")
     meta(property="og:description" content=currentPage.description)
     meta(property="og:locale" content=language)
+    - let otherLanguages = languages.filter(l => l != language);
     each l in otherLanguages
       meta(property="og:locale:alternate" content=l)
     link(rel="icon" type="image/png" href="favicon.png")
     link(rel="apple-touch-icon" href="img/appicon.png")
-    link(rel='stylesheet' as='style' type='text/css' href='css/main.css' media='print' onload='this.media="all"')
-    link(rel='stylesheet' as='style' type='text/css' href='css/' + currentPage.basicPath + '.css' media='print' onload='this.media="all"')
+    link(rel='stylesheet' as='style' type='text/css' href='/css/main.css' media='print' onload='this.media="all"')
+    link(rel='stylesheet' as='style' type='text/css' href='/css/' + currentPage.basicPath + '.css' media='print' onload='this.media="all"')
     noscript 
-      link(rel='stylesheet' as='style' type='text/css' href='css/main.css')
-      link(rel='stylesheet' as='style' type='text/css' href='css/' + currentPage.basicPath + '.css')
-    script(src='js/main.js' defer)
+      link(rel='stylesheet' as='style' type='text/css' href='/css/main.css')
+      link(rel='stylesheet' as='style' type='text/css' href='/css/' + currentPage.basicPath + '.css')
+    script(src='/js/main.js' defer)
     script(src="https://analytics.lenra.io/js/plausible.js" data-domain="!DOMAIN!" defer)
 
   body

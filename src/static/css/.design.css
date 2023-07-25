@@ -217,7 +217,7 @@ body>footer {
     max-width: 82.5rem;
 }
 
-a[href="/"] {
+a[href="./"] {
     position: relative;
     display: inline-block;
     width: var(--logo-height);
@@ -228,7 +228,7 @@ a[href="/"] {
     transition-property: none;
 }
 
-a[href="/"]::before {
+a[href="./"]::before {
     content: " ";
     position: absolute;
     top: 0;
@@ -241,7 +241,7 @@ a[href="/"]::before {
     background-position: var(--logo-position);
 }
 
-a[href="/"]::after {
+a[href="./"]::after {
     display: none;
 }
 

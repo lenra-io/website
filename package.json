@@ -8,12 +8,15 @@
         "build": "lesta nginx"
     },
     "dependencies": {
-        "@lenra/lesta": "github:lenra-io/lesta"
+        "@lenra/lesta": "file:../lesta"
     },
     "lesta": {
         "languages": [
-            "en"
+            "en",
+            "fr"
         ],
+        "translationStrategy": "subdir",
+        "enableDefaultLanquage": true,
         "nginx": {
             "additionalContentSecurityPolicies": {
                 "default-src": [

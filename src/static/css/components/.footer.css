@@ -13,7 +13,7 @@ body>footer::before {
     background-repeat: no-repeat;
 }
 
-body>footer>a[href="/"] {
+body>footer>a[href="./"] {
     --logo-image: var(--logo-horizontal-image);
     --logo-position: left;
     display: block;

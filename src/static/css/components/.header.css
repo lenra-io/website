@@ -16,7 +16,7 @@ body>header>nav.menu {
     padding-top: calc(var(--logo-height) + 1.5rem);
 }
 
-body>header>nav.menu>*:not(a[href="/"]) {
+body>header>nav.menu>*:not(a[href="./"]) {
     display: inline-block;
     min-width: 3rem;
     height: var(--button-height);
@@ -24,7 +24,7 @@ body>header>nav.menu>*:not(a[href="/"]) {
     font-weight: 700;
 }
 
-body>header>nav.menu a:not(a[href="/"]) {
+body>header>nav.menu a:not(a[href="./"]) {
     --size: 0.5rem;
     --btn-text-color-data: var(--background-contrast-color-data);
     --btn-text-color-hover-data: var(--background-contrast-color-data);
@@ -34,7 +34,7 @@ body>header>nav.menu a:not(a[href="/"]) {
     align-items: center;
 }
 
-body>header>nav.menu>a[href="/"] {
+body>header>nav.menu>a[href="./"] {
     position: absolute;
     top: 0;
     left: 50%;
@@ -111,7 +111,7 @@ body>header>p>a {
         margin-right: 2rem;
     }
 
-    body>header>nav.menu>a[href="/"] {
+    body>header>nav.menu>a[href="./"] {
         width: calc(var(--logo-height) * var(--logo-horizontal-ratio));
         height: var(--logo-height);
     }
@@ -151,7 +151,7 @@ body>header>p>a {
         margin-bottom: 6rem;
     }
 
-    body>header>nav.menu>a[href="/"] {
+    body>header>nav.menu>a[href="./"] {
         left: 0;
         transform: none;
     }

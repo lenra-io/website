@@ -1,14 +1,14 @@
 - const headerGroups = {};
 
 mixin displayPageLink(p)
-    - const trad = page[p.name]
-    - const path = p.path || `/${p.name}.html`
+    - const name = t(`page.${p.name}.name`)
+    - const path = p.path || `${p.name}.html`
     if (p.disabled)
-        a(href=path disabled aria-disabled="true" tabindex="-1" title="Coming soon")= trad.name
+        a(href=path disabled aria-disabled="true" tabindex="-1" title="Coming soon")= name
     else if (p.name == currentPage.basicPath)
-        a.current(href=path)= trad.name
+        a.current(href=path)= name
     else 
-        a(href=path)= trad.name
+        a(href=path)= name
 
 mixin displayPageGroup(group, pages)
     each page in pages
@@ -21,7 +21,7 @@ mixin displayNavElement(element)
         if (pages.length==1)
             +displayPageLink(pages[0])
         else
-            +displayPageGroup(pageGroup[element], pages)
+            +displayPageGroup(t(`pageGroup.${element}`), pages)
     else 
         +displayPageLink(element)
 
