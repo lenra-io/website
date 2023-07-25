@@ -44,7 +44,7 @@ header(class=headerClass)
             +displayNavElement(el)
 
     block header
-        h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
+        h1= t(`page.${currentPage.basicPath}.title`, {context: "html"})
         if currentPage.subtitle
             h2 !{currentPage.subtitle}
         if currentPage.headerTexts

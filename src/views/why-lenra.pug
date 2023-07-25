@@ -110,7 +110,7 @@ block content
                 strong Lenra
                 | , I can
             each field in competitorsFields
-                p=competitorsFieldsText[field]
+                p=t(`competitorsFieldsText.${field}`)
                     +managed("yes")
         
         each competitor in competitors
@@ -119,7 +119,7 @@ block content
                     strong=competitor.name
                     | , I can
                 each field in competitorsFields
-                    p=competitorsFieldsText[field]
+                    p=t(`competitorsFieldsText.${field}`)
                         |
                         +managed(competitor[field])
 

@@ -41,11 +41,12 @@
         "contact": {
             "name": "Contact us",
             "title": "Do you have any questions ?",
-            "titleHtml": "Do you have any <strong>questions</strong> ?",
+            "title_html": "Do you have any <strong>questions</strong> ?",
             "description": "Let's get in touch with us !"
         },
         "legal": {
             "name": "Legal informations",
+            "title": "Legal informations",
             "description": "The Lenra platform and websites legal informations."
         }
     },

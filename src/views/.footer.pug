@@ -1,29 +1,28 @@
 - const footerGroups = {};
 
 mixin displayFooterPageLink(p)
-    - const trad = t(`page.${p.name}`)
     - const path = p.path || `${p.name}.html`
     if (p.disabled)
         a(href=path disabled aria-disabled="true" tabindex="-1" title="Coming soon")= trad.name
     else 
-        a(href=path)= trad.name
+        a(href=path)= t(`page.${p.name}.name`)
 
 mixin displayFooterPageGroup(group, pages)
     - var disabled = pages.filter(p => !p.disabled).length==0
     if (disabled)
         section
-            h3= group.name
+            h3= group
             each page in pages
                 +displayFooterPageLink(page)
     else
         section
-            h3= group.name
+            h3= group
             each page in pages
                 +displayFooterPageLink(page)
 
 mixin displayFooterElement(element)
     - var pages = footerGroups[element]
-    +displayFooterPageGroup(t(`pageGroup.${element}`), pages)
+    +displayFooterPageGroup(t(`pageGroup.${element}.name`), pages)
 
 footer.invert-colors
     //- section 

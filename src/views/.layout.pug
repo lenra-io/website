@@ -3,16 +3,15 @@ include .social.pug
 doctype html
 html(lang=language)
   head
-    - var pageTitle = currentPage.titleTag ? currentPage.titleTag : `${title} - ${currentPage.title || currentPage.name}`
-    title= pageTitle
+    title= t(`page.${currentPage.basicPath}.title`, {context: "tag"})
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1')
-    meta(name="description" content=currentPage.description)
-    meta(property="og:title" content=pageTitle)
+    meta(name="description" content=t(`page.${currentPage.basicPath}.title`, {context: "tag"}))
+    meta(property="og:title" content=t(`page.${currentPage.basicPath}.title`, {context: "og"}))
     meta(property="og:type" content="website")
     meta(property="og:url" content="!CURRENT_URL!")
     //- meta(property="og:image" content="!IMAGE_URL!")
-    meta(property="og:description" content=currentPage.description)
+    meta(property="og:description" content=t(`page.${currentPage.basicPath}.title`, {context: "og"}))
     meta(property="og:locale" content=language)
     - let otherLanguages = languages.filter(l => l != language);
     each l in otherLanguages
