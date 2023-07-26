@@ -130,6 +130,10 @@ body>footer>aside>#wcb.carbonbadge {
     text-align: inherit;
 }
 
+#wcb #wcb_g {
+    background: transparent;
+}
+
 
 @media (min-width: 44rem) {
     body>footer>nav {
