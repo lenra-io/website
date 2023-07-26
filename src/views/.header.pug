@@ -44,11 +44,13 @@ header(class=headerClass)
             +displayNavElement(el)
 
     block header
-        h1= t(`page.${currentPage.basicPath}.title`, {context: "html"})
-        if currentPage.subtitle
-            h2 !{currentPage.subtitle}
-        if currentPage.headerTexts
-            each text  in currentPage.headerTexts
-                p= text
-        if currentPage.mainAction
-            a.btn.primary(href=currentPage.mainAction.href)= currentPage.mainAction.text
+        block header_title
+            h1 !{t(`page.${currentPage.basicPath}.title`, {context: "html", interpolation: {escapeValue: false}})}
+            if currentPage.subtitle
+                h2 !{currentPage.subtitle}
+        block header_content
+            if currentPage.headerTexts
+                each text  in currentPage.headerTexts
+                    p= text
+            if currentPage.mainAction
+                a.btn.primary(href=currentPage.mainAction.href)= currentPage.mainAction.text

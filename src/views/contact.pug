@@ -4,7 +4,7 @@ block header
 
 block content
     header
-        h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
+        h1 !{t(`page.${currentPage.basicPath}.title`, {context: "html", interpolation: {escapeValue: false}})}
         p Let's get in touch with us!
 
     section 
