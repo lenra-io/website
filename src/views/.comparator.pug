@@ -1,0 +1,25 @@
+section#difference
+    h2(data-title=t("The difference", {ns: "comparator"}))
+        | Why
+        |
+        strong us
+        |
+        | ?
+    
+    section#lenra
+        h3(data-title="With us")
+            strong Lenra
+            | , I can
+        each field in competitorsFields
+            p=t(`field.${field}`, {ns: "comparator"})
+                +managed("yes")
+    
+    each competitor in competitors
+        section
+            h3(data-title="With them")
+                strong=competitor.name
+                | , I can
+            each field in competitorsFields
+                p=t(`field.${field}`, {ns: "comparator"})
+                    |
+                    +managed(competitor[field])

@@ -1,7 +1,7 @@
 - const headerGroups = {};
 
 mixin displayPageLink(p)
-    - const name = t(`page.${p.name}.name`)
+    - const name = t(`translation:page.${p.name}.name`)
     - const path = p.path || `${p.name}.html`
     if (p.disabled)
         a(href=path disabled aria-disabled="true" tabindex="-1" title="Coming soon")= name
@@ -21,10 +21,14 @@ mixin displayNavElement(element)
         if (pages.length==1)
             +displayPageLink(pages[0])
         else
-            +displayPageGroup(t(`pageGroup.${element}`), pages)
+            +displayPageGroup(t(`translation:pageGroup.${element}`), pages)
     else 
         +displayPageLink(element)
 
+mixin headerTitle()
+    h1 !{t(`translation:page.${currentPage.basicPath}.title`, {context: "html", interpolation: {escapeValue: false}})}
+    if currentPage.subtitle
+        h2 !{currentPage.subtitle}
 - const headerClass = currentPage.basicPath=="index" ? "invert-colors" : ""
 header(class=headerClass)
     nav.menu
@@ -44,10 +48,7 @@ header(class=headerClass)
             +displayNavElement(el)
 
     block header
-        block header_title
-            h1 !{t(`page.${currentPage.basicPath}.title`, {context: "html", interpolation: {escapeValue: false}})}
-            if currentPage.subtitle
-                h2 !{currentPage.subtitle}
+        +headerTitle()
         block header_content
             if currentPage.headerTexts
                 each text  in currentPage.headerTexts

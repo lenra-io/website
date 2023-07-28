@@ -57,7 +57,7 @@
             "name": "Contact"
         }
     },
-    "competitorsFieldsText": {
+    "field": {
         "anyLanguage": "Coder en utilisant n'importe quel langage",
         "opensource": "Utiliser une solution open source",
         "frontEnd": "Gérer le front-end",

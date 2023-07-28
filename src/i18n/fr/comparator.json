@@ -1,0 +1,14 @@
+{
+    "The difference": "La difference",
+    "field": {
+        "anyLanguage": "Coder en utilisant n'importe quel langage",
+        "opensource": "Utiliser une solution open source",
+        "frontEnd": "Gérer le front-end",
+        "allOS": "Utiliser mon application sur n'importe quel système d'exploitation",
+        "backEnd": "Gérer le back-end",
+        "autoscaling": "Avoir un environnement auto-évolutif",
+        "optimized": "Consommer un minimum de données",
+        "encourageOptimizing": "Être accompagné pour optimiser mes ressources",
+        "gdpr": "Être accompagné pour se conformer à la législation européenne (GDPR, INR, etc.)"
+    }
+}

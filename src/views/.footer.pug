@@ -5,7 +5,7 @@ mixin displayFooterPageLink(p)
     if (p.disabled)
         a(href=path disabled aria-disabled="true" tabindex="-1" title="Coming soon")= trad.name
     else 
-        a(href=path)= t(`page.${p.name}.name`)
+        a(href=path)= t(`translation:page.${p.name}.name`)
 
 mixin displayFooterPageGroup(group, pages)
     - var disabled = pages.filter(p => !p.disabled).length==0
@@ -22,7 +22,7 @@ mixin displayFooterPageGroup(group, pages)
 
 mixin displayFooterElement(element)
     - var pages = footerGroups[element]
-    +displayFooterPageGroup(t(`pageGroup.${element}.name`), pages)
+    +displayFooterPageGroup(t(`translation:pageGroup.${element}.name`), pages)
 
 footer.invert-colors
     //- section 

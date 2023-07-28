@@ -96,31 +96,6 @@ block content
                 p
                     | Address environmental issues: optimize the environmental impact of apps by optimizing network exchanges and encouraging developers to act economically, limit obsolescence and limit the use of personal data.
 
-    section#difference
-        h2(data-title="The difference")
-            | Why
-            |
-            strong us
-            |
-            | ?
-        
-        section#lenra
-            h3(data-title="With us")
-                strong Lenra
-                | , I can
-            each field in competitorsFields
-                p=t(`competitorsFieldsText.${field}`)
-                    +managed("yes")
-        
-        each competitor in competitors
-            section
-                h3(data-title="With them")
-                    strong=competitor.name
-                    | , I can
-                each field in competitorsFields
-                    p=t(`competitorsFieldsText.${field}`)
-                        |
-                        +managed(competitor[field])
-
+    include .comparator.pug
 
     include .try-lenra-footer-link.pug
