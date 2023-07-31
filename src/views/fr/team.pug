@@ -1,4 +1,4 @@
-extends .layout.pug
+extends ../.components/layout.pug
 block header_content
     p En savoir plus sur les personnes qui travaillent en coulisses.
 
@@ -125,7 +125,7 @@ block content
         p
             | Rejoignez la guilde de Lenra et aidez-nous à continuer à développer une plateforme éthique et open source pour optimiser la création d'applications.
             | En devenant un sponsor GitHub, vous pouvez contribuer aux capacités de notre équipe et soutenir notre quête d'amélioration de la plateforme Lenra.
-        a.btn.primary(href="https://github.com/sponsors/lenra-io" rel="noopener") Devenir sponsor
+        a.btn.primary(href="https://github.com/sponsors/lenra-io" target="_blank" rel="noopener") Devenir sponsor
 
     section#len.alternate
         h2(data-title='Découvrez notre débogueur "rubber duck"')
@@ -165,4 +165,4 @@ block content
     //-             a.btn.link.lenra-icon-arrow-right(href="https://cv.lenra.io" target="_blank" rel="noopener") En savoir plus
     //-     img(src="/img/team/len.jpg" alt="L'équipe de Lenra" loading="lazy")
 
-    include .manifesto-footer-link.fr.pug
+    include .components/manifesto-footer-link.pug

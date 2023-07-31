@@ -1,4 +1,4 @@
-extends .layout.pug
+extends .components/layout.pug
 block header_content
     p Learn more about the people behind the scenes.
 
@@ -125,7 +125,7 @@ block content
         p
             | Join the Lenra's guild and help us continue developing an ethical, open-source platform for optimizing app creation.
             | By becoming a GitHub sponsor, you can contribute to our team's capabilities and support our quest to improve the Lenra platform.
-        a.btn.primary(href="https://github.com/sponsors/lenra-io" rel="noopener") Become a sponsor
+        a.btn.primary(href="https://github.com/sponsors/lenra-io" target="_blank" rel="noopener") Become a sponsor
 
     section#len.alternate
         h2(data-title='Discover our rubber duck debugger')
@@ -165,4 +165,4 @@ block content
     //-             a.btn.link.lenra-icon-arrow-right(href="https://cv.lenra.io" target="_blank" rel="noopener") Know more
     //-     img(src="/img/team/len.jpg" alt="The Lenra team" loading="lazy")
 
-    include .manifesto-footer-link.pug
+    include .components/manifesto-footer-link.pug

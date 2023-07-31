@@ -1,4 +1,4 @@
-extends .layout.pug
+extends ../.components/layout.pug
 
 block header_content
     p Lenra est un
@@ -62,7 +62,7 @@ block content
                             | Le CLI Lenra a besoin de Docker et Docker Compose.
                             | Vous pouvez installer la commande Docker buildx pour utiliser l'optimisation Buildkit donnée par Dofigen.
                         p Une fois la configuration mise en place, téléchargez le binaire en fonction de votre système d'exploitation et ajoutez-le à votre variable d'environnement PATH.
-                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli/releases" rel="noopener") Voir tous les binaires
+                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli/releases" target="_blank" rel="noopener") Voir tous les binaires
                     aside
                         details#download-linux(open)
                             summary.lenra-icon-linux Lenra pour Linux
@@ -96,9 +96,9 @@ block content
                             |
                             | qui sera utilisée pour récupérer un modèle de projet depuis GitHub. Nous avons déjà plusieurs modèles disponibles,
                             |
-                            a(href="https://github.com/orgs/lenra-io/repositories?q=&type=template&language=&sort=" rel="noopener") consultez notre GitHub pour en voir plus
+                            a(href="https://github.com/orgs/lenra-io/repositories?q=&type=template&language=&sort=" target="_blank" rel="noopener") consultez notre GitHub pour en voir plus
                             | . Ensuite, il ne vous reste plus qu'à coder !
-                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli#how-to-use-it" rel="noopener") Découvrez toutes les possibilités avec Lenra CLI
+                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli#how-to-use-it" target="_blank" rel="noopener") Découvrez toutes les possibilités avec Lenra CLI
                     aside
                         pre.command-line(data-filter-output='> ' data-prompt='you@lenra:~$')
                             code.language-bash
@@ -144,7 +144,7 @@ block content
             |
             strong Lenra ?
         p Nous avons déjà publié certains de nos outils et dépendances sous une licence open source et d'autres sont à venir !
-        a.btn.primary(href="https://github.com/lenra-io" rel="noopener") Consultez notre Github
+        a.btn.primary(href="https://github.com/lenra-io" target="_blank" rel="noopener") Consultez notre Github
 
     section#features.fixed-content
         h2(data-title="Nos fonctionnalités")
@@ -170,7 +170,7 @@ block content
                     h4.lenra-icon-webhooks Webhooks
                     p
                         | Connectez des outils externes à votre application grâce à notre système de Webhook.
-            a.btn.primary(href="https://github.com/lenra-io" rel="noopener") Voir plus sur Github
+            a.btn.primary(href="https://github.com/lenra-io" target="_blank" rel="noopener") Voir plus sur Github
         section#management
             h3 Votre gestion
             ul
@@ -212,7 +212,7 @@ block content
                         | Observez les habitudes d'utilisation de vos utilisateurs sans violer leur vie privée.
             a.btn.primary(href="https://dev.lenra.io") Rejoignez la bêta
 
-    include .manifesto-footer-link.fr.pug
+    include .components/manifesto-footer-link.pug
 
     script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js' defer)
     script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/command-line/prism-command-line.min.js' defer)

@@ -1,11 +1,11 @@
-extends .layout.pug
+extends .components/layout.pug
 
 block header_content
     p Lenra is an open source framework to create your app using any language, and deploy it without any Ops scale, built on ethical values.
     nav
         a.btn.primary(href="https://docs.lenra.io/getting-started/") Getting started
         a.btn(href="https://dev.lenra.io") Join the beta
-    a.btn.link.lenra-icon-heart(href="https://github.com/sponsors/lenra-io" rel="noopener") Join Lenra's guild and become a GitHub sponsor
+    a.btn.link.lenra-icon-heart(href="https://github.com/sponsors/lenra-io" target="_blank" rel="noopener") Join Lenra's guild and become a GitHub sponsor
 
 block content
     section#advantages.arrows
@@ -146,7 +146,7 @@ block content
                 p Access your app from any platform, use as many tools as you want to manage your users and their data.
                 a.btn.link.lenra-icon-arrow-right(href="discover.html#hosting") Know more
 
-    include .try-lenra-footer-link.pug
+    include .components/try-lenra-footer-link.pug
 
     section#partners
         h2 

@@ -1,4 +1,4 @@
-include .social.pug
+include social.pug
 
 doctype html
 html(lang=language)
@@ -36,8 +36,8 @@ html(lang=language)
     script(src="https://analytics.lenra.io/js/plausible.js" data-domain="!DOMAIN!" defer)
 
   body
-    include .header.pug
+    include header.pug
     main
       block content
-    include .footer.pug
-    include .cookies.pug
+    include footer.pug
+    include cookies.pug

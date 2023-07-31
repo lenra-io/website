@@ -1,4 +1,4 @@
-extends .layout.pug
+extends .components/layout.pug
 
 block header_content
     p Lenra is an
@@ -62,7 +62,7 @@ block content
                             | The Lenra CLI needs Docker and Docker Compose.
                             | You can install the Docker buildx command to use the Buildkit optimization given by Dofigen. 
                         p Once you have the setup configuration, download the binary depending on your operating system and add it to your path environment variable.
-                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli/releases" rel="noopener") Check out all the binary
+                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli/releases" target="_blank" rel="noopener") Check out all the binary
                     aside
                         details#download-linux(open)
                             summary.lenra-icon-linux Lenra for Linux
@@ -96,9 +96,9 @@ block content
                             |
                             | which will be used to retrieve a project template from github. We already have several models available,
                             |
-                            a(href="https://github.com/orgs/lenra-io/repositories?q=&type=template&language=&sort=" rel="noopener") check out our github to see more
+                            a(href="https://github.com/orgs/lenra-io/repositories?q=&type=template&language=&sort=" target="_blank" rel="noopener") check out our github to see more
                             | . Then all you have to do is code!
-                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli#how-to-use-it" rel="noopener") Discover all the possibilities with Lenra CLI
+                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli#how-to-use-it" target="_blank" rel="noopener") Discover all the possibilities with Lenra CLI
                     aside
                         pre.command-line(data-filter-output='> ' data-prompt='you@lenra:~$')
                             code.language-bash
@@ -144,7 +144,7 @@ block content
             |
             strong Lenra ?
         p We already released some of our tools and dependencies under an open source license and more is coming!
-        a.btn.primary(href="https://github.com/lenra-io" rel="noopener") Check out our Github
+        a.btn.primary(href="https://github.com/lenra-io" target="_blank" rel="noopener") Check out our Github
 
     section#features.fixed-content
         h2(data-title="Our features")
@@ -170,7 +170,7 @@ block content
                     h4.lenra-icon-webhooks Webhooks
                     p
                         | Connect external tools to your app with our Webhook system.
-            a.btn.primary(href="https://github.com/lenra-io" rel="noopener") See more on Github
+            a.btn.primary(href="https://github.com/lenra-io" target="_blank" rel="noopener") See more on Github
         section#management
             h3 Your management
             ul
@@ -212,7 +212,7 @@ block content
                         | Observe the usage habits of your users without breaking their privacy.
             a.btn.primary(href="https://dev.lenra.io") Join the beta
 
-    include .manifesto-footer-link.pug
+    include .components/manifesto-footer-link.pug
 
     script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js' defer)
     script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/command-line/prism-command-line.min.js' defer)

@@ -1,4 +1,4 @@
-extends .layout.pug
+extends ../.components/layout.pug
 
 mixin managed(value)
   case value 
@@ -96,6 +96,6 @@ block content
                 p
                     | S'attaquer aux problèmes environnementaux : optimiser l'impact environnemental des applications en optimisant les échanges réseau et en encourageant les développeurs à agir de manière économique, limiter l'obsolescence et limiter l'utilisation des données personnelles.
 
-    include .comparator.fr.pug
+    include .components/comparator.pug
 
-    include .try-lenra-footer-link.fr.pug
+    include .components/try-lenra-footer-link.pug
