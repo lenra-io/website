@@ -1,0 +1,65 @@
+extends ../.components/layout.pug
+
+block header_content
+    p Encore un autre "super" framework de développement d'applications, mais pourquoi devrais-je l'utiliser ?
+
+block content
+    section.alternate
+        h2 
+            | Vos
+            |
+            strong projets personnels
+        h3(data-emoji="⏱️") Gagnez du temps
+        p
+            | Vous avez une idée d'application et souhaitez la créer, mais vous n'avez pas beaucoup de temps pour le faire ?
+            | Avec Lenra, vous n'avez pas besoin d'installer de nombreux outils pour créer, construire et déployer votre projet.
+            | Pour créer une application Lenra, vous aurez juste besoin de Git et Docker (et bien sûr un éditeur de texte).
+        h3(data-emoji="🌐") Utilisez le langage que vous connaissez déjà
+        p
+            | Le framework Lenra est basé sur JSON et les API REST, vous pouvez donc utiliser n'importe quel langage capable de les gérer.
+        h3(data-emoji="❤️") En toute simplicité
+        p
+            | Une fois que vous avez terminé, déployez votre application sur nos serveurs en un clic et utilisez-la gratuitement.
+        a.btn.link.lenra-icon-arrow-right(href="https://docs.lenra.io/getting-started.html") Commencer
+        //- empty alt since not useful for understanding
+        img(src="/img/illustrations/use-case-1.svg" alt="" loading="lazy")
+
+    section.alternate
+        h2
+            | Votre
+            |
+            strong application start-up
+        h3(data-emoji="🖋️") Créez votre PoC ou MVP
+        p 
+            | Vous créez une start-up technologique et avez besoin de démarrer une application pour créer un PoC ou un MVP ?
+            | Lenra vous permettra de démarrer votre projet plus rapidement.
+            | Ne perdez pas de temps à choisir les meilleures technologies pour créer votre application.
+            | Créez-la simplement.
+            | Lenra propose de nombreux outils intégrés pour vous permettre de démarrer votre développement plus rapidement.
+        h3(data-emoji="📈") Faites évoluer votre application selon les besoins de vos utilisateurs
+        p
+            | Notre infrastructure fera évoluer automatiquement votre application en fonction des besoins de vos utilisateurs.
+            | Votre application utilisera les ressources dont elle a besoin et seulement quand elles seront nécessaires.
+            | Cela réduira l'empreinte carbone.
+        h3(data-emoji="🔑") Simplifiez la gestion de la conformité GDPR
+        p
+            | Le framework Lenra simplifiera la gestion de la conformité GDPR, car vous n'aurez qu'à implémenter quelques écouteurs d'événements pour gérer le droit à l'oubli.
+        a.btn.link.lenra-icon-arrow-right(href="https://docs.lenra.io/getting-started.html") Commencer
+        //- empty alt since not useful for understanding
+        img(src="/img/illustrations/use-case-2.svg" alt="" loading="lazy")
+    
+    section#twitch.arrows
+        h2(data-title="Codage en direct")
+            | Vous voulez voir
+            |
+            strong davantage
+            |
+            | ?
+        p
+            | Retrouvez nos développeurs en direct sur Twitch pour une démonstration du framework.
+        img(src="/img/live-twitch.jpg" alt="" loading="lazy")
+        a.btn.primary(href="https://twitch.lenra.io") Découvrez notre chaîne Twitch
+        p
+            | Déjà convaincu ?
+            |
+            a.btn.link(href="https://docs.lenra.io/getting-started/") Commencez gratuitement

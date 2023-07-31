@@ -1,4 +1,5 @@
 include social.pug
+- let isoToEmoji = code => langCountry[code].split('').map(letter => letter.charCodeAt(0) % 32 + 0x1F1E5).map(emojiCode => String.fromCodePoint(emojiCode)).join('');
 
 doctype html
 html(lang=language)
@@ -36,6 +37,9 @@ html(lang=language)
     script(src="https://analytics.lenra.io/js/plausible.js" data-domain="!DOMAIN!" defer)
 
   body
+    nav.translate
+      each l in otherLanguages
+        a.btn.link(href="/"+l+"/"+currentPage.path lang=l)= isoToEmoji(l)
     include header.pug
     main
       block content

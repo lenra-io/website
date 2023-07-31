@@ -1,5 +1,9 @@
 {
     "title": "Lenra",
+    "langCountry": {
+        "en": "us",
+        "fr": "fr"
+    },
     "pageList": [
         {
             "name": "index",
