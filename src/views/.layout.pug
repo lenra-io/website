@@ -19,10 +19,19 @@ html(lang=language)
     link(rel="icon" type="image/png" href="favicon.png")
     link(rel="apple-touch-icon" href="img/appicon.png")
     link(rel='stylesheet' as='style' type='text/css' href='/css/main.css' media='print' onload='this.media="all"')
-    link(rel='stylesheet' as='style' type='text/css' href='/css/' + currentPage.basicPath + '.css' media='print' onload='this.media="all"')
+    - cssPath = currentPage.basicPath + ".css";
+    - cssExists = fileExists('src/static/css/' + currentPage.basicPath + ".css");
+    - langCssExists = fileExists('src/static/css/' + currentPage.basicPath + "." + language + ".css");
+    if (cssExists)
+      link(rel='stylesheet' as='style' type='text/css' href='/css/' + currentPage.basicPath + '.css' media='print' onload='this.media="all"')
+    if (langCssExists)
+      link(rel='stylesheet' as='style' type='text/css' href='/css/' + currentPage.basicPath + "." + language + '.css' media='print' onload='this.media="all"')
     noscript 
       link(rel='stylesheet' as='style' type='text/css' href='/css/main.css')
-      link(rel='stylesheet' as='style' type='text/css' href='/css/' + currentPage.basicPath + '.css')
+      if (cssExists)
+        link(rel='stylesheet' as='style' type='text/css' href='/css/' + currentPage.basicPath + '.css')
+      if (langCssExists)
+        link(rel='stylesheet' as='style' type='text/css' href='/css/' + currentPage.basicPath + "." + language + '.css')
     script(src='/js/main.js' defer)
     script(src="https://analytics.lenra.io/js/plausible.js" data-domain="!DOMAIN!" defer)
 

@@ -1,0 +1,221 @@
+extends .layout.pug
+
+block header_content
+    p Lenra est un
+        |
+        |
+        strong framework open source
+        |
+        |
+        | pour créer votre application en utilisant n'importe quel langage, et la déployer sans mise à l'échelle Ops, construit sur des valeurs éthiques.
+    a.btn.primary(href="https://docs.lenra.io/getting-started/") Commencer
+
+block content
+    link(rel='stylesheet' as='style' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css' media='print' onload='this.media="all"')
+    link(rel='stylesheet' as='style' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/command-line/prism-command-line.min.css' media='print' onload='this.media="all"')
+    link(rel='stylesheet' as='style' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css' media='print' onload='this.media="all"')
+    link(rel='stylesheet' as='style' type='text/css' href='css/prism.css' media='print' onload='this.media="all"')
+    section#framework
+        h2(data-title="Notre framework") Un framework pour
+            |
+            |
+            strong réussir
+        p Voyons comment notre framework peut vous aider à créer une application simple et éthique. Notre framework est basé sur quatre parties : données, vues, écouteurs et utilisateurs.
+            |
+            |
+            strong Mais pourquoi ?
+        ul
+            li.colored-block.lenra-icon-database(data-action="Met à jour")
+                h3 Données
+                p Sans données, il n'y a pas d'application. C'est pourquoi notre framework commence par les données. Nous pensons que les données doivent être simples et faciles à comprendre.
+            li.colored-block.lenra-icon-grid(data-action="Dessine l'UI")
+                h3 Vues
+                p Les vues sont ce que l'utilisateur voit et avec quoi il interagit. Elles doivent être claires et concises, faciles à utiliser et à naviguer.
+            li.colored-block.lenra-icon-users(data-action="Déclenche")
+                h3 Utilisateurs
+                p Ce sont eux qui utiliseront nos applications et en bénéficieront. Nous pensons que toutes les applications doivent être conçues en pensant à l'utilisateur.
+            li.colored-block.lenra-icon-bell(data-action="Modifie")
+                h3 Écouteurs
+                p Les écouteurs rendent une application interactive. Ils écoutent les actions de l'utilisateur et y répondent en conséquence.
+        a.btn.primary(href="https://docs.lenra.io/getting-started.html") Commencer
+
+    section#how-it-works
+        h2(data-title='Comment ça marche')
+            | Comment installer, créer et pousser un
+            |
+            strong projet Lenra
+        p Vous avez décidé de créer une application. C'est super ! Mais avant de commencer à coder et à concevoir, vous devez configurer le back-end.
+        section.tab.pages
+            input#download(type="radio" name="tab" checked)
+            label(for="download") Télécharger
+            input#terminal(type="radio" name="tab")
+            label(for="terminal") Terminal
+            input#ide(type="radio" name="tab")
+            label(for="ide") IDE
+            input#online(type="radio" name="tab")
+            label(for="online") En ligne
+            ul
+                li
+                    section
+                        h3 Télécharger le binaire
+                        p
+                            | Le CLI Lenra a besoin de Docker et Docker Compose.
+                            | Vous pouvez installer la commande Docker buildx pour utiliser l'optimisation Buildkit donnée par Dofigen.
+                        p Une fois la configuration mise en place, téléchargez le binaire en fonction de votre système d'exploitation et ajoutez-le à votre variable d'environnement PATH.
+                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli/releases" rel="noopener") Voir tous les binaires
+                    aside
+                        details#download-linux(open)
+                            summary.lenra-icon-linux Lenra pour Linux
+                            ul
+                                li
+                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-linux-x86_64.tar.gz" target="_blank" rel="noopener") lenra-linux-x86_64.tar.gz
+                                li
+                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-linux-aarch64.tar.gz" target="_blank" rel="noopener") lenra-linux-aarch64.tar.gz
+                        details#download-windows
+                            summary.lenra-icon-windows Lenra pour Windows
+                            ul
+                                li
+                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-windows-x86_64.zip" target="_blank" rel="noopener") lenra-windows-x86_64.zip
+                                //- li
+                                //-     a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-windows-aarch64.zip" target="_blank" rel="noopener") lenra-windows-aarch64.zip
+                        details#download-macos
+                            summary.lenra-icon-apple Lenra pour MacoS
+                            ul
+                                li
+                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-macos-x86_64.tar.gz" target="_blank" rel="noopener") lenra-macos-x86_64.tar.gz
+                                li
+                                    a.btn.link.lenra-icon-download(href="https://github.com/lenra-io/lenra_cli/releases/latest/download/lenra-macos-aarch64.tar.gz" target="_blank" rel="noopener") lenra-macos-aarch64.tar.gz
+                li
+                    section
+                        h3 Définir votre langage préféré et créer votre application
+                        p
+                            | Une fois le client Lenra téléchargé, vous pouvez définir votre langage préféré pour démarrer votre application !
+                            | Tapez simplement la commande suivante :
+                            |
+                            code lenra new
+                            |
+                            | qui sera utilisée pour récupérer un modèle de projet depuis GitHub. Nous avons déjà plusieurs modèles disponibles,
+                            |
+                            a(href="https://github.com/orgs/lenra-io/repositories?q=&type=template&language=&sort=" rel="noopener") consultez notre GitHub pour en voir plus
+                            | . Ensuite, il ne vous reste plus qu'à coder !
+                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli#how-to-use-it" rel="noopener") Découvrez toutes les possibilités avec Lenra CLI
+                    aside
+                        pre.command-line(data-filter-output='> ' data-prompt='you@lenra:~$')
+                            code.language-bash
+                                | lenra new your_langage -p your_app_name
+                                | > Cloning into 'your_app_name'...
+                                | > remote: Enumerating objects: 27, done.
+                                | > remote: Counting objects: 100% (27/27), done.
+                                | > remote: Compressing objects: 100% (25/25), done.
+                                | > remote: Total 27 (delta 0), reused 15 (delta 0), pack-reused 0
+                                | > Unpacking objects: 100% (27/27), 14.18 KiB | 1.29 MiB/s, done.
+                                | code your_app_name/
+
+                li
+                    section
+                        h3 Ouvrez votre IDE et développez votre application
+                        p Lenra est divisé en plusieurs parties : vues, écouteurs et données via des bases de données. Créez votre application en utilisant les ressources à votre disposition, ouvrez le terminal de votre IDE, vous n'avez qu'à taper "lenra dev" pour compiler votre application et la tester en temps réel localement sur votre ordinateur.
+                        a.btn.link.lenra-icon-arrow-right(href="https://docs.lenra.io") Lisez notre documentation complète
+                    aside 
+                        pre.line-numbers.join
+                            code.language-javascript
+                                | function home() {
+                                |    return {
+                                |        type: "flex",
+                                |        direction: "vertical",
+                                |        spacing: 32,
+                                |        mainAxisAlignement: "spaceEvenly",
+                                |        crossAxisAlignement: "center",
+                                |        children: [
+                        pre.command-line(data-prompt='you@lenra:~/your_app_name$')
+                            code.language-bash
+                                | lenra dev
+                li
+                    section
+                        h3 Poussez votre application vers un référentiel Git et tadaaa
+                        p Votre application est-elle stable ? Êtes-vous satisfait de ce que vous avez fait ? Il ne vous reste plus qu'à pousser votre application vers un référentiel Git, créer un compte sur le back-office Lenra, configurer votre répertoire et présenter tout cela à vos clients !
+                        a.btn.link.lenra-icon-arrow-right(href="https://dev.lenra.io") Rejoignez la bêta
+                    aside.arrows
+                        img(src="/img/github-project.jpg" alt="Code source d'une application Lenra sur GitHub")
+                        img(src="/img/capture/back-office.jpg" alt="Back-office de développement de Lenra")
+    section#open-source.invert-colors
+        h2(data-title="Open Source")
+            | Vous voulez en savoir plus sur
+            |
+            strong Lenra ?
+        p Nous avons déjà publié certains de nos outils et dépendances sous une licence open source et d'autres sont à venir !
+        a.btn.primary(href="https://github.com/lenra-io" rel="noopener") Consultez notre Github
+
+    section#features.fixed-content
+        h2(data-title="Nos fonctionnalités")
+            | Développé par des développeurs
+            |
+            strong pour des développeurs
+        section#development
+            h3 Votre développement
+            ul
+                li
+                    h4.lenra-icon-cpu Multilingue
+                    p
+                        | Développez votre application avec le langage avec lequel vous avez l'habitude de travailler.
+                li
+                    h4.lenra-icon-terminal CLI
+                    p
+                        | Notre interface en ligne de commande vous aidera à créer votre application localement.
+                li
+                    h4.lenra-icon-clock CRON
+                    p
+                        | Gérez les tâches récurrentes de votre application grâce à notre système de tâches CRON intégré.
+                li
+                    h4.lenra-icon-webhooks Webhooks
+                    p
+                        | Connectez des outils externes à votre application grâce à notre système de Webhook.
+            a.btn.primary(href="https://github.com/lenra-io" rel="noopener") Voir plus sur Github
+        section#management
+            h3 Votre gestion
+            ul
+                li
+                    h4.lenra-icon-database Gestion des données
+                    p
+                        | Gérez les vues de votre application grâce à notre système de données en temps réel basé sur MongoDB.
+                li
+                    h4.lenra-icon-mouse-pointer Déploiement en un clic
+                    p
+                        | Construisez et déployez les nouvelles versions de votre application depuis un référentiel Git d'un simple clic.
+                li
+                    h4.lenra-icon-grid Autant d'applications que vous le souhaitez
+                    p
+                        | Notre back-office vous permet de gérer autant d'applications que vous le souhaitez.
+                li.soon
+                    h4.lenra-icon-layers Environnements multiples
+                    p
+                        | Gérez vos environnements de développement, de test et de production.
+            a.btn.primary(href="https://docs.lenra.io/getting-started/") Commencer
+        section#hosting
+            h3 Votre hébergement
+            ul
+                li
+                    h4.lenra-icon-devices Multiplateforme
+                    p
+                        | Distribuez votre application à tous vos utilisateurs grâce à notre client multiplateforme.
+                li
+                    h4.lenra-icon-auto-scaling Mise à l'échelle automatique
+                    p
+                        | Votre application s'adapte en temps réel pour répondre aux besoins de vos utilisateurs.
+                li.soon
+                    h4.lenra-icon-bell Notifications
+                    p
+                        | Notifiez vos utilisateurs sans les déranger grâce à notre système avancé de notification.
+                li.soon
+                    h4.lenra-icon-activity Analytics
+                    p
+                        | Observez les habitudes d'utilisation de vos utilisateurs sans violer leur vie privée.
+            a.btn.primary(href="https://dev.lenra.io") Rejoignez la bêta
+
+    include .manifesto-footer-link.fr.pug
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js' defer)
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/command-line/prism-command-line.min.js' defer)
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js' defer)
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js' defer)
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js' defer)

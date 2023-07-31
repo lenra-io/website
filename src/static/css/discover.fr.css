@@ -1,0 +1,19 @@
+html[lang="fr"] #features>section>h3::before {
+    content: "Optimiser ";
+}
+
+html[lang="fr"] #features>section>ul>li.soon>h4::after {
+    content: "Bientôt";
+}
+
+@media (min-width: 50rem) {
+    html[lang="fr"] #features>section:first-of-type::after {
+        content: "Optimiser";
+    }
+}
+
+@media (min-width: 75rem) {
+    #features>section:first-of-type::before {
+        content: "Notre mission en un mot:";
+    }
+}

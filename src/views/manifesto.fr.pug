@@ -1,0 +1,86 @@
+extends .layout.pug
+
+block header_content
+    p 
+        | Cela devrait être la norme pour toute personne démarrant un projet numérique.
+        | Non pas parce que le greenwashing est à la mode, mais parce que le changement climatique nous dit qu'il est temps d'agir.
+        |
+        strong Fortement.
+        |
+        | Voici quelques idées sur la manière dont vous pouvez agir en choisissant Lenra.
+
+block content
+    section#values.fixed-content
+        //- h2(data-title="Our values")
+        h2
+            | Nos
+            |
+            strong objectifs
+        h3(data-title="Informatique verte et RSE")
+            strong Réduire l'impact
+            |
+            | de la technologie numérique sur l'environnement
+        h4(data-emoji="🚧") Par sa conception
+        p
+            | La plateforme est conçue pour optimiser les ressources en ligne, en utilisant Flutter (gestion optimisée de l'interface), Elixir (communications optimisées) et des développements supplémentaires (gestion optimisée des données puisque la plateforme gère à la fois le client et le serveur, les données échangées seront uniquement les nouvelles données ou les données mises à jour).
+        h4(data-emoji="💸") Par notre modèle économique
+        p
+            | La tarification basée sur les ressources encouragera les développeurs à produire un code économe, en évitant l'utilisation de ressources informatiques inutiles ou un stockage de données excessif.
+        h4(data-emoji="⚒️") Par nos outils
+        p
+            | Des outils seront mis à disposition des développeurs pour les encourager à identifier et à résoudre les faiblesses de leurs applications sur ce point. Dans la première phase du projet, nous fournirons des outils pour surveiller l'état des applications et les métriques associées et les indicateurs.
+
+        h3(data-title="Souveraineté numérique")
+            strong Cesser de dépendre
+            |
+            | des géants de la technologie pour notre vie numérique
+        h4(data-emoji="🇪🇺") Avec notre hébergement
+        p
+            | L'hébergement des composants de la plateforme et des applications stockées dans le système Lenra sera réalisé par des entreprises européennes au sein de l'Union européenne, en dehors de ce que nous considérons comme une menace pour les données personnelles (comme le Cloud Act américain).
+        h4(data-emoji="🕊️") Avec notre liberté
+        p 
+            | Lenra est dépourvu de Big Tech et n'utilise aucun de leurs services ou composants (même si certaines technologies sont développées par des géants de la tech, comme Flutter - mais c'est désormais open source).
+        h4(data-emoji="🧑‍💻") Avec une solution open source
+        p
+            | L'aspect open source des composants de Lenra garantit la transparence et permet à chacun de s'approprier la plateforme, de l'utiliser de manière indépendante ou de la faire évoluer dans le temps.
+            | Bien que l'accès aux applications via l'App Store ou le Play Store offre les meilleures performances possibles sur les appareils mobiles, le système Lenra laisse le choix à l'utilisateur de la manière d'accéder aux applications.
+            | En particulier, l'accès via un navigateur Web sera possible.
+            | Cela s'étendra également à l'objectif de proposer le système Lenra à des systèmes d'exploitation mobiles indépendants (nous sommes déjà en contact avec la fondation /e/).
+
+        h3(data-title="Protection des données")
+            | Redonnons à nos utilisateurs le
+            |
+            strong contrôle de leurs données
+            | , pour qu'ils ne soient plus le produit
+        h4(data-emoji="📊") Gestion des données
+        p
+            | Les données sont gérées par la plateforme, pas par le développeur.
+            | Cet aspect open source est très important pour permettre à chacun de vérifier les mécanismes de sécurité mis en place en toute transparence.
+        h4(data-emoji="🙏") Autorisations
+        p
+            | Les autorisations seront automatiquement demandées lorsque l'utilisateur souhaite gérer les données dans d'autres environnements en dehors du système Lenra (connexion à un serveur externe par exemple) ou a besoin de gérer des données dans le système de l'application.
+
+    section#documentation
+        h2(data-title="Notre documentation")
+            | Créée pour vous
+            |
+            strong vous
+        p
+            | La documentation de la plateforme sera optimisée, avec un site statique.
+            br
+            | Nous suivons les recommandations de l'Institut du Numérique Responsable.
+        img(src="/img/capture/docs.jpg" alt="Capture d'écran de la page de documentation pour commencer" loading="lazy")
+        a.btn.primary(href="https://docs.lenra.io/getting-started.html") Commencer
+
+    section#framework.arrows
+        h2(data-title="Notre framework")
+            | Construisez un
+            |
+            strong environnement de codage plus durable
+        p
+            | Associez la création de votre application aux grandes préoccupations actuelles, tant pour la planète que pour nous, en commençant à utiliser Lenra.
+        a.btn.primary(href="discover.html") Découvrir Lenra
+        p
+            | Déjà convaincu ?
+            |
+            a.btn.link(href="https://docs.lenra.io/getting-started/") Commencez gratuitement

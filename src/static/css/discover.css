@@ -11,24 +11,34 @@
 }
 
 #framework>ul>li:nth-of-type(1) {
-    --primary-color-data: var(--red-pulse-data);
-    --background-color-data: var(--red-data);
+    --primary-color-data: var(--blue-pulse-data);
+    --background-color-data: var(--blue-data);
+    --action-color: var(--red-pulse-data);
+    --action-arrow: url(../img/arrows/red-arrow.svg);
     grid-area: data;
 }
 
 #framework>ul>li:nth-of-type(2) {
+    --primary-color-data: var(--yellow-pulse-data);
+    --background-color-data: var(--yellow-data);
+    --action-color: var(--blue-pulse-data);
+    --action-arrow: url(../img/arrows/blue-arrow.svg);
     grid-area: views;
 }
 
 #framework>ul>li:nth-of-type(3) {
-    --primary-color-data: var(--blue-pulse-data);
-    --background-color-data: var(--blue-data);
+    --primary-color-data: var(--green-pulse-data);
+    --background-color-data: var(--green-data);
+    --action-color: var(--yellow-pulse-data);
+    --action-arrow: url(../img/arrows/yellow-arrow.svg);
     grid-area: users;
 }
 
 #framework>ul>li:nth-of-type(4) {
-    --primary-color-data: var(--yellow-pulse-data);
-    --background-color-data: var(--yellow-data);
+    --primary-color-data: var(--red-pulse-data);
+    --background-color-data: var(--red-data);
+    --action-color: var(--green-pulse-data);
+    --action-arrow: url(../img/arrows/green-arrow.svg);
     grid-area: listeners;
 }
 
@@ -166,75 +176,71 @@
 
 @media (min-width: 38rem) {
     #framework>ul {
+        --spacing: 5rem;
         position: relative;
         width: fit-content;
         display: grid;
         grid-template-areas:
             "data listeners"
             "views users";
-        grid-gap: 5rem;
+        grid-gap: var(--spacing);
         margin: calc(0.5rem * 4) auto 0;
         justify-content: center;
+        align-items: stretch;
     }
 
     #framework>ul>li {
+        position: relative;
         max-width: 21.5rem;
     }
 
     #framework>ul>li::after {
-        --spacing: 4rem;
-        --big-size: 5rem;
-        --small-size: 3rem;
+        --big-size: 4.25rem;
+        --small-size: 1.75rem;
         position: absolute;
-        color: rgb(var(--primary-color-data));
+        content: attr(data-action);
+        color: rgb(var(--action-color));
+        background-image: var(--action-arrow);
+        background-repeat: no-repeat;
         font-size: calc(1rem * 9 / 8);
         font-weight: 700;
         text-align: center;
-        background-repeat: no-repeat;
     }
 
     #framework>ul>li:nth-of-type(1)::after {
-        content: "Draw UI";
-        background-image: url(../img/arrows/red-arrow.svg);
         left: 50%;
-        bottom: var(--spacing);
+        top: 100%;
         transform: translateX(-50%);
-        min-width: var(--big-size);
-        padding-bottom: var(--small-size);
-        background-position: 50% 100%;
+        background-position: 0% 50%;
+        line-height: var(--spacing);
+        padding: 0 calc(var(--small-size) + 0.5rem);
     }
 
     #framework>ul>li:nth-of-type(2)::after {
-        content: "Trigger";
-        background-image: url(../img/arrows/green-arrow.svg);
         top: 50%;
-        right: var(--spacing);
+        left: 100%;
         transform: translateY(-50%);
-        line-height: var(--big-size);
-        padding-right: var(--small-size);
-        background-position: 100% 50%;
+        background-position: 50% 100%;
+        min-width: var(--spacing);
+        padding: calc(var(--small-size) + 0.5rem) 0;
     }
 
     #framework>ul>li:nth-of-type(3)::after {
-        content: "Modify";
-        background-image: url(../img/arrows/blue-arrow.svg);
         left: 50%;
-        top: var(--spacing);
+        bottom: 100%;
         transform: translateX(-50%);
-        min-width: var(--big-size);
-        padding-top: var(--small-size);
-        background-position: 50% 0%;
+        background-position: 100% 50%;
+        line-height: var(--spacing);
+        padding: 0 calc(var(--small-size) + 0.5rem);
     }
 
     #framework>ul>li:nth-of-type(4)::after {
-        content: "Update";
-        background-image: url(../img/arrows/yellow-arrow.svg);
         top: 50%;
-        left: var(--spacing);
+        right: 100%;
         transform: translateY(-50%);
-        line-height: var(--big-size);
-        padding-left: var(--small-size);
-        background-position: 0% 50%;
+        background-position: 50% 0%;
+        min-width: var(--spacing);
+        padding: calc(var(--small-size) + 0.5rem) 0;
     }
 }
 

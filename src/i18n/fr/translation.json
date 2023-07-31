@@ -4,6 +4,19 @@
     "register": "S'inscrire sur Lenra",
     "contact_us": "Nous contacter",
     "anyLanguage": "n'importe quel langage",
+    "footer": {
+        "financedBy": "Projet financé par",
+        "developers": "Développeurs",
+        "documentation": "Documentation",
+        "devPlatform": "Plateforme développeurs",
+        "appPlatform": "Plateforme applications",
+        "contact": "Contact",
+        "legal": "Mentions légales",
+        "socials": {
+            "followUs": "Suivez-nous",
+            "developers": "Développeurs"
+        }
+    },
     "page": {
         "index": {
             "name": "Lenra",

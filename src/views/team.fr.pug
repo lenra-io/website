@@ -1,0 +1,168 @@
+extends .layout.pug
+block header_content
+    p En savoir plus sur les personnes qui travaillent en coulisses.
+
+block content
+    section
+        h2(data-title='Notre équipe')
+            | L'équipe
+            |
+            strong Lenra
+        section.tab.filter
+            input#all(type="radio" name="tab" checked)
+            label(for="all") Toute l'équipe
+            input#head(type="radio" name="tab")
+            label(for="head") Direction
+            input#developers(type="radio" name="tab")
+            label(for="developers") Développeurs
+            ul
+                li#thomas.head.developers
+                    img(src="/img/team/thomas.jpg" alt="Thomas Da Rocha")
+                    details  
+                        summary
+                            h3 Thomas Da Rocha
+                            p PDG
+                            +social().app.small
+                                a.lenra-icon-github(href="https://github.com/taorepoara" target="_blank" rel="noopener")
+                                a.lenra-icon-youtube(href="https://youtube.com/shorts/ukHZfjO391U?feature=share" target="_blank" rel="noopener")
+                                a.lenra-icon-linkedin(href="https://www.linkedin.com/in/thomas-da-rocha-57211170" target="_blank" rel="noopener")
+                        p
+                            | PDG de l'entreprise, il est le créateur du projet.
+                            | Il travaille à la fois sur le front-end et le back-end et décide de la direction à prendre pour chaque avancée réalisée sur la plateforme.
+                li#alienor.head
+                    img(src="/img/team/alienor.jpg" alt="Aliénor Malbosc")
+                    details  
+                        summary
+                            h3 Aliénor Malbosc
+                            p Responsable de la communication
+                            +social().app.small
+                                a.lenra-icon-linkedin(href="https://www.linkedin.com/in/aliénor-malbosc-b03609220" target="_blank" rel="noopener")
+                        p
+                            | Elle s'occupe de la stratégie de communication numérique et gère nos réseaux sociaux.
+                li#nathalie.head
+                    img(src="/img/team/nathalie.jpg" alt="Nathalie Pestel")
+                    details  
+                        summary
+                            h3 Nathalie Pestel
+                            p Directrice marketing
+                            +social().app.small
+                                a.lenra-icon-linkedin(href="https://www.linkedin.com/in/nathalie-monrouzeau-822b9387" target="_blank" rel="noopener")
+                        p
+                            | Directrice marketing de l'entreprise, elle s'occupe également de l'administration de l'entreprise.
+                li#louis.developers
+                    img(src="/img/team/louis.jpg" alt="Louis Guilbert")
+                    details  
+                        summary
+                            h3 Louis Guilbert
+                            p Développeur Full Stack
+                            +social().app.small
+                                a.lenra-icon-github(href="https://github.com/Nesqwik" target="_blank" rel="noopener")
+                        p
+                            | Il est un développeur Full Stack qui a une vue globale sur le projet, ce qui lui donne l'agilité pour intervenir sur tout problème bloquant.
+                            | Il est également responsable de notre département R&D.
+                li#jonas.developers
+                    img(src="/img/team/jonas.jpg" alt="Jonas Martinez")
+                    details  
+                        summary
+                            h3 Jonas Martinez
+                            p Développeur Front-end
+                            +social().app.small
+                                a.lenra-icon-github(href="https://github.com/jonas-martinez" target="_blank" rel="noopener")
+                                a.lenra-icon-youtube(href="https://youtube.com/shorts/1-OdmEHCYmQ?feature=share" target="_blank" rel="noopener")
+                        p
+                            | Il est responsable du front-end et plus précisément des fonctionnalités actuelles et futures du client Lenra.
+                            | Il est un expert des technologies
+                            |
+                            a(href="https://flutter.dev" target="_blank" rel="noopener") Flutter
+                            |
+                            | et
+                            |
+                            a(href="https://dart.dev" target="_blank" rel="noopener") Dart
+                            |
+                            .
+                li#emric.developers
+                    img(src="/img/team/emric.jpg" alt="Emric Pichonier")
+                    details  
+                        summary
+                            h3 Emric Pichonnier
+                            p Développeur Back-end
+                            +social().app.small
+                                a.lenra-icon-github(href="https://github.com/pichoemr" target="_blank" rel="noopener")
+                                a.lenra-icon-youtube(href="https://youtube.com/shorts/Z9L4HFW7Vyc?feature=share" target="_blank" rel="noopener")
+                        p
+                            | Il est spécialisé dans la partie backend de l'informatique et la gestion des données.
+                            | Il est passionné par
+                            |
+                            a(href="https://elixir-lang.org" target="_blank" rel="noopener") Elixir
+                            |
+                            | et a conçu notre gestion avancée des données en utilisant
+                            |
+                            a(href="https://www.mongodb.com" target="_blank" rel="noopener") MongoDB
+                            | .
+                li#flavien.developers
+                    img(src="/img/team/flavien.jpg" alt="Flavien Cadet")
+                    details  
+                        summary
+                            h3 Flavien Cadet
+                            p DevSecOps
+                            +social().app.small
+                                a.lenra-icon-github(href="https://github.com/shiipou" target="_blank" rel="noopener")
+                                a.lenra-icon-youtube(href="https://youtube.com/shorts/kOgr8ZMIZ38?feature=share" target="_blank" rel="noopener")
+                        p
+                            | Il est principalement responsable de l'administration du serveur et de la sécurité de la plateforme.
+                            |
+                            a(href="https://kubernetes.io") Kubernetes
+                            |
+                            | n'a aucun secret pour lui.
+
+    section#sponsor.invert-colors
+        h2(data-title="Sponsor")
+            | Soutenez la
+            |
+            strong guilde de Lenra
+            | 
+            | sur GitHub
+        p
+            | Rejoignez la guilde de Lenra et aidez-nous à continuer à développer une plateforme éthique et open source pour optimiser la création d'applications.
+            | En devenant un sponsor GitHub, vous pouvez contribuer aux capacités de notre équipe et soutenir notre quête d'amélioration de la plateforme Lenra.
+        a.btn.primary(href="https://github.com/sponsors/lenra-io" rel="noopener") Devenir sponsor
+
+    section#len.alternate
+        h2(data-title='Découvrez notre débogueur "rubber duck"')
+            | Faites connaissance avec
+            |
+            strong Len Raccoon
+        p
+            | Len Raccoon, notre débogueur en forme de canard en plastique.
+            | Il est né en novembre 2021 de l'imagination créative de Thomas.
+            | La superbe entreprise Budsies l'a rendu réel.
+            | Il nous aide désormais quotidiennement à déboguer du code, à comprendre et résoudre des problèmes, tandis que son visage mignon et paisible nous dit "soyez confiants, expliquez-moi tout, vous allez trouver une solution"....
+        img(src="/img/team/len.jpg" alt="Len Raccoon" loading="lazy")
+
+    //- section#join.alternate
+    //-     h2(data-title="Faites partie de l'équipe de Lenra")
+    //-         | Envie de rejoindre la
+    //-         |
+    //-         strong famille
+    //-         |
+    //-         | ?
+    //-     ul
+    //-         li.colored-block
+    //-             strong CDI
+    //-             h3
+    //-                 | Nous recrutons :
+    //-                 |
+    //-                 strong Développeur back-end
+    //-             p Une courte description des informations liées va ici
+    //-             a.btn.link.lenra-icon-arrow-right(href="https://cv.lenra.io" target="_blank" rel="noopener") En savoir plus
+    //-         li.colored-block
+    //-             strong CDI
+    //-             h3
+    //-                 | Nous recrutons :
+    //-                 |
+    //-                 strong Développeur back-end
+    //-             p Une courte description des informations liées va ici
+    //-             a.btn.link.lenra-icon-arrow-right(href="https://cv.lenra.io" target="_blank" rel="noopener") En savoir plus
+    //-     img(src="/img/team/len.jpg" alt="L'équipe de Lenra" loading="lazy")
+
+    include .manifesto-footer-link.fr.pug

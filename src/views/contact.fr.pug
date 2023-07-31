@@ -1,0 +1,27 @@
+extends .layout.pug
+
+block header
+
+block content
+    header
+        +headerTitle()
+        p Entrez en contact avec nous !
+
+    section 
+        h2 Suivez-nous
+        +social()
+            
+    section
+        h2 Pour les développeurs
+        +social(true)
+
+    form
+        label(for="name") Nom
+        input#name(type="text" name="name" placeholder="Votre nom" required)
+        label(for="name") Email
+        input#email(type="email" name="email" placeholder="Votre adresse email" required)
+        label(for="name") Message
+        textarea#message(name="message" placeholder="Votre message" required)
+        button.primary Envoyer votre message
+
+    script(src='js/contact.js' defer)

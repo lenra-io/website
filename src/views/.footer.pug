@@ -33,17 +33,17 @@ footer.invert-colors
     a(href="./") Lenra
     nav
         section#financed-by
-            h3 Project financed by
+            h3= t("translation:footer.financedBy")
             a.organization(href="https://www.nouvelle-aquitaine.fr" target="_blank" rel="noopener")
                 img(src="/img/partners/NouvelleAquitaine-vertical.svg" alt="Nouvelle Aquitaine" loading="lazy")
             a.organization(href="https://www.bpifrance.fr" target="_blank" rel="noopener")
                 img(src="/img/partners/bpi.svg" alt="Bpifrance" loading="lazy")
             a.btn.primary.lenra-icon-heart(href="https://github.com/sponsors/lenra-io" rel="noopener") GitHub Sponsor
         section
-            h3 Developpers
-            a(href="https://docs.lenra.io") Documentation
-            a(href="https://dev.lenra.io") Dev platform
-            a(href="https://app.lenra.io") App platform
+            h3= t("translation:footer.developers")
+            a(href="https://docs.lenra.io")= t("translation:footer.documentation")
+            a(href="https://dev.lenra.io")= t("translation:footer.devPlatform")
+            a(href="https://app.lenra.io")= t("translation:footer.appPlatform")
         
         - const footerItems = pageList.filter(p => p.group).flatMap(p => {
         -    if (!footerGroups[p.group]) {
@@ -60,9 +60,9 @@ footer.invert-colors
             +displayFooterElement(el)
 
     ul 
-        li Follow us
+        li= t("translation:footer.socials.followUs")
             +social().app
-        li For developers
+        li= t("translation:footer.socials.developers")
             +social(true).app
     
     aside

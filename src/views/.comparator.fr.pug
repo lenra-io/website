@@ -1,24 +1,24 @@
 section#difference
-    h2(data-title="The difference")
-        | Why
+    h2(data-title="La différence")
+        | Pourquoi
         |
-        strong us
+        strong nous
         |
         | ?
-    
+
     section#lenra
-        h3(data-title="With us")
+        h3(data-title="Avec nous")
             strong Lenra
-            | , I can
+            | , je peux
         each field in competitorsFields
             p=t(`field.${field}`, {ns: "comparator"})
                 +managed("yes")
-    
+
     each competitor in competitors
         section
-            h3(data-title="With them")
+            h3(data-title="Avec eux")
                 strong=competitor.name
-                | , I can
+                | , je peux
             each field in competitorsFields
                 p=t(`field.${field}`, {ns: "comparator"})
                     |

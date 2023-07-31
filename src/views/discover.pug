@@ -25,16 +25,16 @@ block content
             |
             strong But why ?
         ul
-            li.colored-block.lenra-icon-database
+            li.colored-block.lenra-icon-database(data-action="Update")
                 h3 Data
                 p Without data, there is no app. That's why our framework starts with data. We believe that data should be simple and easy to understand. 
-            li.colored-block.lenra-icon-grid
+            li.colored-block.lenra-icon-grid(data-action="Draw UI")
                 h3 Views
                 p The views are what the user sees and interacts with. It should be clear and concise. It should be easy to use and navigate.
-            li.colored-block.lenra-icon-users
+            li.colored-block.lenra-icon-users(data-action="Trigger")
                 h3 Users
                 p They are the ones who will use our apps and benefit from them. We believe that all apps should be designed with the user in mind.
-            li.colored-block.lenra-icon-bell
+            li.colored-block.lenra-icon-bell(data-action="Modify")
                 h3 Listeners
                 p Listeners are what make an app interactive. They listen for user input and then respond accordingly.
         a.btn.primary(href="https://docs.lenra.io/getting-started.html") Getting started
@@ -102,7 +102,7 @@ block content
                     aside
                         pre.command-line(data-filter-output='> ' data-prompt='you@lenra:~$')
                             code.language-bash
-                                | lenra new your_langage your_app_name
+                                | lenra new your_langage -p your_app_name
                                 | > Cloning into 'your_app_name'...
                                 | > remote: Enumerating objects: 27, done.
                                 | > remote: Counting objects: 100% (27/27), done.

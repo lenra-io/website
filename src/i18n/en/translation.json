@@ -5,7 +5,17 @@
     "contact_us": "Contact us",
     "anyLanguage": "any language",
     "footer": {
-        "financedBy": "Project financed by"
+        "financedBy": "Project financed by",
+        "developers": "Developers",
+        "documentation": "Documentation",
+        "devPlatform": "Dev platform",
+        "appPlatform": "App platform",
+        "contact": "Contact",
+        "legal": "Legal informations",
+        "socials": {
+            "followUs": "Follow us",
+            "developers": "For developers"
+        }
     },
     "page": {
         "index": {

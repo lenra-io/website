@@ -1,0 +1,101 @@
+extends .layout.pug
+
+mixin managed(value)
+  case value 
+    when "yes"
+        span.lenra-icon-check-circle Oui
+    when "partially"
+        span.lenra-icon-tilde Partiellement
+    when "no"
+        span.lenra-icon-minus Non
+    when ""
+        span Non applicable
+    default
+        - throw new Error(`Not managed value '${value}'`)
+    
+
+block header_content
+    p
+        | Pourquoi notre solution et pas une autre ?
+        | Avec Lenra, nous nous assurons de
+        |
+        strong résoudre un problème
+        |
+        | qui est plus que présent dans notre société, le tout avec de fortes valeurs.
+
+block content
+    section#observation
+        h2(data-title="L'observation")
+            | Développer une application
+            |
+            strong multiplateforme
+            | ,
+            br
+            | qu'est-ce que cela signifie
+            |
+            strong aujourd'hui
+            |
+            | ?
+        ul
+            li.colored-block.lenra-icon-meh
+                h3 Trop de complexité
+                p
+                    | De nos jours, développer une application pour le web ou les appareils mobiles signifie utiliser divers systèmes, technologies et langages.
+            li.colored-block.lenra-icon-clock
+                h3 Trop de temps gaspillé
+                p
+                    | Cela peut être une véritable perte de temps, que ce soit lors de la création de l'application ou de son exploitation (initialisation, hébergement, gestion des données, etc.).
+            li.colored-block.lenra-icon-tool
+                h3 Trop d'outils
+                p
+                    | Un développeur n'est pas toujours à la pointe pour répondre efficacement aux divers besoins d'une application.
+                    | Généralement, il faut un outil pour chaque aspect précis de la création de l'application.
+
+    section#problem
+        h2(data-title="Le problème")
+            | La
+            |
+            strong présence excessive
+            |
+            | des grandes entreprises technologiques
+        ul
+            li.colored-block.lenra-icon-help-circle
+                h3 Problèmes éthiques
+                p
+                    | Elles dirigent leurs stratégies à travers la bourse, sans tenir compte des problèmes environnementaux, de l'éthique de la vie privée, de l'éthique des affaires.
+            li.colored-block.lenra-icon-share-2
+                h3 Submergés
+                p
+                    | Il est maintenant avéré que nos données personnelles laissent des empreintes dans le monde numérique.
+                    | Elles ont pris la tête dans nos vies, car nous dépendons tous des géants de la technologie.
+            li.colored-block.lenra-icon-database
+                h3 Insécurité des données
+                p
+                    | Un très petit groupe d'entreprises possède une énorme quantité de données sur qui nous sommes, ce que nous faisons, où nous allons, nos interactions avec les autres, sans moyen pour nous de les récupérer, de contrôler ce qui en est fait.
+                    | Leurs politiques à ce sujet sont loin d'être claires.
+
+    section#solution
+        h2(data-title="La solution")
+            | Notre
+            |
+            strong framework tout-en-un
+            |
+            | 
+        ul
+            li.colored-block.lenra-icon-arrow-up-right
+                h3 Accélérer
+                p
+                    | Accélérer le développement et la distribution des applications : environnement multiplateforme, prise en charge de l'hébergement et du déploiement, gestion des données.
+            li.colored-block.lenra-icon-book-open
+                h3 Open-source
+                p
+                    | La contribution est la clé pour créer la plateforme la plus précise possible pour les développeurs.
+                    | Cela garantit la transparence et l'amélioration continue.
+            li.colored-block.lenra-icon-logo-lenra
+                h3 Optimiser
+                p
+                    | S'attaquer aux problèmes environnementaux : optimiser l'impact environnemental des applications en optimisant les échanges réseau et en encourageant les développeurs à agir de manière économique, limiter l'obsolescence et limiter l'utilisation des données personnelles.
+
+    include .comparator.fr.pug
+
+    include .try-lenra-footer-link.fr.pug
