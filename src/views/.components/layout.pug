@@ -16,6 +16,7 @@ html(lang=language)
     meta(property="og:locale" content=language)
     - let otherLanguages = languages.filter(l => l != language);
     each l in otherLanguages
+      link(rel="alternate" hreflang=l href="/"+l+"/"+currentPage.path)
       meta(property="og:locale:alternate" content=l)
     link(rel="icon" type="image/png" href="favicon.png")
     link(rel="apple-touch-icon" href="img/appicon.png")
@@ -39,7 +40,7 @@ html(lang=language)
   body
     nav.translate
       each l in otherLanguages
-        a.btn.link(href="/"+l+"/"+currentPage.path lang=l)= isoToEmoji(l)
+        a.btn.small(href="/"+l+"/"+currentPage.path lang=l)= isoToEmoji(l)
     include header.pug
     main
       block content

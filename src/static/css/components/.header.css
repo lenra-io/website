@@ -1,3 +1,19 @@
+body>nav.translate {
+    position: fixed;
+    top: 0rem;
+    right: max(5%, calc((100vw - 82.5rem) / 2));
+    display: flex;
+    column-gap: 0.5rem;
+    z-index: 1000;
+}
+
+body>nav.translate>a.btn {
+    margin: 0;
+    min-width: 2.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
 body>header {
     position: relative;
     text-align: left;
