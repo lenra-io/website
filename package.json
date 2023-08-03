@@ -16,7 +16,6 @@
             "fr"
         ],
         "translationStrategy": "subdir",
-        "enableDefaultLanquage": true,
         "nginx": {
             "additionalContentSecurityPolicies": {
                 "default-src": [
