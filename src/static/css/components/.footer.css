@@ -40,7 +40,7 @@ body>footer>nav>section {
 }
 
 body>footer>nav>section#financed-by {
-    --size: 4.5rem;
+    --size: 5rem;
     flex-basis: 20rem;
     display: initial;
     width: auto;
@@ -58,7 +58,7 @@ body>footer>nav>section#financed-by>a.organization {
 }
 
 body>footer>nav>section#financed-by>a.organization+a.organization {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
 }
 
 body>footer>nav>section#financed-by>a.organization::after {
@@ -141,7 +141,6 @@ body>footer>aside>#wcb.carbonbadge {
     }
 
     body>footer>nav>section#financed-by {
-        --size: 5.5rem;
         flex-grow: 1;
         flex-basis: 19.5rem;
     }
@@ -150,6 +149,7 @@ body>footer>aside>#wcb.carbonbadge {
 @media (min-width: 50rem) {
     body>footer>nav>section#financed-by {
         flex-basis: 25rem;
+        --size: 6rem;
     }
 
     body>footer>aside {
