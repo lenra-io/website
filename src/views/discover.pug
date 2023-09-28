@@ -31,21 +31,21 @@ block content
                 p Without data, there is no app. That's why our framework starts with data. We believe that data should be simple and easy to understand. 
             li.colored-block.lenra-icon-grid
                 h3 Views
-                p The views are what the user sees and interacts with. It should be clear and concise. It should be easy to use and navigate.
+                p The views are what is sent to the client app. It should be clear and concise. You define in the views what the user will see and interact with.
             li.colored-block.lenra-icon-users
                 h3 Users
                 p They are the ones who will use our apps and benefit from them. We believe that all apps should be designed with the user in mind.
             li.colored-block.lenra-icon-bell
                 h3 Listeners
-                p Listeners are what make an app interactive. They listen for user input and then respond accordingly.
-        a.btn.primary(href="https://docs.lenra.io/getting-started.html") Getting started
+                p Listeners are what make an app interactive. They listen for user input and adapt the data accordingly.
+        a.btn.primary(href="https://docs.lenra.io/getting-started/principles.html") Getting started
 
     section#how-it-works
         h2(data-title='How it works')
             | How to install, create and push a
             |
             strong Lenra project
-        p So you've decided to create an app. That's great! But before you can start coding and designing, you need to set up the back end.
+        p So you've decided to create an app. That's great! But before you can start coding, you need to set up your environment.
         section.tab.pages
             input#download(type="radio" name="tab" checked)
             label(for="download") Download
@@ -97,19 +97,15 @@ block content
                             |
                             | which will be used to retrieve a project template from github. We already have several models available,
                             |
-                            a(href="https://github.com/orgs/lenra-io/repositories?q=&type=template&language=&sort=" rel="noopener") check out our github to see more
+                            a(href="https://github.com/search?q=topic%3Alenra+topic%3Atemplate&sort=stargazers&type=repositories" rel="noopener") find them all on GitHub
                             | . Then all you have to do is code!
-                        a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io/lenra_cli#how-to-use-it" rel="noopener") Discover all the possibilities with Lenra CLI
+                        a.btn.link.lenra-icon-arrow-right(href="https://docs.lenra.io/references/cli/" rel="noopener") Discover all the possibilities with Lenra CLI
                     aside
                         pre.command-line(data-filter-output='> ' data-prompt='you@lenra:~$')
                             code.language-bash
-                                | lenra new your_langage your_app_name
-                                | > Cloning into 'your_app_name'...
-                                | > remote: Enumerating objects: 27, done.
-                                | > remote: Counting objects: 100% (27/27), done.
-                                | > remote: Compressing objects: 100% (25/25), done.
-                                | > remote: Total 27 (delta 0), reused 15 (delta 0), pack-reused 0
-                                | > Unpacking objects: 100% (27/27), 14.18 KiB | 1.29 MiB/s, done.
+                                | lenra new your_langage --path your_app_name
+                                | > Using template: https://github.com/lenra-io/template-javascript.git
+                                | > ✔ Project created
                                 | code your_app_name/
 
                 li
@@ -122,12 +118,13 @@ block content
                             code.language-javascript
                                 | function home() {
                                 |    return {
-                                |        type: “flex”,
-                                |        direction: “vertical”,
-                                |        spacing: 32,
-                                |        mainAxisAlignement: “spaceEvenly”,
-                                |        crossAxisAlignement: “center”,
-                                |        children: [
+                                |        "myValue": 42,
+                                |        "onIncrement": {
+                                |            "_type": "listener",
+                                |            "name": "increment"
+                                |        }
+                                |    }
+                                | }
                         pre.command-line(data-prompt='you@lenra:~/your_app_name$')
                             code.language-bash
                                 | lenra dev
@@ -135,7 +132,7 @@ block content
                     section
                         h3 Push your app to a Git repository and tadaaa
                         p Is your app stable? Are you satisfied with what you have done? All you have to do is push your application to a Git repository, create an account on the Lenra back-office, configure your directory and present everything to your customers!
-                        a.btn.link.lenra-icon-arrow-right(href="https://dev.lenra.io") Join the beta
+                        a.btn.link.lenra-icon-arrow-right(href="https://dev.lenra.io") Deploy a Lenra app
                     aside.arrows
                         img(src="img/github-project.jpg" alt="A Lenra app source code on GitHub")
                         img(src="img/capture/back-office.jpg" alt="Lenra's dev back-office")
@@ -211,7 +208,7 @@ block content
                     h4.lenra-icon-activity Analytics
                     p
                         | Observe the usage habits of your users without breaking their privacy.
-            a.btn.primary(href="https://dev.lenra.io") Join the beta
+            a.btn.primary(href="https://dev.lenra.io") Deploy a Lenra app
 
     include .manifesto-footer-link.pug
 
