@@ -26,6 +26,10 @@
             "group": "company"
         },
         {
+            "name": "pricing",
+            "group": "company"
+        },
+        {
             "name": "contact",
             "group": "contact",
             "notOnTop": true

@@ -42,6 +42,10 @@
             "title": "Green Tech is the new tech",
             "description": "This should be the standard for anyone starting a digital project. Not because greenwashing is trending, but because climate change tells us it's time to act. Strongly. Here're some insights on how you act by choosing Lenra."
         },
+        "pricing": {
+            "name": "Pricing",
+            "description": "Start for free and upgrade for a subsription when your app is ready for production."
+        },
         "team": {
             "name": "Team",
             "title": "Meet our amazing team !",
