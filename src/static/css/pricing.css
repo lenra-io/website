@@ -1,0 +1,85 @@
+/** Handle filtering **/
+.tab.filter>ul>li {
+    display: flex;
+}
+
+.tab.filter>ul>li .monthly,
+.tab.filter>ul>li .yearly {
+    display: none;
+}
+
+.tab.filter>input#monthly:checked~ul>li .monthly,
+.tab.filter>input#yearly:checked~ul>li .yearly {
+    display: grid;
+}
+
+
+/** Style **/
+.tab.filter>ul {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 0;
+    gap: 4rem;
+}
+
+.tab.filter>ul>li {
+    flex-direction: column;
+    flex: 1;
+    padding: 1.5rem;
+    border: 1px solid;
+    border-radius: 1rem;
+    max-width: 25rem;
+    min-width: 17rem;
+    overflow: hidden;
+}
+
+.tab.filter>ul>li>h3 {
+    padding-bottom: 0;
+}
+
+.tab.filter>input#monthly:checked~ul>li>h4.monthly,
+.tab.filter>input#yearly:checked~ul>li>h4.yearly {
+    display: block;
+}
+
+.tab.filter>ul>li>h4 {
+    height: 6rem;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.tab.filter>ul>li>h4>strong {
+    font-size: 2.5rem;
+}
+
+.tab.filter>ul>li>h4>span {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    text-decoration: line-through;
+}
+
+.tab.filter>ul>li>p {
+    height: 3rem;
+}
+
+.tab.filter>ul>li>ul {
+    padding: 1rem 0;
+}
+
+.tab.filter>ul>li>ul>li {
+    display: flex;
+    text-align: left;
+    height: 3rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.tab.filter>ul>li>ul>li::before {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.tab.filter>ul>li>ul>li.lenra-icon-check-circle::before {
+    color: var(--primary-color);
+}
