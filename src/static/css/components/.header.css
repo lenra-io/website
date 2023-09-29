@@ -117,7 +117,7 @@ body>header>p>a {
     }
 }
 
-@media (min-width: 50rem) {
+@media (min-width: 55rem) {
     body>header {
         padding-bottom: 5rem;
         grid-template-columns: auto 1fr 1fr;

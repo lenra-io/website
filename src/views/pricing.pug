@@ -1,0 +1,54 @@
+extends .layout.pug
+
+block header 
+    h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
+    p
+        | At Lenra we believe in simplicity.
+        | That's why we have a simple and clear pricing model.
+        | You can develop, test, deploy and use your application for free.
+        | If you want to share it with the world, you will have to suscribe.
+        //- | You pay for what you use but you won't have suprise on your bills at the end of the month if you don't want to.
+
+block content
+    section
+        h2(data-title='Our pricing')
+            | Choose the plan that
+            |
+            strong suits
+            |
+            | you best
+        p The prices are in euros and without taxes.
+        section.tab.filter
+            input#monthly(type="radio" name="tab" checked)
+            label(for="monthly") Monthly
+            input#yearly(type="radio" name="tab")
+            label(for="yearly") Yearly
+            ul
+                li.plan.invert-colors
+                    h3 Free plan
+                    h4
+                        strong Free
+                    p
+                        | Create, test and deploy your application for free.
+                    ul
+                        li.lenra-icon-tilde Invite 2 users max
+                        li.lenra-icon-tilde Scale up to 1 container
+                    a.btn.primary(href="https://docs.lenra.io/getting-started/") Start for free
+                li.plan.invert-colors
+                    h3 Premium plan
+                    h4.monthly
+                        strong 4 €
+                        |
+                        | / month
+                        span 8 € / month
+                    h4.yearly
+                        strong 40 €
+                        |
+                        | / year
+                        span 80 € / year
+                    p
+                        | Share your application with the world.
+                    ul
+                        li.lenra-icon-check-circle Invite many users or make your application public
+                        li.lenra-icon-check-circle Autoscaling up to 5 containers
+                    a.btn.primary(href="https://dev.lenra.io/") Suscribe now

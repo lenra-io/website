@@ -253,7 +253,7 @@ a[href="/"]::after {
         --text-contrast-color-data: var(--black-data);
         --logo-horizontal-image: var(--logo-horizontal-image-white);
         --logo-vertical-image: var(--logo-vertical-image-white);
-        --logo-image: var(--logo-horizontal-image);
+        --logo-image: var(--logo-vertical-image);
     }
 
     .invert-colors {
