@@ -1,87 +1,103 @@
 {
-    "login": "Login",
-    "documentation": "Documentation",
-    "register": "Register on Lenra",
-    "contact_us": "Contact us",
-    "programmingLanguages": [
-        "JavaScript",
-        "TypeScript",
-        "Rust",
-        "Elixir",
-        "C++",
-        "C#",
-        "Java",
-        "Python",
-        "Ruby",
-        "Brainfuck"
+    "title": "Lenra",
+    "pageList": [
+        {
+            "name": "index",
+            "path": "/"
+        },
+        {
+            "name": "discover",
+            "group": "platform"
+        },
+        {
+            "name": "why-lenra",
+            "group": "platform"
+        },
+        {
+            "name": "usecases",
+            "group": "platform"
+        },
+        {
+            "name": "manifesto",
+            "group": "company"
+        },
+        {
+            "name": "team",
+            "group": "company"
+        },
+        {
+            "name": "pricing",
+            "group": "company"
+        },
+        {
+            "name": "contact",
+            "group": "contact",
+            "notOnTop": true
+        },
+        {
+            "name": "legal",
+            "group": "contact",
+            "notOnTop": true
+        }
     ],
-    "anyLanguage": "any language",
-    "page": {
-        "index": {
-            "name": "Lenra",
-            "title": "Optimize your app creation",
-            "description": "Lenra is an open source framework to create your app using any language, and deploy it without any Ops scale, built on ethical values."
+    "competitorsFields": [
+        "anyLanguage",
+        "frontEnd",
+        "allOS",
+        "backEnd",
+        "autoscaling",
+        "optimized",
+        "encourageOptimizing",
+        "gdpr"
+    ],
+    "competitors": [
+        {
+            "name": "MeteorJS",
+            "anyLanguage": "no",
+            "opensource": "yes",
+            "frontEnd": "yes",
+            "allOS": "partially",
+            "backEnd": "yes",
+            "autoscaling": "no",
+            "optimized": "no",
+            "encourageOptimizing": "no",
+            "gdpr": "no"
         },
-        "discover": {
-            "name": "Discover",
-            "title": "Discover Lenra",
-            "description": "Lenra is an open source framework to create your app using any language, and deploy it without any Ops scale, built on ethical values."
+        {
+            "name": "Supabase",
+            "anyLanguage": "partially",
+            "opensource": "yes",
+            "frontEnd": "no",
+            "allOS": "",
+            "backEnd": "yes",
+            "autoscaling": "partially",
+            "optimized": "no",
+            "encourageOptimizing": "no",
+            "gdpr": "no"
         },
-        "why-lenra": {
-            "name": "Why Lenra",
-            "title": "Why should I use Lenra ?",
-            "description": "Why our solution and not another? With Lenra, we make sure to solve a problem that is more than present in our society, all with strong values."
+        {
+            "name": "Firebase",
+            "anyLanguage": "no",
+            "opensource": "no",
+            "frontEnd": "no",
+            "allOS": "",
+            "backEnd": "yes",
+            "autoscaling": "partially",
+            "optimized": "partially",
+            "encourageOptimizing": "no",
+            "gdpr": "no"
         },
-        "usecases": {
-            "name": "Use cases",
-            "title": "The main Lenra use cases",
-            "description": "Yet another \"great\" app development framework, but why should I use it ?"
-        },
-        "manifesto": {
-            "name": "Manifesto",
-            "title": "Green Tech is the new tech",
-            "description": "This should be the standard for anyone starting a digital project. Not because greenwashing is trending, but because climate change tells us it's time to act. Strongly. Here're some insights on how you act by choosing Lenra."
-        },
-        "pricing": {
-            "name": "Pricing",
-            "description": "Start for free and upgrade for a subsription when your app is ready for production."
-        },
-        "team": {
-            "name": "Team",
-            "title": "Meet our amazing team !",
-            "description": "Learn more about the people behind the scenes."
-        },
-        "contact": {
-            "name": "Contact us",
-            "title": "Do you have any questions ?",
-            "titleHtml": "Do you have any <strong>questions</strong> ?",
-            "description": "Let's get in touch with us !"
-        },
-        "legal": {
-            "name": "Legal informations",
-            "description": "The Lenra platform and websites legal informations."
+        {
+            "name": "AWS Lambda",
+            "anyLanguage": "yes",
+            "opensource": "no",
+            "frontEnd": "no",
+            "allOS": "",
+            "backEnd": "yes",
+            "autoscaling": "yes",
+            "optimized": "no",
+            "encourageOptimizing": "no",
+            "gdpr": "no"
         }
-    },
-    "pageGroup": {
-        "platform": {
-            "name": "Platform"
-        },
-        "company": {
-            "name": "Company"
-        },
-        "contact": {
-            "name": "Contact"
-        }
-    },
-    "competitorsFieldsText": {
-        "anyLanguage": "Code using any language",
-        "opensource": "Use an opensource solution",
-        "frontEnd": "Manage the front end",
-        "allOS": "Use my app on any operating system",
-        "backEnd": "Manage the back end",
-        "autoscaling": "Have an autoscalable environment",
-        "optimized": "Consume a minimum of data",
-        "encourageOptimizing": "Be accompanied to optimize my resources",
-        "gdpr": "Be accompanied to comply with European law (GDPR, INR, etc.)"
-    }
+    ]
 }
