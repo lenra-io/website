@@ -21,24 +21,16 @@ main>section {
 
     nav {
         display: flex;
+
         justify-content: center;
-        background-color: #333;
-        padding: 1rem;
-    }
 
-    nav a {
-        color: white;
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        margin: 0 0.5rem;
-    }
-
-    nav a:hover {
-        background-color: #555;
-    }
-
-    nav a.active {
         background-color: #007BFF;
-    }
 
-}
+        padding: 1rem;
+
+        font-family: 'Arial', sans-serif;
+
+        border-radius: 5px;
+
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
