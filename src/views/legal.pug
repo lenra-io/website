@@ -1,78 +1,65 @@
 extends .layout.pug
 
 block header 
-    h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
-    p
-        | The
-        |
-        a(href="https://www.lenra.io") www.lenra.io
-        | ,
-        |
-        a(href="https://app.lenra.io") app.lenra.io
-        | ,
-        |
-        a(href="https://dev.lenra.io") dev.lenra.io
-        |
-        | and
-        |
-        a(href="https://docs.lenra.io") docs.lenra.io
-        | 
-        | websites are edited by the Lenra company.
+    section.hero
+        div.hero-content
+            h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
+            p
+                | Les sites
+                |
+                a(href="https://www.lenra.io") www.lenra.io
+                | ,
+                |
+                a(href="https://app.lenra.io") app.lenra.io
+                | ,
+                |
+                a(href="https://dev.lenra.io") dev.lenra.io
+                | et
+                |
+                a(href="https://docs.lenra.io") docs.lenra.io
+                | sont édités par la société Lenra.
+        figure.hero-visual
+            img(src="img/undraw/undraw_security_re_a2rk.svg" alt="Illustration représentant la conformité" loading="lazy")
 
 block content
     section
-        h2 Owner
-        h3 Lenra
-        p SAS with a capital of 1030 €
+        h2(data-title="Editeur") Lenra
+        p Société par actions simplifiée au capital de 1 030 €
         p RCS La Rochelle B 812 357 317
-        p 
-            strong APE code
-            |
-            | 62009Z
-        p 
-            strong Intracommunity VAT
-            |
-            | FR 22 812 357 317
         p
-            strong Head office
-            |
-            | 1 rue Fleming 17000 La Rochelle FRANCE
-        p 
-            strong President
-            |
-            | Thomas Da Rocha
+            strong Code APE
+            |  : 6200Z
         p
-            strong Phone number
-            |
-            |
+            strong TVA intracommunautaire
+            |  : FR 22 812 357 317
+        p
+            strong Siège social
+            |  : 1 rue Fleming 17000 La Rochelle – France
+        p
+            strong Président
+            |  : Thomas Da Rocha
+        p
+            strong Téléphone
+            |  :
             a(href="tel:+33767673626") +33 7 67 67 36 26
 
     section
-        h2 Hosted by
-        h3 OVHCloud
-        p SAS with a capital of 10 174 560 €
+        h2(data-title="Hébergeur") OVHcloud
+        p SAS au capital de 10 174 560 €
         p RCS Lille Métropole 424 761 419 00045
-        p 
-            strong APE code
-            |
-            | 2620Z
-        p 
-            strong Intracommunity VAT
-            |
-            | FR 22 424 761 419
         p
-            strong Head office
-            |
-            | 2 rue Kellermann - 59100 Roubaix - France
-        p 
-            strong Chairman
-            |
-            | Michel Paulin
-        p OVH SAS is a subsidiary of OVH Groupe SA, a company registered in the Lille Trade and Companies Register under number 537 407 926 and located at 2, rue Kellermann, 59100 Roubaix.
+            strong Code APE
+            |  : 2620Z
+        p
+            strong TVA intracommunautaire
+            |  : FR 22 424 761 419
+        p
+            strong Siège social
+            |  : 2 rue Kellermann — 59100 Roubaix – France
+        p OVH SAS est une filiale d'OVH Groupe SA, immatriculée à Lille sous le numéro 537 407 926, 2 rue Kellermann, 59100 Roubaix.
 
     section
-        h2 Credits
-        h3 Design, illustrations and icons
+        h2(data-title="Crédits") Design, illustrations & icônes
         ul
             li 
                 a(href="https://www.ipsoon.fr" target="_blank" rel="noopener") Ipsoon

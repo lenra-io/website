@@ -1,0 +1,140 @@
+/* Intro section */
+section.intro {
+    text-align: left;
+    max-width: 32rem;
+}
+
+section.intro>h1 {
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+section.intro>h1>strong {
+    color: rgb(var(--primary-color-data));
+}
+
+section.intro>h2.subtitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+section.intro>p {
+    margin-left: 0;
+    line-height: 1.6;
+}
+
+section.intro>ul {
+    margin: 1rem 0;
+    padding-left: 1.25rem;
+    list-style: disc;
+    line-height: 1.6;
+}
+
+section.intro>ul>li {
+    margin-top: 0.25rem;
+}
+
+/* Team section */
+section.team {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+section.team>h2 {
+    font-size: 1.75rem;
+}
+
+section.team>h2>strong {
+    color: rgb(var(--primary-color-data));
+}
+
+section.team>p {
+    --text-opacity: 0.7;
+}
+
+section.team>ul.members {
+    margin-top: 2.5rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    list-style: none;
+    padding: 0;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section.team>ul.members>li {
+    background-color: rgba(var(--background-contrast-color-data), 0.08);
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.team>ul.members>li>.name {
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+/* Values section */
+section.values {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: left;
+}
+
+section.values>.text>h2 {
+    font-size: 1.75rem;
+    padding-bottom: 1.5rem;
+}
+
+section.values>.text>h2>strong:first-of-type {
+    color: rgb(var(--primary-color-data));
+}
+
+section.values>.text>h2>strong:last-of-type {
+    color: rgb(var(--green-pulse-data));
+}
+
+section.values>.text>p {
+    margin-left: 0;
+    line-height: 1.6;
+}
+
+section.values>.text>h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    padding-bottom: 0.25rem;
+    margin-top: 1.5rem;
+}
+
+section.values>figure {
+    align-self: center;
+    max-width: 18rem;
+}
+
+section.values>figure>img {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 62rem) {
+    section.values {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    section.values>.text {
+        flex: 1 1 28rem;
+    }
+
+    section.values>figure {
+        flex: 0 0 18rem;
+    }
+}

@@ -24,6 +24,34 @@ main>section>nav {
     text-align: center;
 }
 
+body>header>section.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+body>header>section.hero>.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+body>header>section.hero>.hero-content>nav.cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+body>header>section.hero>.hero-visual {
+    align-self: center;
+    width: min(20rem, 90%);
+}
+
+body>header>section.hero>.hero-visual>img {
+    width: 100%;
+    height: auto;
+}
+
 h2[data-title]::before,
 h3[data-title]::before {
     --text-opacity: 0.6;
@@ -298,6 +326,21 @@ h4[data-emoji]+p {
 }
 
 @media (min-width: 50rem) {
+    body>header>section.hero {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    body>header>section.hero>.hero-content {
+        flex: 1 1 24rem;
+    }
+
+    body>header>section.hero>.hero-visual {
+        flex: 1 1 18rem;
+        max-width: 24rem;
+    }
+
     /*********** .alternate ************/
     .alternate {
         --text-width: 60%;
@@ -398,4 +441,34 @@ h4[data-emoji]+p {
     .fixed-content {
         --content-space: 5rem;
     }
+}
+
+@media (min-width: 68rem) {
+    body>header>section.hero>.hero-content>nav.cta {
+        gap: 1.5rem;
+    }
+}
+
+/* Utilities */
+.text-primary {
+    color: rgb(var(--primary-color-data));
+}
+
+/* Common Hero Styles */
+.hero-marketing {
+    text-align: center;
+    padding: 4rem 5%;
+}
+
+.hero-marketing h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-marketing p {
+    max-width: 50rem;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: rgba(var(--white-data), 0.8);
 }

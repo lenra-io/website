@@ -1,0 +1,96 @@
+extends .layout.pug
+
+block header
+    section.hero
+        div.hero-content
+            h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
+            nav.options
+                span.active Application
+                span Web app
+                span Site-web
+                span API
+
+block content
+    section.app-dev
+        div.content-wrapper
+            div.text-column
+                h2 Développement d'application mobile
+                p Notre équipe d'experts en développement d'applications vous aide à créer une application mobile ou de bureau personnalisée pour votre entreprise. Nous proposons des services de développement pour les principales plateformes telles qu'iOS, Android, Windows, macOS et Linux. Nous sommes en mesure de gérer l'ensemble du processus de développement, de la conception à la mise en œuvre, en passant par les tests et le lancement, nous sommes en mesure de réaliser tous types d'applications : marketplace, fitness, finances, jeux, réseau social, productivité et organisation, santé, livraison, e-commerce etc...
+                p.highlight Les + : une expertise approfondie dans la conception et le développement de ces applications, ainsi qu'une compréhension approfondie des principales plateformes.
+                nav.platforms
+                    img(src="img/placeholder-icon.svg" alt="iOS" loading="lazy")
+                    img(src="img/placeholder-icon.svg" alt="Android" loading="lazy")
+                    img(src="img/placeholder-icon.svg" alt="Windows" loading="lazy")
+                    img(src="img/placeholder-icon.svg" alt="macOS" loading="lazy")
+                    img(src="img/placeholder-icon.svg" alt="Linux" loading="lazy")
+            div.logos-column
+                figure
+                    img(src="img/placeholder.svg" alt="LENRA" loading="lazy")
+                    figcaption LENRA
+                figure
+                    img(src="img/placeholder.svg" alt="FLUTTER" loading="lazy")
+                    figcaption FLUTTER
+
+    section.services
+        div.grid
+            article.formation
+                h3 Formation
+                p Notre équipe d'experts accompagne la nouvelle génération de développeurs à travers des formations complètes et adaptées aux exigences du marché. Nous intervenons au sein d'organismes agréés Qualiopi et d'écoles d'ingénieurs pour transmettre notre savoir-faire technique et méthodologique dans le développement d'applications web et mobiles.
+                p Nos formateurs, issus du terrain, partagent leur expérience à travers des programmes alliant théorie et pratique, pour permettre aux apprenants de maîtriser les technologies les plus récentes et de développer des compétences concrètes, directement applicables en entreprise.
+                p.highlight Les + : une expertise pédagogique éprouvée, des contenus de formation actualisés en permanence, et une approche orientée projet favorisant l'autonomie et la réussite professionnelle des développeurs formés.
+                nav.logos
+                    img(src="img/placeholder.svg" alt="Qualiopi" loading="lazy")
+            article.regie
+                h3 Régie
+                p Notre équipe met à votre disposition des développeurs expérimentés pour renforcer vos équipes techniques sur des missions en régie. Que ce soit pour un besoin ponctuel ou un accompagnement à long terme, nous vous apportons des profils qualifiés capables de s'intégrer rapidement à votre environnement et de contribuer efficacement à la réussite de vos projets.
+                p Nos experts interviennent sur l'ensemble du cycle de développement — conception, intégration, tests, déploiement et maintenance — en assurant une collaboration fluide avec vos équipes internes et une qualité de prestation conforme à vos exigences.
+                p.highlight Les + : une sélection rigoureuse des profils selon vos besoins, une grande réactivité dans la mise à disposition des ressources, et une expertise technique couvrant un large éventail de technologies et de domaines d'activité.
+                nav.logos
+                    img(src="img/placeholder.svg" alt="Jira" loading="lazy")
+                    img(src="img/placeholder.svg" alt="GitHub" loading="lazy")
+
+    section.stack
+        h2 Des outils clés pour votre #[strong performance]
+        ul.tools-grid
+            li
+                img(src="img/placeholder-icon.svg" alt="LENRA" loading="lazy")
+                span LENRA
+            li
+                img(src="img/placeholder-icon.svg" alt="FLUTTER" loading="lazy")
+                span FLUTTER
+            li
+                img(src="img/placeholder-icon.svg" alt="REACT" loading="lazy")
+                span REACT
+            li
+                img(src="img/placeholder-icon.svg" alt="LESTA" loading="lazy")
+                span LESTA
+            li
+                img(src="img/placeholder-icon.svg" alt="SPRING BOOT" loading="lazy")
+                span SPRING BOOT
+            li
+                img(src="img/placeholder-icon.svg" alt="EXPRESS" loading="lazy")
+                span EXPRESS
+            li
+                img(src="img/placeholder-icon.svg" alt="PHOENIX" loading="lazy")
+                span PHOENIX
+            li
+                img(src="img/placeholder-icon.svg" alt="POSTGRESQL" loading="lazy")
+                span POSTGRESQL
+            li
+                img(src="img/placeholder-icon.svg" alt="MONGODB" loading="lazy")
+                span MONGODB
+            li
+                img(src="img/placeholder-icon.svg" alt="GITLAB CI" loading="lazy")
+                span GITLAB CI
+            li
+                img(src="img/placeholder-icon.svg" alt="GITHUB ACTIONS" loading="lazy")
+                span GITHUB ACTIONS
+            li
+                img(src="img/placeholder-icon.svg" alt="DOCKER" loading="lazy")
+                span DOCKER
+            li
+                img(src="img/placeholder-icon.svg" alt="DOCKER COMPOSE" loading="lazy")
+                span DOCKER COMPOSE
+            li
+                img(src="img/placeholder-icon.svg" alt="KUBERNETES" loading="lazy")
+                span KUBERNETES

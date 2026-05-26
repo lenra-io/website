@@ -1,0 +1,52 @@
+extends .layout.pug
+
+block header
+
+block content
+    section.intro
+        h1
+            | Découvrez 
+            strong Lenra
+        h2.subtitle Développons pour vous comme pour nous
+        p
+            | Lenra, c'est une aventure commencée en 2015 à La Rochelle, avec des projets internes ambitieux qui nécessitent un développement constant.
+        p
+            | Pour autofinancer cette R&D, nous nous sommes spécialisés dans les missions suivantes :
+        ul
+            li Développer des applications web et mobile pour des clients extérieurs tout en leur faisant profiter des expériences et des innovations acquises en interne.
+            li Avoir en régie des membres d'équipe expert dans de grandes entreprises.
+            li Transmettre notre savoir et notre expertise en dispensant des formations auprès d'organismes reconnus ou d'écoles d'ingénieurs.
+        p
+            | N'hésitez pas à faire un tour sur nos produits et réalisations ou à nous contacter pour tout projet que vous avez.
+
+    section.team
+        h2
+            | La 
+            strong team
+            |  Lenra
+        p Notre équipe est composée de développeurs passionnés et expérimentés.
+        ul.members
+            each member in ['Adrien', 'Flavien', 'Jonas', 'Ludo', 'Max', 'Thomas']
+                li
+                    span.name= member
+
+    section.values
+        div.text
+            h2
+                | Agence 
+                strong éthique
+                |  & 
+                strong responsable
+            p
+                | Chez Lenra, nous croyons en la Responsabilité Sociale des Entreprises et nous intégrons des pratiques durables et éthiques dans tous nos projets. Nous travaillons avec des partenaires qui partagent nos valeurs et nous cherchons constamment à améliorer nos pratiques pour contribuer positivement à notre environnement et notre société.
+            h3 Intégrité
+            p
+                | Lenra s'engage à respecter les normes éthiques dans toutes ses activités, à être honnête et transparente.
+            h3 Respect de la vie privée
+            p
+                | Lenra s'engage à protéger la vie privée de ses utilisateurs et à respecter les règles en matière de protection des données personnelles.
+            h3 Développement durable
+            p
+                | Lenra s'engage à utiliser des technologies et des pratiques de développement durables pour minimiser l'impact environnemental de son activité.
+        figure
+            img(src="img/undraw/undraw_nature.svg" alt="Illustration représentant la nature" loading="lazy")

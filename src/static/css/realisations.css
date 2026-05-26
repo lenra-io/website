@@ -1,0 +1,60 @@
+/* Realisations Grid */
+section.realisations {
+    padding: 2rem 5% 6rem;
+}
+
+section.realisations ul.grid {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 65rem;
+}
+
+section.realisations ul.grid li {
+    background-color: white;
+    border-radius: 0.25rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    transition: transform 0.2s ease;
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+section.realisations ul.grid li:hover {
+    transform: translateY(-5px);
+}
+
+section.realisations ul.grid li img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.2s ease;
+    opacity: 0.8;
+}
+
+section.realisations ul.grid li:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+@media (min-width: 40rem) {
+    section.realisations ul.grid li {
+        flex: 0 0 calc(50% - 0.75rem);
+        width: calc(50% - 0.75rem);
+    }
+}
+
+@media (min-width: 60rem) {
+    section.realisations ul.grid li {
+        flex: 0 0 calc((100% - 3rem) / 3);
+        width: calc((100% - 3rem) / 3);
+    }
+}

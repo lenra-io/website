@@ -1,0 +1,36 @@
+extends .layout.pug
+
+block header
+    section.hero.hero-marketing
+        div.hero-content
+            h1 Nos #[span.text-primary produits]
+            p
+                | Lenra, c'est aussi des solutions développées en interne qui vous sont proposées afin d'améliorer la qualité de vos projets et optimiser leur organisation
+
+block content
+    section.products
+        ul
+            li
+                div.visual
+                    img.logo(src="img/logo/horizontal-white.svg" alt="Lenra" loading="lazy")
+                    span.badge FRAMEWORK
+                div.content
+                    h2 #[span.text-primary Optimisez] la création de vos app
+                    p
+                        | 🚀 Pas facile quand il faut en plus de cela s'assurer que la traduction technique de votre cahier des charges est conforme à vos attentes alors que le monde du développement informatique ne vous ai pas familier.
+            li
+                div.visual
+                    img.logo(src="img/logo/horizontal-white.svg" alt="Lenra" loading="lazy")
+                    span.badge DOFIGEN
+                div.content
+                    h2 #[span.text-primary Simplifiez] la conteneurisation de vos idées !
+                    p
+                        | 🐳 Dofigen, outil gratuit, qui simplifie la création de Dockerfiles pour les DevOps en intégrant automatiquement les bonnes pratiques de sécurité. Cet outil open source, utilisant YAML ou JSON, permet de générer rapidement des Dockerfiles optimisés, réduisant le temps de build.
+            li
+                div.visual
+                    img.logo(src="img/logo/horizontal-white.svg" alt="Lenra" loading="lazy")
+                    span.badge PROJECT.IA
+                div.content
+                    h2 #[span.text-primary Gérez] intelligemment vos projets
+                    p
+                        | 📁 Un assistant de gestion de projet basé sur l'IA qui aide à créer et organiser des user stories, tâches et sections de projet.

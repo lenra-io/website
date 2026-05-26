@@ -1,0 +1,43 @@
+extends .layout.pug
+
+block header
+    section.hero
+        div.hero-content
+            h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
+            div.content-wrapper
+                div.text-column
+                    p.emoji 🎯 Un projet d'application web ou mobile c'est beaucoup de choses à la fois.
+                    ul.highlights
+                        li Trouver l'équilibre entre fonctionnalités et design tout en respectant un budget fixé.
+                        li Identifier clairement le public cible (particuliers, entreprises, collectivités, etc.) et ses habitudes pour être sûr d'avoir le bon message.
+                        li Être visible parmi la quantité d'offres existantes ou réussir à mettre en avant l'élément d'innovation qui va faire la différence.
+                    p Pas facile quand il faut en plus de cela s'assurer que la traduction technique de votre cahier des charges est conforme à vos attentes alors que le monde du développement informatique ne vous ai pas familier.
+                    p Chez Lenra, on a réfléchi à cette question avec nos clients et en s'appuyant sur notre expérience, nous avons co-créer avec eux des ateliers permettant de guider et d'accompagner les porteurs de projets dans leur démarche.
+                    p Ces ateliers portés par des outils simples et ludiques sont une véritable passerelle, entre vous et nous, au service de la qualité de développement de votre projet.
+                    nav.tools-icons
+                        span.tool-icon.discord
+                            img(src="img/icons/discord.svg" alt="Discord" loading="lazy")
+                        span.tool-icon.figma
+                            img(src="img/icons/figma.svg" alt="Figma" loading="lazy")
+                div.cards-column
+                    div.carousel-box
+                        span Carrousel automatique
+                    figure.pitch-card
+                        img(src="img/placeholder.svg" alt="Pitch minute illustration" loading="lazy")
+                        figcaption Pitch minute
+
+block content
+    section.workshops
+        ul
+            li
+                figure
+                    img(src="img/placeholder.svg" alt="Illustration Impact Map" loading="lazy")
+                h3 Impact Map
+            li
+                figure
+                    img(src="img/placeholder.svg" alt="Illustration Priorisation" loading="lazy")
+                h3 Priorisation des besoins
+            li
+                figure
+                    img(src="img/placeholder.svg" alt="Illustration Scrum Board" loading="lazy")
+                h3 Scrum Board

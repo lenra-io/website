@@ -1,0 +1,33 @@
+extends .layout.pug
+
+block header
+    section.hero.hero-marketing
+        div.hero-content
+            h1 Nos #[span.text-primary réalisations]
+            p
+                | Qu'il s'agisse de missions de création d'applications, d'API, de site internet, de régie ou encore de formation ; de nombreux partenaires nous ont fait et nous font confiance !
+
+block content
+    -
+        const partners = [
+            { name: 'France Travail', img: 'france-travail.png' },
+            { name: 'Atout Online', img: 'atout-online.png' },
+            { name: 'Simplon', img: 'simplon.png' },
+            { name: 'Fitness Park', img: 'fitness-park.png' },
+            { name: 'Nike', img: 'nike.png' },
+            { name: 'Intersport', img: 'intersport.png' },
+            { name: 'Schneider Electric', img: 'schneider-electric.png' },
+            { name: 'Socram Banque', img: 'socram-banque.png' },
+            { name: '3iL Ingénieurs', img: '3il.png' },
+            { name: 'GO Sport', img: 'go-sport.png' },
+            { name: "IS L'agence", img: 'is-agence.png' },
+            { name: 'Fami Relay', img: 'fami-relay.png' },
+            { name: 'Lenbox', img: 'lenbox.png' },
+            { name: 'Under Armour', img: 'under-armour.png' }
+        ]
+
+    section.realisations
+        ul.grid
+            each partner in partners
+                li
+                    img(src="img/placeholder.svg" alt=partner.name loading="lazy")

@@ -1,37 +1,16 @@
-- const footerGroups = {};
-
-mixin displayFooterPageLink(p)
-    - const trad = page[p.name]
-    - const path = p.path || `/${p.name}.html`
-    if (p.disabled)
-        a(href=path disabled aria-disabled="true" tabindex="-1" title="Coming soon")= trad.name
-    else 
-        a(href=path)= trad.name
-
-mixin displayFooterPageGroup(group, pages)
-    - var disabled = pages.filter(p => !p.disabled).length==0
-    if (disabled)
-        section
-            h3= group.name
-            each page in pages
-                +displayFooterPageLink(page)
-    else
-        section
-            h3= group.name
-            each page in pages
-                +displayFooterPageLink(page)
-
-mixin displayFooterElement(element)
-    - var pages = footerGroups[element]
-    +displayFooterPageGroup(pageGroup[element], pages)
-
 footer.invert-colors
     //- section 
     //-     h2 So, we're going up together?
     //-     p focus on what you love about developing, and forget about the painful tasks 
 
 
-    a(href="/") Lenra
+    - var footerHomePage = pageList.find(p => p.name === 'index')
+    - var footerHomePath = (footerHomePage && footerHomePage.path) ? footerHomePage.path : '/'
+    - var footerNavPages = pageList.filter(p => !p.notOnTop && p.name !== 'contact')
+    - var footerContactPage = pageList.find(p => p.name === 'contact')
+    - var footerLegalPage = pageList.find(p => p.name === 'legal')
+
+    a(href=footerHomePath) Lenra
     nav
         section#financed-by
             h3 Project financed by
@@ -41,24 +20,25 @@ footer.invert-colors
                 img(src="img/partners/bpi.svg" alt="Bpifrance" loading="lazy")
             a.btn.primary.lenra-icon-heart(href="https://github.com/sponsors/lenra-io" rel="noopener") GitHub Sponsor
         section
-            h3 Developpers
+            h3 Navigation
+            if footerNavPages.length
+                each p in footerNavPages
+                    - var footerTrad = page[p.name]
+                    - var footerPath = p.path || `/${p.name}.html`
+                    a(href=footerPath)= footerTrad.name
+            if footerLegalPage
+                - var footerLegalTrad = page[footerLegalPage.name]
+                - var footerLegalPath = footerLegalPage.path || `/${footerLegalPage.name}.html`
+                a(href=footerLegalPath)= footerLegalTrad.name
+        section
+            h3 Resources
             a(href="https://docs.lenra.io") Documentation
             a(href="https://dev.lenra.io") Dev platform
             a(href="https://app.lenra.io") App platform
-        
-        - const footerItems = pageList.filter(p => p.group).flatMap(p => {
-        -    if (!footerGroups[p.group]) {
-        -        footerGroups[p.group] = [p];
-        -        return p.group;
-        -    }
-        -    else {
-        -        footerGroups[p.group].push(p);
-        -        return [];
-        -    }
-        - });
-
-        each el in footerItems
-            +displayFooterElement(el)
+            if footerContactPage
+                - var footerContactTrad = page[footerContactPage.name]
+                - var footerContactPath = footerContactPage.path || `/${footerContactPage.name}.html`
+                a(href=footerContactPath)= footerContactTrad.name
 
     ul 
         li Follow us

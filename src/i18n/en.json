@@ -18,59 +18,45 @@
     "anyLanguage": "any language",
     "page": {
         "index": {
-            "name": "Lenra",
-            "title": "Optimize your app creation",
-            "description": "Lenra is an open source framework to create your app using any language, and deploy it without any Ops scale, built on ethical values."
+            "name": "Accueil",
+            "titleHtml": "<strong>Engagés</strong> &amp; <strong>Innovants</strong> :<br/>Pour vous comme pour nous",
+            "description": "Lenra imagine et développe des solutions numériques engagées pour vos projets et les nôtres."
         },
-        "discover": {
-            "name": "Discover",
-            "title": "Discover Lenra",
-            "description": "Lenra is an open source framework to create your app using any language, and deploy it without any Ops scale, built on ethical values."
+        "agence": {
+            "name": "Agence",
+            "titleHtml": "Découvrez <strong>Lenra</strong>",
+            "subtitle": "Développons pour vous comme pour nous",
+            "description": "Lenra est une agence tech engagée basée à La Rochelle. Nous accompagnons les porteurs de projets avec une équipe expérimentée, passionnée et responsable."
         },
-        "why-lenra": {
-            "name": "Why Lenra",
-            "title": "Why should I use Lenra ?",
-            "description": "Why our solution and not another? With Lenra, we make sure to solve a problem that is more than present in our society, all with strong values."
+        "methode": {
+            "name": "Méthode",
+            "titleHtml": "Une conception <strong>collaborative</strong>",
+            "description": "Notre démarche mêle ateliers, co-création et outils simples pour faire émerger la meilleure version de votre projet numérique."
         },
-        "usecases": {
-            "name": "Use cases",
-            "title": "The main Lenra use cases",
-            "description": "Yet another \"great\" app development framework, but why should I use it ?"
+        "expertises": {
+            "name": "Expertises",
+            "titleHtml": "Une expertise au service de votre <strong>besoin</strong>",
+            "description": "Nous intervenons de l'idéation au déploiement avec des experts mobile, web, API et data."
         },
-        "manifesto": {
-            "name": "Manifesto",
-            "title": "Green Tech is the new tech",
-            "description": "This should be the standard for anyone starting a digital project. Not because greenwashing is trending, but because climate change tells us it's time to act. Strongly. Here're some insights on how you act by choosing Lenra."
+        "produits": {
+            "name": "Produits",
+            "titleHtml": "Nos <strong>produits</strong>",
+            "description": "Des solutions développées par Lenra pour accélérer et sécuriser vos projets."
         },
-        "pricing": {
-            "name": "Pricing",
-            "description": "Start for free and upgrade for a subsription when your app is ready for production."
-        },
-        "team": {
-            "name": "Team",
-            "title": "Meet our amazing team !",
-            "description": "Learn more about the people behind the scenes."
+        "realisations": {
+            "name": "Réalisations",
+            "titleHtml": "Nos <strong>réalisations</strong>",
+            "description": "De nombreuses organisations nous font confiance pour imaginer, concevoir et déployer leurs services numériques."
         },
         "contact": {
-            "name": "Contact us",
-            "title": "Do you have any questions ?",
-            "titleHtml": "Do you have any <strong>questions</strong> ?",
-            "description": "Let's get in touch with us !"
+            "name": "Contact",
+            "titleHtml": "Contactez <strong>Lenra</strong>",
+            "description": "Un projet, une idée ou l'envie de collaborer ? Parlons-en."
         },
         "legal": {
-            "name": "Legal informations",
-            "description": "The Lenra platform and websites legal informations."
-        }
-    },
-    "pageGroup": {
-        "platform": {
-            "name": "Platform"
-        },
-        "company": {
-            "name": "Company"
-        },
-        "contact": {
-            "name": "Contact"
+            "name": "Mentions légales",
+            "titleHtml": "Mentions <strong>légales</strong>",
+            "description": "Les informations légales relatives à Lenra."
         }
     },
     "competitorsFieldsText": {
