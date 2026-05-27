@@ -1,7 +1,3 @@
-main > section > p > strong::after {
-    content: ":";
-}
-
 main > section > ul > li {
     display: inline-block;
 }

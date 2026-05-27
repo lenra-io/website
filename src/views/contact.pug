@@ -1,28 +1,37 @@
 extends .layout.pug
 
 block header
+    section.hero
+        div.hero-content
+            h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
+            p Trouvez le bon canal pour nous écrire, nous appeler ou lancer un projet commun.
+            nav.cta
+                a.btn.primary(href="mailto:contact@lenra.io") contact@lenra.io
+                a.btn.link.lenra-icon-arrow-right(href="https://github.com/lenra-io" rel="noopener" target="_blank") Suivre Lenra
+        figure.hero-visual
+            img(src="img/undraw/undraw_private_data_re_4eab.svg" alt="Illustration de boîte mail" loading="lazy")
 
 block content
     header
-        h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}
-        p Let's get in touch with us!
+        h2 Restons en contact
+        p Nos équipes vous répondent rapidement pour cadrer vos idées et passer à l'action.
 
     section 
-        h2 Follow us
+        h2 Suivez-nous
         +social()
             
     section
-        h2 For developers
+        h2 Pour les développeurs
         +social(true)
 
     form
-        label(for="name") Name
-        input#name(type="text" name="name" placeholder="Your name" required)
-        label(for="name") Email
-        input#email(type="email" name="email" placeholder="Your email" required)
-        label(for="name") Message
-        textarea#message(name="message" placeholder="Your message" required)
-        button.primary Send your message
+        label(for="name") Nom
+        input#name(type="text" name="name" placeholder="Votre nom" required)
+        label(for="email") Email
+        input#email(type="email" name="email" placeholder="Votre email" required)
+        label(for="message") Message
+        textarea#message(name="message" placeholder="Votre message" required)
+        button.primary Envoyer
 
     script(src='js/contact.js' defer)
 

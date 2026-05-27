@@ -1,30 +1,30 @@
-body>header {
-    padding-bottom: 0;
-}
-
 main {
-    text-align: center;
+    text-align: left;
     padding-bottom: calc(0.5rem * var(--section-padding-bottom));
+    display: grid;
+    gap: 3rem;
 }
 
-h1 {
+main>header>h2 {
+    font-size: 1.75rem;
     padding-bottom: 1rem;
 }
 
 main>section {
-    padding-top: 2rem;
-    padding-bottom: 0;
-    text-align: inherit;
+    display: grid;
+    gap: 1rem;
 }
 
 main>section>h2 {
-    font-size: calc(1rem * 9 / 8);
-    padding-bottom: 0.5rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
 main nav.social {
-    justify-content: center;
-    padding-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
 }
 
 main nav.social>a:not(:hover)::before {
@@ -32,75 +32,54 @@ main nav.social>a:not(:hover)::before {
 }
 
 form {
-    text-align: left;
-    padding-top: 3rem;
-    max-width: 37.5rem;
-    margin: auto;
+    display: grid;
+    gap: 0.75rem;
+    max-width: 36rem;
 }
 
 label {
-    margin-bottom: 0.25rem;
     font-weight: 600;
-    padding-top: 2rem;
 }
 
 input,
 textarea {
-    --text-opacity: 0.65;
-    display: block;
+    --text-opacity: 0.75;
     width: 100%;
-    padding: 0.5rem 0.75rem;
-    margin-bottom: 1.5rem;
-    border: 0.0625rem solid;
-    border-radius: 0.25rem;
-    background: transparent;
+    padding: 0.75rem 1rem;
+    border: 0.0625rem solid rgba(var(--background-contrast-color-data), 0.4);
+    border-radius: 0.5rem;
+    background: rgba(var(--background-contrast-color-data), 0.02);
 }
 
 textarea {
-    height: 7.5rem;
+    min-height: 8rem;
     resize: vertical;
 }
 
 form button {
-    width: 100%;
+    margin-top: 1rem;
+    width: fit-content;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
 }
 
-@media (min-width: 50rem) {
-    body>main {
-        display: grid;
-        column-gap: 2.5rem;
-        grid-template:
-            "header form"
-            "social form"
-            "dev form" / 1fr 1fr;
-        text-align: left;
-        max-width: 70rem;
+@media (min-width: 60rem) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
     }
 
     main>header {
-        grid-area: header;
+        grid-column: 1;
     }
 
-    main>header>p {
-        margin-left: 0;
-    }
-
-    main>section {
-        grid-area: social;
-        align-self: end;
-    }
-
+    main>section:first-of-type,
     main>section:last-of-type {
-        grid-area: dev;
-    }
-
-    main nav.social {
-        justify-content: left;
+        grid-column: 1;
     }
 
     main>form {
-        grid-area: form;
-        padding-top: 0;
-        margin: 0;
+        grid-column: 2;
+        justify-self: end;
     }
 }

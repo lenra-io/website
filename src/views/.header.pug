@@ -1,47 +1,33 @@
-- const headerGroups = {};
-
-mixin displayPageLink(p)
-    - const trad = page[p.name]
-    - const path = p.path || `/${p.name}.html`
-    if (p.disabled)
-        a(href=path disabled aria-disabled="true" tabindex="-1" title="Coming soon")= trad.name
-    else if (p.name == currentPage.basicPath)
-        a.current(href=path)= trad.name
-    else 
-        a(href=path)= trad.name
-
-mixin displayPageGroup(group, pages)
-    each page in pages
-        +displayPageLink(page)
-
-mixin displayNavElement(element)
-    - var type = typeof element
-    if (type == 'string')
-        - var pages = headerGroups[element]
-        if (pages.length==1)
-            +displayPageLink(pages[0])
-        else
-            +displayPageGroup(pageGroup[element], pages)
-    else 
-        +displayPageLink(element)
-
-- const headerClass = currentPage.basicPath=="index" ? "invert-colors" : ""
+- const headerClass = "invert-colors"
 header(class=headerClass)
+    - const homePage = pageList.find(p => p.name === 'index')
+    - const navPages = pageList.filter(p => !p.notOnTop && p.name !== 'contact')
+    - const contactPage = pageList.find(p => p.name === 'contact')
     nav.menu
-        - const items = pageList.filter(p => !p.notOnTop).flatMap(p => {
-        -    if (!p.group) return [p];
-        -    if (!headerGroups[p.group]) {
-        -        headerGroups[p.group] = [p];
-        -        return p.group;
-        -    }
-        -    else {
-        -        headerGroups[p.group].push(p);
-        -        return [];
-        -    }
-        - });
-
-        each el in items
-            +displayNavElement(el)
+        div.brand
+            - const homePath = (homePage && homePage.path) ? homePage.path : '/'
+            a.logo(href=homePath) Lenra
+            if currentPage.badge
+                span.badge= currentPage.badge
+        if navPages.length
+            ul.links
+                each p in navPages
+                    - const trad = page[p.name]
+                    - const path = p.path || `/${p.name}.html`
+                    li
+                        if p.disabled
+                            a(href=path disabled aria-disabled="true" tabindex="-1" title="Bientôt disponible")= trad.name
+                        else if p.name === currentPage.basicPath
+                            a.current(href=path)= trad.name
+                        else
+                            a(href=path)= trad.name
+        if contactPage
+            - const contactTrad = page[contactPage.name]
+            - const contactPath = contactPage.path || `/${contactPage.name}.html`
+            if contactPage.name === currentPage.basicPath
+                a.btn.primary.contact(href=contactPath)= contactTrad.name
+            else
+                a.btn.contact(href=contactPath)= contactTrad.name
 
     block header
         h1 !{currentPage.titleHtml || currentPage.title || currentPage.name}

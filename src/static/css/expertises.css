@@ -1,0 +1,235 @@
+/* Hero tabs */
+section.hero nav.options {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+section.hero nav.options span {
+    padding: 0.6rem 1.25rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color var(--animation-duration);
+    font-size: 0.95rem;
+    color: rgba(var(--white-data), 0.7);
+}
+
+section.hero nav.options span.active {
+    background-color: rgb(var(--primary-color-data));
+    color: white;
+}
+
+section.hero nav.options span:hover:not(.active) {
+    background-color: rgba(var(--white-data), 0.1);
+}
+
+/* App dev section */
+section.app-dev {
+    padding: 4rem 5%;
+}
+
+section.app-dev .content-wrapper {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+section.app-dev .text-column {
+    flex: 2;
+}
+
+section.app-dev .logos-column {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 2rem;
+}
+
+section.app-dev .logos-column figure {
+    text-align: center;
+}
+
+section.app-dev .logos-column figure img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+section.app-dev .logos-column figcaption {
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+section.app-dev h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+section.app-dev p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+section.app-dev p.highlight {
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+nav.platforms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+nav.platforms span {
+    font-weight: 600;
+}
+
+nav.platforms img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/* Services section */
+section.services {
+    padding: 4rem 5%;
+}
+
+section.services .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+section.services article {
+    background-color: rgb(var(--yellow-data));
+    > p, h3 {
+        color: black;
+    }
+    padding: 2rem;
+    border-radius: var(--border-radius);
+}
+
+section.services h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+section.services p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    text-align: justify;
+}
+
+section.services p.highlight {
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+section.services nav.logos {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    align-items: center;
+}
+
+section.services nav.logos img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Stack section */
+section.stack {
+    padding: 4rem 5%;
+    background-color: rgba(var(--background-contrast-color-data), 0.03);
+}
+
+section.stack h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+section.stack h2 strong {
+    font-weight: 700;
+}
+
+ul.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.tools-grid li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+ul.tools-grid li img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+ul.tools-grid li span {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+/* Responsive */
+@media (max-width: 64rem) {
+    ul.tools-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 50rem) {
+    section.app-dev .content-wrapper {
+        flex-direction: column;
+    }
+
+    section.app-dev .logos-column {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        padding-top: 1rem;
+    }
+
+    section.services .grid {
+        grid-template-columns: 1fr;
+    }
+
+    ul.tools-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 30rem) {
+    ul.tools-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

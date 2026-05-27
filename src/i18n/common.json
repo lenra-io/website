@@ -3,40 +3,29 @@
     "pageList": [
         {
             "name": "index",
-            "path": "/"
-        },
-        {
-            "name": "discover",
-            "group": "platform"
-        },
-        {
-            "name": "why-lenra",
-            "group": "platform"
-        },
-        {
-            "name": "usecases",
-            "group": "platform"
-        },
-        {
-            "name": "manifesto",
-            "group": "company"
-        },
-        {
-            "name": "team",
-            "group": "company"
-        },
-        {
-            "name": "pricing",
-            "group": "company"
-        },
-        {
-            "name": "contact",
-            "group": "contact",
+            "path": "/",
             "notOnTop": true
         },
         {
+            "name": "agence"
+        },
+        {
+            "name": "methode"
+        },
+        {
+            "name": "expertises"
+        },
+        {
+            "name": "produits"
+        },
+        {
+            "name": "realisations"
+        },
+        {
+            "name": "contact"
+        },
+        {
             "name": "legal",
-            "group": "contact",
             "notOnTop": true
         }
     ],
